@@ -1,0 +1,8 @@
+{
+  "metadata": {
+    "version": "0.1",
+    "description": "Logs swatch crops for training and QA review. Entries are appended automatically.",
+    "created_by": "SwatchCropGUI"
+  },
+  "entries": []
+}
