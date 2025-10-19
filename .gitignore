@@ -3,9 +3,6 @@ __pycache__/
 .env
 .DS_Store
 *.log
-inputs/
-outputs/
-/swatch_pipeline_ml/.venv/
-swatch_pipeline_ml/outputs/
-swatch_pipeline_pre_api/outputs/
-
+*/inputs/
+*/outputs/
+*/.venv/
