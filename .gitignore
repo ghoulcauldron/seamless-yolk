@@ -5,4 +5,7 @@ __pycache__/
 *.log
 inputs/
 outputs/
-.venv/
+/swatch_pipeline_ml/.venv/
+swatch_pipeline_ml/outputs/
+swatch_pipeline_pre_api/outputs/
+
