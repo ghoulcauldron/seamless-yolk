@@ -1,0 +1,32 @@
+{
+  "dresses": {
+    "left_ratio": 0.35,
+    "top_ratio": 0.35,
+    "size_ratio": 0.3
+  },
+  "pants": {
+    "left_ratio": 0.5,
+    "top_ratio": 0.2,
+    "size_ratio": 0.2
+  },
+  "tops": {
+    "left_ratio": 0.35,
+    "top_ratio": 0.35,
+    "size_ratio": 0.3
+  },
+  "sweater": {
+    "left_ratio": 0.3,
+    "top_ratio": 0.25,
+    "size_ratio": 0.3
+  },
+  "coat": {
+    "left_ratio": 0.25,
+    "top_ratio": 0.35,
+    "size_ratio": 0.3
+  },
+  "default": {
+    "left_ratio": 0.35,
+    "top_ratio": 0.35,
+    "size_ratio": 0.3
+  }
+}
