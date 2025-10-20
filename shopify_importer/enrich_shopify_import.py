@@ -214,4 +214,3 @@ if __name__ == '__main__':
     
     # The tags guide file is no longer needed for the main function
     enrich_shopify_import_poc(SOURCE_CSV, SCAFFOLD_CSV, GHOST_FILE, MODEL_FILE, OUTPUT_CSV, CDN_PREFIX_URL)
-

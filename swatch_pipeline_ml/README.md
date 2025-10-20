@@ -1,6 +1,6 @@
 # Swatch Pipeline (ML-Enabled)
 
-This project offers an interactive GUI to manually crop swatches from flat/ghost garment photos, with logging for future ML automation.
+This project offers an interactive GUI to manually crop swatches from flat lay/ghost garment photos, with logging for future ML automation.
 
 ## Features
 
@@ -35,7 +35,7 @@ Here's a breakdown of the updates based on your requests:
 
 ✨ Add Garment Types (#4): A new "Add Type" button allows you to add new garment categories on the fly.
 
-🖼️ "Zoom to Fit" Preview (#5): You can now press and hold the Tab key to see a scaled-down "zoom to fit" preview of the entire garment. Releasing the key restores the full-resolution view.
+🖼️ "Zoom to Fit" Preview (#5): You can now press and hold the Tab key to see a scaled-down "zoom to fit" preview of the entire garment. Releasing the key restores the full-resolution view. NOTE: This is a WIP; currently a tab press merely centers the image in the preview.
 
 📝 Filename in Title (#6): The current image's filename is now displayed in the window's title bar for easy reference.
 
@@ -50,6 +50,7 @@ The next phase of this project will focus on leveraging the Shopify API to fully
 1.  **API-Based Metafield Updates:**
     * Develop a script to update product metafields directly via the Shopify API.
     * This will specifically target the population of file-reference metafields, including `Swatch: Image (product.metafields.altuzarra.swatch_image)` and `Get the look image (product.metafields.altuzarra.look_image)`, which cannot be handled by the CSV import process.
+    * Serve as a pilot project for automating the management of other product attributes currently handled via CSV, such as parent/variant image assignments, the generation of collection tags, allowed metafields,
 
 2.  **Automated Smart Collection Creation:**
     * Create a script that uses the Shopify API to perform bulk creation of smart collections.
