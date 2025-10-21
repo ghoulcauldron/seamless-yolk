@@ -2,13 +2,14 @@ import sys
 import os
 import json
 from PyQt5 import QtWidgets, QtGui, QtCore
-from PIL import Image # <<< FIX: This line was missing
+from PIL import Image
 
 INPUT_DIR = "inputs/ghosts"
 OUTPUT_DIR = "outputs/swatches"
 LOG_PATH = "logs/swatch_hints.json"
 CONFIG_PATH = "config/garment_config.json"
-CROP_SIZE = 300
+CROP_SIZE = 300 # Default size
+MIN_CROP_SIZE = 50 # Minimum resize dimension
 
 
 class ImageLabel(QtWidgets.QLabel):
@@ -17,18 +18,19 @@ class ImageLabel(QtWidgets.QLabel):
         self.crop_rect = QtCore.QRect(100, 100, CROP_SIZE, CROP_SIZE)
         self.dragging = False
         self.drag_offset = QtCore.QPoint()
-        self.setFocusPolicy(QtCore.Qt.StrongFocus)
-        self.preview_mode = False # --- FEATURE #5: Flag for zoom preview
+        self.setFocusPolicy(QtCore.Qt.NoFocus)
+        self.preview_mode = False
 
     def mousePressEvent(self, event):
         if event.button() == QtCore.Qt.LeftButton:
-            # --- FEATURE #7: Click anywhere to move the box ---
             if self.crop_rect.contains(event.pos()):
                 self.dragging = True
                 self.drag_offset = event.pos() - self.crop_rect.topLeft()
             else:
-                # Center the crop box on the click position
-                new_top_left = event.pos() - QtCore.QPoint(CROP_SIZE // 2, CROP_SIZE // 2)
+                new_top_left = event.pos() - QtCore.QPoint(
+                    self.crop_rect.width() // 2, 
+                    self.crop_rect.height() // 2
+                )
                 self.crop_rect.moveTo(new_top_left)
                 self.update()
 
@@ -41,22 +43,9 @@ class ImageLabel(QtWidgets.QLabel):
     def mouseReleaseEvent(self, event):
         if event.button() == QtCore.Qt.LeftButton:
             self.dragging = False
-
-    def keyPressEvent(self, event):
-        step = 10
-        if event.key() == QtCore.Qt.Key_Left:
-            self.crop_rect.translate(-step, 0)
-        elif event.key() == QtCore.Qt.Key_Right:
-            self.crop_rect.translate(step, 0)
-        elif event.key() == QtCore.Qt.Key_Up:
-            self.crop_rect.translate(0, -step)
-        elif event.key() == QtCore.Qt.Key_Down:
-            self.crop_rect.translate(0, step)
-        self.update()
-
+    
     def paintEvent(self, event):
         super().paintEvent(event)
-        # --- FEATURE #5: Don't draw the crop box in preview mode ---
         if not self.preview_mode:
             painter = QtGui.QPainter(self)
             painter.setPen(QtGui.QPen(QtCore.Qt.red, 2, QtCore.Qt.SolidLine))
@@ -72,7 +61,12 @@ class SwatchCropper(QtWidgets.QMainWindow):
         self.image_files = [f for f in os.listdir(INPUT_DIR) if f.lower().endswith((".jpg", ".jpeg", ".png"))]
         self.current_index = 0
         self.pil_image = None
-        self.original_pixmap = None # --- FEATURE #5: Store original pixmap
+        self.original_pixmap = None
+        
+        # --- FIX: Add variables to store scroll position ---
+        self.last_scroll_h = 0
+        self.last_scroll_v = 0
+        # --- END FIX ---
 
         self.garment_config = {}
         self.garment_types = ["default"]
@@ -92,29 +86,37 @@ class SwatchCropper(QtWidgets.QMainWindow):
         self.central_widget = QtWidgets.QWidget()
         self.setCentralWidget(self.central_widget)
 
+        self.setFocusPolicy(QtCore.Qt.StrongFocus)
+        self.setFocus()
+
         self.image_label = ImageLabel()
         self.image_label.setAlignment(QtCore.Qt.AlignTop)
 
         self.scroll_area = QtWidgets.QScrollArea()
         self.scroll_area.setWidget(self.image_label)
         self.scroll_area.setAlignment(QtCore.Qt.AlignCenter)
-
+        self.scroll_area.setFocusPolicy(QtCore.Qt.NoFocus)
+        
         self.garment_selector = QtWidgets.QComboBox()
         self.garment_selector.addItems(self.garment_types)
         self.garment_selector.currentIndexChanged.connect(self.setGarmentType)
+        self.garment_selector.setFocusPolicy(QtCore.Qt.NoFocus) 
         
-        # --- FEATURE #4: "Add Type" button ---
         add_type_button = QtWidgets.QPushButton("Add Type")
         add_type_button.clicked.connect(self.addNewGarmentType)
+        add_type_button.setFocusPolicy(QtCore.Qt.NoFocus)
 
         save_button = QtWidgets.QPushButton("Save Swatch")
         save_button.clicked.connect(self.saveSwatch)
+        save_button.setFocusPolicy(QtCore.Qt.NoFocus)
 
         next_button = QtWidgets.QPushButton("Next Image")
         next_button.clicked.connect(self.nextImage)
+        next_button.setFocusPolicy(QtCore.Qt.NoFocus)
         
         prev_button = QtWidgets.QPushButton("Previous Image")
         prev_button.clicked.connect(self.prevImage)
+        prev_button.setFocusPolicy(QtCore.Qt.NoFocus)
 
         vbox = QtWidgets.QVBoxLayout()
         vbox.addWidget(self.scroll_area)
@@ -125,7 +127,7 @@ class SwatchCropper(QtWidgets.QMainWindow):
         hbox.addStretch(1)
         hbox.addWidget(QtWidgets.QLabel("Garment Type:"))
         hbox.addWidget(self.garment_selector)
-        hbox.addWidget(add_type_button) # Add button to layout
+        hbox.addWidget(add_type_button)
         hbox.addWidget(save_button)
         vbox.addLayout(hbox)
 
@@ -133,7 +135,6 @@ class SwatchCropper(QtWidgets.QMainWindow):
 
     def setGarmentType(self, index):
         self.garment_type = self.garment_types[index]
-        # --- FIX #3: Removed call to updateCropHint() to prevent box from resetting ---
 
     def updateCropHint(self):
         if not self.pil_image or not self.garment_config: return
@@ -143,6 +144,8 @@ class SwatchCropper(QtWidgets.QMainWindow):
         top_ratio = hint.get("top_ratio", 0.35)
 
         img_width, img_height = self.pil_image.size
+        
+        self.image_label.crop_rect.setSize(QtCore.QSize(CROP_SIZE, CROP_SIZE))
         new_x = max(0, min(int(img_width * left_ratio), img_width - CROP_SIZE))
         new_y = max(0, min(int(img_height * top_ratio), img_height - CROP_SIZE))
         
@@ -158,7 +161,6 @@ class SwatchCropper(QtWidgets.QMainWindow):
         image_path = os.path.join(INPUT_DIR, self.image_files[self.current_index])
         self.pil_image = Image.open(image_path).convert("RGB")
         
-        # --- FEATURE #6: Display filename in window title ---
         self.setWindowTitle(f"Swatch Cropper - {self.image_files[self.current_index]}")
         
         img = self.pil_image
@@ -166,11 +168,12 @@ class SwatchCropper(QtWidgets.QMainWindow):
         qimage = QtGui.QImage(data, img.width, img.height, img.width * 3, QtGui.QImage.Format_RGB888)
         pixmap = QtGui.QPixmap.fromImage(qimage)
         
-        self.original_pixmap = pixmap # --- FEATURE #5: Store the original pixmap
+        self.original_pixmap = pixmap
         self.image_label.setPixmap(self.original_pixmap)
         self.image_label.setFixedSize(self.original_pixmap.size())
         
         self.updateCropHint()
+        self.setFocus()
 
     def saveSwatch(self):
         if self.pil_image is None: return
@@ -179,7 +182,6 @@ class SwatchCropper(QtWidgets.QMainWindow):
         cropped = self.pil_image.crop((rect.x(), rect.y(), rect.right(), rect.bottom()))
         
         original_filename = self.image_files[self.current_index]
-        # --- FIX #1: Correctly split filename at "_ghost" ---
         base_name = original_filename.split("_ghost")[0]
         swatch_filename = f"{base_name}_swatch.jpg"
         
@@ -191,7 +193,12 @@ class SwatchCropper(QtWidgets.QMainWindow):
             "filename": original_filename,
             "swatch": swatch_filename,
             "garment_type": self.garment_type,
-            "crop": {"x": rect.x(), "y": rect.y(), "width": rect.width(), "height": rect.height()}
+            "crop": {
+                "x": rect.x(), 
+                "y": rect.y(), 
+                "width": rect.width(), 
+                "height": rect.height()
+            }
         }
         
         os.makedirs(os.path.dirname(LOG_PATH), exist_ok=True)
@@ -217,7 +224,6 @@ class SwatchCropper(QtWidgets.QMainWindow):
         self.current_index -= 1
         self.loadImage()
     
-    # --- FEATURE #4: Method to handle adding a new garment type ---
     def addNewGarmentType(self):
         text, ok = QtWidgets.QInputDialog.getText(self, 'Add Garment Type', 'Enter new type name:')
         if ok and text:
@@ -226,13 +232,23 @@ class SwatchCropper(QtWidgets.QMainWindow):
                 self.garment_types.append(new_type)
                 self.garment_selector.addItem(new_type)
                 self.garment_selector.setCurrentText(new_type)
+        self.setFocus()
 
-    # --- FEATURE #2 & #5: Handle key presses for shortcuts ---
     def keyPressEvent(self, event):
-        if event.key() in (QtCore.Qt.Key_Return, QtCore.Qt.Key_Enter):
+        step = 10
+        rect = self.image_label.crop_rect
+        key = event.key()
+
+        if key in (QtCore.Qt.Key_Return, QtCore.Qt.Key_Enter):
             self.saveSwatch()
-        elif event.key() == QtCore.Qt.Key_Tab:
+        
+        elif key == QtCore.Qt.Key_Tab:
             if self.original_pixmap:
+                # --- FIX: Save scroll positions before showing preview ---
+                self.last_scroll_h = self.scroll_area.horizontalScrollBar().value()
+                self.last_scroll_v = self.scroll_area.verticalScrollBar().value()
+                # --- END FIX ---
+                
                 self.image_label.preview_mode = True
                 scaled_pixmap = self.original_pixmap.scaled(
                     self.scroll_area.viewport().size(), 
@@ -241,8 +257,40 @@ class SwatchCropper(QtWidgets.QMainWindow):
                 )
                 self.image_label.setPixmap(scaled_pixmap)
                 self.image_label.setFixedSize(self.scroll_area.viewport().size())
+                
+        elif key in (QtCore.Qt.Key_Equal, QtCore.Qt.Key_Plus):
+            current_size = rect.width()
+            new_size = current_size + step
+            self.resizeCrop(new_size)
+            
+        elif key in (QtCore.Qt.Key_Minus, QtCore.Qt.Key_Underscore):
+            current_size = rect.width()
+            new_size = max(MIN_CROP_SIZE, current_size - step)
+            self.resizeCrop(new_size)
+
+        elif key == QtCore.Qt.Key_Left:
+            rect.translate(-step, 0)
+            self.image_label.update()
+        elif key == QtCore.Qt.Key_Right:
+            rect.translate(step, 0)
+            self.image_label.update()
+        elif key == QtCore.Qt.Key_Up:
+            rect.translate(0, -step)
+            self.image_label.update()
+        elif key == QtCore.Qt.Key_Down:
+            rect.translate(0, step)
+            self.image_label.update()
+        
         else:
             super().keyPressEvent(event)
+            
+    def resizeCrop(self, new_size):
+        rect = self.image_label.crop_rect
+        center = rect.center()
+        new_top_left = center - QtCore.QPoint(new_size // 2, new_size // 2)
+        rect.setTopLeft(new_top_left)
+        rect.setSize(QtCore.QSize(new_size, new_size))
+        self.image_label.update()
 
     def keyReleaseEvent(self, event):
         if event.key() == QtCore.Qt.Key_Tab:
@@ -250,12 +298,17 @@ class SwatchCropper(QtWidgets.QMainWindow):
                 self.image_label.preview_mode = False
                 self.image_label.setPixmap(self.original_pixmap)
                 self.image_label.setFixedSize(self.original_pixmap.size())
+                
+                # --- FIX: Restore scroll positions after preview ---
+                self.scroll_area.horizontalScrollBar().setValue(self.last_scroll_h)
+                self.scroll_area.verticalScrollBar().setValue(self.last_scroll_v)
+                # --- END FIX ---
         else:
             super().keyReleaseEvent(event)
 
 
 if __name__ == "__main__":
     app = QtWidgets.QApplication(sys.argv)
-    win = SwatchCropper()
+    win = SwatchCropper() 
     win.show()
     sys.exit(app.exec_())

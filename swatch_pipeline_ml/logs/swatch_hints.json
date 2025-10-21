@@ -6,113 +6,245 @@
   },
   "entries": [
     {
+      "filename": "SS26-7165-STS002-000414 DANUBE_FINAL_ghost_side_0446_main.jpg",
+      "swatch": "SS26-7165-STS002-000414 DANUBE_FINAL_swatch.jpg",
+      "garment_type": "bag",
+      "crop": {
+        "x": 1293,
+        "y": 2487,
+        "width": 300,
+        "height": 300
+      }
+    },
+    {
+      "filename": "SS26-7152-LLS063-000130 TAN_FINAL_ghost_side_0692_main.jpg",
+      "swatch": "SS26-7152-LLS063-000130 TAN_FINAL_swatch.jpg",
+      "garment_type": "bag",
+      "crop": {
+        "x": 1009,
+        "y": 2470,
+        "width": 300,
+        "height": 300
+      }
+    },
+    {
       "filename": "S126-8829 KKS818 000008 JET MELANGE_FINAL_ghost_0312.jpg",
-      "swatch": "S126-8829 KKS818 000008 JET MELANGE_FINAL_0312_swatch.jpg",
+      "swatch": "S126-8829 KKS818 000008 JET MELANGE_FINAL_swatch.jpg",
       "garment_type": "sweater",
       "crop": {
-        "x": 863,
-        "y": 1281,
+        "x": 840,
+        "y": 1260,
         "width": 300,
         "height": 300
       }
     },
     {
       "filename": "S126-8307 KYS029 000001 BLACK_FINAL_ghost_0063.jpg",
-      "swatch": "S126-8307 KYS029 000001 BLACK_FINAL_0063_swatch.jpg",
+      "swatch": "S126-8307 KYS029 000001 BLACK_FINAL_swatch.jpg",
       "garment_type": "dresses",
       "crop": {
-        "x": 1049,
-        "y": 1109,
+        "x": 1047,
+        "y": 902,
         "width": 300,
         "height": 300
+      }
+    },
+    {
+      "filename": "SS26-7694-LLS036-000001 BLACK_FINAL_ghost_front_1135_main.jpg",
+      "swatch": "SS26-7694-LLS036-000001 BLACK_FINAL_swatch.jpg",
+      "garment_type": "belt",
+      "crop": {
+        "x": 1536,
+        "y": 1668,
+        "width": 180,
+        "height": 180
+      }
+    },
+    {
+      "filename": "SS26-7690-LUC004-000265 GOLDEN OAK_FINAL_ghost_detail_1578_main.jpg",
+      "swatch": "SS26-7690-LUC004-000265 GOLDEN OAK_FINAL_swatch.jpg",
+      "garment_type": "belt",
+      "crop": {
+        "x": 1588,
+        "y": 1474,
+        "width": 300,
+        "height": 300
+      }
+    },
+    {
+      "filename": "SS26-7691-LUC006-000214 BURNT CYPRESS_FINAL_ghost_front_1039_main.jpg",
+      "swatch": "SS26-7691-LUC006-000214 BURNT CYPRESS_FINAL_swatch.jpg",
+      "garment_type": "belt",
+      "crop": {
+        "x": 1603,
+        "y": 1826,
+        "width": 80,
+        "height": 80
       }
     },
     {
       "filename": "S126-8801 KWS081 421001 BLACK_FINAL_ghost_0327.jpg",
-      "swatch": "S126-8801 KWS081 421001 BLACK_FINAL_0327_swatch.jpg",
+      "swatch": "S126-8801 KWS081 421001 BLACK_FINAL_swatch.jpg",
       "garment_type": "sweater",
       "crop": {
-        "x": 881,
-        "y": 1090,
+        "x": 1084,
+        "y": 1618,
         "width": 300,
         "height": 300
       }
     },
     {
+      "filename": "SS26-7690-ELP013-000907 PYTHON_FINAL_ghost_front_1159_main.jpg",
+      "swatch": "SS26-7690-ELP013-000907 PYTHON_FINAL_swatch.jpg",
+      "garment_type": "belt",
+      "crop": {
+        "x": 1446,
+        "y": 1809,
+        "width": 140,
+        "height": 140
+      }
+    },
+    {
       "filename": "S126-8836 KWS084 421182 BURNT TAHINI_FINAL_ghost_0094.jpg",
-      "swatch": "S126-8836 KWS084 421182 BURNT TAHINI_FINAL_0094_swatch.jpg",
+      "swatch": "S126-8836 KWS084 421182 BURNT TAHINI_FINAL_swatch.jpg",
       "garment_type": "sweater",
       "crop": {
-        "x": 850,
-        "y": 1128,
+        "x": 1083,
+        "y": 1603,
         "width": 300,
         "height": 300
       }
     },
     {
       "filename": "S126-8404 KYS073 000001 BLACK_FINAL_ghost_0587.jpg",
-      "swatch": "S126-8404 KYS073 000001 BLACK_FINAL_0587_swatch.jpg",
+      "swatch": "S126-8404 KYS073 000001 BLACK_FINAL_swatch.jpg",
       "garment_type": "sweater",
       "crop": {
-        "x": 1087,
-        "y": 1095,
+        "x": 950,
+        "y": 918,
         "width": 300,
         "height": 300
       }
     },
     {
       "filename": "S126-8825 KYS071 000563 MAROON_FINAL_ghost_0410.jpg",
-      "swatch": "S126-8825 KYS071 000563 MAROON_FINAL_0410_swatch.jpg",
+      "swatch": "S126-8825 KYS071 000563 MAROON_FINAL_swatch.jpg",
       "garment_type": "sweater",
       "crop": {
-        "x": 794,
-        "y": 1269,
+        "x": 805,
+        "y": 1409,
         "width": 300,
         "height": 300
       }
     },
     {
+      "filename": "SS26-7682-LLS036-000102 IVORY_FINAL_ghost_detail_1497_main.jpg",
+      "swatch": "SS26-7682-LLS036-000102 IVORY_FINAL_swatch.jpg",
+      "garment_type": "belt",
+      "crop": {
+        "x": 676,
+        "y": 417,
+        "width": 190,
+        "height": 190
+      }
+    },
+    {
       "filename": "S126-8810 KKS818 000102 IVORY_FINAL_ghost_0456.jpg",
-      "swatch": "S126-8810 KKS818 000102 IVORY_FINAL_0456_swatch.jpg",
+      "swatch": "S126-8810 KKS818 000102 IVORY_FINAL_swatch.jpg",
       "garment_type": "sweater",
       "crop": {
-        "x": 940,
-        "y": 1268,
+        "x": 1014,
+        "y": 1204,
         "width": 300,
         "height": 300
       }
     },
     {
       "filename": "S126-3016 BSP033 370025 MONSOON HERON_FINAL_ghost_0078.jpg",
-      "swatch": "S126-3016 BSP033 370025 MONSOON HERON_FINAL_0078_swatch.jpg",
+      "swatch": "S126-3016 BSP033 370025 MONSOON HERON_FINAL_swatch.jpg",
       "garment_type": "dresses",
       "crop": {
-        "x": 904,
-        "y": 453,
+        "x": 894,
+        "y": 414,
         "width": 300,
         "height": 300
       }
     },
     {
+      "filename": "SS26-7170-LLS061-000605 GRENADINE_FINAL_ghost_front_0100_main.jpg",
+      "swatch": "SS26-7170-LLS061-000605 GRENADINE_FINAL_swatch.jpg",
+      "garment_type": "bag",
+      "crop": {
+        "x": 1308,
+        "y": 2573,
+        "width": 170,
+        "height": 170
+      }
+    },
+    {
+      "filename": "SS26-7166-ELP013-000907 PYTHON_FINAL_ghost_front_0161_main.jpg",
+      "swatch": "SS26-7166-ELP013-000907 PYTHON_FINAL_swatch.jpg",
+      "garment_type": "bag",
+      "crop": {
+        "x": 1053,
+        "y": 2565,
+        "width": 300,
+        "height": 300
+      }
+    },
+    {
+      "filename": "SS26-7690-LUC004-000265 GOLDEN OAK_FINAL_ghost_front_1089_main.jpg",
+      "swatch": "SS26-7690-LUC004-000265 GOLDEN OAK_FINAL_swatch.jpg",
+      "garment_type": "belt",
+      "crop": {
+        "x": 783,
+        "y": 1821,
+        "width": 120,
+        "height": 120
+      }
+    },
+    {
       "filename": "S126-8815 KWM013 000258 TOFFEE_FINAL_ghost_0174.jpg",
-      "swatch": "S126-8815 KWM013 000258 TOFFEE_FINAL_0174_swatch.jpg",
+      "swatch": "S126-8815 KWM013 000258 TOFFEE_FINAL_swatch.jpg",
       "garment_type": "sweater",
       "crop": {
-        "x": 858,
-        "y": 1246,
+        "x": 1018,
+        "y": 1157,
         "width": 300,
         "height": 300
       }
     },
     {
       "filename": "S126-8332 KYS923 000001 BLACK_FINAL_ghost_0450.jpg",
-      "swatch": "S126-8332 KYS923 000001 BLACK_FINAL_0450_swatch.jpg",
+      "swatch": "S126-8332 KYS923 000001 BLACK_FINAL_swatch.jpg",
       "garment_type": "dresses",
       "crop": {
-        "x": 1002,
-        "y": 1308,
+        "x": 1067,
+        "y": 757,
         "width": 300,
         "height": 300
+      }
+    },
+    {
+      "filename": "SS26-7166-LLS063-000001 BLACK_FINAL_ghost_front_0210_main.jpg",
+      "swatch": "SS26-7166-LLS063-000001 BLACK_FINAL_swatch.jpg",
+      "garment_type": "bag",
+      "crop": {
+        "x": 800,
+        "y": 2606,
+        "width": 300,
+        "height": 300
+      }
+    },
+    {
+      "filename": "F125-7681 LUC004 000227 CHOCOLATE_FINAL_ghost_detail_1319_main.jpg",
+      "swatch": "F125-7681 LUC004 000227 CHOCOLATE_FINAL_swatch.jpg",
+      "garment_type": "belt",
+      "crop": {
+        "x": 665,
+        "y": 1288,
+        "width": 210,
+        "height": 210
       }
     },
     {
@@ -120,8 +252,8 @@
       "swatch": "S126-1003 AWM041 000182 TAHINI_FINAL_swatch.jpg",
       "garment_type": "coat",
       "crop": {
-        "x": 681,
-        "y": 1316,
+        "x": 665,
+        "y": 2345,
         "width": 300,
         "height": 300
       }
@@ -131,10 +263,32 @@
       "swatch": "S126-1001 LUS005 000265 GOLDEN OAK_FINAL_swatch.jpg",
       "garment_type": "coat",
       "crop": {
-        "x": 787,
-        "y": 1539,
+        "x": 1357,
+        "y": 1254,
         "width": 300,
         "height": 300
+      }
+    },
+    {
+      "filename": "SS26-7170-LLS061-000001 BLACK_FINAL_ghost_front_0279_main.jpg",
+      "swatch": "SS26-7170-LLS061-000001 BLACK_FINAL_swatch.jpg",
+      "garment_type": "bag",
+      "crop": {
+        "x": 1285,
+        "y": 2575,
+        "width": 190,
+        "height": 190
+      }
+    },
+    {
+      "filename": "SS26-7689-LLS036-000001 BLACK_FINAL_ghost_detail_1628_main.jpg",
+      "swatch": "SS26-7689-LLS036-000001 BLACK_FINAL_swatch.jpg",
+      "garment_type": "belt",
+      "crop": {
+        "x": 570,
+        "y": 275,
+        "width": 230,
+        "height": 230
       }
     },
     {
@@ -142,8 +296,8 @@
       "swatch": "S126-8806 KWS083 000181 BONE MELANGE_FINAL_swatch.jpg",
       "garment_type": "sweater",
       "crop": {
-        "x": 834,
-        "y": 1413,
+        "x": 841,
+        "y": 1488,
         "width": 300,
         "height": 300
       }
@@ -153,10 +307,43 @@
       "swatch": "S126-1004 LHS008 000272 SEPIABROWN_FINAL_swatch.jpg",
       "garment_type": "coat",
       "crop": {
-        "x": 864,
-        "y": 1516,
+        "x": 844,
+        "y": 936,
         "width": 300,
         "height": 300
+      }
+    },
+    {
+      "filename": "SS26-7683-LUC006-000563 MAROON_FINAL_ghost_detail_1542_main.jpg",
+      "swatch": "SS26-7683-LUC006-000563 MAROON_FINAL_swatch.jpg",
+      "garment_type": "coat",
+      "crop": {
+        "x": 605,
+        "y": 740,
+        "width": 250,
+        "height": 250
+      }
+    },
+    {
+      "filename": "SS26-7692-LUC004-000228 CAPPUCCINO_FINAL_ghost_detail_1473_main.jpg",
+      "swatch": "SS26-7692-LUC004-000228 CAPPUCCINO_FINAL_swatch.jpg",
+      "garment_type": "belt",
+      "crop": {
+        "x": 606,
+        "y": 1065,
+        "width": 210,
+        "height": 210
+      }
+    },
+    {
+      "filename": "SS26-7170-ELP013-000907 PYTHON_FINAL_ghost_front_0473_main.jpg",
+      "swatch": "SS26-7170-ELP013-000907 PYTHON_FINAL_swatch.jpg",
+      "garment_type": "bag",
+      "crop": {
+        "x": 1273,
+        "y": 2604,
+        "width": 190,
+        "height": 190
       }
     },
     {
@@ -164,8 +351,8 @@
       "swatch": "S126-8825 KYS071 000001 BLACK_FINAL_swatch.jpg",
       "garment_type": "sweater",
       "crop": {
-        "x": 780,
-        "y": 1497,
+        "x": 787,
+        "y": 1313,
         "width": 300,
         "height": 300
       }
@@ -175,10 +362,10 @@
       "swatch": "S126-2012 LLS034 000563 MAROON_FINAL_swatch.jpg",
       "garment_type": "coat",
       "crop": {
-        "x": 858,
-        "y": 2016,
-        "width": 300,
-        "height": 300
+        "x": 1378,
+        "y": 1002,
+        "width": 200,
+        "height": 200
       }
     },
     {
@@ -186,8 +373,8 @@
       "swatch": "S126-8832 KWE054 000001 BLACK_FINAL_swatch.jpg",
       "garment_type": "sweater",
       "crop": {
-        "x": 995,
-        "y": 1013,
+        "x": 1068,
+        "y": 1030,
         "width": 300,
         "height": 300
       }
@@ -197,8 +384,8 @@
       "swatch": "S126-1004 LHS008 000260 CHESTNUT BROWN_FINAL_swatch.jpg",
       "garment_type": "coat",
       "crop": {
-        "x": 847,
-        "y": 1047,
+        "x": 822,
+        "y": 990,
         "width": 300,
         "height": 300
       }
@@ -208,10 +395,32 @@
       "swatch": "S126-8809 KWM014 000181 BONE MELANGE_FINAL_swatch.jpg",
       "garment_type": "sweater",
       "crop": {
-        "x": 832,
-        "y": 1203,
+        "x": 1041,
+        "y": 1265,
         "width": 300,
         "height": 300
+      }
+    },
+    {
+      "filename": "SS26-7689-LLS036-000102 IVORY_FINAL_ghost_front_0991_main.jpg",
+      "swatch": "SS26-7689-LLS036-000102 IVORY_FINAL_swatch.jpg",
+      "garment_type": "belt",
+      "crop": {
+        "x": 1459,
+        "y": 1795,
+        "width": 110,
+        "height": 110
+      }
+    },
+    {
+      "filename": "SS26-7683-LUC006-000214 BURNT CYPRESS_FINAL_ghost_detail_1523_main.jpg",
+      "swatch": "SS26-7683-LUC006-000214 BURNT CYPRESS_FINAL_swatch.jpg",
+      "garment_type": "belt",
+      "crop": {
+        "x": 632,
+        "y": 2012,
+        "width": 220,
+        "height": 220
       }
     },
     {
@@ -219,8 +428,8 @@
       "swatch": "S126-8817 KKS818 419008 JET MELANGE_FINAL_swatch.jpg",
       "garment_type": "sweater",
       "crop": {
-        "x": 1051,
-        "y": 1247,
+        "x": 1048,
+        "y": 1346,
         "width": 300,
         "height": 300
       }
@@ -230,10 +439,10 @@
       "swatch": "S126-3005 BSP033 371182 TAHINI GOOSE_FINAL_swatch.jpg",
       "garment_type": "dresses",
       "crop": {
-        "x": 895,
-        "y": 880,
-        "width": 300,
-        "height": 300
+        "x": 955,
+        "y": 919,
+        "width": 170,
+        "height": 170
       }
     },
     {
@@ -241,21 +450,43 @@
       "swatch": "S126-1003 AWM041 000214 BURNT CYRPESS_FINAL_swatch.jpg",
       "garment_type": "coat",
       "crop": {
-        "x": 616,
-        "y": 2328,
-        "width": 300,
-        "height": 300
+        "x": 618,
+        "y": 2324,
+        "width": 270,
+        "height": 270
+      }
+    },
+    {
+      "filename": "SS26-7152-LUC006-000265 GOLDEN OAK_FINAL_ghost_front_0630_main.jpg",
+      "swatch": "SS26-7152-LUC006-000265 GOLDEN OAK_FINAL_swatch.jpg",
+      "garment_type": "bag",
+      "crop": {
+        "x": 956,
+        "y": 2502,
+        "width": 260,
+        "height": 260
       }
     },
     {
       "filename": "S126-8815 KWM013 000008 JET MELANGE_FINAL_ghost_0163.jpg",
       "swatch": "S126-8815 KWM013 000008 JET MELANGE_FINAL_swatch.jpg",
-      "garment_type": "dresses",
+      "garment_type": "sweater",
       "crop": {
-        "x": 880,
-        "y": 1308,
+        "x": 1044,
+        "y": 1214,
         "width": 300,
         "height": 300
+      }
+    },
+    {
+      "filename": "SS26-7689-LLS036-000001 BLACK_FINAL_ghost_front_1011_main.jpg",
+      "swatch": "SS26-7689-LLS036-000001 BLACK_FINAL_swatch.jpg",
+      "garment_type": "belt",
+      "crop": {
+        "x": 801,
+        "y": 1832,
+        "width": 90,
+        "height": 90
       }
     },
     {
@@ -263,10 +494,21 @@
       "swatch": "S126-2013 AWM024 000008 JET MELANGE_FINAL_swatch.jpg",
       "garment_type": "jacket",
       "crop": {
-        "x": 873,
-        "y": 1634,
-        "width": 300,
-        "height": 300
+        "x": 946,
+        "y": 1688,
+        "width": 230,
+        "height": 230
+      }
+    },
+    {
+      "filename": "SS26-7167-CYS008-000479 MIDNIGHT_FINAL_ghost_front_0143_main.jpg",
+      "swatch": "SS26-7167-CYS008-000479 MIDNIGHT_FINAL_swatch.jpg",
+      "garment_type": "bag",
+      "crop": {
+        "x": 1107,
+        "y": 2742,
+        "width": 160,
+        "height": 160
       }
     },
     {
@@ -274,8 +516,8 @@
       "swatch": "S126-8805 KWS083 000102 IVORY_FINAL_swatch.jpg",
       "garment_type": "sweater",
       "crop": {
-        "x": 837,
-        "y": 971,
+        "x": 855,
+        "y": 958,
         "width": 300,
         "height": 300
       }
@@ -285,10 +527,32 @@
       "swatch": "S126-8312 KYS073 000001 BLACK_FINAL_swatch.jpg",
       "garment_type": "dresses",
       "crop": {
-        "x": 951,
-        "y": 1285,
+        "x": 1038,
+        "y": 948,
         "width": 300,
         "height": 300
+      }
+    },
+    {
+      "filename": "SS26-BEAN-SKINNY-BLACK_ghost_front_1176_main.jpg",
+      "swatch": "SS26-BEAN-SKINNY-BLACK_swatch.jpg",
+      "garment_type": "belt",
+      "crop": {
+        "x": 861,
+        "y": 1903,
+        "width": 70,
+        "height": 70
+      }
+    },
+    {
+      "filename": "SS26-7690-LLS036-000001 BLACK_FINAL_ghost_front_1099_main.jpg",
+      "swatch": "SS26-7690-LLS036-000001 BLACK_FINAL_swatch.jpg",
+      "garment_type": "belt",
+      "crop": {
+        "x": 1490,
+        "y": 1833,
+        "width": 110,
+        "height": 110
       }
     },
     {
@@ -296,10 +560,32 @@
       "swatch": "S126-8813 KWM014 000406 BERRY BLUE_FINAL_swatch.jpg",
       "garment_type": "sweater",
       "crop": {
-        "x": 870,
-        "y": 1474,
+        "x": 1085,
+        "y": 1507,
         "width": 300,
         "height": 300
+      }
+    },
+    {
+      "filename": "SS26-7692-LUC004-000228 CAPPUCCINO_FINAL_ghost_front_1027_main.jpg",
+      "swatch": "SS26-7692-LUC004-000228 CAPPUCCINO_FINAL_swatch.jpg",
+      "garment_type": "belt",
+      "crop": {
+        "x": 1348,
+        "y": 1819,
+        "width": 130,
+        "height": 130
+      }
+    },
+    {
+      "filename": "SS26-7689-LUC006-000214 BURNT CYPRESS_FINAL_ghost_detail_1429_main.jpg",
+      "swatch": "SS26-7689-LUC006-000214 BURNT CYPRESS_FINAL_swatch.jpg",
+      "garment_type": "belt",
+      "crop": {
+        "x": 1428,
+        "y": 1460,
+        "width": 200,
+        "height": 200
       }
     },
     {
@@ -307,19 +593,19 @@
       "swatch": "S126-3033 BSP029 373398 DESERT SAGE_FINAL_swatch.jpg",
       "garment_type": "dresses",
       "crop": {
-        "x": 871,
-        "y": 1321,
-        "width": 300,
-        "height": 300
+        "x": 1227,
+        "y": 666,
+        "width": 190,
+        "height": 190
       }
     },
     {
       "filename": "S126-2011 AWS011 000258 TOFFEE_FINAL_ghost_0640.jpg",
       "swatch": "S126-2011 AWS011 000258 TOFFEE_FINAL_swatch.jpg",
-      "garment_type": "jacket",
+      "garment_type": "coat",
       "crop": {
-        "x": 885,
-        "y": 2469,
+        "x": 910,
+        "y": 2485,
         "width": 300,
         "height": 300
       }
@@ -329,10 +615,21 @@
       "swatch": "S126-8810 KKS818 000454 ASH BLUE_FINAL_swatch.jpg",
       "garment_type": "sweater",
       "crop": {
-        "x": 1014,
-        "y": 1368,
+        "x": 1016,
+        "y": 1140,
         "width": 300,
         "height": 300
+      }
+    },
+    {
+      "filename": "SS26-7695-LLS036-000102 IVORY_FINAL_ghost_front_0935_main.jpg",
+      "swatch": "SS26-7695-LLS036-000102 IVORY_FINAL_swatch.jpg",
+      "garment_type": "belt",
+      "crop": {
+        "x": 828,
+        "y": 1802,
+        "width": 120,
+        "height": 120
       }
     },
     {
@@ -340,8 +637,8 @@
       "swatch": "S126-3050 ZYS008 000171 MACADAMIA_FINAL_swatch.jpg",
       "garment_type": "dresses",
       "crop": {
-        "x": 1031,
-        "y": 1031,
+        "x": 1072,
+        "y": 810,
         "width": 300,
         "height": 300
       }
@@ -349,12 +646,12 @@
     {
       "filename": "S126-2012 LLS056 000001 BLACK_FINAL_ghost_0597.jpg",
       "swatch": "S126-2012 LLS056 000001 BLACK_FINAL_swatch.jpg",
-      "garment_type": "coat",
+      "garment_type": "jacket",
       "crop": {
-        "x": 871,
-        "y": 1970,
-        "width": 300,
-        "height": 300
+        "x": 1059,
+        "y": 2062,
+        "width": 160,
+        "height": 160
       }
     },
     {
@@ -362,10 +659,21 @@
       "swatch": "S126-8303 KWS059 000689 PALE BLUSH_FINAL_swatch.jpg",
       "garment_type": "dresses",
       "crop": {
-        "x": 1087,
-        "y": 911,
+        "x": 1052,
+        "y": 851,
         "width": 300,
         "height": 300
+      }
+    },
+    {
+      "filename": "SS26-7165-STS002-000414 DANUBE_FINAL_ghost_front_0430_main.jpg",
+      "swatch": "SS26-7165-STS002-000414 DANUBE_FINAL_swatch.jpg",
+      "garment_type": "bag",
+      "crop": {
+        "x": 1530,
+        "y": 2523,
+        "width": 180,
+        "height": 180
       }
     },
     {
@@ -373,19 +681,41 @@
       "swatch": "S126-8303 KWS059 000406 BERRY BLUE_FINAL_swatch.jpg",
       "garment_type": "dresses",
       "crop": {
-        "x": 1043,
-        "y": 975,
+        "x": 1029,
+        "y": 1064,
         "width": 300,
         "height": 300
       }
     },
     {
+      "filename": "SS26-7164-LUC006-000479 MIDNIGHT_FINAL_ghost_front_1983_main.jpg",
+      "swatch": "SS26-7164-LUC006-000479 MIDNIGHT_FINAL_swatch.jpg",
+      "garment_type": "bag",
+      "crop": {
+        "x": 1036,
+        "y": 2512,
+        "width": 300,
+        "height": 300
+      }
+    },
+    {
+      "filename": "SS26-7689-LUC006-000214 BURNT CYPRESS_FINAL_ghost_front_0982_main.jpg",
+      "swatch": "SS26-7689-LUC006-000214 BURNT CYPRESS_FINAL_swatch.jpg",
+      "garment_type": "belt",
+      "crop": {
+        "x": 820,
+        "y": 1854,
+        "width": 60,
+        "height": 60
+      }
+    },
+    {
       "filename": "S126-4007 BSP029 373001 BLACK_FINAL_ghost_0409.jpg",
       "swatch": "S126-4007 BSP029 373001 BLACK_FINAL_swatch.jpg",
-      "garment_type": "dresses",
+      "garment_type": "tops",
       "crop": {
-        "x": 891,
-        "y": 1713,
+        "x": 1057,
+        "y": 1486,
         "width": 300,
         "height": 300
       }
@@ -393,12 +723,12 @@
     {
       "filename": "S126-1001 LLS055 000001 BLACK_FINAL_ghost_0269.jpg",
       "swatch": "S126-1001 LLS055 000001 BLACK_FINAL_swatch.jpg",
-      "garment_type": "coat",
+      "garment_type": "jacket",
       "crop": {
-        "x": 761,
-        "y": 1364,
-        "width": 300,
-        "height": 300
+        "x": 1410,
+        "y": 1140,
+        "width": 180,
+        "height": 180
       }
     },
     {
@@ -406,8 +736,8 @@
       "swatch": "S126-8101 KWS084 000258 TOFFEE_FINAL_swatch.jpg",
       "garment_type": "coat",
       "crop": {
-        "x": 779,
-        "y": 1545,
+        "x": 815,
+        "y": 1495,
         "width": 300,
         "height": 300
       }
@@ -417,19 +747,30 @@
       "swatch": "S126-8102 KWS065 000258 TOFFEE_FINAL_swatch.jpg",
       "garment_type": "coat",
       "crop": {
-        "x": 820,
-        "y": 1234,
+        "x": 801,
+        "y": 1510,
         "width": 300,
         "height": 300
       }
     },
     {
+      "filename": "SS26-7693-LUC004-000227 CHOCOLATE_FINAL_ghost_front_1193_main.jpg",
+      "swatch": "SS26-7693-LUC004-000227 CHOCOLATE_FINAL_swatch.jpg",
+      "garment_type": "belt",
+      "crop": {
+        "x": 986,
+        "y": 1853,
+        "width": 80,
+        "height": 80
+      }
+    },
+    {
       "filename": "S126-2011 AWS011 000259 OAK_FINAL_ghost_0785.jpg",
       "swatch": "S126-2011 AWS011 000259 OAK_FINAL_swatch.jpg",
-      "garment_type": "jacket",
+      "garment_type": "coat",
       "crop": {
-        "x": 936,
-        "y": 2263,
+        "x": 942,
+        "y": 2289,
         "width": 300,
         "height": 300
       }
@@ -439,8 +780,8 @@
       "swatch": "S126-8813 KWM014 000454 ASH BLUE_FINAL_swatch.jpg",
       "garment_type": "sweater",
       "crop": {
-        "x": 967,
-        "y": 1419,
+        "x": 1103,
+        "y": 1298,
         "width": 300,
         "height": 300
       }
@@ -450,8 +791,8 @@
       "swatch": "S126-8833 KCS042 351258 TOFFEE_FINAL_swatch.jpg",
       "garment_type": "sweater",
       "crop": {
-        "x": 1006,
-        "y": 1359,
+        "x": 1033,
+        "y": 1354,
         "width": 300,
         "height": 300
       }
@@ -461,8 +802,63 @@
       "swatch": "S126-8602 KKS818 000001 BLACK_FINAL_swatch.jpg",
       "garment_type": "pants",
       "crop": {
-        "x": 1273,
-        "y": 754,
+        "x": 1250,
+        "y": 483,
+        "width": 300,
+        "height": 300
+      }
+    },
+    {
+      "filename": "SS26-7153-LLC052-000214 BURNT CYPRESS_FINAL_ghost_front_0362_main.jpg",
+      "swatch": "SS26-7153-LLC052-000214 BURNT CYPRESS_FINAL_swatch.jpg",
+      "garment_type": "bag",
+      "crop": {
+        "x": 1712,
+        "y": 2512,
+        "width": 210,
+        "height": 210
+      }
+    },
+    {
+      "filename": "SS26-7160-LLC052-000228 CAPPUCCINO_FINAL_ghost_front_0845_main.jpg",
+      "swatch": "SS26-7160-LLC052-000228 CAPPUCCINO_FINAL_swatch.jpg",
+      "garment_type": "bag",
+      "crop": {
+        "x": 1045,
+        "y": 2686,
+        "width": 240,
+        "height": 240
+      }
+    },
+    {
+      "filename": "SS26-7693-LLS036-000001 BLACK_FINAL_ghost_detail_1350_main.jpg",
+      "swatch": "SS26-7693-LLS036-000001 BLACK_FINAL_swatch.jpg",
+      "garment_type": "belt",
+      "crop": {
+        "x": 1508,
+        "y": 1984,
+        "width": 190,
+        "height": 190
+      }
+    },
+    {
+      "filename": "SS26-7694-LLS036-000122 MOUTON_FINAL_ghost_detail_1377_main.jpg",
+      "swatch": "SS26-7694-LLS036-000122 MOUTON_FINAL_swatch.jpg",
+      "garment_type": "belt",
+      "crop": {
+        "x": 618,
+        "y": 445,
+        "width": 300,
+        "height": 300
+      }
+    },
+    {
+      "filename": "SS26-7163-LUC006-00042 STONE_FINAL_ghost_front_1939_main.jpg",
+      "swatch": "SS26-7163-LUC006-00042 STONE_FINAL_swatch.jpg",
+      "garment_type": "bag",
+      "crop": {
+        "x": 1056,
+        "y": 2510,
         "width": 300,
         "height": 300
       }
@@ -472,10 +868,43 @@
       "swatch": "S126-3029 JYP012 373001 BLACK_FINAL_swatch.jpg",
       "garment_type": "dresses",
       "crop": {
-        "x": 864,
-        "y": 548,
+        "x": 861,
+        "y": 1627,
         "width": 300,
         "height": 300
+      }
+    },
+    {
+      "filename": "SS26-7695-LLS036-000001 BLACK_FINAL_ghost_detail_1463_main.jpg",
+      "swatch": "SS26-7695-LLS036-000001 BLACK_FINAL_swatch.jpg",
+      "garment_type": "belt",
+      "crop": {
+        "x": 559,
+        "y": 1555,
+        "width": 300,
+        "height": 300
+      }
+    },
+    {
+      "filename": "SS26-7151-LUC006-000300 EUCALYPTUS_FINAL_ghost_front_0650_main.jpg",
+      "swatch": "SS26-7151-LUC006-000300 EUCALYPTUS_FINAL_swatch.jpg",
+      "garment_type": "bag",
+      "crop": {
+        "x": 891,
+        "y": 2331,
+        "width": 300,
+        "height": 300
+      }
+    },
+    {
+      "filename": "SS26-7691-LUC006-000214 BURNT CYPRESS_FINAL_ghost_detail_1362_main.jpg",
+      "swatch": "SS26-7691-LUC006-000214 BURNT CYPRESS_FINAL_swatch.jpg",
+      "garment_type": "belt",
+      "crop": {
+        "x": 1557,
+        "y": 1321,
+        "width": 240,
+        "height": 240
       }
     },
     {
@@ -483,8 +912,8 @@
       "swatch": "S126-3053 LLS057 000001 BLACK_FINAL_swatch.jpg",
       "garment_type": "dresses",
       "crop": {
-        "x": 1074,
-        "y": 1500,
+        "x": 1087,
+        "y": 1418,
         "width": 300,
         "height": 300
       }
@@ -494,21 +923,65 @@
       "swatch": "S126-3008 BSP029 373102 IVORY_FINAL_swatch.jpg",
       "garment_type": "dresses",
       "crop": {
-        "x": 808,
-        "y": 2458,
-        "width": 300,
-        "height": 300
+        "x": 901,
+        "y": 532,
+        "width": 220,
+        "height": 220
       }
     },
     {
       "filename": "S126-2002 AWS028 000001 BLACK_FINAL_ghost_0302.jpg",
       "swatch": "S126-2002 AWS028 000001 BLACK_FINAL_swatch.jpg",
-      "garment_type": "jacket",
+      "garment_type": "coat",
       "crop": {
-        "x": 841,
-        "y": 889,
-        "width": 300,
-        "height": 300
+        "x": 1307,
+        "y": 1947,
+        "width": 210,
+        "height": 210
+      }
+    },
+    {
+      "filename": "F125-7681 LUC004 000227 CHOCOLATE_FINAL_ghost_front_1254_main.jpg",
+      "swatch": "F125-7681 LUC004 000227 CHOCOLATE_FINAL_swatch.jpg",
+      "garment_type": "belt",
+      "crop": {
+        "x": 1163,
+        "y": 1790,
+        "width": 90,
+        "height": 90
+      }
+    },
+    {
+      "filename": "SS26-7682-LLC053-000001 BLACK PATENT CROC_FINAL_ghost_front_1168_main.jpg",
+      "swatch": "SS26-7682-LLC053-000001 BLACK PATENT CROC_FINAL_swatch.jpg",
+      "garment_type": "belt",
+      "crop": {
+        "x": 824,
+        "y": 1857,
+        "width": 100,
+        "height": 100
+      }
+    },
+    {
+      "filename": "SS26-7689-LLS036-000102 IVORY_FINAL_ghost_detail_1423_main.jpg",
+      "swatch": "SS26-7689-LLS036-000102 IVORY_FINAL_swatch.jpg",
+      "garment_type": "belt",
+      "crop": {
+        "x": 1433,
+        "y": 1436,
+        "width": 260,
+        "height": 260
+      }
+    },
+    {
+      "filename": "SS26-7691-LLS036-000257 SADDLE_FINAL_ghost_front_1286_main.jpg",
+      "swatch": "SS26-7691-LLS036-000257 SADDLE_FINAL_swatch.jpg",
+      "garment_type": "belt",
+      "crop": {
+        "x": 881,
+        "y": 1850,
+        "width": 70,
+        "height": 70
       }
     },
     {
@@ -516,8 +989,8 @@
       "swatch": "S126-8816 KWS059 000236 CAMEL_FINAL_swatch.jpg",
       "garment_type": "sweater",
       "crop": {
-        "x": 1078,
-        "y": 1004,
+        "x": 1080,
+        "y": 997,
         "width": 300,
         "height": 300
       }
@@ -525,10 +998,10 @@
     {
       "filename": "S126-8103 KWM014 000406 BERRY BLUE_FINAL_ghost_0102.jpg",
       "swatch": "S126-8103 KWM014 000406 BERRY BLUE_FINAL_swatch.jpg",
-      "garment_type": "jacket",
+      "garment_type": "sweater",
       "crop": {
-        "x": 778,
-        "y": 1567,
+        "x": 810,
+        "y": 1505,
         "width": 300,
         "height": 300
       }
@@ -536,12 +1009,23 @@
     {
       "filename": "S126-8826 KYS071 000563 MAROON_FINAL_ghost_0434.jpg",
       "swatch": "S126-8826 KYS071 000563 MAROON_FINAL_swatch.jpg",
-      "garment_type": "dresses",
+      "garment_type": "sweater",
       "crop": {
-        "x": 1087,
-        "y": 865,
+        "x": 1096,
+        "y": 1792,
         "width": 300,
         "height": 300
+      }
+    },
+    {
+      "filename": "SS26-7160-LLC052-000563 MAROON_FINAL_ghost_front_0793_main.jpg",
+      "swatch": "SS26-7160-LLC052-000563 MAROON_FINAL_swatch.jpg",
+      "garment_type": "bag",
+      "crop": {
+        "x": 1552,
+        "y": 2774,
+        "width": 120,
+        "height": 120
       }
     },
     {
@@ -549,8 +1033,8 @@
       "swatch": "S126-8801 KWS081 421272 SEPIA_FINAL_swatch.jpg",
       "garment_type": "sweater",
       "crop": {
-        "x": 911,
-        "y": 1640,
+        "x": 1044,
+        "y": 1201,
         "width": 300,
         "height": 300
       }
@@ -560,10 +1044,54 @@
       "swatch": "S126-4015 BSP031 418001 BLACK_FINAL_swatch.jpg",
       "garment_type": "tops",
       "crop": {
-        "x": 767,
-        "y": 2290,
+        "x": 1325,
+        "y": 1622,
         "width": 300,
         "height": 300
+      }
+    },
+    {
+      "filename": "SS26-7695-LLS036-000206 PRALINE_FINAL_ghost_front_0948_main.jpg",
+      "swatch": "SS26-7695-LLS036-000206 PRALINE_FINAL_swatch.jpg",
+      "garment_type": "belt",
+      "crop": {
+        "x": 836,
+        "y": 1829,
+        "width": 90,
+        "height": 90
+      }
+    },
+    {
+      "filename": "SS26-7683-LUC006-000214 BURNT CYPRESS_FINAL_ghost_front_1127_main.jpg",
+      "swatch": "SS26-7683-LUC006-000214 BURNT CYPRESS_FINAL_swatch.jpg",
+      "garment_type": "belt",
+      "crop": {
+        "x": 1158,
+        "y": 1836,
+        "width": 80,
+        "height": 80
+      }
+    },
+    {
+      "filename": "SS26-7167-LLE053-380001 BLACK-CRYSTAL_FINAL_ghost_front_0317_main.jpg",
+      "swatch": "SS26-7167-LLE053-380001 BLACK-CRYSTAL_FINAL_swatch.jpg",
+      "garment_type": "bag",
+      "crop": {
+        "x": 1112,
+        "y": 2668,
+        "width": 240,
+        "height": 240
+      }
+    },
+    {
+      "filename": "SS26-7168-LLS061-000001 BLACK_FINAL_ghost_front_0603_main.jpg",
+      "swatch": "SS26-7168-LLS061-000001 BLACK_FINAL_swatch.jpg",
+      "garment_type": "bag",
+      "crop": {
+        "x": 1414,
+        "y": 2752,
+        "width": 150,
+        "height": 150
       }
     },
     {
@@ -571,10 +1099,10 @@
       "swatch": "S126-8817 KKS818 419258 TOFFEE_FINAL_swatch.jpg",
       "garment_type": "sweater",
       "crop": {
-        "x": 1048,
-        "y": 1225,
-        "width": 300,
-        "height": 300
+        "x": 901,
+        "y": 1185,
+        "width": 600,
+        "height": 600
       }
     },
     {
@@ -582,10 +1110,65 @@
       "swatch": "S126-1008 AWM040 000182 TAHINI MELANGE_FINAL_swatch.jpg",
       "garment_type": "coat",
       "crop": {
-        "x": 1006,
-        "y": 2284,
+        "x": 1068,
+        "y": 2280,
         "width": 300,
         "height": 300
+      }
+    },
+    {
+      "filename": "SS26-7681-LLS036-000258 TOFFEE_FINAL_ghost_detail_1324_main.jpg",
+      "swatch": "SS26-7681-LLS036-000258 TOFFEE_FINAL_swatch.jpg",
+      "garment_type": "belt",
+      "crop": {
+        "x": 1510,
+        "y": 1797,
+        "width": 180,
+        "height": 180
+      }
+    },
+    {
+      "filename": "SS26-7690-LUC004-000365 THYME GREEN_FINAL_ghost_front_1145_main.jpg",
+      "swatch": "SS26-7690-LUC004-000365 THYME GREEN_FINAL_swatch.jpg",
+      "garment_type": "belt",
+      "crop": {
+        "x": 1457,
+        "y": 1812,
+        "width": 120,
+        "height": 120
+      }
+    },
+    {
+      "filename": "SS26-7681-LLS036-000258 TOFFEE_FINAL_ghost_front_1270_main.jpg",
+      "swatch": "SS26-7681-LLS036-000258 TOFFEE_FINAL_swatch.jpg",
+      "garment_type": "belt",
+      "crop": {
+        "x": 1156,
+        "y": 1780,
+        "width": 80,
+        "height": 80
+      }
+    },
+    {
+      "filename": "F325-7164 LHS007 000296 BROWN_FINAL_ghost_front_0894_main.jpg",
+      "swatch": "F325-7164 LHS007 000296 BROWN_FINAL_swatch.jpg",
+      "garment_type": "bag",
+      "crop": {
+        "x": 1093,
+        "y": 2281,
+        "width": 300,
+        "height": 300
+      }
+    },
+    {
+      "filename": "SS26-7168-LLS061-000122 MOUTON_FINAL_ghost_front_0248_main.jpg",
+      "swatch": "SS26-7168-LLS061-000122 MOUTON_FINAL_swatch.jpg",
+      "garment_type": "bag",
+      "crop": {
+        "x": 1302,
+        "y": 2399,
+        "width": 220,
+        "height": 220
       }
     },
     {
@@ -593,19 +1176,30 @@
       "swatch": "S126-4008 BSP024 418067 STORM_FINAL_swatch.jpg",
       "garment_type": "dresses",
       "crop": {
-        "x": 1269,
-        "y": 1717,
+        "x": 1205,
+        "y": 1668,
         "width": 300,
         "height": 300
       }
     },
     {
+      "filename": "SS26-7693-LLS036-000257 SADDLE_FINAL_ghost_front_1206_main.jpg",
+      "swatch": "SS26-7693-LLS036-000257 SADDLE_FINAL_swatch.jpg",
+      "garment_type": "belt",
+      "crop": {
+        "x": 1136,
+        "y": 1849,
+        "width": 70,
+        "height": 70
+      }
+    },
+    {
       "filename": "S126-8102 KWS065 000406 BERRY BLUE_FINAL_ghost_0250.jpg",
       "swatch": "S126-8102 KWS065 000406 BERRY BLUE_FINAL_swatch.jpg",
-      "garment_type": "coat",
+      "garment_type": "sweater",
       "crop": {
-        "x": 840,
-        "y": 1260,
+        "x": 798,
+        "y": 1525,
         "width": 300,
         "height": 300
       }
@@ -615,8 +1209,19 @@
       "swatch": "S126-8832 KWE054 000398 DESERT SAGE_FINAL_swatch.jpg",
       "garment_type": "sweater",
       "crop": {
-        "x": 963,
-        "y": 1005,
+        "x": 1020,
+        "y": 1029,
+        "width": 300,
+        "height": 300
+      }
+    },
+    {
+      "filename": "SS26-7695-LLS036-000206 PRALINE_FINAL_ghost_detail_1409_main.jpg",
+      "swatch": "SS26-7695-LLS036-000206 PRALINE_FINAL_swatch.jpg",
+      "garment_type": "belt",
+      "crop": {
+        "x": 539,
+        "y": 1059,
         "width": 300,
         "height": 300
       }
@@ -626,10 +1231,32 @@
       "swatch": "S126-8316 KYS950 000001 BLACK_FINAL_swatch.jpg",
       "garment_type": "dresses",
       "crop": {
-        "x": 1055,
-        "y": 1364,
+        "x": 1072,
+        "y": 1259,
         "width": 300,
         "height": 300
+      }
+    },
+    {
+      "filename": "SS26-7693-LLS036-000001 BLACK_FINAL_ghost_front_1232_main.jpg",
+      "swatch": "SS26-7693-LLS036-000001 BLACK_FINAL_swatch.jpg",
+      "garment_type": "belt",
+      "crop": {
+        "x": 1096,
+        "y": 1853,
+        "width": 70,
+        "height": 70
+      }
+    },
+    {
+      "filename": "SS26-7693-LUC004-000227 CHOCOLATE_FINAL_ghost_detail_1507_main.jpg",
+      "swatch": "SS26-7693-LUC004-000227 CHOCOLATE_FINAL_swatch.jpg",
+      "garment_type": "belt",
+      "crop": {
+        "x": 639,
+        "y": 1738,
+        "width": 230,
+        "height": 230
       }
     },
     {
@@ -637,8 +1264,41 @@
       "swatch": "S126-8803 KWS082 422181 BONE_FINAL_swatch.jpg",
       "garment_type": "sweater",
       "crop": {
-        "x": 1056,
-        "y": 1132,
+        "x": 808,
+        "y": 1112,
+        "width": 710,
+        "height": 710
+      }
+    },
+    {
+      "filename": "SS26-7167-CYS008-000649 HOLLY RED_FINAL_ghost_front_0084_main.jpg",
+      "swatch": "SS26-7167-CYS008-000649 HOLLY RED_FINAL_swatch.jpg",
+      "garment_type": "bag",
+      "crop": {
+        "x": 1137,
+        "y": 2876,
+        "width": 100,
+        "height": 100
+      }
+    },
+    {
+      "filename": "SS26-7694-LUC004-000265 GOLDEN OAK_FINAL_ghost_detail_1370_main.jpg",
+      "swatch": "SS26-7694-LUC004-000265 GOLDEN OAK_FINAL_swatch.jpg",
+      "garment_type": "belt",
+      "crop": {
+        "x": 613,
+        "y": 1574,
+        "width": 300,
+        "height": 300
+      }
+    },
+    {
+      "filename": "SS26-7690-LUC004-000365 THYME GREEN_FINAL_ghost_detail_1603_main.jpg",
+      "swatch": "SS26-7690-LUC004-000365 THYME GREEN_FINAL_swatch.jpg",
+      "garment_type": "belt",
+      "crop": {
+        "x": 1588,
+        "y": 1577,
         "width": 300,
         "height": 300
       }
@@ -648,8 +1308,41 @@
       "swatch": "S126-8816 KWS059 000406 BERRY BLUE_FINAL_swatch.jpg",
       "garment_type": "sweater",
       "crop": {
-        "x": 1081,
-        "y": 1006,
+        "x": 1083,
+        "y": 963,
+        "width": 300,
+        "height": 300
+      }
+    },
+    {
+      "filename": "SS26-7157-STS002-000689 PALE BLUSH_FINAL_ghost_front_0410_main.jpg",
+      "swatch": "SS26-7157-STS002-000689 PALE BLUSH_FINAL_swatch.jpg",
+      "garment_type": "bag",
+      "crop": {
+        "x": 1032,
+        "y": 2431,
+        "width": 300,
+        "height": 300
+      }
+    },
+    {
+      "filename": "SS26-7692-LLS036-000001 BLACK_FINAL_ghost_detail_1612_main.jpg",
+      "swatch": "SS26-7692-LLS036-000001 BLACK_FINAL_swatch.jpg",
+      "garment_type": "belt",
+      "crop": {
+        "x": 1530,
+        "y": 1455,
+        "width": 300,
+        "height": 300
+      }
+    },
+    {
+      "filename": "SS26-7160-ELP013-000907 PYTHON_FINAL_ghost_front_0816_main.jpg",
+      "swatch": "SS26-7160-ELP013-000907 PYTHON_FINAL_swatch.jpg",
+      "garment_type": "bag",
+      "crop": {
+        "x": 1109,
+        "y": 2658,
         "width": 300,
         "height": 300
       }
@@ -659,8 +1352,41 @@
       "swatch": "S126-8816 KWS059 000399 SMOKE PINK_FINAL_swatch.jpg",
       "garment_type": "sweater",
       "crop": {
-        "x": 1055,
-        "y": 1018,
+        "x": 1046,
+        "y": 990,
+        "width": 300,
+        "height": 300
+      }
+    },
+    {
+      "filename": "SS26-7681-LLS036-000001 BLACK_FINAL_ghost_front_1242_main.jpg",
+      "swatch": "SS26-7681-LLS036-000001 BLACK_FINAL_swatch.jpg",
+      "garment_type": "belt",
+      "crop": {
+        "x": 586,
+        "y": 1785,
+        "width": 80,
+        "height": 80
+      }
+    },
+    {
+      "filename": "SS26-7683-LUC006-000563 MAROON_FINAL_ghost_front_1000_main.jpg",
+      "swatch": "SS26-7683-LUC006-000563 MAROON_FINAL_swatch.jpg",
+      "garment_type": "belt",
+      "crop": {
+        "x": 821,
+        "y": 1815,
+        "width": 100,
+        "height": 100
+      }
+    },
+    {
+      "filename": "SS26-7166-LUC006-000298 RUSSET_FINAL_ghost_front_0337_main.jpg",
+      "swatch": "SS26-7166-LUC006-000298 RUSSET_FINAL_swatch.jpg",
+      "garment_type": "bag",
+      "crop": {
+        "x": 1312,
+        "y": 2565,
         "width": 300,
         "height": 300
       }
@@ -670,8 +1396,85 @@
       "swatch": "S126-2002 ACQ011 000397 GREEN LILY_FINAL_swatch.jpg",
       "garment_type": "jacket",
       "crop": {
-        "x": 1310,
-        "y": 1895,
+        "x": 1365,
+        "y": 1917,
+        "width": 240,
+        "height": 240
+      }
+    },
+    {
+      "filename": "SS26-BEAN-SKINNY-BLACK_ghost-detail_1449_main.jpg",
+      "swatch": "SS26-BEAN-SKINNY-BLACK_swatch.jpg",
+      "garment_type": "belt",
+      "crop": {
+        "x": 674,
+        "y": 2084,
+        "width": 200,
+        "height": 200
+      }
+    },
+    {
+      "filename": "SS26-7163-LLC052-000214 BURNT CYPRESS_FINAL_ghost_front_1962_main.jpg",
+      "swatch": "SS26-7163-LLC052-000214 BURNT CYPRESS_FINAL_swatch.jpg",
+      "garment_type": "bag",
+      "crop": {
+        "x": 659,
+        "y": 2087,
+        "width": 250,
+        "height": 250
+      }
+    },
+    {
+      "filename": "SS26-7694-LLS036-000122 MOUTON_FINAL_ghost_front_1116_main.jpg",
+      "swatch": "SS26-7694-LLS036-000122 MOUTON_FINAL_swatch.jpg",
+      "garment_type": "belt",
+      "crop": {
+        "x": 815,
+        "y": 1781,
+        "width": 120,
+        "height": 120
+      }
+    },
+    {
+      "filename": "SS26-7692-LLS036-000182 TAHINI_FINAL_ghost_detail_1486_main.jpg",
+      "swatch": "SS26-7692-LLS036-000182 TAHINI_FINAL_swatch.jpg",
+      "garment_type": "belt",
+      "crop": {
+        "x": 1524,
+        "y": 1691,
+        "width": 300,
+        "height": 300
+      }
+    },
+    {
+      "filename": "SS26-7695-LLS036-000001 BLACK_FINAL_ghost_front_0960_main.jpg",
+      "swatch": "SS26-7695-LLS036-000001 BLACK_FINAL_swatch.jpg",
+      "garment_type": "belt",
+      "crop": {
+        "x": 830,
+        "y": 1799,
+        "width": 100,
+        "height": 100
+      }
+    },
+    {
+      "filename": "SS26-7157-STS007-381182 TAHINI-SILVER_FINAL_ghost_front_0230_main.jpg",
+      "swatch": "SS26-7157-STS007-381182 TAHINI-SILVER_FINAL_swatch.jpg",
+      "garment_type": "bag",
+      "crop": {
+        "x": 941,
+        "y": 2423,
+        "width": 300,
+        "height": 300
+      }
+    },
+    {
+      "filename": "SS26-7163-LLC052-000214 BURNT CYPRESS_FINAL_ghost_front_0708_main.jpg",
+      "swatch": "SS26-7163-LLC052-000214 BURNT CYPRESS_FINAL_swatch.jpg",
+      "garment_type": "bag",
+      "crop": {
+        "x": 998,
+        "y": 2428,
         "width": 300,
         "height": 300
       }
@@ -681,8 +1484,19 @@
       "swatch": "S126-8602 KKS818 000008 JET MELANGE_FINAL_swatch.jpg",
       "garment_type": "pants",
       "crop": {
-        "x": 1239,
-        "y": 451,
+        "x": 1238,
+        "y": 550,
+        "width": 300,
+        "height": 300
+      }
+    },
+    {
+      "filename": "SS26-7694-LLS036-000001 BLACK_FINAL_ghost_detail_1386_main.jpg",
+      "swatch": "SS26-7694-LLS036-000001 BLACK_FINAL_swatch.jpg",
+      "garment_type": "belt",
+      "crop": {
+        "x": 624,
+        "y": 668,
         "width": 300,
         "height": 300
       }
@@ -692,8 +1506,8 @@
       "swatch": "S126-8316 KYS950 000182 TAHINI MELANGE_FINAL_swatch.jpg",
       "garment_type": "dresses",
       "crop": {
-        "x": 1066,
-        "y": 1423,
+        "x": 1009,
+        "y": 1171,
         "width": 300,
         "height": 300
       }
@@ -703,10 +1517,43 @@
       "swatch": "S126-3014 BYP057 373398 DESERT SAGE_FINAL_swatch.jpg",
       "garment_type": "dresses",
       "crop": {
-        "x": 910,
-        "y": 568,
+        "x": 937,
+        "y": 545,
+        "width": 250,
+        "height": 250
+      }
+    },
+    {
+      "filename": "SS26-7690-LLS036-000001 BLACK_FINAL_ghost_detail_1594_main.jpg",
+      "swatch": "SS26-7690-LLS036-000001 BLACK_FINAL_swatch.jpg",
+      "garment_type": "belt",
+      "crop": {
+        "x": 1579,
+        "y": 1792,
         "width": 300,
         "height": 300
+      }
+    },
+    {
+      "filename": "SS26-7681-LLS036-000001 BLACK_FINAL_ghost_detail_1341_main.jpg",
+      "swatch": "SS26-7681-LLS036-000001 BLACK_FINAL_swatch.jpg",
+      "garment_type": "belt",
+      "crop": {
+        "x": 1521,
+        "y": 2062,
+        "width": 130,
+        "height": 130
+      }
+    },
+    {
+      "filename": "SS26-7682-LLS036-000102 IVORY_FINAL_ghost_front_1071_main.jpg",
+      "swatch": "SS26-7682-LLS036-000102 IVORY_FINAL_swatch.jpg",
+      "garment_type": "belt",
+      "crop": {
+        "x": 1456,
+        "y": 1834,
+        "width": 90,
+        "height": 90
       }
     },
     {
@@ -714,8 +1561,8 @@
       "swatch": "S126-8829 KKS818 000181 BONE_FINAL_swatch.jpg",
       "garment_type": "sweater",
       "crop": {
-        "x": 1119,
-        "y": 1456,
+        "x": 971,
+        "y": 1306,
         "width": 300,
         "height": 300
       }
@@ -725,8 +1572,8 @@
       "swatch": "S126-8827 KWS059 420001 BLACK_FINAL_swatch.jpg",
       "garment_type": "sweater",
       "crop": {
-        "x": 793,
-        "y": 1211,
+        "x": 771,
+        "y": 1184,
         "width": 300,
         "height": 300
       }
@@ -736,10 +1583,21 @@
       "swatch": "S126-4003 BSP033 371102 IVORY GOOSE_FINAL_swatch.jpg",
       "garment_type": "dresses",
       "crop": {
-        "x": 1166,
-        "y": 1289,
+        "x": 1078,
+        "y": 1230,
         "width": 300,
         "height": 300
+      }
+    },
+    {
+      "filename": "SS26-7694-LUC004-000265 GOLDEN OAK_FINAL_ghost_front_1108_main.jpg",
+      "swatch": "SS26-7694-LUC004-000265 GOLDEN OAK_FINAL_swatch.jpg",
+      "garment_type": "belt",
+      "crop": {
+        "x": 824,
+        "y": 1782,
+        "width": 100,
+        "height": 100
       }
     },
     {
@@ -747,10 +1605,21 @@
       "swatch": "S126-8315 KYS071 000563 MAROON_FINAL_swatch.jpg",
       "garment_type": "dresses",
       "crop": {
-        "x": 1042,
-        "y": 1283,
+        "x": 1075,
+        "y": 1095,
         "width": 300,
         "height": 300
+      }
+    },
+    {
+      "filename": "SS26-7691-LLS036-000001 BLACK_FINAL_ghost_detail_1307_main.jpg",
+      "swatch": "SS26-7691-LLS036-000001 BLACK_FINAL_swatch.jpg",
+      "garment_type": "belt",
+      "crop": {
+        "x": 1555,
+        "y": 1338,
+        "width": 210,
+        "height": 210
       }
     },
     {
@@ -758,8 +1627,30 @@
       "swatch": "S126-6001 AWS028 000001 BLACK_FINAL_swatch.jpg",
       "garment_type": "pants",
       "crop": {
-        "x": 1254,
-        "y": 485,
+        "x": 1211,
+        "y": 441,
+        "width": 200,
+        "height": 200
+      }
+    },
+    {
+      "filename": "SS26-7159-STS007-381001 BLACK-SILVER_FINAL_ghost_front_0538_main.jpg",
+      "swatch": "SS26-7159-STS007-381001 BLACK-SILVER_FINAL_swatch.jpg",
+      "garment_type": "bag",
+      "crop": {
+        "x": 1114,
+        "y": 2520,
+        "width": 300,
+        "height": 300
+      }
+    },
+    {
+      "filename": "SS26-7690-LLS036-000258 TOFFEE_FINAL_ghost_detail_1588_main.jpg",
+      "swatch": "SS26-7690-LLS036-000258 TOFFEE_FINAL_swatch.jpg",
+      "garment_type": "belt",
+      "crop": {
+        "x": 1568,
+        "y": 1779,
         "width": 300,
         "height": 300
       }
@@ -769,8 +1660,52 @@
       "swatch": "S126-4001 BSP038 417001 BLACK_FINAL_swatch.jpg",
       "garment_type": "dresses",
       "crop": {
-        "x": 1039,
-        "y": 2246,
+        "x": 1092,
+        "y": 2026,
+        "width": 300,
+        "height": 300
+      }
+    },
+    {
+      "filename": "SS26-7692-LLS036-000182 TAHINI_FINAL_ghost_front_1021_main.jpg",
+      "swatch": "SS26-7692-LLS036-000182 TAHINI_FINAL_swatch.jpg",
+      "garment_type": "belt",
+      "crop": {
+        "x": 1350,
+        "y": 1840,
+        "width": 120,
+        "height": 120
+      }
+    },
+    {
+      "filename": "SS26-7164-LLC052-000228 CAPPUCCINO_FINAL_ghost_front_0391_main.jpg",
+      "swatch": "SS26-7164-LLC052-000228 CAPPUCCINO_FINAL_swatch.jpg",
+      "garment_type": "bag",
+      "crop": {
+        "x": 1105,
+        "y": 2303,
+        "width": 300,
+        "height": 300
+      }
+    },
+    {
+      "filename": "SS26-7691-LLS036-000257 SADDLE_FINAL_ghost_detail_1301_main.jpg",
+      "swatch": "SS26-7691-LLS036-000257 SADDLE_FINAL_swatch.jpg",
+      "garment_type": "belt",
+      "crop": {
+        "x": 1553,
+        "y": 1364,
+        "width": 190,
+        "height": 190
+      }
+    },
+    {
+      "filename": "SS26-7163-LUC006-00042 STONE_FINAL_ghost_front_0741_main.jpg",
+      "swatch": "SS26-7163-LUC006-00042 STONE_FINAL_swatch.jpg",
+      "garment_type": "bag",
+      "crop": {
+        "x": 599,
+        "y": 1815,
         "width": 300,
         "height": 300
       }
@@ -780,8 +1715,8 @@
       "swatch": "S126-8319 KYS923 000563 MAROON_FINAL_swatch.jpg",
       "garment_type": "dresses",
       "crop": {
-        "x": 1051,
-        "y": 1271,
+        "x": 1052,
+        "y": 1248,
         "width": 300,
         "height": 300
       }
@@ -789,12 +1724,23 @@
     {
       "filename": "S126-8826 KYS071 000001 BLACK_FINAL_ghost_0443.jpg",
       "swatch": "S126-8826 KYS071 000001 BLACK_FINAL_swatch.jpg",
-      "garment_type": "dresses",
+      "garment_type": "sweater",
       "crop": {
-        "x": 840,
-        "y": 1260,
+        "x": 1033,
+        "y": 914,
         "width": 300,
         "height": 300
+      }
+    },
+    {
+      "filename": "SS26-7682-ELP013-000907 PYTHON_FINAL_ghost_detail_1443_main.jpg",
+      "swatch": "SS26-7682-ELP013-000907 PYTHON_FINAL_swatch.jpg",
+      "garment_type": "belt",
+      "crop": {
+        "x": 649,
+        "y": 2096,
+        "width": 200,
+        "height": 200
       }
     },
     {
@@ -802,10 +1748,43 @@
       "swatch": "S126-8312 KYS073 000479 MIDNIGHT MELANGE_FINAL_swatch.jpg",
       "garment_type": "dresses",
       "crop": {
-        "x": 1056,
-        "y": 1274,
+        "x": 1061,
+        "y": 1248,
         "width": 300,
         "height": 300
+      }
+    },
+    {
+      "filename": "SS26-7682-LLC053-000001 BLACK PATENT CROC_FINAL_ghost_detail_1454_main.jpg",
+      "swatch": "SS26-7682-LLC053-000001 BLACK PATENT CROC_FINAL_swatch.jpg",
+      "garment_type": "belt",
+      "crop": {
+        "x": 1523,
+        "y": 2029,
+        "width": 220,
+        "height": 220
+      }
+    },
+    {
+      "filename": "SS26-7693-LLS036-000257 SADDLE_FINAL_ghost_detail_1513_main.jpg",
+      "swatch": "SS26-7693-LLS036-000257 SADDLE_FINAL_swatch.jpg",
+      "garment_type": "belt",
+      "crop": {
+        "x": 1536,
+        "y": 1968,
+        "width": 130,
+        "height": 130
+      }
+    },
+    {
+      "filename": "SS26-7153-LUC006-000479 MIDNIGHT_FINAL_ghost_front_0035_main.jpg",
+      "swatch": "SS26-7153-LUC006-000479 MIDNIGHT_FINAL_swatch.jpg",
+      "garment_type": "bag",
+      "crop": {
+        "x": 1459,
+        "y": 2703,
+        "width": 270,
+        "height": 270
       }
     },
     {
@@ -813,8 +1792,19 @@
       "swatch": "S126-8806 KWS083 000008 JET MELANGE_FINAL_swatch.jpg",
       "garment_type": "sweater",
       "crop": {
-        "x": 719,
-        "y": 1386,
+        "x": 1418,
+        "y": 1169,
+        "width": 300,
+        "height": 300
+      }
+    },
+    {
+      "filename": "SS26-7154-STS002-000171 MACADEMIA_FINAL_ghost_front_0552_main.jpg",
+      "swatch": "SS26-7154-STS002-000171 MACADEMIA_FINAL_swatch.jpg",
+      "garment_type": "bag",
+      "crop": {
+        "x": 1466,
+        "y": 2173,
         "width": 300,
         "height": 300
       }
@@ -824,10 +1814,10 @@
       "swatch": "S126-8814 KWM013 000258 TOFFEE_FINAL_swatch.jpg",
       "garment_type": "sweater",
       "crop": {
-        "x": 472,
-        "y": 1425,
-        "width": 300,
-        "height": 300
+        "x": 880,
+        "y": 1300,
+        "width": 200,
+        "height": 200
       }
     },
     {
@@ -835,10 +1825,21 @@
       "swatch": "S126-2003 AWS680 000563 MAROON_FINAL_swatch.jpg",
       "garment_type": "jacket",
       "crop": {
-        "x": 980,
-        "y": 2120,
-        "width": 300,
-        "height": 300
+        "x": 978,
+        "y": 1507,
+        "width": 220,
+        "height": 220
+      }
+    },
+    {
+      "filename": "SS26-7690-LLS036-000258 TOFFEE_FINAL_ghost_front_1059_main.jpg",
+      "swatch": "SS26-7690-LLS036-000258 TOFFEE_FINAL_swatch.jpg",
+      "garment_type": "belt",
+      "crop": {
+        "x": 1048,
+        "y": 1831,
+        "width": 120,
+        "height": 120
       }
     },
     {
@@ -846,10 +1847,32 @@
       "swatch": "S126-3019 BSP031 418102 IVORY_FINAL_swatch.jpg",
       "garment_type": "dresses",
       "crop": {
-        "x": 877,
-        "y": 2004,
-        "width": 300,
-        "height": 300
+        "x": 900,
+        "y": 1707,
+        "width": 250,
+        "height": 250
+      }
+    },
+    {
+      "filename": "SS26-7692-LLS036-000001 BLACK_FINAL_ghost_front_1052_main.jpg",
+      "swatch": "SS26-7692-LLS036-000001 BLACK_FINAL_swatch.jpg",
+      "garment_type": "belt",
+      "crop": {
+        "x": 1372,
+        "y": 1833,
+        "width": 110,
+        "height": 110
+      }
+    },
+    {
+      "filename": "SS26-7168-ELP013-000907 PYTHON_FINAL_ghost_front_0517_main.jpg",
+      "swatch": "SS26-7168-ELP013-000907 PYTHON_FINAL_swatch.jpg",
+      "garment_type": "bag",
+      "crop": {
+        "x": 1464,
+        "y": 2704,
+        "width": 210,
+        "height": 210
       }
     },
     {
@@ -857,8 +1880,30 @@
       "swatch": "S126-6022 AWS680 000563 MAROON_FINAL_swatch.jpg",
       "garment_type": "pants",
       "crop": {
-        "x": 1304,
-        "y": 464,
+        "x": 1249,
+        "y": 455,
+        "width": 260,
+        "height": 260
+      }
+    },
+    {
+      "filename": "SS26-7690-ELP013-000907 PYTHON_FINAL_ghost_detail_1564_main.jpg",
+      "swatch": "SS26-7690-ELP013-000907 PYTHON_FINAL_swatch.jpg",
+      "garment_type": "belt",
+      "crop": {
+        "x": 1563,
+        "y": 1728,
+        "width": 300,
+        "height": 300
+      }
+    },
+    {
+      "filename": "SS26-7166-LUC006-000563 MAROON_FINAL_ghost_front_0055_main.jpg",
+      "swatch": "SS26-7166-LUC006-000563 MAROON_FINAL_swatch.jpg",
+      "garment_type": "bag",
+      "crop": {
+        "x": 1379,
+        "y": 2581,
         "width": 300,
         "height": 300
       }
@@ -866,10 +1911,10 @@
     {
       "filename": "S126-8502 KWM013 000008 JET MELANGE_FINAL_ghost_0178.jpg",
       "swatch": "S126-8502 KWM013 000008 JET MELANGE_FINAL_swatch.jpg",
-      "garment_type": "sweater",
+      "garment_type": "skirt",
       "crop": {
-        "x": 1051,
-        "y": 1295,
+        "x": 1165,
+        "y": 1042,
         "width": 300,
         "height": 300
       }
@@ -879,8 +1924,19 @@
       "swatch": "S126-8332 KYS923 000562 DUSTY LILAC_FINAL_swatch.jpg",
       "garment_type": "dresses",
       "crop": {
-        "x": 1063,
-        "y": 1344,
+        "x": 1075,
+        "y": 608,
+        "width": 300,
+        "height": 300
+      }
+    },
+    {
+      "filename": "SS26-7153-LLE052-381001 BLACK-SILVER_FINAL_ghost_front_0191_main.jpg",
+      "swatch": "SS26-7153-LLE052-381001 BLACK-SILVER_FINAL_swatch.jpg",
+      "garment_type": "bag",
+      "crop": {
+        "x": 697,
+        "y": 2610,
         "width": 300,
         "height": 300
       }
@@ -890,10 +1946,10 @@
       "swatch": "S126-3052 BSP024 418001 BLACK_FINAL_swatch.jpg",
       "garment_type": "dresses",
       "crop": {
-        "x": 1082,
-        "y": 1494,
-        "width": 300,
-        "height": 300
+        "x": 924,
+        "y": 632,
+        "width": 240,
+        "height": 240
       }
     },
     {
@@ -901,8 +1957,8 @@
       "swatch": "S126-8810 KKS818 000563 MAROON_FINAL_swatch.jpg",
       "garment_type": "sweater",
       "crop": {
-        "x": 1056,
-        "y": 1421,
+        "x": 1070,
+        "y": 1402,
         "width": 300,
         "height": 300
       }
@@ -912,8 +1968,19 @@
       "swatch": "S126-3020 BYS088 000172 TAPIOCA_FINAL_swatch.jpg",
       "garment_type": "dresses",
       "crop": {
-        "x": 1062,
-        "y": 1492,
+        "x": 1024,
+        "y": 1399,
+        "width": 300,
+        "height": 300
+      }
+    },
+    {
+      "filename": "SS26-7160-LLE054-381182 TAHINI-SILVER_FINAL_ghost_front_0870_main.jpg",
+      "swatch": "SS26-7160-LLE054-381182 TAHINI-SILVER_FINAL_swatch.jpg",
+      "garment_type": "bag",
+      "crop": {
+        "x": 1059,
+        "y": 2661,
         "width": 300,
         "height": 300
       }
@@ -923,8 +1990,8 @@
       "swatch": "S126-8315 KYS071 000001 BLACK_FINAL_swatch.jpg",
       "garment_type": "dresses",
       "crop": {
-        "x": 1062,
-        "y": 1515,
+        "x": 1073,
+        "y": 538,
         "width": 300,
         "height": 300
       }
@@ -934,10 +2001,10 @@
       "swatch": "S126-8103 KWM014 000181 BONE MELANGE_FINAL_swatch.jpg",
       "garment_type": "sweater",
       "crop": {
-        "x": 1326,
-        "y": 1169,
-        "width": 300,
-        "height": 300
+        "x": 829,
+        "y": 1750,
+        "width": 260,
+        "height": 260
       }
     },
     {
@@ -945,8 +2012,8 @@
       "swatch": "S126-8307 KYS029 000649 HOLLY RED_FINAL_swatch.jpg",
       "garment_type": "dresses",
       "crop": {
-        "x": 1082,
-        "y": 974,
+        "x": 1032,
+        "y": 987,
         "width": 300,
         "height": 300
       }
@@ -956,8 +2023,41 @@
       "swatch": "S126-3017 BSP038 417102 IVORY_FINAL_swatch.jpg",
       "garment_type": "dresses",
       "crop": {
-        "x": 867,
-        "y": 1826,
+        "x": 1030,
+        "y": 1163,
+        "width": 300,
+        "height": 300
+      }
+    },
+    {
+      "filename": "SS26-7691-LLS036-000001 BLACK_FINAL_ghost_front_1221_main.jpg",
+      "swatch": "SS26-7691-LLS036-000001 BLACK_FINAL_swatch.jpg",
+      "garment_type": "belt",
+      "crop": {
+        "x": 877,
+        "y": 1836,
+        "width": 70,
+        "height": 70
+      }
+    },
+    {
+      "filename": "SS26-7152-LLS063-000130 TAN_FINAL_ghost_front_0677_main.jpg",
+      "swatch": "SS26-7152-LLS063-000130 TAN_FINAL_swatch.jpg",
+      "garment_type": "bag",
+      "crop": {
+        "x": 1066,
+        "y": 2456,
+        "width": 300,
+        "height": 300
+      }
+    },
+    {
+      "filename": "SS26-7167-LLC053-000001 BLACK PATENT CROC_FINAL_ghost_front_0296_main.jpg",
+      "swatch": "SS26-7167-LLC053-000001 BLACK PATENT CROC_FINAL_swatch.jpg",
+      "garment_type": "bag",
+      "crop": {
+        "x": 1004,
+        "y": 2638,
         "width": 300,
         "height": 300
       }
@@ -967,8 +2067,19 @@
       "swatch": "S125-8330 KYS021 000482 CADET BLUE_FINAL_swatch.jpg",
       "garment_type": "dresses",
       "crop": {
-        "x": 1076,
-        "y": 1551,
+        "x": 1059,
+        "y": 873,
+        "width": 300,
+        "height": 300
+      }
+    },
+    {
+      "filename": "SS26-7164-LLC052-000228 CAPPUCCINO_FINAL_ghost_front_2003_main.jpg",
+      "swatch": "SS26-7164-LLC052-000228 CAPPUCCINO_FINAL_swatch.jpg",
+      "garment_type": "bag",
+      "crop": {
+        "x": 1445,
+        "y": 2489,
         "width": 300,
         "height": 300
       }
@@ -978,10 +2089,32 @@
       "swatch": "S126-8817 KKS818 419406 BERRY BLUE_FINAL_swatch.jpg",
       "garment_type": "sweater",
       "crop": {
-        "x": 1083,
-        "y": 1234,
+        "x": 917,
+        "y": 1220,
+        "width": 550,
+        "height": 550
+      }
+    },
+    {
+      "filename": "SS26-7695-LLS036-000102 IVORY_FINAL_ghost_detail_1395_main.jpg",
+      "swatch": "SS26-7695-LLS036-000102 IVORY_FINAL_swatch.jpg",
+      "garment_type": "belt",
+      "crop": {
+        "x": 539,
+        "y": 1674,
         "width": 300,
         "height": 300
+      }
+    },
+    {
+      "filename": "SS26-7682-ELP013-000907 PYTHON_FINAL_ghost_front_1078_main.jpg",
+      "swatch": "SS26-7682-ELP013-000907 PYTHON_FINAL_swatch.jpg",
+      "garment_type": "belt",
+      "crop": {
+        "x": 864,
+        "y": 1855,
+        "width": 80,
+        "height": 80
       }
     }
   ]
