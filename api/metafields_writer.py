@@ -24,7 +24,7 @@ def load_product_map(capsule: str):
         raise FileNotFoundError("product_map.json missing (CPI → Product GID mapping).")
     return json.load(open(mapping_path))
 
-def main(capsule: str, dry_run: bool = False, debug_cpi: str = None):
+def main(capsule: str, dry_run: bool = False, debug_cpi: str = None, cpis: list | None = None):
     CDN_PREFIX = 'https://cdn.shopify.com/s/files/1/0148/9561/2004/files/'
     client = ShopifyClient()
     
@@ -43,6 +43,14 @@ def main(capsule: str, dry_run: bool = False, debug_cpi: str = None):
     existing_files_map = client.get_staged_uploads_map()
     if dry_run or debug_cpi:
         print("[run mode] The script will now check against the list of existing files.")
+
+    if cpis:
+        print(f"--- Running in CPI filter mode for {len(cpis)} CPI(s) ---")
+        # Filter the product_data_map to only include items from the --cpis list
+        product_data_map = {cpi: data for cpi, data in product_data_map.items() if cpi in cpis}
+        if not product_data_map:
+            print("No matching CPIs found from your list. Exiting.")
+            return
 
     if debug_cpi:
         print("\n--- Full Existing Files Map (first 10 items for brevity) ---")
@@ -119,5 +127,6 @@ if __name__ == "__main__":
     parser.add_argument("--capsule", required=True)
     parser.add_argument("--dry-run", action="store_true")
     parser.add_argument("--debug-cpi", help="Run a focused debug test on a single CPI.")
+    parser.add_argument('--cpis', nargs='+', help='(Optional) A list of specific CPIs to process.')
     args = parser.parse_args()
     main(args.capsule, args.dry_run, args.debug_cpi)

@@ -22,12 +22,20 @@ def extract_unique_style_tags(csv_path: pathlib.Path):
                 tags.add(t)
     return sorted(tags)
 
-def main(capsule: str, dry_run: bool = False):
+def main(capsule: str, dry_run: bool = False, styles: list | None = None):
     # Load styles from the enriched CSV for this capsule
     csv_path = pathlib.Path(f"capsules/{capsule}/outputs/poc_shopify_import_enriched.csv")
     if not csv_path.exists():
         raise FileNotFoundError(f"Missing enriched CSV: {csv_path}")
     styles_to_create = extract_unique_style_tags(csv_path)
+
+    if styles:
+        print(f"--- Filtering for {len(styles)} specific style(s) ---")
+        styles_to_create = styles_to_create.intersection(set(styles))
+        if not styles_to_create:
+            print("No matching styles found from your list. Exiting.")
+            return
+
     print(f"Found {len(styles_to_create)} unique style tags to process.")
 
     client = ShopifyClient()
@@ -81,8 +89,11 @@ def main(capsule: str, dry_run: bool = False):
     print(f"🗂  Collections log → {log_path}")
 
 if __name__ == "__main__":
-    p = argparse.ArgumentParser()
-    p.add_argument("--capsule", required=True)
-    p.add_argument("--dry-run", action="store_true")
-    args = p.parse_args()
-    main(args.capsule, dry_run=args.dry_run)
+    parser = argparse.ArgumentParser(description="Create smart collections based on style tags.")
+    parser.add_argument('--capsule', required=True, help='Capsule name (e.g., "S126") to filter CSV.')
+    parser.add_argument('--dry-run', action='store_true', help='Run script without creating collections.')
+    parser.add_argument('--styles', nargs='+', help='(Optional) A list of specific style_TAGS to process.')
+    
+    args = parser.parse_args()
+
+    main(capsule=args.capsule, dry_run=args.dry_run, styles=args.styles)
