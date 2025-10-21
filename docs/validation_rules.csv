@@ -1,0 +1,67 @@
+| Field                                                | Normal / Allowed Behavior                                                                       | Notes                                                           |
+| ---------------------------------------------------- | ----------------------------------------------------------------------------------------------- | --------------------------------------------------------------- |
+| **Handle**                                           | Repeated (duplicate) values are normal and expected for multi-variant products                  | Must appear in *contiguous blocks* (grouped variants)           |
+| **Title**                                            | Title case, only allowed on parent row; duplicates not allowed across variants                  | Variant rows may leave blank — Shopify inherits from parent     |
+| **Body (HTML)**                                      | Populated only on first (parent) row                                                            | Variant rows may be empty                                       |
+| **Vendor**                                           | Repeated or static (“Altuzarra”) across all parent rows                                         | Shopify uses it as a grouping filter                            |
+| **Product Category**                                 | Added during capsule scaffold; parent row only; must match export template                      | Must match taxonomy; consistent casing                          |
+| **Type**                                             | Custom type added during capsule scaffolding; parent row only; must match export template       | Must match taxonomy; consistent casing                          |
+| **Tags**                                             | Comma-separated string; must follow internal system tags (`style_`, `color_`, `collection_...`) | Shopify deduplicates automatically on import                    |
+| **Published**                                        | Must be set to "FALSE"                                                                          | Staging imports must be kept as FALSE                           |
+| **Option1 Name**                                     | “Size” attribute                                                                                | Shopify requires at least one option if multiple variants exist |
+| **Option1 Value**                                    | Alpha sizes (S, M, L, XL) or numeric (30, 32, 34, etc.)                                         | Allowed if the product is single-variant or image-only          |
+| **Option1 Linked**                                   | Intentionally left blank                                                                        |                                                                 |
+| **Option2 Name**                                     | "Color" attribute                                                                               | Shopify requires at least one option if multiple variants exist |
+| **Option2 Value**                                    | Internal color naming                                                                           | Commonly “Color” with value “Storm” etc.                        |
+| **Option2 Linked**                                   | Intentionally left blank                                                                        |                                                                 |
+| **Option3 Name**                                     | Not used                                                                                        |                                                                 |
+| **Option3 Value**                                    | Not used                                                                                        |                                                                 |
+| **Option3 Linked**                                   | Not used                                                                                        |                                                                 |
+| **Variant SKU**                                      | should always contain a 12-digit number                                                         | SKUs can repeat across products if unique at variant scope      |
+| **Variant Grams**                                    | Should match export csv template; cannot be blank                                               | Shopify defaults to 0 grams if missing                          |
+| **Variant Inventory**                                | set to "shopify"                                                                                | Cannot be blank; client uses "shopify"                          |
+| **Variant Inventory Policy**                         | alwasy set to “deny”                                                                            |                                                                 |
+| **Variant Fulfillment Service**                      | always set to “manual”                                                                          | “manual” typical for fashion workflows                          |
+| **Variant Price**                                    | Numeric only (e.g., “550.00”); no currency symbol; every cell must have a value                 |                                                                 |
+| **Variant Compare**                                  | Not used                                                                                        | Blank allowed if no sale price                                  |
+| **Variant Requires Shipping**                        | always set to “TRUE”; may be blank (defaults TRUE)                                              |                                                                 |
+| **Variant Taxable**                                  | always set to “TRUE”; may be blank (defaults TRUE)                                              |                                                                 |
+| **Variant Barcode**                                  | Matches Variant SKU                                                                             | Shopify accepts duplicates                                      |
+| **Image Src**                                        | Duplicate entries not allowed; if empty Option 1 Value or Option 2 Value must have a value      | Blank allowed for size-only variants                            |
+| **Image Position**                                   | Sequential (1..N), may repeat across handles; but duplicaes not allowed at variant level        | Shopify will renumber automatically if blank                    |
+| **Alt Image Columns** (`Image Alt Text`)             | Optional                                                                                        | Ignored if missing                                              |
+| **Metafields (e.g. product.metafields.altuzarra.*)** | Populated only on parent row; not currently updated via csv import                              | Allowed blanks in all rows                                      |
+| **Compare-at Price / ***                             | Not used                                                                                        | Client uses country specific price and compare at price; not US |
+| **Title casing**                                     | Variability in capitalization is accepted                                                       | Shopify normalizes in UI                                        |
+
+| Field                                    | Invalid / Anomalous Behavior                                           | Why It’s Problematic                                         |
+| ---------------------------------------- | ---------------------------------------------------------------------- | ------------------------------------------------------------ |
+| **Handle**                               | Does not use kebab case                                                | Breaks variant grouping — Shopify creates duplicate products |
+|                                          | Contains spaces or uppercase letters                                   | Shopify requires lowercase, hyphenated handles               |
+|                                          | does not match title/color pattern                                     | Title + Option Value 2 (lowercase, no whitespace, kebab case)|
+|                                          | exists in other columns or across more than one variant                | must adhere to one variant only                              |
+| **Title**                                | Blank on all rows for a handle                                         | Product will import with no title                            |
+| **Body (HTML)**                          | Contains malformed HTML (unclosed tags)                                | Shopify importer may truncate description                    |
+| **Vendor**                               | Not "Altuzarra"                                                        | Breaks vendor consistency; flagged as anomaly                |
+| **Product Category**                     | Does not match export template CSV                                     | Shopify cannot assign multiple categories to one product     |
+| **Tags**                                 | Newlines, tabs, or semicolons; does not follow tags schema             | Breaks parsing; commas only are valid separators             |
+| **Option1 Name**                         | Must have "Size" on parent row                                         | Shopify requires at least one variant attribute              |
+| **Option1 Value**                        | Blank *and* Image Src also blank → anomaly                             | Indicates orphan row with no variant or image                |
+| **Option2 Name**                         | Must have "Color" on parent row                                        | Can create unexpected “blank” variants in admin              |
+| **Option2 Value**                        | Blank *and* Image Src also blank → anomaly                             | Indicates orphan row with no variant or image                |
+| **Variant SKU**                          | Duplicates across more than one variant                                | Shopify rejects duplicate SKUs in one product                |
+| **Variant Barcode**                      | Non-numeric string in numeric-only schema; duplicates across variants  | Causes errors in third-party integrations                    |
+| **Variant Price**                        | Non-numeric or formatted (e.g. “$550”)                                 | Must be raw number only                                      |
+| **Variant Fulfillment Service**          | Not "manual"                                                           |                                                              |
+| **Variant Requires Shipping / Taxable**  | Not "TRUE"                                                             | Must be TRUE(case-insensitive)                               |
+| **Image Src**                            | Blank on all rows                                                      | Product will import with no media                            |
+|                                          | References non-existent URL or filename                                | Broken link; image won’t appear in Shopify                   |
+|                                          | Relative path (e.g., `images/photo.jpg`)                               | Shopify requires absolute URL                                |
+| **Image Position**                       | Duplicated sequence numbers per handle                                 | Shopify reorders arbitrarily                                 |
+| **Metafields**                           | Contain invalid key syntax (`product.metafields.altuzarra.color name`) | This is handled via API; can be left blank                   |
+| **Published**                            | Not "FALSE"                                                            | Must be FALSE                                                |
+| **Handle / SKU mismatch**                | SKU belonging to one handle appears under another                      | Causes variant leakage across products                       |
+| **Encoding**                             | Non-UTF-8 characters                                                   | Shopify rejects file or corrupts symbols                     |
+| **File Structure**                       | Missing mandatory columns (Handle, Title, Option1 Name, Variant Price) | File won’t import                                            |
+| **Non-contiguous rows with same Handle** | Breaks variant grouping                                                | Creates duplicate product entries                            |
+| **Header case differences**              | “option1 name” vs “Option1 Name”                                       | Shopify is case-sensitive on header titles                   |

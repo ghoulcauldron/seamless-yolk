@@ -1,219 +1,202 @@
-#!/usr/bin/env python3
-"""
-enrich_shopify_import.py
-Refactored proof-of-concept.
-• Reads Shopify export, tracker, and images manifest for a given capsule
-• Extracts Product ID from Shopify Tags → tracker lookup
-• Restores original tag-building and image-mapping behaviour
-"""
+import pandas as pd
+import re
+import json
+import pathlib
+import argparse
+from datetime import datetime
 
-import argparse, json, pathlib, pandas as pd, re
+# --- NATIVE TRANSLATION of Shopify Tags Guide.csv ---
+CATEGORY_TAGS_MAP = {
+    1: "collection_ready-to-wear, collection_jackets, collection_new-arrivals",
+    2: "collection_ready-to-wear, collection_jackets, collection_new-arrivals",
+    3: "collection_ready-to-wear, collection_dresses, collection_new-arrivals",
+    4: "collection_ready-to-wear, collection_tops, collection_new-arrivals",
+    5: "collection_ready-to-wear, collection_skirts, collection_new-arrivals",
+    6: "collection_ready-to-wear, collection_pants, collection_new-arrivals",
+    9: "collection_accessories, collection_SHOES, collection_new-arrivals",
+    70: "collection_accessories, collection_Bags, collection_new-arrivals",
+    71: "collection_accessories, collection_Bags, collection_new-arrivals",
+    76: "collection_accessories, collection_belts, collection_new-arrivals",
+    79: "collection_accessories, collection_Jewelry, collection_new-arrivals",
+    81: "collection_ready-to-wear, collection_knitwear, collection_jackets, collection_new-arrivals",
+    82: "collection_ready-to-wear, collection_knitwear, collection_jackets, collection_new-arrivals",
+    83: "collection_ready-to-wear, collection_knitwear, collection_dresses, collection_new-arrivals",
+    84: "collection_ready-to-wear, collection_knitwear, collection_tops, collection_new-arrivals",
+    85: "collection_ready-to-wear, collection_knitwear, collection_skirts, collection_new-arrivals",
+    86: "collection_ready-to-wear, collection_knitwear, collection_pants, collection_new-arrivals",
+    88: "collection_ready-to-wear, collection_knitwear, collection_tops, collection_new-arrivals"
+}
 
-# ---------------------------------------------------------------------
-# Helpers
-# ---------------------------------------------------------------------
-
-def load_manifest(capsule: str) -> pd.DataFrame:
-    path = pathlib.Path(f"capsules/{capsule}/manifests/images_manifest.jsonl")
-    if not path.exists():
-        raise FileNotFoundError(f"Manifest not found: {path}")
-    recs = [json.loads(line) for line in path.read_text().splitlines() if line.strip()]
-    return pd.DataFrame(recs)
-
+CPI_PATTERN_FROM_PRODUCT_ID = re.compile(r"(\d{3,5})\s+[A-Z0-9]+\s+(\d{6})")
 
 def extract_product_id_from_tags(tags_str: str) -> str | None:
-    """Extract Product ID from Shopify tags string (as in original POC)."""
-    if not isinstance(tags_str, str):
-        return None
-    tags = [t.strip() for t in tags_str.split(",") if t.strip()]
-    # Product ID tag usually contains at least three space-separated words
-    for tag in tags:
-        if len(tag.split()) >= 3:
-            return tag
+    if not isinstance(tags_str, str): return None
+    for tag in tags_str.split(','):
+        tag = tag.strip()
+        if tag.count(' ') >= 2: return tag
     return None
 
+def extract_cpi_from_product_id(product_id: str) -> str | None:
+    if not product_id: return None
+    match = CPI_PATTERN_FROM_PRODUCT_ID.search(product_id)
+    if match:
+        style, color = match.groups()
+        return f"{style}-{color}"
+    return None
 
-def build_tags(source_record: pd.Series, existing_tags_str: str) -> str:
-    """Re-uses the original tag logic for style, color, season, and collections."""
-    category_tags_map = {
-        1: "collection_ready-to-wear, collection_jackets, collection_new-arrivals",
-        2: "collection_ready-to-wear, collection_jackets, collection_new-arrivals",
-        3: "collection_ready-to-wear, collection_dresses, collection_new-arrivals",
-        4: "collection_ready-to-wear, collection_tops, collection_new-arrivals",
-        5: "collection_ready-to-wear, collection_skirts, collection_new-arrivals",
-        6: "collection_ready-to-wear, collection_pants, collection_new-arrivals",
-        9: "collection_accessories, collection_SHOES, collection_new-arrivals",
-        70: "collection_accessories, collection_Bags, collection_new-arrivals",
-        71: "collection_accessories, collection_Bags, collection_new-arrivals",
-        76: "collection_accessories, collection_belts, collection_new-arrivals",
-        79: "collection_accessories, collection_Jewelry, collection_new-arrivals",
-        81: "collection_ready-to-wear, collection_knitwear, collection_jackets, collection_new-arrivals",
-        82: "collection_ready-to-wear, collection_knitwear, collection_jackets, collection_new-arrivals",
-        83: "collection_ready-to-wear, collection_knitwear, collection_dresses, collection_new-arrivals",
-        84: "collection_ready-to-wear, collection_knitwear, collection_tops, collection_new-arrivals",
-        85: "collection_ready-to-wear, collection_knitwear, collection_skirts, collection_new-arrivals",
-        86: "collection_ready-to-wear, collection_knitwear, collection_pants, collection_new-arrivals",
-        88: "collection_ready-to-wear, collection_knitwear, collection_tops, collection_new-arrivals",
-    }
-
+def build_tags(source_record, existing_tags_str):
     new_tags = []
-    if not source_record.empty:
-        if pd.notna(source_record.get("Description")):
-            style_name = str(source_record["Description"]).title()
-            new_tags.append(f"style_{style_name}")
-        if pd.notna(source_record.get("SEASON CODE")):
-            sc = str(source_record["SEASON CODE"])
-            new_tags.append(sc.replace("S1", "SS") if "S1" in sc else sc)
-        if pd.notna(source_record.get("Colour")):
-            color = " ".join(str(source_record["Colour"]).split(" ")[1:]).lower()
-            new_tags.append(f"color_{color}")
-        # Prefer knit-specific code if present, otherwise fallback to general category code
-        category_code = None
+    category_code_to_use = None
+    
+    if pd.notna(source_record.get('KNIT CATEGORY CODE')) and str(source_record['KNIT CATEGORY CODE']).strip().lower() not in ['na', 'n/a', '']:
+        try:
+            category_code_to_use = int(source_record['KNIT CATEGORY CODE'])
+        except (ValueError, TypeError):
+            pass
+    
+    if category_code_to_use is None and pd.notna(source_record.get('CATEGORY CODE')):
+        try:
+            category_code_to_use = int(source_record['CATEGORY CODE'])
+        except (ValueError, TypeError):
+            pass
 
-        knit_code = source_record.get("KNIT CATEGORY CODE")
-        cat_code = source_record.get("CATEGORY CODE")
+    if pd.notna(source_record.get('Description')):
+        new_tags.append(f"style_{source_record['Description'].title()}")
+    if pd.notna(source_record.get('SEASON CODE')):
+        new_tags.append(str(source_record['SEASON CODE']).replace('S1', 'SS'))
+    if pd.notna(source_record.get('Colour')):
+        new_tags.append(f"color_{' '.join(str(source_record['Colour']).split(' ')[1:]).lower()}")
+    
+    if category_code_to_use and category_code_to_use in CATEGORY_TAGS_MAP:
+        new_tags.extend([t.strip() for t in CATEGORY_TAGS_MAP[category_code_to_use].split(',')])
 
-        # Try knit first (since it's more specific)
-        for val in [knit_code, cat_code]:
-            if pd.notna(val):
-                try:
-                    category_code = int(float(val))
-                    break
-                except (ValueError, TypeError):
-                    continue
+    existing_tags = [t.strip() for t in str(existing_tags_str).split(',') if t.strip()]
+    return ', '.join(filter(None, list(dict.fromkeys(existing_tags + new_tags))))
 
-        if category_code in category_tags_map:
-            new_tags.extend([t.strip() for t in category_tags_map[category_code].split(",")])
-
-    print("DEBUG: CATEGORY CODE =", source_record.get("CATEGORY CODE"),
-          "| KNIT CATEGORY CODE =", source_record.get("KNIT CATEGORY CODE"))
-
-    existing = [t.strip() for t in str(existing_tags_str).split(",") if t.strip()]
-    combined = list(dict.fromkeys(existing + new_tags))
-    return ", ".join(filter(None, combined))
-
-# ---------------------------------------------------------------------
-# Main enrichment
-# ---------------------------------------------------------------------
-
-def enrich(capsule: str, dry_run: bool = False):
-    base = pathlib.Path(f"capsules/{capsule}/inputs")
-    df_export = pd.read_csv(base / "products_export_1.csv")
-    df_tracker = pd.read_csv(base / "SS26 for Shopify check(By Style).csv")
-    manifest = load_manifest(capsule)
-
-    # normalise tracker index for quick lookup
-    df_tracker.set_index("Product ID", inplace=True, drop=False)
-
-    # derive CPI from handle if needed
-    if "CPI" not in df_export.columns:
-        df_export["CPI"] = df_export["Handle"].str.extract(r"(\d{4}-\d{6})")
-
-    # extract Product ID from Shopify tags
-    df_export["Product ID"] = df_export["Tags"].apply(extract_product_id_from_tags)
-
-    # pre-fill enrichment columns
-    df_export["Swatch_File"] = ""
-    df_export["Look_Image_File"] = ""
-    df_export["Accessory"] = False
-
-    # ---------------------------------------------------------------
-    # 1️⃣  Link imagery from manifest
-    # ---------------------------------------------------------------
-    for _, m in manifest.iterrows():
-        if not m["cpi"]:
-            continue
-        mask = df_export["CPI"] == m["cpi"]
-        if not mask.any():
-            continue
-        if m["asset_type"] == "swatches":
-            df_export.loc[mask, "Swatch_File"] = m["filename"]
-            df_export.loc[mask, "Accessory"] = m["is_accessory"]
-        elif m["asset_type"] == "editorials" and not m["is_accessory"]:
-            df_export.loc[mask, "Look_Image_File"] = m["filename"]
-
-    # ---------------------------------------------------------------
-    # 2️⃣  Rebuild tags from tracker record
-    # ---------------------------------------------------------------
-    def tag_row(r):
-        pid = r.get("Product ID")
-        if pd.isna(pid) or pid not in df_tracker.index:
-            return r.get("Tags", "")
-        return build_tags(df_tracker.loc[pid], r.get("Tags", ""))
-
-    df_export["Tags"] = df_export.apply(tag_row, axis=1)
-
-    # ---------------------------------------------------------------
-    # 3️⃣  Create metafield prefill columns
-    # ---------------------------------------------------------------
-    df_export["Metafield: altuzarra.swatch_image [file_reference]"] = df_export[
-        "Swatch_File"
-    ]
-    df_export["Metafield: altuzarra.look_image [file_reference]"] = df_export.apply(
-        lambda r: r["Look_Image_File"] if not r["Accessory"] else "", axis=1
-    )
-
-    # ---------------------------------------------------------------
-    # 4️⃣  Assign Image Src and Image Position (non-destructive)
-    # ---------------------------------------------------------------
-    CDN_PREFIX = "https://cdn.shopify.com/s/files/1/0148/9561/2004/files/"
-    ghosts = manifest[manifest["asset_type"] == "ghosts"]
-
-    def sort_order(fname: str, is_accessory: bool) -> int:
-        f = fname.lower()
+def sort_images(images, is_accessory):
+    def sort_key(img):
+        filename = img['filename']
         if is_accessory:
-            if "front" in f and "main" in f: return 1
-            if "side"  in f and "main" in f: return 2
-            if "aerial" in f and "main" in f: return 3
-            if "detail" in f: return 4
-            return 99
-        if "_ghost_" in f: return 1
-        if "_hero_"  in f: return 2
-        m = re.search(r"model_image_(\d+)", f)
-        return 2 + int(m.group(1)) if m else 99
+            if 'ghost' in filename: return (0, filename)
+            return (1, filename)
+        else:
+            if 'hero_image' in filename: return (0, filename)
+            match = re.search(r'model_image_(\d+)', filename)
+            if match: return (1, int(match.group(1)))
+            return (2, filename)
+    return sorted(images, key=sort_key)
 
-    # guarantee columns exist
-    for col in ["Image Src", "Image Position"]:
-        if col not in df_export.columns:
-            df_export[col] = ""
+def main(capsule: str, dry_run: bool):
+    CDN_PREFIX = 'https://cdn.shopify.com/s/files/1/0148/9561/2004/files/'
+    anomalous_handles = set()
 
-    for cpi, group in ghosts.groupby("cpi"):
-        is_acc = bool(group["is_accessory"].any())
-        sorted_files = sorted(group["filename"], key=lambda f: sort_order(f, is_acc))
+    try:
+        capsule_dir = pathlib.Path(f"capsules/{capsule}")
+        tracker_path = capsule_dir / "inputs/SS26 for Shopify check(By Style).csv"
+        tracker_df_raw = pd.read_csv(tracker_path, header=None, encoding='cp1252', keep_default_na=False)
+        header_row_index = tracker_df_raw[tracker_df_raw.apply(lambda r: r.astype(str).str.contains('Product ID').any(), axis=1)].index[0]
+        tracker_df = tracker_df_raw.copy()
+        tracker_df.columns = tracker_df.iloc[header_row_index]
+        tracker_df = tracker_df.drop(tracker_df.index[:header_row_index + 1]).reset_index(drop=True)
+        tracker_df.columns = tracker_df.columns.str.strip()
+        
+        export_df = pd.read_csv(capsule_dir / "inputs/products_export_1.csv")
+        manifest_path = capsule_dir / "manifests/images_manifest.jsonl"
+        manifest_recs = [json.loads(line) for line in manifest_path.read_text().splitlines() if line.strip()]
+        manifest_df = pd.DataFrame(manifest_recs)
+        print("✅ Successfully loaded all source files.")
+    except (FileNotFoundError, IndexError) as e:
+        print(f"❌ Error loading or parsing files: {e}")
+        return
 
-        # --- robust pattern: look for “8835 000067” inside Product ID ---
-        pattern = r"\b" + re.escape(cpi.replace("-", " ")) + r"\b"
-        mask = df_export["Product ID"].fillna("").str.contains(pattern, na=False)
-        if not mask.any():
+    handle_to_cpi_map = {
+        row['Handle']: cpi for _, row in export_df[export_df['Title'].notna()].iterrows()
+        if (cpi := extract_cpi_from_product_id(extract_product_id_from_tags(row['Tags'])))
+    }
+    print(f"✅ Built Handle-to-CPI map for {len(handle_to_cpi_map)} products.")
+    
+    tracker_df.set_index('Product ID', inplace=True)
+    tracker_df['RRP (USD)'] = pd.to_numeric(tracker_df['RRP (USD)'], errors='coerce')
+
+    for handle, product_group in export_df.groupby('Handle'):
+        if handle not in handle_to_cpi_map: continue
+        cpi = handle_to_cpi_map[handle]
+        
+        parent_row_filter = product_group['Title'].notna() & (product_group['Title'] != '')
+        parent_row_index = product_group[parent_row_filter].index[0]
+        full_product_id = extract_product_id_from_tags(product_group.loc[parent_row_index, 'Tags'])
+
+        try:
+            source_record = tracker_df.loc[full_product_id]
+            new_tags = build_tags(source_record, product_group.loc[parent_row_index, 'Tags'])
+            export_df.loc[parent_row_index, 'Tags'] = new_tags
+            
+            child_indices = product_group[~parent_row_filter].index
+            export_df.loc[child_indices, 'Tags'] = ''
+            
+            if pd.notna(source_record.get('PRODUCT DETAILS')):
+                export_df.loc[parent_row_index, 'Details (product.metafields.altuzarra.details)'] = source_record['PRODUCT DETAILS']
+            export_df.loc[product_group.index, 'Variant Price'] = source_record['RRP (USD)']
+        except KeyError:
+            print(f"  > ANOMALY: Product ID '{full_product_id}' not found in tracker file.")
+            anomalous_handles.add(handle)
             continue
+            
+        images_for_cpi = manifest_df[manifest_df['cpi'] == cpi].to_dict('records')
+        if not images_for_cpi:
+            print(f"  > ANOMALY: No images found in manifest for CPI {cpi}.")
+            anomalous_handles.add(handle)
+            continue
+            
+        is_accessory = images_for_cpi[0].get('is_accessory', False)
+        sorted_images = sort_images(images_for_cpi, is_accessory)
+        
+        for i, index in enumerate(product_group.index):
+            if i < len(sorted_images):
+                filename = sorted_images[i]['filename']
+                export_df.loc[index, 'Image Src'] = CDN_PREFIX + filename.replace(' ', '_')
+                export_df.loc[index, 'Image Position'] = i + 1
+            else:
+                export_df.loc[index, 'Image Src'] = ''
+                export_df.loc[index, 'Image Position'] = pd.NA
+    
+    export_df['Image Position'] = export_df['Image Position'].astype('Int64')
+    
+    # --- 4. Split DataFrame and Save Outputs ---
+    output_dir = capsule_dir / "outputs"
+    output_dir.mkdir(parents=True, exist_ok=True)
 
-        for pos, fname in enumerate(sorted_files, start=1):
-            url = CDN_PREFIX + fname.replace(" ", "_")
-            # assign only first free slot per image, not overwrite all
-            rows = df_export.index[mask]
-            if pos - 1 < len(rows):
-                df_export.at[rows[pos - 1], "Image Src"] = url
-                df_export.at[rows[pos - 1], "Image Position"] = pos
-
-
-
-    # ---------------------------------------------------------------
-    # 4️⃣  Write or preview
-    # ---------------------------------------------------------------
-    out = pathlib.Path(f"capsules/{capsule}/outputs/poc_shopify_import_enriched.csv")
+    # Define the three output dataframes
+    full_enriched_df = export_df
+    import_ready_df = export_df[~export_df['Handle'].isin(anomalous_handles)]
+    anomalies_df = export_df[export_df['Handle'].isin(anomalous_handles)]
+    
     if dry_run:
-        print(df_export.head(10))
+        print("\n--- Dry Run Complete ---")
+        print(f"\n{len(import_ready_df)} rows are clean and ready for import.")
+        print(f"{len(anomalies_df)} rows have data gap anomalies.")
+        print("\nDisplaying 'import-ready' data for 'askania-coat-tahini-melange':")
+        print(import_ready_df[import_ready_df['Handle'] == 'askania-coat-tahini-melange'][['Handle', 'Image Src', 'Image Position', 'Tags']])
     else:
-        out.parent.mkdir(parents=True, exist_ok=True)
-        df_export.to_csv(out, index=False)
-        print(f"✅ Enriched CSV written: {out}")
+        # Save the full enriched file
+        full_output_path = output_dir / "poc_shopify_import_enriched.csv"
+        full_enriched_df.to_csv(full_output_path, index=False)
+        print(f"\n✅ Full enriched CSV written successfully to: {full_output_path}")
 
-# ---------------------------------------------------------------------
-# CLI
-# ---------------------------------------------------------------------
-if __name__ == "__main__":
-    p = argparse.ArgumentParser()
-    p.add_argument("--capsule", required=True)
-    p.add_argument("--dry-run", action="store_true")
-    a = p.parse_args()
-    enrich(a.capsule, dry_run=a.dry_run)
+        # Save the import-ready file
+        ready_output_path = output_dir / "poc_shopify_import_ready.csv"
+        import_ready_df.to_csv(ready_output_path, index=False)
+        print(f"✅ Import-ready CSV ({len(import_ready_df)} rows) written successfully to: {ready_output_path}")
+
+        # Save the anomalies file
+        if not anomalies_df.empty:
+            anomalies_output_path = output_dir / "poc_shopify_anomalies.csv"
+            anomalies_df.to_csv(anomalies_output_path, index=False)
+            print(f"⚠️  {len(anomalies_df)} rows with anomalies staged for review in: {anomalies_output_path}")
+
+if __name__ == '__main__':
+    parser = argparse.ArgumentParser(description="Enrich Shopify CSV using a capsule system.")
+    parser.add_argument("--capsule", required=True, help="The capsule code (e.g., S126)")
+    parser.add_argument("--dry-run", action="store_true", help="Simulate actions without writing files.")
+    args = parser.parse_args()
+    main(args.capsule, args.dry_run)
