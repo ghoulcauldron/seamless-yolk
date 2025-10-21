@@ -2,6 +2,7 @@ import pandas as pd
 import pathlib
 import argparse
 import re
+import json
 
 # --- NATIVE TRANSLATION of Shopify Tags Guide.csv for validation ---
 CATEGORY_TAGS_MAP = {
@@ -25,11 +26,22 @@ CATEGORY_TAGS_MAP = {
     88: "collection_ready-to-wear, collection_knitwear, collection_tops, collection_new-arrivals"
 }
 
+CPI_PATTERN_FROM_PRODUCT_ID = re.compile(r"(\d{3,5})\s+[A-Z0-9]+\s+(\d{6})")
+
+
 def extract_product_id_from_tags(tags_str: str) -> str | None:
     if not isinstance(tags_str, str): return None
     for tag in tags_str.split(','):
         tag = tag.strip()
         if tag.count(' ') >= 2: return tag
+    return None
+
+def extract_cpi_from_product_id(product_id: str) -> str | None:
+    if not product_id: return None
+    match = CPI_PATTERN_FROM_PRODUCT_ID.search(product_id)
+    if match:
+        style, color = match.groups()
+        return f"{style}-{color}"
     return None
 
 def get_expected_tags(source_record):
@@ -56,6 +68,50 @@ def get_expected_tags(source_record):
         expected_tags.update([t.strip() for t in CATEGORY_TAGS_MAP[category_code_to_use].split(',')])
 
     return expected_tags
+
+def check_image_validity(df: pd.DataFrame, manifest_df: pd.DataFrame, handle_to_cpi_map: dict) -> list:
+    """Validates Image Src URLs against the manifest and construction rules."""
+    errors = []
+    CDN_PREFIX = 'https://cdn.shopify.com/s/files/1/0148/9561/2004/files/'
+    
+    # Create a lookup for manifest files for faster access
+    manifest_lookup = manifest_df.groupby('cpi')['filename'].apply(list).to_dict()
+
+    for index, row in df.iterrows():
+        image_src = row['Image Src']
+        if pd.isna(image_src) or image_src.strip() == '':
+            continue # Skip blank image sources
+
+        handle = row['Handle']
+        
+        # 1. Prefix Check
+        if not image_src.startswith(CDN_PREFIX):
+            errors.append({'error_type': 'Invalid Image URL Prefix', 'handle': handle, 'details': f"URL '{image_src}' has an incorrect prefix."})
+            continue
+
+        filename_from_url = image_src.replace(CDN_PREFIX, '')
+        
+        # 2. Snake Case Check
+        if ' ' in filename_from_url:
+            errors.append({'error_type': 'Image URL Contains Spaces', 'handle': handle, 'details': f"Filename '{filename_from_url}' in URL contains spaces instead of underscores."})
+
+        # 3. Manifest Cross-Reference Check
+        cpi = handle_to_cpi_map.get(handle)
+        if not cpi:
+            errors.append({'error_type': 'Cannot Validate Image (No CPI)', 'handle': handle, 'details': f"Could not map handle '{handle}' to a CPI to validate its images."})
+            continue
+            
+        valid_filenames_for_cpi = manifest_lookup.get(cpi, [])
+        # Compare by replacing spaces with underscores in the manifest filenames
+        valid_shopify_filenames = [fn.replace(' ', '_') for fn in valid_filenames_for_cpi]
+
+        if filename_from_url not in valid_shopify_filenames:
+            errors.append({
+                'error_type': 'Image Not Found in Manifest', 'handle': handle, 'cpi': cpi,
+                'details': f"Filename '{filename_from_url}' for handle '{handle}' is not listed in the manifest for CPI '{cpi}'."
+            })
+            
+    return errors
 
 def check_data_consistency_against_sources(df: pd.DataFrame, tracker_df: pd.DataFrame) -> list:
     """Validates enriched data against the master tracker file."""
@@ -156,32 +212,41 @@ def check_internal_structure(df: pd.DataFrame) -> list:
 
 
 def main(capsule: str):
-    """Main execution function to run all validation checks."""
     base_path = pathlib.Path(f"capsules/{capsule}")
     ready_file_path = base_path / "outputs/poc_shopify_import_ready.csv"
     tracker_file_path = base_path / "inputs/SS26 for Shopify check(By Style).csv"
+    manifest_path = base_path / "manifests/images_manifest.jsonl"
 
     try:
         print(f"Validating file: {ready_file_path}...")
         df_ready = pd.read_csv(ready_file_path)
         
-        # Load tracker file robustly
         tracker_df_raw = pd.read_csv(tracker_file_path, header=None, encoding='cp1252', keep_default_na=False)
         header_row_index = tracker_df_raw[tracker_df_raw.apply(lambda r: r.astype(str).str.contains('Product ID').any(), axis=1)].index[0]
         df_tracker = tracker_df_raw.copy()
         df_tracker.columns = df_tracker.iloc[header_row_index]
         df_tracker = df_tracker.drop(df_tracker.index[:header_row_index + 1]).reset_index(drop=True)
         df_tracker.columns = df_tracker.columns.str.strip()
+        
+        manifest_recs = [json.loads(line) for line in manifest_path.read_text().splitlines() if line.strip()]
+        df_manifest = pd.DataFrame(manifest_recs)
+
     except FileNotFoundError as e:
         print(f"❌ File not found: {e}. Please ensure capsule inputs and outputs exist.")
         return
 
-    # Run all validation checks
+    # Build the Handle-to-CPI map needed for image validation
+    handle_to_cpi_map = {
+        row['Handle']: cpi for _, row in df_ready[df_ready['Title'].notna()].iterrows()
+        if (cpi := extract_cpi_from_product_id(extract_product_id_from_tags(row['Tags'])))
+    }
+
     all_errors = []
     all_errors.extend(check_internal_structure(df_ready))
     all_errors.extend(check_data_consistency_against_sources(df_ready, df_tracker))
+    # Add the new image validation check
+    all_errors.extend(check_image_validity(df_ready, df_manifest, handle_to_cpi_map))
 
-    # --- Print Report ---
     if all_errors:
         print(f"\n❌ Validation failed with {len(all_errors)} errors:")
         grouped_errors = {}

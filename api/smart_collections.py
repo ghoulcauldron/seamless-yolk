@@ -23,6 +23,40 @@ def extract_unique_style_tags(csv_path: pathlib.Path):
     return sorted(tags)
 
 def main(capsule: str, dry_run: bool = False):
+    # Load styles from the enriched CSV for this capsule
+    csv_path = pathlib.Path(f"capsules/{capsule}/outputs/poc_shopify_import_enriched.csv")
+    if not csv_path.exists():
+        raise FileNotFoundError(f"Missing enriched CSV: {csv_path}")
+    styles_to_create = extract_unique_style_tags(csv_path)
+    print(f"Found {len(styles_to_create)} unique style tags to process.")
+
+    client = ShopifyClient()
+    
+    # --- ADD THIS LINE ---
+    # Fetch all existing titles *before* the loop
+    existing_titles = client.get_all_smart_collection_titles()
+    
+    jobs = []
+    for style_tag in sorted(list(styles_to_create)):
+        
+        # --- ADD THIS CHECK ---
+        if style_tag in existing_titles:
+            print(f"  > Skipping '{style_tag}': Collection already exists.")
+            continue # Skip to the next style_tag
+
+        if dry_run:
+            print(f"[dry-run] Would create smart collection '{style_tag}'")
+            continue
+
+        print(f"  > Creating smart collection '{style_tag}'...")
+        try:
+            resp = client.create_smart_collection(title=style_tag, tag=style_tag)
+            jobs.append({"tag": style_tag, "response": resp})
+            print(f"    ✅ Created.")
+        except Exception as e:
+            print(f"    ❌ FAILED to create '{style_tag}': {e}")
+            jobs.append({"tag": style_tag, "response": {"error": str(e)}})
+
     csv_path = pathlib.Path(f"capsules/{capsule}/outputs/poc_shopify_import_enriched.csv")
     if not csv_path.exists():
         raise FileNotFoundError(f"Missing enriched CSV: {csv_path}")
