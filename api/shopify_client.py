@@ -129,6 +129,72 @@ class ShopifyClient:
             
         print(f"Found {len(titles)} existing smart collections.")
         return titles
+    
+    def get_products_for_qa(self, tag: str) -> list:
+        """
+        Fetches all products for a given capsule tag with all data needed for QA.
+        """
+        print(f"Fetching all products tagged with '{tag}' for QA...")
+        products = []
+        query = """
+        query getProductsForQA($query: String!, $cursor: String) {
+          products(first: 100, after: $cursor, query: $query) {
+            edges {
+              cursor
+              node {
+                id
+                handle
+                tags
+                bodyHtml
+                images(first: 1) {
+                  edges { node { id } }
+                }
+                swatch_metafield: metafield(namespace: "altuzarra", key: "swatch_image") {
+                  value
+                }
+                details_metafield: metafield(namespace: "altuzarra", key: "details") {
+                  value
+                }
+                look_image_metafield: metafield(namespace: "altuzarra", key: "look_image") {
+                  value
+                }
+              }
+            }
+            pageInfo {
+              hasNextPage
+            }
+          }
+        }
+        """
+        hasNextPage = True
+        cursor = None
+        variables = {"query": f"tag:'{tag}'"}
+        
+        while hasNextPage:
+            if cursor:
+                variables["cursor"] = cursor
+            
+            response = self.graphql(query, variables)
+            
+            if 'errors' in response:
+                print("❌ GraphQL API returned errors:")
+                for error in response['errors']:
+                    print(f"  - {error.get('message')}")
+                break
+            
+            data = response.get("data", {}).get("products", {})
+            if data is None:
+                print("⚠️  Warning: The 'products' key was not found. This may be a permission issue.")
+                break
+
+            for edge in data.get("edges", []):
+                products.append(edge.get("node", {}))
+                cursor = edge.get("cursor")
+            
+            hasNextPage = data.get("pageInfo", {}).get("hasNextPage", False)
+            
+        print(f"Found {len(products)} products for QA.")
+        return products
 
     def get_staged_uploads_map(self) -> dict:
         """
