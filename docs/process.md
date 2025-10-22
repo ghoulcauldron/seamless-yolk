@@ -193,5 +193,5 @@ Creates or idempotently updates smart collections:
 
 * `garment_config.json` — garment heuristics & default crop ratios
 * `swatch_hints.json` — GUI-logged crops and OTF categories
-* `Shopify Tags Guide.csv` — authoritative tag rules
+* `Shopify Tags Guide.csv` — authoritative tag rules; now embedded within enrich_shopify_import.py
 * `Strategic Implementation Plan for Shopify SS26.md` — foundational logic reference

@@ -294,26 +294,179 @@ class ShopifyClient:
         print(f"Found {len(files_map)} existing files in Shopify Content > Files.")
         return files_map
 
+    def get_staged_uploads_map_with_urls(self) -> dict:
+        """
+        Fetches all files from Shopify and returns a map of {standardized_filename: cdn_url}.
+        The filename key is standardized to use underscores and is stripped of UUIDs.
+        """
+        print("Fetching existing staged files with CDN URLs from Shopify...")
+        files_map = {}
+        paginated_query = """
+        query($cursor: String) {
+          files(first: 250, after: $cursor) {
+            edges {
+              cursor
+              node {
+                id
+                ... on GenericFile {
+                  url
+                }
+                ... on MediaImage {
+                  originalSource {
+                    url
+                  }
+                }
+              }
+            }
+            pageInfo {
+              hasNextPage
+            }
+          }
+        }
+        """
+        hasNextPage = True
+        cursor = None
+        while hasNextPage:
+            response = self.graphql(paginated_query, {"cursor": cursor})
+            
+            if 'errors' in response:
+                print("❌ GraphQL API returned errors:")
+                for error in response['errors']:
+                    print(f"  - {error.get('message')}")
+                break
+
+            files = response.get("data", {}).get("files", {})
+            if files is None:
+                print("⚠️  Warning: The 'files' key was not found. (Missing 'read_files' scope?)")
+                break
+
+            for edge in files.get("edges", []):
+                node = edge.get("node", {})
+                
+                file_url = None
+                
+                # Check for GenericFile url
+                if "url" in node and node["url"]:
+                    file_url = node["url"]
+                
+                # Check for MediaImage url
+                elif "originalSource" in node and node["originalSource"] and "url" in node["originalSource"]:
+                    file_url = node["originalSource"]["url"]
+
+                if file_url:
+                    # Extract filename from URL
+                    filename_from_url = file_url.split('/')[-1].split('?')[0]
+                    
+                    try:
+                        name_part, extension = filename_from_url.rsplit('.', 1)
+                    except ValueError:
+                        continue
+                    
+                    # Regex to find and remove Shopify's UUID token
+                    token_regex = r'_[a-fA-F0-9]{8}-([a-fA-F0-9]{4}-){3}[a-fA-F0-9]{12}$'
+                    name_part_clean = re.sub(token_regex, '', name_part)
+                    clean_filename = f"{name_part_clean}.{extension}"
+                    
+                    standardized_filename = re.sub(r'\s+', '_', clean_filename)
+                    
+                    # --- THIS IS THE KEY CHANGE ---
+                    # Store the CDN URL (stripped of query params)
+                    files_map[standardized_filename] = file_url.split('?')[0]
+                    # --- END OF CHANGE ---
+
+                cursor = edge.get("cursor")
+            hasNextPage = files.get("pageInfo", {}).get("hasNextPage", False)
+            
+        print(f"Found {len(files_map)} existing files with CDN URLs.")
+        return files_map
+
     # ------------------------------------------------------------------
     def upload_file(self, resource_url: str, alt: str) -> str:
-        # ... (This function is correct and remains unchanged) ...
+        """
+        Triggers a fileCreate mutation.
+        Returns the new file's GID for polling.
+        """
         mutation = """
         mutation fileCreate($files: [FileCreateInput!]!) {
           fileCreate(files: $files) {
-            files { id }
+            files { 
+              id
+              fileStatus
+            }
             userErrors { field message }
           }
         }
         """
         variables = {"files": {"alt": alt, "contentType": "IMAGE_JPEG", "originalSource": resource_url}}
         resp = self.graphql(mutation, variables)
-        return resp["data"]["fileCreate"]["files"][0]["id"]
         
-    def wait_for_file_ready(self, file_gid: str, timeout: int = 30) -> str:
-        # ... (This function is correct and remains unchanged) ...
-        print(f"Simulating wait for file {file_gid} to be ready...")
-        time.sleep(2)
-        return f"https://cdn.shopify.com/s/files/1/0148/9561/2004/files/SIMULATED_URL.jpg"
+        user_errors = resp.get("data", {}).get("fileCreate", {}).get("userErrors", [])
+        if user_errors:
+            raise RuntimeError(f"Error creating file: {user_errors[0]['message']}")
+            
+        file_data = resp["data"]["fileCreate"]["files"][0]
+        
+        # If file is already processed (rare), return its GID
+        if file_data["fileStatus"] == "READY":
+            return file_data["id"]
+        
+        # If not, return GID for polling
+        return file_data["id"]
+        
+    def wait_for_file_ready(self, file_gid: str, timeout: int = 60) -> str:
+        """
+        Polls Shopify for a file's status and returns the CDN URL once 'READY'.
+        """
+        print(f"  > Waiting for file {file_gid} to be 'READY'...")
+        start_time = time.time()
+        
+        query = """
+        query checkFileStatus($id: ID!) {
+          node(id: $id) {
+            ... on File {
+              fileStatus
+              ... on MediaImage {
+                originalSource { url }
+              }
+              ... on GenericFile {
+                url
+              }
+            }
+          }
+        }
+        """
+        variables = {"id": file_gid}
+        
+        while time.time() - start_time < timeout:
+            resp = self.graphql(query, variables)
+            node = resp.get("data", {}).get("node", {})
+            
+            if not node:
+                raise RuntimeError(f"Could not find file {file_gid} during polling.")
+
+            status = node.get("fileStatus")
+            
+            if status == "READY":
+                # Check for GenericFile URL first
+                cdn_url = node.get("url")
+                
+                # If not found, check for MediaImage URL
+                if not cdn_url:
+                    cdn_url = node.get("originalSource", {}).get("url")
+
+                if cdn_url:
+                    print(f"  > File is 'READY'.")
+                    return cdn_url
+                else:
+                    raise RuntimeError(f"File {file_gid} is READY but no URL was found.")
+
+            elif status == "FAILED":
+                raise RuntimeError(f"File processing FAILED for {file_gid}.")
+            
+            # If still "PROCESSING", wait 2 seconds and try again
+            time.sleep(2)
+        
+        raise TimeoutError(f"Timed out waiting for file {file_gid} to become ready.")
 
     def set_product_metafield(self, product_gid: str, key: str, value_gid: str, namespace: str = "altuzarra", field_type: str = "file_reference"):
         # ... (This function is correct and remains unchanged) ...
