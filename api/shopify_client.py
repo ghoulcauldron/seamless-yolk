@@ -491,3 +491,132 @@ class ShopifyClient:
         }"""
         variables = {"input": {"title": title, "handle": title.lower().replace(" ", "-"), "ruleSet": {"appliedDisjunctively": False, "rules": [{"column": "TAG", "relation": "EQUALS", "condition": tag}]}, "sortOrder": "BEST_SELLING"}}
         return self.graphql(mutation, variables)
+    
+    def get_size_guide_pages_map(self) -> dict:
+        """
+        Fetches ALL pages from the Online Store and filters for 'Size Guide' pages.
+        Returns a map of {Product Type: Page GID}.
+        
+        Example: {'TOP': 'gid://.../Page/123', 'SKIRT': 'gid://.../Page/456'}
+        """
+        print("Fetching all pages from Shopify to find 'Size Guides'...")
+        page_map = {}
+        
+        # --- THIS QUERY IS UPDATED ---
+        # We removed the $query variable and moved pages to the root
+        query = """
+        query getPages($cursor: String) {
+          pages(first: 250, after: $cursor) {
+            edges {
+              cursor
+              node {
+                id
+                title
+              }
+            }
+            pageInfo {
+              hasNextPage
+            }
+          }
+        }
+        """
+        # --- END OF QUERY UPDATE ---
+
+        hasNextPage = True
+        cursor = None
+        variables = {} # No more 'query' variable
+        
+        while hasNextPage:
+            if cursor:
+                variables["cursor"] = cursor
+            
+            response = self.graphql(query, variables)
+            
+            if 'errors' in response:
+                print("❌ GraphQL API returned errors fetching pages:")
+                for error in response['errors']:
+                    print(f"  - {error.get('message')}")
+                break
+            
+            # --- THIS PARSING LOGIC IS UPDATED ---
+            data = response.get("data", {}).get("pages", {})
+            if data is None:
+                print("⚠️  Warning: The 'pages' key was not found. (Missing 'read_online_store_pages' scope?)")
+                break
+            # --- END OF PARSING UPDATE ---
+
+            for edge in data.get("edges", []):
+                node = edge.get("node", {})
+                
+                # --- THIS IS NOW THE MAIN FILTER ---
+                if node and node["title"].startswith("Size Guide"):
+                    
+                    # 'Size Guide TOP - Momoko' -> 'TOP'
+                    # 'Size Guide KNIT DRESS' -> 'KNIT DRESS'
+                    base_title = node["title"].replace("Size Guide", "").strip()
+                    product_type = base_title.split(' - ')[0].strip() # Takes "TOP" from "TOP - Momoko"
+                    
+                    if product_type:
+                        page_map[product_type] = node["id"]
+                # --- END OF FILTER ---
+
+                cursor = edge.get("cursor")
+            
+            hasNextPage = data.get("pageInfo", {}).get("hasNextPage", False)
+            
+        print(f"Found {len(page_map)} size guide pages and mapped them to product types.")
+        return page_map
+    
+    def get_products_with_type(self, tag: str) -> list:
+        """
+        Fetches all products for a given capsule tag, returning
+        their GID, handle, and productType.
+        """
+        print(f"Fetching all products and types for capsule '{tag}'...")
+        products = []
+        query = """
+        query getProductsWithType($query: String!, $cursor: String) {
+          products(first: 250, after: $cursor, query: $query) {
+            edges {
+              cursor
+              node {
+                id
+                handle
+                productType
+              }
+            }
+            pageInfo {
+              hasNextPage
+            }
+          }
+        }
+        """
+        hasNextPage = True
+        cursor = None
+        variables = {"query": f"tag:'{tag}'"}
+        
+        while hasNextPage:
+            if cursor:
+                variables["cursor"] = cursor
+            
+            response = self.graphql(query, variables)
+            
+            if 'errors' in response:
+                print("❌ GraphQL API returned errors fetching products:")
+                for error in response['errors']:
+                    print(f"  - {error.get('message')}")
+                break
+            
+            data = response.get("data", {}).get("products", {})
+            if data is None:
+                print("⚠️  Warning: The 'products' key was not found.")
+                break
+
+            for edge in data.get("edges", []):
+                products.append(edge.get("node", {}))
+                cursor = edge.get("cursor")
+            
+            hasNextPage = data.get("pageInfo", {}).get("hasNextPage", False)
+            
+        print(f"Found {len(products)} products in capsule '{tag}'.")
+        return products
