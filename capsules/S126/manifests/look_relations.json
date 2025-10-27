@@ -1,0 +1,742 @@
+{
+  "metadata": {
+    "source_files": [
+      "2025-07-17 SS26 Shot list_FINAL(SS26).csv",
+      "2025-07-17 SS26 Shot list_FINAL(DAY 1).csv",
+      "2025-07-17 SS26 Shot list_FINAL(DAY 2).csv"
+    ]
+  },
+  "looks": {
+    "Look_103": {
+      "product_ids": [
+        "S226-3007 BYS084 000102 IVORY"
+      ],
+      "hero_product": "S226-3007 BYS084 000102 IVORY"
+    },
+    "Look_104": {
+      "product_ids": [
+        "S226-3030 BSP024 413067 STORM TULIP"
+      ],
+      "hero_product": "S226-3030 BSP024 413067 STORM TULIP"
+    },
+    "Look_105": {
+      "product_ids": [
+        "S226-3034 BSP024 415067 STORM PETALS"
+      ],
+      "hero_product": "S226-3034 BSP024 415067 STORM PETALS"
+    },
+    "Look_106": {
+      "product_ids": [
+        "S226-3024 SCP015 416689 PALE BLUSH PETALS"
+      ],
+      "hero_product": "S226-3024 SCP015 416689 PALE BLUSH PETALS"
+    },
+    "Look_107": {
+      "product_ids": [
+        "S226-3010 BSP032 414001 BLACK LILY"
+      ],
+      "hero_product": "S226-3010 BSP032 414001 BLACK LILY"
+    },
+    "Look_108": {
+      "product_ids": [
+        "S226-3019 BSP024 416563 MAROON ALLOVER PETALS"
+      ],
+      "hero_product": "S226-3019 BSP024 416563 MAROON ALLOVER PETALS"
+    },
+    "Look_109": {
+      "product_ids": [
+        "S226-3001 SCP015 416102 IVORY ALLOVER PETALS",
+        "S226-7154 STS002 000171 MACADEMIA"
+      ],
+      "hero_product": "S226-3001 SCP015 416102 IVORY ALLOVER PETALS"
+    },
+    "Look_110": {
+      "product_ids": [
+        "S226-3035 BSP024 416067 STORM ALLOVER PETALS",
+        "S226-7165 STS002 000414 DANUBE"
+      ],
+      "hero_product": "S226-3035 BSP024 416067 STORM ALLOVER PETALS"
+    },
+    "Look_111": {
+      "product_ids": [
+        "S226-8322 KYS078 000001 BLACK"
+      ],
+      "hero_product": "S226-8322 KYS078 000001 BLACK"
+    },
+    "Look_112": {
+      "product_ids": [
+        "S226-8307 KYS081 000649 HOLLY RED"
+      ],
+      "hero_product": "S226-8307 KYS081 000649 HOLLY RED"
+    },
+    "Look_113": {
+      "product_ids": [
+        "S226-8307 KYS081 000001 BLACK"
+      ],
+      "hero_product": "S226-8307 KYS081 000001 BLACK"
+    },
+    "Look_114": {
+      "product_ids": [
+        "S226-7157 STS007 381182 TAHINI/SILVER",
+        "S226-8301 KCS049 000001 BLACK"
+      ],
+      "hero_product": "S226-7157 STS007 381182 TAHINI/SILVER"
+    },
+    "Look_115": {
+      "product_ids": [
+        "S226-8301 KCS049 000258 TOFFEE"
+      ],
+      "hero_product": "S226-8301 KCS049 000258 TOFFEE"
+    },
+    "Look_116": {
+      "product_ids": [
+        "S226-8309 KYS078 000406 BERRY BLUE"
+      ],
+      "hero_product": "S226-8309 KYS078 000406 BERRY BLUE"
+    },
+    "Look_117": {
+      "product_ids": [
+        "S226-7157 STS002 000689 PALE BLUSH",
+        "S226-8309 KYS078 000689 PALE BLUSH"
+      ],
+      "hero_product": "S226-7157 STS002 000689 PALE BLUSH"
+    },
+    "Look_118": {
+      "product_ids": [
+        "S226-4013 BSP024 416067 STORM PETALS",
+        "S226-5003 BYP050 416067 STORM PETALS"
+      ],
+      "hero_product": "S226-4013 BSP024 416067 STORM PETALS"
+    },
+    "Look_119": {
+      "product_ids": [
+        "S226-3022 AIS005 000400 NAVY"
+      ],
+      "hero_product": "S226-3022 AIS005 000400 NAVY"
+    },
+    "Look_120": {
+      "product_ids": [
+        "S226-3008 SCQ015 374484 AZURE STRIPE"
+      ],
+      "hero_product": "S226-3008 SCQ015 374484 AZURE STRIPE"
+    },
+    "Look_121": {
+      "product_ids": [
+        "S226-8308 KYS078 000102 IVORY"
+      ],
+      "hero_product": "S226-8308 KYS078 000102 IVORY"
+    },
+    "Look_122": {
+      "product_ids": [
+        "S226-4016 SCP015 416102 IVORY ALLOVER PETALS",
+        "S226-5017 SCP015 416102 IVORY PETALS"
+      ],
+      "hero_product": "S226-4016 SCP015 416102 IVORY ALLOVER PETALS"
+    },
+    "Look_123": {
+      "product_ids": [
+        "S226-2005 AIS005 000400 NAVY",
+        "S226-7168 ELP013 000907 PYTHON"
+      ],
+      "hero_product": "S226-2005 AIS005 000400 NAVY"
+    },
+    "Look_124": {
+      "product_ids": [
+        "S226-4015 BSP024 416102 IVORY ALLOVER PETALS",
+        "S226-6022 AIS005 000400 NAVY"
+      ],
+      "hero_product": "S226-4015 BSP024 416102 IVORY ALLOVER PETALS"
+    },
+    "Look_125": {
+      "product_ids": [
+        "S226-4015 BSS033 000172 TAPIOCA",
+        "S226-6003 AWS016 000182 TAHINI",
+        "S226-7168 LLS061 000001 BLACK"
+      ],
+      "hero_product": "S226-4015 BSS033 000172 TAPIOCA"
+    },
+    "Look_126": {
+      "product_ids": [
+        "S226-8807 KCS049 000001 BLACK"
+      ],
+      "hero_product": "S226-8807 KCS049 000001 BLACK"
+    },
+    "Look_127": {
+      "product_ids": [
+        "S226-8808 KCS049 000001 BLACK"
+      ],
+      "hero_product": "S226-8808 KCS049 000001 BLACK"
+    },
+    "Look_128": {
+      "product_ids": [
+        "S226-2003 AIQ003 000147 MORTAR MELANGE"
+      ],
+      "hero_product": "S226-2003 AIQ003 000147 MORTAR MELANGE"
+    },
+    "Look_129": {
+      "product_ids": [
+        "S226-6007 AIQ003 000147 MORTAR MELANGE",
+        "S226-8807 KCS049 000398 DESERT SAGE"
+      ],
+      "hero_product": "S226-6007 AIQ003 000147 MORTAR MELANGE"
+    },
+    "Look_130": {
+      "product_ids": [
+        "S226-2017 AWS016 000182 TAHINI"
+      ],
+      "hero_product": "S226-2017 AWS016 000182 TAHINI"
+    },
+    "Look_131": {
+      "product_ids": [
+        "S226-8401 KYS078 000001 BLACK"
+      ],
+      "hero_product": "S226-8401 KYS078 000001 BLACK"
+    },
+    "Look_132": {
+      "product_ids": [
+        "S226-8808 KCS049 000258 TOFFEE"
+      ],
+      "hero_product": "S226-8808 KCS049 000258 TOFFEE"
+    },
+    "Look_133": {
+      "product_ids": [
+        "S226-4010 DCS021 000403 INDIGO",
+        "S226-7159 STS007 381001 BLACK/SILVER"
+      ],
+      "hero_product": "S226-4010 DCS021 000403 INDIGO"
+    },
+    "Look_134": {
+      "product_ids": [
+        "S226-6007 AIM001 000479 MIDNIGHT MELANGE"
+      ],
+      "hero_product": "S226-6007 AIM001 000479 MIDNIGHT MELANGE"
+    },
+    "Look_135": {
+      "product_ids": [
+        "S226-2003 AWQ015 000182 TAHINI MELANGE",
+        "S226-6014 AWQ015 000182 TAHINI MELANGE"
+      ],
+      "hero_product": "S226-2003 AWQ015 000182 TAHINI MELANGE"
+    },
+    "Look_136": {
+      "product_ids": [
+        "S226-6015 DCS009 000100 OPTIC WHITE"
+      ],
+      "hero_product": "S226-6015 DCS009 000100 OPTIC WHITE"
+    },
+    "Look_137": {
+      "product_ids": [
+        "S226-4004 SCS011 000100 OPTIC WHITE",
+        "S226-5024 DCS008 000406 BERRY BLUE"
+      ],
+      "hero_product": "S226-4004 SCS011 000100 OPTIC WHITE"
+    },
+    "Look_138": {
+      "product_ids": [
+        "S126-1001 LLS055 000001 BLACK"
+      ],
+      "hero_product": "S126-1001 LLS055 000001 BLACK"
+    },
+    "Look_14": {
+      "product_ids": [
+        "S126-2002 ACQ011 000397 GREEN LILY",
+        "S126-3022 ACQ011 000397 GREEN LILY"
+      ],
+      "hero_product": "S126-2002 ACQ011 000397 GREEN LILY"
+    },
+    "Look_15": {
+      "product_ids": [
+        "S126-3050 ZYS008 000171 MACADAMIA"
+      ],
+      "hero_product": "S126-3050 ZYS008 000171 MACADAMIA"
+    },
+    "Look_16": {
+      "product_ids": [
+        "S126-3014 BYP057 373398 DESERT SAGE ANIMAL"
+      ],
+      "hero_product": "S126-3014 BYP057 373398 DESERT SAGE ANIMAL"
+    },
+    "Look_17": {
+      "product_ids": [
+        "S126-3005 BSP032 371182 TAHINI GOOSE",
+        "S126-7167 CYS008 000649 HOLLY RED"
+      ],
+      "hero_product": "S126-7167 CYS008 000649 HOLLY RED"
+    },
+    "Look_18": {
+      "product_ids": [
+        "S126-3019 BSP031 416102 IVORY FLOWERS"
+      ],
+      "hero_product": "S126-3019 BSP031 416102 IVORY FLOWERS"
+    },
+    "Look_19": {
+      "product_ids": [
+        "S126-3017 BSP038 417102 IVORY APPLIQUE FLOWERS"
+      ],
+      "hero_product": "S126-3005 BSP032 371182 TAHINI GOOSE"
+    },
+    "Look_20": {
+      "product_ids": [
+        "S126-7689 LLS036 000102 IVORY"
+      ],
+      "hero_product": "S126-7689 LLS036 000102 IVORY"
+    },
+    "Look_21": {
+      "product_ids": [
+        "S126-7689 LUC006 000214 BURNT CYPRESS"
+      ],
+      "hero_product": "S126-7689 LUC006 000214 BURNT CYPRESS"
+    },
+    "Look_22": {
+      "product_ids": [
+        "S126-7682 LLS036 000102 IVORY"
+      ],
+      "hero_product": "S126-7682 LLS036 000102 IVORY"
+    },
+    "Look_23": {
+      "product_ids": [
+        "S126-7682 LLC053 000001 BLACK PATENT CROC"
+      ],
+      "hero_product": "S126-7682 LLC053 000001 BLACK PATENT CROC"
+    },
+    "Look_24": {
+      "product_ids": [
+        "S126-7691 LLS036 000001 BLACK"
+      ],
+      "hero_product": "S126-7691 LLS036 000001 BLACK"
+    },
+    "Look_25": {
+      "product_ids": [
+        "S126-7691 LLS036 000257 SADDLE"
+      ],
+      "hero_product": "S126-7691 LLS036 000257 SADDLE"
+    },
+    "Look_26": {
+      "product_ids": [
+        "S126-7691 LUC006 000214 BURNT CYPRESS"
+      ],
+      "hero_product": "S126-7691 LUC006 000214 BURNT CYPRESS"
+    },
+    "Look_27": {
+      "product_ids": [
+        "S126-7683 LUC006 000563 MAROON"
+      ],
+      "hero_product": "S126-7683 LUC006 000563 MAROON"
+    },
+    "Look_28": {
+      "product_ids": [
+        "S126-7689 LLS036 000001 BLACK"
+      ],
+      "hero_product": "S126-7689 LLS036 000001 BLACK"
+    },
+    "Look_29": {
+      "product_ids": [
+        "S126-3029 JYP012 373001 BLACK ANIMAL"
+      ],
+      "hero_product": "S126-3029 JYP012 373001 BLACK ANIMAL"
+    },
+    "Look_30": {
+      "product_ids": [
+        "S126-3033 BYP058 373398 DESERT SAGE ANIMAL"
+      ],
+      "hero_product": "S126-3033 BYP058 373398 DESERT SAGE ANIMAL"
+    },
+    "Look_32": {
+      "product_ids": [
+        "S126-3008 BYP058 373102 IVORY ANIMAL",
+        "S126-7166 LUC006 000563 MAROON"
+      ],
+      "hero_product": "S126-3008 BYP058 373102 IVORY ANIMAL"
+    },
+    "Look_33": {
+      "product_ids": [
+        "S126-5004 BYP058 373001 BLACK ANIMAL",
+        "S126-7166 LLS063 000001 BLACK"
+      ],
+      "hero_product": "S126-5004 BYP058 373001 BLACK ANIMAL"
+    },
+    "Look_34": {
+      "product_ids": [
+        "S126-4007 BYP058 373001 BLACK ANIMAL",
+        "S126-7692 LLS036 000001 BLACK"
+      ],
+      "hero_product": "S126-4007 BYP058 373001 BLACK ANIMAL"
+    },
+    "Look_35": {
+      "product_ids": [
+        "S126-8332 KYS923 000001 BLACK"
+      ],
+      "hero_product": "S126-8332 KYS923 000001 BLACK"
+    },
+    "Look_36": {
+      "product_ids": [
+        "S126-3018 JYS019 000605 GRENADINE"
+      ],
+      "hero_product": "S126-3018 JYS019 000605 GRENADINE"
+    },
+    "Look_37": {
+      "product_ids": [
+        "S126-8315 KYS071 000001 BLACK"
+      ],
+      "hero_product": "S126-8315 KYS071 000001 BLACK"
+    },
+    "Look_38": {
+      "product_ids": [
+        "S126-7167 CYS008 000479 MIDNIGHT",
+        "S126-8315 KYS071 000563 MAROON"
+      ],
+      "hero_product": "S126-7167 CYS008 000479 MIDNIGHT"
+    },
+    "Look_39": {
+      "product_ids": [
+        "S126-8332 KYS923 000562 DUSTY LILAC"
+      ],
+      "hero_product": "S126-8332 KYS923 000562 DUSTY LILAC"
+    },
+    "Look_40": {
+      "product_ids": [
+        "S126-8316 KYS080 000001 BLACK"
+      ],
+      "hero_product": "S126-8316 KYS080 000001 BLACK"
+    },
+    "Look_41": {
+      "product_ids": [
+        "S126-2002 AWS028 000001 BLACK"
+      ],
+      "hero_product": "S126-2002 AWS028 000001 BLACK"
+    },
+    "Look_42": {
+      "product_ids": [
+        "S126-8806 KWS083 000181 BONE"
+      ],
+      "hero_product": "S126-8806 KWS083 000181 BONE"
+    },
+    "Look_43": {
+      "product_ids": [
+        "S126-2012 LLS034 000563 MAROON"
+      ],
+      "hero_product": "S126-2012 LLS034 000563 MAROON"
+    },
+    "Look_44": {
+      "product_ids": [
+        "S126-5023 LLS002 000563 MAROON"
+      ],
+      "hero_product": "S126-5023 LLS002 000563 MAROON"
+    },
+    "Look_45": {
+      "product_ids": [
+        "S126-5016 LLS034 000001 BLACK",
+        "S126-7160 LLE054 381182 TAHINI/SILVER",
+        "S126-8806 KWS083 000181 BONE"
+      ],
+      "hero_product": "S126-5016 LLS034 000001 BLACK"
+    },
+    "Look_46": {
+      "product_ids": [
+        "S126-8406 KYS080 000001 BLACK"
+      ],
+      "hero_product": "S126-8406 KYS080 000001 BLACK"
+    },
+    "Look_47": {
+      "product_ids": [
+        "S126-5017 ZYS008 000171 MACADAMIA"
+      ],
+      "hero_product": "S126-5017 ZYS008 000171 MACADAMIA"
+    },
+    "Look_48": {
+      "product_ids": [
+        "S126-7690 LLS036 000001 BLACK"
+      ],
+      "hero_product": "S126-7690 LLS036 000001 BLACK"
+    },
+    "Look_49": {
+      "product_ids": [
+        "S126-7690 LUC004 000265 GOLDEN OAK"
+      ],
+      "hero_product": "S126-7690 LUC004 000265 GOLDEN OAK"
+    },
+    "Look_50": {
+      "product_ids": [
+        "S126-8102 KWS089 000258 TOFFEE"
+      ],
+      "hero_product": "S126-8102 KWS089 000258 TOFFEE"
+    },
+    "Look_51": {
+      "product_ids": [
+        "S126-8103 KWM014 000406 BERRY BLUE"
+      ],
+      "hero_product": "S126-8103 KWM014 000406 BERRY BLUE"
+    },
+    "Look_52": {
+      "product_ids": [
+        "S126-8103 KWM014 000181 BONE MELANGE"
+      ],
+      "hero_product": "S126-8103 KWM014 000181 BONE MELANGE"
+    },
+    "Look_53": {
+      "product_ids": [
+        "S126-7683 LUC006 000214 BURNT CYPRESS",
+        "S126-8810 KKS818 000102 IVORY"
+      ],
+      "hero_product": "S126-7683 LUC006 000214 BURNT CYPRESS"
+    },
+    "Look_54": {
+      "product_ids": [
+        "S126-8830 KWS068 000102 IVORY"
+      ],
+      "hero_product": "S126-8830 KWS068 000102 IVORY"
+    },
+    "Look_55": {
+      "product_ids": [
+        "S126-8805 KWS083 000102 IVORY"
+      ],
+      "hero_product": "S126-8805 KWS083 000102 IVORY"
+    },
+    "Look_56": {
+      "product_ids": [
+        "S126-4003 BSP032 371102 IVORY GOOSE",
+        "S126-6007 AYS006 000265 GOLDEN OAK"
+      ],
+      "hero_product": "S126-4003 BSP032 371102 IVORY GOOSE"
+    },
+    "Look_57": {
+      "product_ids": [
+        "S126-4007 BYS089 000102 IVORY",
+        "S126-7153 LLC052 000214 BURNT CYPRESS"
+      ],
+      "hero_product": "S126-4007 BYS089 000102 IVORY"
+    },
+    "Look_58": {
+      "product_ids": [
+        "S126-4015 BSP031 418001 BLACK FLOWERS",
+        "S126-6007 AWS028 000001 BLACK"
+      ],
+      "hero_product": "S126-4015 BSP031 418001 BLACK FLOWERS"
+    },
+    "Look_59": {
+      "product_ids": [
+        "S126-8830 KWS068 000406 BERRY BLUE"
+      ],
+      "hero_product": "S126-8830 KWS068 000406 BERRY BLUE"
+    },
+    "Look_60": {
+      "product_ids": [
+        "S126-8830 KWS068 000689 PALE BLUSH"
+      ],
+      "hero_product": "S126-8830 KWS068 000689 PALE BLUSH"
+    },
+    "Look_61": {
+      "product_ids": [
+        "S126-8834 KWS068 000689 PALE BLUSH"
+      ],
+      "hero_product": "S126-8834 KWS068 000689 PALE BLUSH"
+    },
+    "Look_62": {
+      "product_ids": [
+        "S126-8834 KWS068 000406 BERRY BLUE"
+      ],
+      "hero_product": "S126-8834 KWS068 000406 BERRY BLUE"
+    },
+    "Look_63": {
+      "product_ids": [
+        "S126-7153 LLS060 000132 WEIZEN",
+        "S126-7695 LLS036 000001 BLACK",
+        "S126-8801 KWS081 421001 BLACK"
+      ],
+      "hero_product": "S126-7153 LLS060 000132 WEIZEN"
+    },
+    "Look_64": {
+      "product_ids": [
+        "S126-7692 LLS036 000182 TAHINI",
+        "S126-8834 KWS068 000102 IVORY"
+      ],
+      "hero_product": "S126-7692 LLS036 000182 TAHINI"
+    },
+    "Look_65": {
+      "product_ids": [
+        "S126-7153 LUC006 000479 MIDNIGHT",
+        "S126-8813 KWM014 000454 ASH BLUE MEL"
+      ],
+      "hero_product": "S126-7153 LUC006 000479 MIDNIGHT"
+    },
+    "Look_66": {
+      "product_ids": [
+        "S126-8833 KCS042 351258 TOFFEE"
+      ],
+      "hero_product": "S126-8833 KCS042 351258 TOFFEE"
+    },
+    "Look_67": {
+      "product_ids": [
+        "S126-8817 KWS059 419008 JET MELANGE"
+      ],
+      "hero_product": "S126-8817 KWS059 419008 JET MELANGE"
+    },
+    "Look_68": {
+      "product_ids": [
+        "S126-7690 ELP013 000907 PYTHON",
+        "S126-8415 KWS083 000008 JET MELANGE"
+      ],
+      "hero_product": "S126-7690 ELP013 000907 PYTHON"
+    },
+    "Look_69": {
+      "product_ids": [
+        "S126-4008 BSP024 418067 STORM FLOWERS",
+        "S126-7153 LLE052 381001 BLACK/SILVER",
+        "S126-7694 LLS036 000001 BLACK"
+      ],
+      "hero_product": "S126-4008 BSP024 418067 STORM FLOWERS"
+    },
+    "Look_70": {
+      "product_ids": [
+        "S126-8809 KWS022 000181 BONE MELANGE"
+      ],
+      "hero_product": "S126-8809 KWS022 000181 BONE MELANGE"
+    },
+    "Look_71": {
+      "product_ids": [
+        "S126-6017 LLS002 000001 BLACK",
+        "S126-7695 LLS036 000206 PRALINE",
+        "S126-8415 KWS083 000102 IVORY"
+      ],
+      "hero_product": "S126-6017 LLS002 000001 BLACK"
+    },
+    "Look_72": {
+      "product_ids": [
+        "S126-8816 KWS090 000399 SMOKE PINE"
+      ],
+      "hero_product": "S126-8816 KWS090 000399 SMOKE PINE"
+    },
+    "Look_73": {
+      "product_ids": [
+        "S126-2012 LLS056 000001 BLACK"
+      ],
+      "hero_product": "S126-2012 LLS056 000001 BLACK"
+    },
+    "Look_74": {
+      "product_ids": [
+        "S126-8835 KCS018 000102 IVORY"
+      ],
+      "hero_product": "S126-8835 KCS018 000102 IVORY"
+    },
+    "Look_75": {
+      "product_ids": [
+        "S126-8832 KWS054 000398 DESERT SAGE"
+      ],
+      "hero_product": "S126-8832 KWS054 000398 DESERT SAGE"
+    },
+    "Look_76": {
+      "product_ids": [
+        "S126-2021 LLS002 000267 TOBACCO"
+      ],
+      "hero_product": "S126-2021 LLS002 000267 TOBACCO"
+    },
+    "Look_77": {
+      "product_ids": [
+        "S126-1008 AWM040 000182 TAHINI MELANGE",
+        "S126-7153 LLE045 000978 BLACK STUD"
+      ],
+      "hero_product": "S126-1008 AWM040 000182 TAHINI MELANGE"
+    },
+    "Look_78": {
+      "product_ids": [
+        "S126-6001 AWS028 000001 BLACK",
+        "S126-8816 KWS090 000236 CAMEL"
+      ],
+      "hero_product": "S126-6001 AWS028 000001 BLACK"
+    },
+    "Look_79": {
+      "product_ids": [
+        "S126-8102 KWS089 000406 BERRY BLUE"
+      ],
+      "hero_product": "S126-8102 KWS089 000406 BERRY BLUE"
+    },
+    "Look_80": {
+      "product_ids": [
+        "S126-8816 KWS090 000406 BERRY BLUE"
+      ],
+      "hero_product": "S126-8816 KWS090 000406 BERRY BLUE"
+    },
+    "Look_81": {
+      "product_ids": [
+        "S126-8833 KCS042 351406 BERRY BLUE"
+      ],
+      "hero_product": "S126-8833 KCS042 351406 BERRY BLUE"
+    },
+    "Look_82": {
+      "product_ids": [
+        "S126-8813 KWM014 000406 BERRY BLUE MEL"
+      ],
+      "hero_product": "S126-8813 KWM014 000406 BERRY BLUE MEL"
+    },
+    "Look_83": {
+      "product_ids": [
+        "S126-8817 KWS059 419406 BERRY BLUE"
+      ],
+      "hero_product": "S126-8817 KWS059 419406 BERRY BLUE"
+    },
+    "Look_84": {
+      "product_ids": [
+        "S126-8835 KCS018 000406 BERRY BLUE"
+      ],
+      "hero_product": "S126-8835 KCS018 000406 BERRY BLUE"
+    },
+    "Look_85": {
+      "product_ids": [
+        "S126-8810 KKS818 000454 ASH BLUE"
+      ],
+      "hero_product": "S126-8810 KKS818 000454 ASH BLUE"
+    },
+    "Look_86": {
+      "product_ids": [
+        "S126-7167 LLC053 000001 BLACK PATENT CROC",
+        "S126-8832 KWS054 000001 BLACK"
+      ],
+      "hero_product": "S126-7167 LLC053 000001 BLACK PATENT CROC"
+    },
+    "Look_87": {
+      "product_ids": [
+        "S126-8826 KYS071 000001 BLACK"
+      ],
+      "hero_product": "S126-8826 KYS071 000001 BLACK"
+    },
+    "Look_88": {
+      "product_ids": [
+        "S126-8825 KYS071 000563 MAROON"
+      ],
+      "hero_product": "S126-8825 KYS071 000563 MAROON"
+    },
+    "Look_89": {
+      "product_ids": [
+        "S126-7166 ELP013 000907 PYTHON",
+        "S126-8806 KWS083 000008 JET MELANGE"
+      ],
+      "hero_product": "S126-7166 ELP013 000907 PYTHON"
+    },
+    "Look_90": {
+      "product_ids": [
+        "S126-7167 LLE053 380001 BLACK/CRYSTAL",
+        "S126-8825 KYS071 000001 BLACK"
+      ],
+      "hero_product": "S126-7167 LLE053 380001 BLACK/CRYSTAL"
+    },
+    "Look_91": {
+      "product_ids": [
+        "S126-8826 KYS071 000563 MAROON"
+      ],
+      "hero_product": "S126-8826 KYS071 000563 MAROON"
+    },
+    "Look_92": {
+      "product_ids": [
+        "S126-2003 AWS680 000563 MAROON"
+      ],
+      "hero_product": "S126-2003 AWS680 000563 MAROON"
+    },
+    "Look_93": {
+      "product_ids": [
+        "S126-6022 AWS680 000563 MAROON",
+        "S126-8810 KKS818 000563 MAROON"
+      ],
+      "hero_product": "S126-6022 AWS680 000563 MAROON"
+    }
+  }
+}

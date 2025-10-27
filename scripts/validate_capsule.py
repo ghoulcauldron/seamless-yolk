@@ -241,11 +241,25 @@ def main(capsule: str):
         if (cpi := extract_cpi_from_product_id(extract_product_id_from_tags(row['Tags'])))
     }
 
-    all_errors = []
-    all_errors.extend(check_internal_structure(df_ready))
-    all_errors.extend(check_data_consistency_against_sources(df_ready, df_tracker))
-    # Add the new image validation check
-    all_errors.extend(check_image_validity(df_ready, df_manifest, handle_to_cpi_map))
+    all_errors = [] # Initialize the master error list
+
+    # --- Run Internal Structure Check ---
+    print("Running internal structure checks...")
+    internal_errors = check_internal_structure(df_ready)
+    all_errors.extend(internal_errors)
+    print(f"  > Internal structure checks complete ({len(internal_errors)} issues found).") # <<< ADDED LOG
+
+    # --- Run Source Consistency Check ---
+    print("Running checks against source tracker...")
+    source_errors = check_data_consistency_against_sources(df_ready, df_tracker)
+    all_errors.extend(source_errors)
+    print(f"  > Source consistency checks complete ({len(source_errors)} issues found).") # <<< ADDED LOG
+
+    # --- Run Basic Image Validity Check ---
+    print("Running basic image validity checks (URL Prefix, Spaces, Manifest Existence)...")
+    basic_image_errors = check_image_validity(df_ready, df_manifest, handle_to_cpi_map)
+    all_errors.extend(basic_image_errors)
+    print(f"  > Basic image validity checks complete ({len(basic_image_errors)} issues found).") # <<< ADDED LOG
 
     if all_errors:
         print(f"\n❌ Validation failed with {len(all_errors)} errors:")
