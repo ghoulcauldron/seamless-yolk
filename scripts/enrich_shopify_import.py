@@ -261,7 +261,7 @@ def main(capsule: str, dry_run: bool, override_file: str = None):
     tracker_df['RRP (USD)'] = pd.to_numeric(tracker_df['RRP (USD)'], errors='coerce')
 
     # --- PATCH 1: INITIALIZE LIST FOR NEW ROWS (FOR ROW CREATION) ---
-    all_new_rows_to_add = [] 
+    all_new_rows_to_add = []
     # --- END PATCH 1 ---
 
     for handle, product_group in export_df.groupby('Handle'):
