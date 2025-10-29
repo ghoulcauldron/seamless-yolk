@@ -11,7 +11,6 @@ from dotenv import load_dotenv
 
 load_dotenv()
 
-
 class ShopifyClient:
     def __init__(self):
         self.shop_url = os.getenv("SHOP_URL", "").rstrip("/")
@@ -397,9 +396,13 @@ class ShopifyClient:
           }
         }
         """
-        variables = {"files": {"alt": alt, "contentType": "IMAGE_JPEG", "originalSource": resource_url}}
+        variables = {"files": {"alt": alt, "contentType": "IMAGE", "originalSource": resource_url}}
         resp = self.graphql(mutation, variables)
         
+        if 'errors' in resp:
+            error_message = resp['errors'][0]['message']
+            raise RuntimeError(f"GraphQL API Error: {error_message}")
+
         user_errors = resp.get("data", {}).get("fileCreate", {}).get("userErrors", [])
         if user_errors:
             raise RuntimeError(f"Error creating file: {user_errors[0]['message']}")

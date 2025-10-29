@@ -32,6 +32,7 @@ def start_server(path: str, port: int):
             super().__init__(*args, directory=str(path), **kwargs)
 
     try:
+        socketserver.TCPServer.allow_reuse_address = True # Allow address reuse
         httpd = socketserver.TCPServer(("", port), Handler)
         print(f"--- 🚀 Starting local file server at http://127.0.0.1:{port} ---")
         print(f"--- Serving files from: {path} ---")
@@ -97,7 +98,7 @@ def load_manifest_map(manifest_path: str) -> dict:
     return file_map
 
 # --- Main Script (Updated) ---
-def main(csv_path: str, base_dir: str, manifest_path: str, output_csv: str, port: int, dry_run: bool = False):
+def main(csv_path: str, base_dir: str, manifest_path: str, output_csv: str, port: int, dry_run: bool = False, public_url: str = None):
     global server_error
     server_error = False
 
@@ -191,7 +192,7 @@ def main(csv_path: str, base_dir: str, manifest_path: str, output_csv: str, port
 
     # --- START SERVER (Moved from above) ---
     # 2. Start the local file server
-    httpd = socketserver.TCPServer(("", port), http.server.SimpleHTTPRequestHandler)
+    # httpd = socketserver.TCPServer(("", port), http.server.SimpleHTTPRequestHandler)
     server_thread = threading.Thread(
         target=start_server, 
         args=(base_dir_path, port), 
@@ -204,9 +205,15 @@ def main(csv_path: str, base_dir: str, manifest_path: str, output_csv: str, port
         print("Exiting due to server error.")
         return
 
-    # 3. Get local IP for constructing public-facing URLs
-    local_ip = get_local_ip()
-    local_url_prefix = f"http://{local_ip}:{port}"
+    # 3. Get public-facing URL
+    if public_url:
+        local_url_prefix = public_url.rstrip('/')
+    else:
+        local_ip = get_local_ip()
+        local_url_prefix = f"http://{local_ip}:{port}"
+        print(f"--- ⚠️  WARNING: No --public-url provided. Using local IP {local_ip}. ---")
+        print("--- This will FAIL if your computer is not on the public internet. ---")
+
     print(f"--- 🌎 Files will be uploaded from: {local_url_prefix}/<filename> ---")
 
     # 7. Upload files and build a {filename: cdn_url} map
@@ -250,7 +257,7 @@ def main(csv_path: str, base_dir: str, manifest_path: str, output_csv: str, port
     # Create a new 'Image Src' column based on the map
     # This rebuilds the column from scratch
     df['Image Src'] = df['Image Src'].apply(
-        lambda x: url_map.get(x.split('/')[-1], "")
+        lambda x: url_map.get(str(x).split('/')[-1], "") if pd.notna(x) else ""
     )
     
     # Save the new CSV
@@ -269,16 +276,16 @@ if __name__ == "__main__":
     parser = argparse.ArgumentParser(description="Verify, pre-upload local images, and create an import-ready CSV.")
     parser.add_argument('--csv', required=True, help='Path to your "poc_shopify_import_ready.csv" file.')
     parser.add_argument('--base-dir', default='.', help='Path to the project root (default: current directory).')
-    # --- ADD THIS LINE ---
+
     parser.add_argument('--manifest', required=True, help='Path to the images_manifest.jsonl file for verification.')
     
     parser.add_argument('--output-csv', default='import_with_urls.csv', help='Name of the final, import-ready CSV file to create.')
     parser.add_argument('--port', type=int, default=8000, help='Port to run the local file server on.')
     
-    # --- ADD THIS LINE ---
+    
+    parser.add_argument('--public-url', help='A public URL (like from ngrok) for Shopify to access files.')
     parser.add_argument('--dry-run', action='store_true', help='Run verification and show what files would be uploaded.')
 
     args = parser.parse_args()
     
-    # --- UPDATE THIS LINE ---
-    main(args.csv, args.base_dir, args.manifest, args.output_csv, args.port, dry_run=args.dry_run)
+    main(args.csv, args.base_dir, args.manifest, args.output_csv, args.port, dry_run=args.dry_run, public_url=args.public_url)
