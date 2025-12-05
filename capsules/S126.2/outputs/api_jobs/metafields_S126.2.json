@@ -1,0 +1,1378 @@
+[
+  {
+    "cpi": "2002-000397",
+    "product_gid": "gid://shopify/Product/7716182556774",
+    "file_gid": "gid://shopify/MediaImage/25577361244262",
+    "key": "look_image",
+    "response": {
+      "data": {
+        "metafieldsSet": {
+          "metafields": [
+            {
+              "key": "look_image",
+              "namespace": "altuzarra",
+              "type": "file_reference",
+              "value": "gid://shopify/MediaImage/25577361244262"
+            }
+          ],
+          "userErrors": []
+        }
+      },
+      "extensions": {
+        "cost": {
+          "requestedQueryCost": 10,
+          "actualQueryCost": 10,
+          "throttleStatus": {
+            "maximumAvailable": 20000.0,
+            "currentlyAvailable": 19990,
+            "restoreRate": 1000.0
+          }
+        }
+      }
+    }
+  },
+  {
+    "cpi": "3018-000605",
+    "product_gid": "gid://shopify/Product/7716182982758",
+    "file_gid": "gid://shopify/MediaImage/25577358884966",
+    "key": "look_image",
+    "response": {
+      "data": {
+        "metafieldsSet": {
+          "metafields": [
+            {
+              "key": "look_image",
+              "namespace": "altuzarra",
+              "type": "file_reference",
+              "value": "gid://shopify/MediaImage/25577358884966"
+            }
+          ],
+          "userErrors": []
+        }
+      },
+      "extensions": {
+        "cost": {
+          "requestedQueryCost": 10,
+          "actualQueryCost": 10,
+          "throttleStatus": {
+            "maximumAvailable": 20000.0,
+            "currentlyAvailable": 19990,
+            "restoreRate": 1000.0
+          }
+        }
+      }
+    }
+  },
+  {
+    "cpi": "3019-416102",
+    "product_gid": "gid://shopify/Product/7716183015526",
+    "file_gid": "gid://shopify/MediaImage/25577358688358",
+    "key": "look_image",
+    "response": {
+      "data": {
+        "metafieldsSet": {
+          "metafields": [
+            {
+              "key": "look_image",
+              "namespace": "altuzarra",
+              "type": "file_reference",
+              "value": "gid://shopify/MediaImage/25577358688358"
+            }
+          ],
+          "userErrors": []
+        }
+      },
+      "extensions": {
+        "cost": {
+          "requestedQueryCost": 10,
+          "actualQueryCost": 10,
+          "throttleStatus": {
+            "maximumAvailable": 20000.0,
+            "currentlyAvailable": 19990,
+            "restoreRate": 1000.0
+          }
+        }
+      }
+    }
+  },
+  {
+    "cpi": "3022-000397",
+    "product_gid": "gid://shopify/Product/7716183113830",
+    "file_gid": "gid://shopify/MediaImage/25577358491750",
+    "key": "look_image",
+    "response": {
+      "data": {
+        "metafieldsSet": {
+          "metafields": [
+            {
+              "key": "look_image",
+              "namespace": "altuzarra",
+              "type": "file_reference",
+              "value": "gid://shopify/MediaImage/25577358491750"
+            }
+          ],
+          "userErrors": []
+        }
+      },
+      "extensions": {
+        "cost": {
+          "requestedQueryCost": 10,
+          "actualQueryCost": 10,
+          "throttleStatus": {
+            "maximumAvailable": 20000.0,
+            "currentlyAvailable": 19990,
+            "restoreRate": 1000.0
+          }
+        }
+      }
+    }
+  },
+  {
+    "cpi": "5004-373001",
+    "product_gid": "gid://shopify/Product/7716183507046",
+    "file_gid": "gid://shopify/MediaImage/25577358229606",
+    "key": "look_image",
+    "response": {
+      "data": {
+        "metafieldsSet": {
+          "metafields": [
+            {
+              "key": "look_image",
+              "namespace": "altuzarra",
+              "type": "file_reference",
+              "value": "gid://shopify/MediaImage/25577358229606"
+            }
+          ],
+          "userErrors": []
+        }
+      },
+      "extensions": {
+        "cost": {
+          "requestedQueryCost": 10,
+          "actualQueryCost": 10,
+          "throttleStatus": {
+            "maximumAvailable": 20000.0,
+            "currentlyAvailable": 19990,
+            "restoreRate": 1000.0
+          }
+        }
+      }
+    }
+  },
+  {
+    "cpi": "5013-000397",
+    "product_gid": "gid://shopify/Product/7716183572582",
+    "file_gid": "gid://shopify/MediaImage/25577358065766",
+    "key": "look_image",
+    "response": {
+      "data": {
+        "metafieldsSet": {
+          "metafields": [
+            {
+              "key": "look_image",
+              "namespace": "altuzarra",
+              "type": "file_reference",
+              "value": "gid://shopify/MediaImage/25577358065766"
+            }
+          ],
+          "userErrors": []
+        }
+      },
+      "extensions": {
+        "cost": {
+          "requestedQueryCost": 10,
+          "actualQueryCost": 10,
+          "throttleStatus": {
+            "maximumAvailable": 20000.0,
+            "currentlyAvailable": 19990,
+            "restoreRate": 1000.0
+          }
+        }
+      }
+    }
+  },
+  {
+    "cpi": "5016-000001",
+    "product_gid": "gid://shopify/Product/7716183703654",
+    "file_gid": "gid://shopify/MediaImage/25577357869158",
+    "key": "look_image",
+    "response": {
+      "data": {
+        "metafieldsSet": {
+          "metafields": [
+            {
+              "key": "look_image",
+              "namespace": "altuzarra",
+              "type": "file_reference",
+              "value": "gid://shopify/MediaImage/25577357869158"
+            }
+          ],
+          "userErrors": []
+        }
+      },
+      "extensions": {
+        "cost": {
+          "requestedQueryCost": 10,
+          "actualQueryCost": 10,
+          "throttleStatus": {
+            "maximumAvailable": 20000.0,
+            "currentlyAvailable": 19990,
+            "restoreRate": 1000.0
+          }
+        }
+      }
+    }
+  },
+  {
+    "cpi": "5017-000171",
+    "product_gid": "gid://shopify/Product/7716183736422",
+    "file_gid": "gid://shopify/MediaImage/25577357639782",
+    "key": "look_image",
+    "response": {
+      "data": {
+        "metafieldsSet": {
+          "metafields": [
+            {
+              "key": "look_image",
+              "namespace": "altuzarra",
+              "type": "file_reference",
+              "value": "gid://shopify/MediaImage/25577357639782"
+            }
+          ],
+          "userErrors": []
+        }
+      },
+      "extensions": {
+        "cost": {
+          "requestedQueryCost": 10,
+          "actualQueryCost": 10,
+          "throttleStatus": {
+            "maximumAvailable": 20000.0,
+            "currentlyAvailable": 19990,
+            "restoreRate": 1000.0
+          }
+        }
+      }
+    }
+  },
+  {
+    "cpi": "5023-000563",
+    "product_gid": "gid://shopify/Product/7716183801958",
+    "file_gid": "gid://shopify/MediaImage/25577357443174",
+    "key": "look_image",
+    "response": {
+      "data": {
+        "metafieldsSet": {
+          "metafields": [
+            {
+              "key": "look_image",
+              "namespace": "altuzarra",
+              "type": "file_reference",
+              "value": "gid://shopify/MediaImage/25577357443174"
+            }
+          ],
+          "userErrors": []
+        }
+      },
+      "extensions": {
+        "cost": {
+          "requestedQueryCost": 10,
+          "actualQueryCost": 10,
+          "throttleStatus": {
+            "maximumAvailable": 20000.0,
+            "currentlyAvailable": 19990,
+            "restoreRate": 1000.0
+          }
+        }
+      }
+    }
+  },
+  {
+    "cpi": "8406-000001",
+    "product_gid": "gid://shopify/Product/7716186685542",
+    "file_gid": "gid://shopify/MediaImage/25577356886118",
+    "key": "look_image",
+    "response": {
+      "data": {
+        "metafieldsSet": {
+          "metafields": [
+            {
+              "key": "look_image",
+              "namespace": "altuzarra",
+              "type": "file_reference",
+              "value": "gid://shopify/MediaImage/25577356886118"
+            }
+          ],
+          "userErrors": []
+        }
+      },
+      "extensions": {
+        "cost": {
+          "requestedQueryCost": 10,
+          "actualQueryCost": 10,
+          "throttleStatus": {
+            "maximumAvailable": 20000.0,
+            "currentlyAvailable": 19990,
+            "restoreRate": 1000.0
+          }
+        }
+      }
+    }
+  },
+  {
+    "cpi": "8415-000008",
+    "product_gid": "gid://shopify/Product/7716186718310",
+    "file_gid": "gid://shopify/MediaImage/25577356656742",
+    "key": "look_image",
+    "response": {
+      "data": {
+        "metafieldsSet": {
+          "metafields": [
+            {
+              "key": "look_image",
+              "namespace": "altuzarra",
+              "type": "file_reference",
+              "value": "gid://shopify/MediaImage/25577356656742"
+            }
+          ],
+          "userErrors": []
+        }
+      },
+      "extensions": {
+        "cost": {
+          "requestedQueryCost": 10,
+          "actualQueryCost": 10,
+          "throttleStatus": {
+            "maximumAvailable": 20000.0,
+            "currentlyAvailable": 19990,
+            "restoreRate": 1000.0
+          }
+        }
+      }
+    }
+  },
+  {
+    "cpi": "8415-000102",
+    "product_gid": "gid://shopify/Product/7716186751078",
+    "file_gid": "gid://shopify/MediaImage/25577356460134",
+    "key": "look_image",
+    "response": {
+      "data": {
+        "metafieldsSet": {
+          "metafields": [
+            {
+              "key": "look_image",
+              "namespace": "altuzarra",
+              "type": "file_reference",
+              "value": "gid://shopify/MediaImage/25577356460134"
+            }
+          ],
+          "userErrors": []
+        }
+      },
+      "extensions": {
+        "cost": {
+          "requestedQueryCost": 10,
+          "actualQueryCost": 10,
+          "throttleStatus": {
+            "maximumAvailable": 20000.0,
+            "currentlyAvailable": 19990,
+            "restoreRate": 1000.0
+          }
+        }
+      }
+    }
+  },
+  {
+    "cpi": "8830-000406",
+    "product_gid": "gid://shopify/Product/7716187701350",
+    "file_gid": "gid://shopify/MediaImage/25577356263526",
+    "key": "look_image",
+    "response": {
+      "data": {
+        "metafieldsSet": {
+          "metafields": [
+            {
+              "key": "look_image",
+              "namespace": "altuzarra",
+              "type": "file_reference",
+              "value": "gid://shopify/MediaImage/25577356263526"
+            }
+          ],
+          "userErrors": []
+        }
+      },
+      "extensions": {
+        "cost": {
+          "requestedQueryCost": 10,
+          "actualQueryCost": 10,
+          "throttleStatus": {
+            "maximumAvailable": 20000.0,
+            "currentlyAvailable": 19990,
+            "restoreRate": 1000.0
+          }
+        }
+      }
+    }
+  },
+  {
+    "cpi": "8830-000689",
+    "product_gid": "gid://shopify/Product/7716187734118",
+    "file_gid": "gid://shopify/MediaImage/25577356034150",
+    "key": "look_image",
+    "response": {
+      "data": {
+        "metafieldsSet": {
+          "metafields": [
+            {
+              "key": "look_image",
+              "namespace": "altuzarra",
+              "type": "file_reference",
+              "value": "gid://shopify/MediaImage/25577356034150"
+            }
+          ],
+          "userErrors": []
+        }
+      },
+      "extensions": {
+        "cost": {
+          "requestedQueryCost": 10,
+          "actualQueryCost": 10,
+          "throttleStatus": {
+            "maximumAvailable": 20000.0,
+            "currentlyAvailable": 19990,
+            "restoreRate": 1000.0
+          }
+        }
+      }
+    }
+  },
+  {
+    "cpi": "8833-351406",
+    "product_gid": "gid://shopify/Product/7716187897958",
+    "file_gid": "gid://shopify/MediaImage/25577355837542",
+    "key": "look_image",
+    "response": {
+      "data": {
+        "metafieldsSet": {
+          "metafields": [
+            {
+              "key": "look_image",
+              "namespace": "altuzarra",
+              "type": "file_reference",
+              "value": "gid://shopify/MediaImage/25577355837542"
+            }
+          ],
+          "userErrors": []
+        }
+      },
+      "extensions": {
+        "cost": {
+          "requestedQueryCost": 10,
+          "actualQueryCost": 10,
+          "throttleStatus": {
+            "maximumAvailable": 20000.0,
+            "currentlyAvailable": 19990,
+            "restoreRate": 1000.0
+          }
+        }
+      }
+    }
+  },
+  {
+    "cpi": "8834-000406",
+    "product_gid": "gid://shopify/Product/7716187930726",
+    "file_gid": "gid://shopify/MediaImage/25577355608166",
+    "key": "look_image",
+    "response": {
+      "data": {
+        "metafieldsSet": {
+          "metafields": [
+            {
+              "key": "look_image",
+              "namespace": "altuzarra",
+              "type": "file_reference",
+              "value": "gid://shopify/MediaImage/25577355608166"
+            }
+          ],
+          "userErrors": []
+        }
+      },
+      "extensions": {
+        "cost": {
+          "requestedQueryCost": 10,
+          "actualQueryCost": 10,
+          "throttleStatus": {
+            "maximumAvailable": 20000.0,
+            "currentlyAvailable": 19990,
+            "restoreRate": 1000.0
+          }
+        }
+      }
+    }
+  },
+  {
+    "cpi": "8834-000689",
+    "product_gid": "gid://shopify/Product/7716188029030",
+    "file_gid": "gid://shopify/MediaImage/25577355444326",
+    "key": "look_image",
+    "response": {
+      "data": {
+        "metafieldsSet": {
+          "metafields": [
+            {
+              "key": "look_image",
+              "namespace": "altuzarra",
+              "type": "file_reference",
+              "value": "gid://shopify/MediaImage/25577355444326"
+            }
+          ],
+          "userErrors": []
+        }
+      },
+      "extensions": {
+        "cost": {
+          "requestedQueryCost": 10,
+          "actualQueryCost": 10,
+          "throttleStatus": {
+            "maximumAvailable": 20000.0,
+            "currentlyAvailable": 19990,
+            "restoreRate": 1000.0
+          }
+        }
+      }
+    }
+  },
+  {
+    "cpi": "2002-000397",
+    "product_gid": "gid://shopify/Product/7716182556774",
+    "file_gid": "gid://shopify/MediaImage/25577344893030",
+    "key": "swatch_image",
+    "response": {
+      "data": {
+        "metafieldsSet": {
+          "metafields": [
+            {
+              "key": "swatch_image",
+              "namespace": "altuzarra",
+              "type": "file_reference",
+              "value": "gid://shopify/MediaImage/25577344893030"
+            }
+          ],
+          "userErrors": []
+        }
+      },
+      "extensions": {
+        "cost": {
+          "requestedQueryCost": 10,
+          "actualQueryCost": 10,
+          "throttleStatus": {
+            "maximumAvailable": 20000.0,
+            "currentlyAvailable": 19990,
+            "restoreRate": 1000.0
+          }
+        }
+      }
+    }
+  },
+  {
+    "cpi": "2012-000265",
+    "product_gid": "gid://shopify/Product/7716182687846",
+    "file_gid": "gid://shopify/MediaImage/25577344925798",
+    "key": "swatch_image",
+    "response": {
+      "data": {
+        "metafieldsSet": {
+          "metafields": [
+            {
+              "key": "swatch_image",
+              "namespace": "altuzarra",
+              "type": "file_reference",
+              "value": "gid://shopify/MediaImage/25577344925798"
+            }
+          ],
+          "userErrors": []
+        }
+      },
+      "extensions": {
+        "cost": {
+          "requestedQueryCost": 10,
+          "actualQueryCost": 10,
+          "throttleStatus": {
+            "maximumAvailable": 20000.0,
+            "currentlyAvailable": 19990,
+            "restoreRate": 1000.0
+          }
+        }
+      }
+    }
+  },
+  {
+    "cpi": "2021-000267",
+    "product_gid": "gid://shopify/Product/7716182720614",
+    "file_gid": "gid://shopify/MediaImage/25577345515622",
+    "key": "swatch_image",
+    "response": {
+      "data": {
+        "metafieldsSet": {
+          "metafields": [
+            {
+              "key": "swatch_image",
+              "namespace": "altuzarra",
+              "type": "file_reference",
+              "value": "gid://shopify/MediaImage/25577345515622"
+            }
+          ],
+          "userErrors": []
+        }
+      },
+      "extensions": {
+        "cost": {
+          "requestedQueryCost": 10,
+          "actualQueryCost": 10,
+          "throttleStatus": {
+            "maximumAvailable": 20000.0,
+            "currentlyAvailable": 19990,
+            "restoreRate": 1000.0
+          }
+        }
+      }
+    }
+  },
+  {
+    "cpi": "3018-000605",
+    "product_gid": "gid://shopify/Product/7716182982758",
+    "file_gid": "gid://shopify/MediaImage/25577345384550",
+    "key": "swatch_image",
+    "response": {
+      "data": {
+        "metafieldsSet": {
+          "metafields": [
+            {
+              "key": "swatch_image",
+              "namespace": "altuzarra",
+              "type": "file_reference",
+              "value": "gid://shopify/MediaImage/25577345384550"
+            }
+          ],
+          "userErrors": []
+        }
+      },
+      "extensions": {
+        "cost": {
+          "requestedQueryCost": 10,
+          "actualQueryCost": 10,
+          "throttleStatus": {
+            "maximumAvailable": 20000.0,
+            "currentlyAvailable": 19990,
+            "restoreRate": 1000.0
+          }
+        }
+      }
+    }
+  },
+  {
+    "cpi": "3019-416102",
+    "product_gid": "gid://shopify/Product/7716183015526",
+    "file_gid": "gid://shopify/MediaImage/25577345319014",
+    "key": "swatch_image",
+    "response": {
+      "data": {
+        "metafieldsSet": {
+          "metafields": [
+            {
+              "key": "swatch_image",
+              "namespace": "altuzarra",
+              "type": "file_reference",
+              "value": "gid://shopify/MediaImage/25577345319014"
+            }
+          ],
+          "userErrors": []
+        }
+      },
+      "extensions": {
+        "cost": {
+          "requestedQueryCost": 10,
+          "actualQueryCost": 10,
+          "throttleStatus": {
+            "maximumAvailable": 20000.0,
+            "currentlyAvailable": 19990,
+            "restoreRate": 1000.0
+          }
+        }
+      }
+    }
+  },
+  {
+    "cpi": "3019-000406",
+    "product_gid": "gid://shopify/Product/7716183048294",
+    "file_gid": "gid://shopify/MediaImage/25577344860262",
+    "key": "swatch_image",
+    "response": {
+      "data": {
+        "metafieldsSet": {
+          "metafields": [
+            {
+              "key": "swatch_image",
+              "namespace": "altuzarra",
+              "type": "file_reference",
+              "value": "gid://shopify/MediaImage/25577344860262"
+            }
+          ],
+          "userErrors": []
+        }
+      },
+      "extensions": {
+        "cost": {
+          "requestedQueryCost": 10,
+          "actualQueryCost": 10,
+          "throttleStatus": {
+            "maximumAvailable": 20000.0,
+            "currentlyAvailable": 19990,
+            "restoreRate": 1000.0
+          }
+        }
+      }
+    }
+  },
+  {
+    "cpi": "3022-000397",
+    "product_gid": "gid://shopify/Product/7716183113830",
+    "file_gid": "gid://shopify/MediaImage/25577345187942",
+    "key": "swatch_image",
+    "response": {
+      "data": {
+        "metafieldsSet": {
+          "metafields": [
+            {
+              "key": "swatch_image",
+              "namespace": "altuzarra",
+              "type": "file_reference",
+              "value": "gid://shopify/MediaImage/25577345187942"
+            }
+          ],
+          "userErrors": []
+        }
+      },
+      "extensions": {
+        "cost": {
+          "requestedQueryCost": 10,
+          "actualQueryCost": 10,
+          "throttleStatus": {
+            "maximumAvailable": 20000.0,
+            "currentlyAvailable": 19990,
+            "restoreRate": 1000.0
+          }
+        }
+      }
+    }
+  },
+  {
+    "cpi": "4008-000171",
+    "product_gid": "gid://shopify/Product/7716183375974",
+    "file_gid": "gid://shopify/MediaImage/25577345286246",
+    "key": "swatch_image",
+    "response": {
+      "data": {
+        "metafieldsSet": {
+          "metafields": [
+            {
+              "key": "swatch_image",
+              "namespace": "altuzarra",
+              "type": "file_reference",
+              "value": "gid://shopify/MediaImage/25577345286246"
+            }
+          ],
+          "userErrors": []
+        }
+      },
+      "extensions": {
+        "cost": {
+          "requestedQueryCost": 10,
+          "actualQueryCost": 10,
+          "throttleStatus": {
+            "maximumAvailable": 20000.0,
+            "currentlyAvailable": 19990,
+            "restoreRate": 1000.0
+          }
+        }
+      }
+    }
+  },
+  {
+    "cpi": "4015-373102",
+    "product_gid": "gid://shopify/Product/7716183474278",
+    "file_gid": "gid://shopify/MediaImage/25577344729190",
+    "key": "swatch_image",
+    "response": {
+      "data": {
+        "metafieldsSet": {
+          "metafields": [
+            {
+              "key": "swatch_image",
+              "namespace": "altuzarra",
+              "type": "file_reference",
+              "value": "gid://shopify/MediaImage/25577344729190"
+            }
+          ],
+          "userErrors": []
+        }
+      },
+      "extensions": {
+        "cost": {
+          "requestedQueryCost": 10,
+          "actualQueryCost": 10,
+          "throttleStatus": {
+            "maximumAvailable": 20000.0,
+            "currentlyAvailable": 19990,
+            "restoreRate": 1000.0
+          }
+        }
+      }
+    }
+  },
+  {
+    "cpi": "5004-373001",
+    "product_gid": "gid://shopify/Product/7716183507046",
+    "file_gid": "gid://shopify/MediaImage/25577345548390",
+    "key": "swatch_image",
+    "response": {
+      "data": {
+        "metafieldsSet": {
+          "metafields": [
+            {
+              "key": "swatch_image",
+              "namespace": "altuzarra",
+              "type": "file_reference",
+              "value": "gid://shopify/MediaImage/25577345548390"
+            }
+          ],
+          "userErrors": []
+        }
+      },
+      "extensions": {
+        "cost": {
+          "requestedQueryCost": 10,
+          "actualQueryCost": 10,
+          "throttleStatus": {
+            "maximumAvailable": 20000.0,
+            "currentlyAvailable": 19990,
+            "restoreRate": 1000.0
+          }
+        }
+      }
+    }
+  },
+  {
+    "cpi": "5013-000397",
+    "product_gid": "gid://shopify/Product/7716183572582",
+    "file_gid": "gid://shopify/MediaImage/25577345024102",
+    "key": "swatch_image",
+    "response": {
+      "data": {
+        "metafieldsSet": {
+          "metafields": [
+            {
+              "key": "swatch_image",
+              "namespace": "altuzarra",
+              "type": "file_reference",
+              "value": "gid://shopify/MediaImage/25577345024102"
+            }
+          ],
+          "userErrors": []
+        }
+      },
+      "extensions": {
+        "cost": {
+          "requestedQueryCost": 10,
+          "actualQueryCost": 10,
+          "throttleStatus": {
+            "maximumAvailable": 20000.0,
+            "currentlyAvailable": 19990,
+            "restoreRate": 1000.0
+          }
+        }
+      }
+    }
+  },
+  {
+    "cpi": "5013-418001",
+    "product_gid": "gid://shopify/Product/7716183670886",
+    "file_gid": "gid://shopify/MediaImage/25577345581158",
+    "key": "swatch_image",
+    "response": {
+      "data": {
+        "metafieldsSet": {
+          "metafields": [
+            {
+              "key": "swatch_image",
+              "namespace": "altuzarra",
+              "type": "file_reference",
+              "value": "gid://shopify/MediaImage/25577345581158"
+            }
+          ],
+          "userErrors": []
+        }
+      },
+      "extensions": {
+        "cost": {
+          "requestedQueryCost": 10,
+          "actualQueryCost": 10,
+          "throttleStatus": {
+            "maximumAvailable": 20000.0,
+            "currentlyAvailable": 19990,
+            "restoreRate": 1000.0
+          }
+        }
+      }
+    }
+  },
+  {
+    "cpi": "5016-000001",
+    "product_gid": "gid://shopify/Product/7716183703654",
+    "file_gid": "gid://shopify/MediaImage/25577345122406",
+    "key": "swatch_image",
+    "response": {
+      "data": {
+        "metafieldsSet": {
+          "metafields": [
+            {
+              "key": "swatch_image",
+              "namespace": "altuzarra",
+              "type": "file_reference",
+              "value": "gid://shopify/MediaImage/25577345122406"
+            }
+          ],
+          "userErrors": []
+        }
+      },
+      "extensions": {
+        "cost": {
+          "requestedQueryCost": 10,
+          "actualQueryCost": 10,
+          "throttleStatus": {
+            "maximumAvailable": 20000.0,
+            "currentlyAvailable": 19990,
+            "restoreRate": 1000.0
+          }
+        }
+      }
+    }
+  },
+  {
+    "cpi": "5017-000171",
+    "product_gid": "gid://shopify/Product/7716183736422",
+    "file_gid": "gid://shopify/MediaImage/25577345482854",
+    "key": "swatch_image",
+    "response": {
+      "data": {
+        "metafieldsSet": {
+          "metafields": [
+            {
+              "key": "swatch_image",
+              "namespace": "altuzarra",
+              "type": "file_reference",
+              "value": "gid://shopify/MediaImage/25577345482854"
+            }
+          ],
+          "userErrors": []
+        }
+      },
+      "extensions": {
+        "cost": {
+          "requestedQueryCost": 10,
+          "actualQueryCost": 10,
+          "throttleStatus": {
+            "maximumAvailable": 20000.0,
+            "currentlyAvailable": 19990,
+            "restoreRate": 1000.0
+          }
+        }
+      }
+    }
+  },
+  {
+    "cpi": "5018-000445",
+    "product_gid": "gid://shopify/Product/7716183769190",
+    "file_gid": "gid://shopify/MediaImage/25577345450086",
+    "key": "swatch_image",
+    "response": {
+      "data": {
+        "metafieldsSet": {
+          "metafields": [
+            {
+              "key": "swatch_image",
+              "namespace": "altuzarra",
+              "type": "file_reference",
+              "value": "gid://shopify/MediaImage/25577345450086"
+            }
+          ],
+          "userErrors": []
+        }
+      },
+      "extensions": {
+        "cost": {
+          "requestedQueryCost": 10,
+          "actualQueryCost": 10,
+          "throttleStatus": {
+            "maximumAvailable": 20000.0,
+            "currentlyAvailable": 19990,
+            "restoreRate": 1000.0
+          }
+        }
+      }
+    }
+  },
+  {
+    "cpi": "5023-000563",
+    "product_gid": "gid://shopify/Product/7716183801958",
+    "file_gid": "gid://shopify/MediaImage/25577345712230",
+    "key": "swatch_image",
+    "response": {
+      "data": {
+        "metafieldsSet": {
+          "metafields": [
+            {
+              "key": "swatch_image",
+              "namespace": "altuzarra",
+              "type": "file_reference",
+              "value": "gid://shopify/MediaImage/25577345712230"
+            }
+          ],
+          "userErrors": []
+        }
+      },
+      "extensions": {
+        "cost": {
+          "requestedQueryCost": 10,
+          "actualQueryCost": 10,
+          "throttleStatus": {
+            "maximumAvailable": 20000.0,
+            "currentlyAvailable": 19990,
+            "restoreRate": 1000.0
+          }
+        }
+      }
+    }
+  },
+  {
+    "cpi": "5023-000265",
+    "product_gid": "gid://shopify/Product/7716183834726",
+    "file_gid": "gid://shopify/MediaImage/25577345417318",
+    "key": "swatch_image",
+    "response": {
+      "data": {
+        "metafieldsSet": {
+          "metafields": [
+            {
+              "key": "swatch_image",
+              "namespace": "altuzarra",
+              "type": "file_reference",
+              "value": "gid://shopify/MediaImage/25577345417318"
+            }
+          ],
+          "userErrors": []
+        }
+      },
+      "extensions": {
+        "cost": {
+          "requestedQueryCost": 10,
+          "actualQueryCost": 10,
+          "throttleStatus": {
+            "maximumAvailable": 20000.0,
+            "currentlyAvailable": 19990,
+            "restoreRate": 1000.0
+          }
+        }
+      }
+    }
+  },
+  {
+    "cpi": "8406-000001",
+    "product_gid": "gid://shopify/Product/7716186685542",
+    "file_gid": "gid://shopify/MediaImage/25577345089638",
+    "key": "swatch_image",
+    "response": {
+      "data": {
+        "metafieldsSet": {
+          "metafields": [
+            {
+              "key": "swatch_image",
+              "namespace": "altuzarra",
+              "type": "file_reference",
+              "value": "gid://shopify/MediaImage/25577345089638"
+            }
+          ],
+          "userErrors": []
+        }
+      },
+      "extensions": {
+        "cost": {
+          "requestedQueryCost": 10,
+          "actualQueryCost": 10,
+          "throttleStatus": {
+            "maximumAvailable": 20000.0,
+            "currentlyAvailable": 19990,
+            "restoreRate": 1000.0
+          }
+        }
+      }
+    }
+  },
+  {
+    "cpi": "8415-000008",
+    "product_gid": "gid://shopify/Product/7716186718310",
+    "file_gid": "gid://shopify/MediaImage/25577345613926",
+    "key": "swatch_image",
+    "response": {
+      "data": {
+        "metafieldsSet": {
+          "metafields": [
+            {
+              "key": "swatch_image",
+              "namespace": "altuzarra",
+              "type": "file_reference",
+              "value": "gid://shopify/MediaImage/25577345613926"
+            }
+          ],
+          "userErrors": []
+        }
+      },
+      "extensions": {
+        "cost": {
+          "requestedQueryCost": 10,
+          "actualQueryCost": 10,
+          "throttleStatus": {
+            "maximumAvailable": 20000.0,
+            "currentlyAvailable": 19990,
+            "restoreRate": 1000.0
+          }
+        }
+      }
+    }
+  },
+  {
+    "cpi": "8415-000102",
+    "product_gid": "gid://shopify/Product/7716186751078",
+    "file_gid": "gid://shopify/MediaImage/25577345056870",
+    "key": "swatch_image",
+    "response": {
+      "data": {
+        "metafieldsSet": {
+          "metafields": [
+            {
+              "key": "swatch_image",
+              "namespace": "altuzarra",
+              "type": "file_reference",
+              "value": "gid://shopify/MediaImage/25577345056870"
+            }
+          ],
+          "userErrors": []
+        }
+      },
+      "extensions": {
+        "cost": {
+          "requestedQueryCost": 10,
+          "actualQueryCost": 10,
+          "throttleStatus": {
+            "maximumAvailable": 20000.0,
+            "currentlyAvailable": 19990,
+            "restoreRate": 1000.0
+          }
+        }
+      }
+    }
+  },
+  {
+    "cpi": "8830-000406",
+    "product_gid": "gid://shopify/Product/7716187701350",
+    "file_gid": "gid://shopify/MediaImage/25577344827494",
+    "key": "swatch_image",
+    "response": {
+      "data": {
+        "metafieldsSet": {
+          "metafields": [
+            {
+              "key": "swatch_image",
+              "namespace": "altuzarra",
+              "type": "file_reference",
+              "value": "gid://shopify/MediaImage/25577344827494"
+            }
+          ],
+          "userErrors": []
+        }
+      },
+      "extensions": {
+        "cost": {
+          "requestedQueryCost": 10,
+          "actualQueryCost": 10,
+          "throttleStatus": {
+            "maximumAvailable": 20000.0,
+            "currentlyAvailable": 19990,
+            "restoreRate": 1000.0
+          }
+        }
+      }
+    }
+  },
+  {
+    "cpi": "8830-000689",
+    "product_gid": "gid://shopify/Product/7716187734118",
+    "file_gid": "gid://shopify/MediaImage/25577344761958",
+    "key": "swatch_image",
+    "response": {
+      "data": {
+        "metafieldsSet": {
+          "metafields": [
+            {
+              "key": "swatch_image",
+              "namespace": "altuzarra",
+              "type": "file_reference",
+              "value": "gid://shopify/MediaImage/25577344761958"
+            }
+          ],
+          "userErrors": []
+        }
+      },
+      "extensions": {
+        "cost": {
+          "requestedQueryCost": 10,
+          "actualQueryCost": 10,
+          "throttleStatus": {
+            "maximumAvailable": 20000.0,
+            "currentlyAvailable": 19990,
+            "restoreRate": 1000.0
+          }
+        }
+      }
+    }
+  },
+  {
+    "cpi": "8833-351406",
+    "product_gid": "gid://shopify/Product/7716187897958",
+    "file_gid": "gid://shopify/MediaImage/25577345744998",
+    "key": "swatch_image",
+    "response": {
+      "data": {
+        "metafieldsSet": {
+          "metafields": [
+            {
+              "key": "swatch_image",
+              "namespace": "altuzarra",
+              "type": "file_reference",
+              "value": "gid://shopify/MediaImage/25577345744998"
+            }
+          ],
+          "userErrors": []
+        }
+      },
+      "extensions": {
+        "cost": {
+          "requestedQueryCost": 10,
+          "actualQueryCost": 10,
+          "throttleStatus": {
+            "maximumAvailable": 20000.0,
+            "currentlyAvailable": 19990,
+            "restoreRate": 1000.0
+          }
+        }
+      }
+    }
+  },
+  {
+    "cpi": "8834-000406",
+    "product_gid": "gid://shopify/Product/7716187930726",
+    "file_gid": "gid://shopify/MediaImage/25577345253478",
+    "key": "swatch_image",
+    "response": {
+      "data": {
+        "metafieldsSet": {
+          "metafields": [
+            {
+              "key": "swatch_image",
+              "namespace": "altuzarra",
+              "type": "file_reference",
+              "value": "gid://shopify/MediaImage/25577345253478"
+            }
+          ],
+          "userErrors": []
+        }
+      },
+      "extensions": {
+        "cost": {
+          "requestedQueryCost": 10,
+          "actualQueryCost": 10,
+          "throttleStatus": {
+            "maximumAvailable": 20000.0,
+            "currentlyAvailable": 19990,
+            "restoreRate": 1000.0
+          }
+        }
+      }
+    }
+  },
+  {
+    "cpi": "8834-000689",
+    "product_gid": "gid://shopify/Product/7716188029030",
+    "file_gid": "gid://shopify/MediaImage/25577344794726",
+    "key": "swatch_image",
+    "response": {
+      "data": {
+        "metafieldsSet": {
+          "metafields": [
+            {
+              "key": "swatch_image",
+              "namespace": "altuzarra",
+              "type": "file_reference",
+              "value": "gid://shopify/MediaImage/25577344794726"
+            }
+          ],
+          "userErrors": []
+        }
+      },
+      "extensions": {
+        "cost": {
+          "requestedQueryCost": 10,
+          "actualQueryCost": 10,
+          "throttleStatus": {
+            "maximumAvailable": 20000.0,
+            "currentlyAvailable": 19990,
+            "restoreRate": 1000.0
+          }
+        }
+      }
+    }
+  },
+  {
+    "cpi": "8835-000067",
+    "product_gid": "gid://shopify/Product/7716188061798",
+    "file_gid": "gid://shopify/MediaImage/25577345351782",
+    "key": "swatch_image",
+    "response": {
+      "data": {
+        "metafieldsSet": {
+          "metafields": [
+            {
+              "key": "swatch_image",
+              "namespace": "altuzarra",
+              "type": "file_reference",
+              "value": "gid://shopify/MediaImage/25577345351782"
+            }
+          ],
+          "userErrors": []
+        }
+      },
+      "extensions": {
+        "cost": {
+          "requestedQueryCost": 10,
+          "actualQueryCost": 10,
+          "throttleStatus": {
+            "maximumAvailable": 20000.0,
+            "currentlyAvailable": 19990,
+            "restoreRate": 1000.0
+          }
+        }
+      }
+    }
+  }
+]

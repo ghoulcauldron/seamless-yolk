@@ -7,6 +7,10 @@ from datetime import datetime
 from collections import Counter
 import math # For checking NaN
 
+CPI_PATTERN_FROM_PRODUCT_ID = re.compile(
+    r"(?:[FS]\d{3}|[A-Z]{2}\d{2})[-_]?(\d{3,5}).*?(\d{6})"
+)
+
 # --- Filename Processing Logic (UPDATED for Accessories) ---
 def get_base_filename(filename: str) -> str:
     """Removes standard suffixes including specific accessory types."""
@@ -86,14 +90,16 @@ CATEGORY_TAGS_MAP = {
     84: "collection_ready-to-wear, collection_knitwear, collection_tops, collection_new-arrivals", 85: "collection_ready-to-wear, collection_knitwear, collection_skirts, collection_new-arrivals",
     86: "collection_ready-to-wear, collection_knitwear, collection_pants, collection_new-arrivals", 88: "collection_ready-to-wear, collection_knitwear, collection_tops, collection_new-arrivals"
 }
-CPI_PATTERN_FROM_PRODUCT_ID = re.compile(r"(\d{3,5})\s+[A-Z0-9]+\s+(\d{6})")
 
 def extract_product_id_from_tags(tags_str: str) -> str | None:
+    """Finds the tag that represents the full Product ID."""
     if not isinstance(tags_str, str): return None
-    for tag in str(tags_str).split(','): # Added str() for safety
+    for tag in str(tags_str).split(','):
         tag = tag.strip()
-        if tag.count(' ') >= 2: return tag
-    return None
+        # NEW LOGIC: Check if the tag itself matches the Product ID pattern
+        if CPI_PATTERN_FROM_PRODUCT_ID.search(tag):
+            return tag # Return the first tag that matches
+    return None # No matching tag found
 
 def extract_cpi_from_product_id(product_id: str) -> str | None:
     if not product_id: return None
@@ -271,7 +277,7 @@ def main(capsule: str, dry_run: bool, override_file: str = None):
         if handle not in handle_to_cpi_map:
             print(f"  > WARNING: Skipping handle '{handle}' as it could not be mapped to a CPI (check parent row tags).")
             # Flag these rows as anomalous directly?
-            # anomalous_handles.add(handle) # Optional: Treat unmappable handles as anomalies
+            anomalous_handles.add(handle) # Optional: Treat unmappable handles as anomalies
             continue
         cpi = handle_to_cpi_map[handle]
 

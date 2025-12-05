@@ -4,6 +4,10 @@ import argparse
 import re
 import json
 
+CPI_PATTERN_FROM_PRODUCT_ID = re.compile(
+    r"(?:[FS]\d{3}|[A-Z]{2}\d{2})[-_]?(\d{3,5}).*?(\d{6})"
+)
+
 # --- NATIVE TRANSLATION of Shopify Tags Guide.csv for validation ---
 CATEGORY_TAGS_MAP = {
     1: "collection_ready-to-wear, collection_jackets, collection_new-arrivals",
@@ -26,15 +30,15 @@ CATEGORY_TAGS_MAP = {
     88: "collection_ready-to-wear, collection_knitwear, collection_tops, collection_new-arrivals"
 }
 
-CPI_PATTERN_FROM_PRODUCT_ID = re.compile(r"(\d{3,5})\s+[A-Z0-9]+\s+(\d{6})")
-
-
 def extract_product_id_from_tags(tags_str: str) -> str | None:
+    """Finds the tag that represents the full Product ID."""
     if not isinstance(tags_str, str): return None
-    for tag in tags_str.split(','):
+    for tag in str(tags_str).split(','):
         tag = tag.strip()
-        if tag.count(' ') >= 2: return tag
-    return None
+        # NEW LOGIC: Check if the tag itself matches the Product ID pattern
+        if CPI_PATTERN_FROM_PRODUCT_ID.search(tag):
+            return tag # Return the first tag that matches
+    return None # No matching tag found
 
 def extract_cpi_from_product_id(product_id: str) -> str | None:
     if not product_id: return None
@@ -138,12 +142,28 @@ def check_data_consistency_against_sources(df: pd.DataFrame, tracker_df: pd.Data
 
         # Validate Variant Price
         try:
+            # 1. Get the tracker price as a float
             expected_price = float(source_record['RRP (USD)'])
-            if not group['Variant Price'].eq(expected_price).all():
-                errors.append({
-                    'error_type': 'Price Mismatch', 'handle': handle,
-                    'details': f"One or more variants do not match tracker RRP (USD) of ${expected_price}."
-                })
+            
+            # 2. Filter for *actual* variant rows (non-empty SKU)
+            variant_rows = group[group['Variant SKU'].notna() & (group['Variant SKU'] != '')]
+            
+            # 3. NEW: Convert the 'Variant Price' column from str to float for comparison
+            variant_prices_numeric = pd.to_numeric(variant_rows['Variant Price'], errors='coerce')
+
+            # 4. Now, compare the numeric Series to the float
+            if not variant_prices_numeric.eq(expected_price).all():
+                # Add a check to see if conversion failed
+                if variant_prices_numeric.isna().any():
+                     errors.append({
+                        'error_type': 'Invalid Price in Ready File', 'handle': handle,
+                        'details': f"One or more variants have a non-numeric price (e.g., blank) in the 'ready' file."
+                    })
+                else:
+                    errors.append({
+                        'error_type': 'Price Mismatch', 'handle': handle,
+                        'details': f"One or more variants do not match tracker RRP (USD) of ${expected_price}."
+                    })
         except (ValueError, TypeError):
              errors.append({
                 'error_type': 'Invalid Price in Source', 'handle': handle,
@@ -151,8 +171,11 @@ def check_data_consistency_against_sources(df: pd.DataFrame, tracker_df: pd.Data
             })
             
         # Validate Details Metafield
-        expected_details = source_record['PRODUCT DETAILS']
-        if pd.notna(expected_details) and parent_row.get('Details (product.metafields.altuzarra.details)') != expected_details:
+        # NEW: Get and strip both values before comparing to avoid whitespace errors
+        expected_details = str(source_record['PRODUCT DETAILS']).strip()
+        actual_details = str(parent_row.get('Details (product.metafields.altuzarra.details)', '')).strip()
+
+        if expected_details != actual_details:
              errors.append({
                 'error_type': 'Details Metafield Mismatch', 'handle': handle,
                 'details': f"Details metafield does not match tracker 'PRODUCT DETAILS' column."
@@ -198,15 +221,28 @@ def check_internal_structure(df: pd.DataFrame) -> list:
                  errors.append({'error_type': 'Body HTML on Child Row', 'handle': handle, 'sku': child.get('Variant SKU'), 'details': f"Child variant {child.get('Variant SKU')} has Body (HTML)."})
     
     # Check Unique SKU
-    if df['Variant SKU'].duplicated().any():
-        dupe_skus = df[df['Variant SKU'].duplicated()]['Variant SKU'].tolist()
+    # --- FIX: Handle non-string data before .join() ---
+    
+    # NEW: Filter for rows that *actually* have a non-empty SKU
+    sku_rows = df[df['Variant SKU'].notna() & (df['Variant SKU'] != '')]
+    
+    # Now, only check for duplicates within that filtered set
+    if sku_rows['Variant SKU'].duplicated().any():
+        dupe_skus_raw = sku_rows[sku_rows['Variant SKU'].duplicated()]['Variant SKU'].tolist()
+        # Convert all items to string
+        dupe_skus = [str(sku) for sku in dupe_skus_raw]
         errors.append({'error_type': 'Duplicate Variant SKU', 'details': f"Duplicate SKUs found: {', '.join(dupe_skus)}"})
+    # --- END FIX ---
         
     # Check Unique Barcode (if not blank)
     populated_barcodes = df[df['Variant Barcode'].notna() & (df['Variant Barcode'] != '')]
     if populated_barcodes['Variant Barcode'].duplicated().any():
-        dupe_barcodes = populated_barcodes[populated_barcodes['Variant Barcode'].duplicated()]['Variant Barcode'].tolist()
+        # --- FIX: Handle non-string data before .join() ---
+        dupe_barcodes_raw = populated_barcodes[populated_barcodes['Variant Barcode'].duplicated()]['Variant Barcode'].tolist()
+        # Convert all items to string
+        dupe_barcodes = [str(bc) for bc in dupe_barcodes_raw]
         errors.append({'error_type': 'Duplicate Variant Barcode', 'details': f"Duplicate barcodes found: {', '.join(dupe_barcodes)}"})
+        # --- END FIX ---
 
     return errors
 
@@ -219,8 +255,9 @@ def main(capsule: str):
 
     try:
         print(f"Validating file: {ready_file_path}...")
-        df_ready = pd.read_csv(ready_file_path)
-        
+        # Force all columns to load as strings to prevent type errors
+        df_ready = pd.read_csv(ready_file_path, dtype=str)     
+           
         tracker_df_raw = pd.read_csv(tracker_file_path, header=None, encoding='cp1252', keep_default_na=False)
         header_row_index = tracker_df_raw[tracker_df_raw.apply(lambda r: r.astype(str).str.contains('Product ID').any(), axis=1)].index[0]
         df_tracker = tracker_df_raw.copy()

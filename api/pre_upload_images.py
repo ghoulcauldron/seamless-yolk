@@ -239,11 +239,12 @@ def main(csv_path: str, base_dir: str, manifest_path: str, output_csv: str, port
 
         try:
             print(f"Uploading '{filename}'...")
+            # upload_file already returns the GID, we just need to capture it.
             file_gid = client.upload_file(resource_url, alt_text)
-            cdn_url = client.wait_for_file_ready(file_gid)
             
-            print(f"  > ✅ Success: {cdn_url}")
-            url_map[filename] = cdn_url
+            # We don't need to wait; we just need the GID.
+            print(f"  > ✅ Success (File GID): {file_gid}")
+            url_map[filename] = file_gid # <-- FIX: Save the GID
             
         except Exception as e:
             print(f"  > ❌ FAILED to upload '{filename}': {e}")

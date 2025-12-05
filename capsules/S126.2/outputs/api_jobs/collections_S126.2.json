@@ -1,0 +1,432 @@
+[
+  {
+    "data": {
+      "collectionCreate": {
+        "collection": {
+          "id": "gid://shopify/Collection/303884140646",
+          "handle": "style-arlie-top",
+          "title": "Style Arlie Top"
+        },
+        "userErrors": []
+      }
+    },
+    "extensions": {
+      "cost": {
+        "requestedQueryCost": 10,
+        "actualQueryCost": 10,
+        "throttleStatus": {
+          "maximumAvailable": 20000.0,
+          "currentlyAvailable": 19990,
+          "restoreRate": 1000.0
+        }
+      }
+    }
+  },
+  {
+    "data": {
+      "collectionCreate": {
+        "collection": null,
+        "userErrors": [
+          {
+            "field": [
+              "handle"
+            ],
+            "message": "Handle has already been taken"
+          }
+        ]
+      }
+    },
+    "extensions": {
+      "cost": {
+        "requestedQueryCost": 10,
+        "actualQueryCost": 10,
+        "throttleStatus": {
+          "maximumAvailable": 20000.0,
+          "currentlyAvailable": 19990,
+          "restoreRate": 1000.0
+        }
+      }
+    }
+  },
+  {
+    "data": {
+      "collectionCreate": {
+        "collection": {
+          "id": "gid://shopify/Collection/303884173414",
+          "handle": "style-dash-pant",
+          "title": "Style Dash Pant"
+        },
+        "userErrors": []
+      }
+    },
+    "extensions": {
+      "cost": {
+        "requestedQueryCost": 10,
+        "actualQueryCost": 10,
+        "throttleStatus": {
+          "maximumAvailable": 20000.0,
+          "currentlyAvailable": 19990,
+          "restoreRate": 1000.0
+        }
+      }
+    }
+  },
+  {
+    "data": {
+      "collectionCreate": {
+        "collection": null,
+        "userErrors": [
+          {
+            "field": [
+              "handle"
+            ],
+            "message": "Handle has already been taken"
+          }
+        ]
+      }
+    },
+    "extensions": {
+      "cost": {
+        "requestedQueryCost": 10,
+        "actualQueryCost": 10,
+        "throttleStatus": {
+          "maximumAvailable": 20000.0,
+          "currentlyAvailable": 19990,
+          "restoreRate": 1000.0
+        }
+      }
+    }
+  },
+  {
+    "data": {
+      "collectionCreate": {
+        "collection": null,
+        "userErrors": [
+          {
+            "field": [
+              "handle"
+            ],
+            "message": "Handle has already been taken"
+          }
+        ]
+      }
+    },
+    "extensions": {
+      "cost": {
+        "requestedQueryCost": 10,
+        "actualQueryCost": 10,
+        "throttleStatus": {
+          "maximumAvailable": 20000.0,
+          "currentlyAvailable": 19990,
+          "restoreRate": 1000.0
+        }
+      }
+    }
+  },
+  {
+    "data": {
+      "collectionCreate": {
+        "collection": null,
+        "userErrors": [
+          {
+            "field": [
+              "handle"
+            ],
+            "message": "Handle has already been taken"
+          }
+        ]
+      }
+    },
+    "extensions": {
+      "cost": {
+        "requestedQueryCost": 10,
+        "actualQueryCost": 10,
+        "throttleStatus": {
+          "maximumAvailable": 20000.0,
+          "currentlyAvailable": 19990,
+          "restoreRate": 1000.0
+        }
+      }
+    }
+  },
+  {
+    "data": {
+      "collectionCreate": {
+        "collection": null,
+        "userErrors": [
+          {
+            "field": [
+              "handle"
+            ],
+            "message": "Handle has already been taken"
+          }
+        ]
+      }
+    },
+    "extensions": {
+      "cost": {
+        "requestedQueryCost": 10,
+        "actualQueryCost": 10,
+        "throttleStatus": {
+          "maximumAvailable": 20000.0,
+          "currentlyAvailable": 19990,
+          "restoreRate": 1000.0
+        }
+      }
+    }
+  },
+  {
+    "data": {
+      "collectionCreate": {
+        "collection": {
+          "id": "gid://shopify/Collection/303884206182",
+          "handle": "style-lear-sweater",
+          "title": "Style Lear Sweater"
+        },
+        "userErrors": []
+      }
+    },
+    "extensions": {
+      "cost": {
+        "requestedQueryCost": 10,
+        "actualQueryCost": 10,
+        "throttleStatus": {
+          "maximumAvailable": 20000.0,
+          "currentlyAvailable": 19990,
+          "restoreRate": 1000.0
+        }
+      }
+    }
+  },
+  {
+    "data": {
+      "collectionCreate": {
+        "collection": null,
+        "userErrors": [
+          {
+            "field": [
+              "handle"
+            ],
+            "message": "Handle has already been taken"
+          }
+        ]
+      }
+    },
+    "extensions": {
+      "cost": {
+        "requestedQueryCost": 10,
+        "actualQueryCost": 10,
+        "throttleStatus": {
+          "maximumAvailable": 20000.0,
+          "currentlyAvailable": 19990,
+          "restoreRate": 1000.0
+        }
+      }
+    }
+  },
+  {
+    "data": {
+      "collectionCreate": {
+        "collection": null,
+        "userErrors": [
+          {
+            "field": [
+              "handle"
+            ],
+            "message": "Handle has already been taken"
+          }
+        ]
+      }
+    },
+    "extensions": {
+      "cost": {
+        "requestedQueryCost": 10,
+        "actualQueryCost": 10,
+        "throttleStatus": {
+          "maximumAvailable": 20000.0,
+          "currentlyAvailable": 19990,
+          "restoreRate": 1000.0
+        }
+      }
+    }
+  },
+  {
+    "data": {
+      "collectionCreate": {
+        "collection": null,
+        "userErrors": [
+          {
+            "field": [
+              "handle"
+            ],
+            "message": "Handle has already been taken"
+          }
+        ]
+      }
+    },
+    "extensions": {
+      "cost": {
+        "requestedQueryCost": 10,
+        "actualQueryCost": 10,
+        "throttleStatus": {
+          "maximumAvailable": 20000.0,
+          "currentlyAvailable": 19990,
+          "restoreRate": 1000.0
+        }
+      }
+    }
+  },
+  {
+    "data": {
+      "collectionCreate": {
+        "collection": null,
+        "userErrors": [
+          {
+            "field": [
+              "handle"
+            ],
+            "message": "Handle has already been taken"
+          }
+        ]
+      }
+    },
+    "extensions": {
+      "cost": {
+        "requestedQueryCost": 10,
+        "actualQueryCost": 10,
+        "throttleStatus": {
+          "maximumAvailable": 20000.0,
+          "currentlyAvailable": 19990,
+          "restoreRate": 1000.0
+        }
+      }
+    }
+  },
+  {
+    "data": {
+      "collectionCreate": {
+        "collection": null,
+        "userErrors": [
+          {
+            "field": [
+              "handle"
+            ],
+            "message": "Handle has already been taken"
+          }
+        ]
+      }
+    },
+    "extensions": {
+      "cost": {
+        "requestedQueryCost": 10,
+        "actualQueryCost": 10,
+        "throttleStatus": {
+          "maximumAvailable": 20000.0,
+          "currentlyAvailable": 19990,
+          "restoreRate": 1000.0
+        }
+      }
+    }
+  },
+  {
+    "data": {
+      "collectionCreate": {
+        "collection": {
+          "id": "gid://shopify/Collection/303884238950",
+          "handle": "style-todd-pant",
+          "title": "Style Todd Pant"
+        },
+        "userErrors": []
+      }
+    },
+    "extensions": {
+      "cost": {
+        "requestedQueryCost": 10,
+        "actualQueryCost": 10,
+        "throttleStatus": {
+          "maximumAvailable": 20000.0,
+          "currentlyAvailable": 19990,
+          "restoreRate": 1000.0
+        }
+      }
+    }
+  },
+  {
+    "data": {
+      "collectionCreate": {
+        "collection": null,
+        "userErrors": [
+          {
+            "field": [
+              "handle"
+            ],
+            "message": "Handle has already been taken"
+          }
+        ]
+      }
+    },
+    "extensions": {
+      "cost": {
+        "requestedQueryCost": 10,
+        "actualQueryCost": 10,
+        "throttleStatus": {
+          "maximumAvailable": 20000.0,
+          "currentlyAvailable": 19990,
+          "restoreRate": 1000.0
+        }
+      }
+    }
+  },
+  {
+    "data": {
+      "collectionCreate": {
+        "collection": null,
+        "userErrors": [
+          {
+            "field": [
+              "handle"
+            ],
+            "message": "Handle has already been taken"
+          }
+        ]
+      }
+    },
+    "extensions": {
+      "cost": {
+        "requestedQueryCost": 10,
+        "actualQueryCost": 10,
+        "throttleStatus": {
+          "maximumAvailable": 20000.0,
+          "currentlyAvailable": 19990,
+          "restoreRate": 1000.0
+        }
+      }
+    }
+  },
+  {
+    "data": {
+      "collectionCreate": {
+        "collection": null,
+        "userErrors": [
+          {
+            "field": [
+              "handle"
+            ],
+            "message": "Handle has already been taken"
+          }
+        ]
+      }
+    },
+    "extensions": {
+      "cost": {
+        "requestedQueryCost": 10,
+        "actualQueryCost": 10,
+        "throttleStatus": {
+          "maximumAvailable": 20000.0,
+          "currentlyAvailable": 19990,
+          "restoreRate": 1000.0
+        }
+      }
+    }
+  }
+]

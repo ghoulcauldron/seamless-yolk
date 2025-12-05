@@ -1,1 +1,1339 @@
-[]
+[
+  {
+    "data": {
+      "collectionCreate": {
+        "collection": {
+          "id": "gid://shopify/Collection/303882207334",
+          "handle": "style-abstract-buckle-belt",
+          "title": "Style Abstract Buckle Belt"
+        },
+        "userErrors": []
+      }
+    },
+    "extensions": {
+      "cost": {
+        "requestedQueryCost": 10,
+        "actualQueryCost": 10,
+        "throttleStatus": {
+          "maximumAvailable": 20000.0,
+          "currentlyAvailable": 19990,
+          "restoreRate": 1000.0
+        }
+      }
+    }
+  },
+  {
+    "data": {
+      "collectionCreate": {
+        "collection": {
+          "id": "gid://shopify/Collection/303882240102",
+          "handle": "style-amory-sweater",
+          "title": "Style Amory Sweater"
+        },
+        "userErrors": []
+      }
+    },
+    "extensions": {
+      "cost": {
+        "requestedQueryCost": 10,
+        "actualQueryCost": 10,
+        "throttleStatus": {
+          "maximumAvailable": 20000.0,
+          "currentlyAvailable": 19990,
+          "restoreRate": 1000.0
+        }
+      }
+    }
+  },
+  {
+    "data": {
+      "collectionCreate": {
+        "collection": {
+          "id": "gid://shopify/Collection/303882272870",
+          "handle": "style-armory-sweater",
+          "title": "Style Armory Sweater"
+        },
+        "userErrors": []
+      }
+    },
+    "extensions": {
+      "cost": {
+        "requestedQueryCost": 10,
+        "actualQueryCost": 10,
+        "throttleStatus": {
+          "maximumAvailable": 20000.0,
+          "currentlyAvailable": 19990,
+          "restoreRate": 1000.0
+        }
+      }
+    }
+  },
+  {
+    "data": {
+      "collectionCreate": {
+        "collection": null,
+        "userErrors": [
+          {
+            "field": [
+              "handle"
+            ],
+            "message": "Handle has already been taken"
+          }
+        ]
+      }
+    },
+    "extensions": {
+      "cost": {
+        "requestedQueryCost": 10,
+        "actualQueryCost": 10,
+        "throttleStatus": {
+          "maximumAvailable": 20000.0,
+          "currentlyAvailable": 19990,
+          "restoreRate": 1000.0
+        }
+      }
+    }
+  },
+  {
+    "data": {
+      "collectionCreate": {
+        "collection": {
+          "id": "gid://shopify/Collection/303882305638",
+          "handle": "style-astley-jacket",
+          "title": "Style Astley Jacket"
+        },
+        "userErrors": []
+      }
+    },
+    "extensions": {
+      "cost": {
+        "requestedQueryCost": 10,
+        "actualQueryCost": 10,
+        "throttleStatus": {
+          "maximumAvailable": 20000.0,
+          "currentlyAvailable": 19990,
+          "restoreRate": 1000.0
+        }
+      }
+    }
+  },
+  {
+    "data": {
+      "collectionCreate": {
+        "collection": {
+          "id": "gid://shopify/Collection/303882338406",
+          "handle": "style-baker-dress",
+          "title": "Style Baker Dress"
+        },
+        "userErrors": []
+      }
+    },
+    "extensions": {
+      "cost": {
+        "requestedQueryCost": 10,
+        "actualQueryCost": 10,
+        "throttleStatus": {
+          "maximumAvailable": 20000.0,
+          "currentlyAvailable": 19990,
+          "restoreRate": 1000.0
+        }
+      }
+    }
+  },
+  {
+    "data": {
+      "collectionCreate": {
+        "collection": {
+          "id": "gid://shopify/Collection/303882371174",
+          "handle": "style-banks-top",
+          "title": "Style Banks Top"
+        },
+        "userErrors": []
+      }
+    },
+    "extensions": {
+      "cost": {
+        "requestedQueryCost": 10,
+        "actualQueryCost": 10,
+        "throttleStatus": {
+          "maximumAvailable": 20000.0,
+          "currentlyAvailable": 19990,
+          "restoreRate": 1000.0
+        }
+      }
+    }
+  },
+  {
+    "data": {
+      "collectionCreate": {
+        "collection": {
+          "id": "gid://shopify/Collection/303882403942",
+          "handle": "style-bean-skinny-belt",
+          "title": "Style Bean Skinny Belt"
+        },
+        "userErrors": []
+      }
+    },
+    "extensions": {
+      "cost": {
+        "requestedQueryCost": 10,
+        "actualQueryCost": 10,
+        "throttleStatus": {
+          "maximumAvailable": 20000.0,
+          "currentlyAvailable": 19990,
+          "restoreRate": 1000.0
+        }
+      }
+    }
+  },
+  {
+    "data": {
+      "collectionCreate": {
+        "collection": {
+          "id": "gid://shopify/Collection/303882436710",
+          "handle": "style-birdy-dress",
+          "title": "Style Birdy Dress"
+        },
+        "userErrors": []
+      }
+    },
+    "extensions": {
+      "cost": {
+        "requestedQueryCost": 10,
+        "actualQueryCost": 10,
+        "throttleStatus": {
+          "maximumAvailable": 20000.0,
+          "currentlyAvailable": 19990,
+          "restoreRate": 1000.0
+        }
+      }
+    }
+  },
+  {
+    "data": {
+      "collectionCreate": {
+        "collection": {
+          "id": "gid://shopify/Collection/303882469478",
+          "handle": "style-buchanan-sweater",
+          "title": "Style Buchanan Sweater"
+        },
+        "userErrors": []
+      }
+    },
+    "extensions": {
+      "cost": {
+        "requestedQueryCost": 10,
+        "actualQueryCost": 10,
+        "throttleStatus": {
+          "maximumAvailable": 20000.0,
+          "currentlyAvailable": 19990,
+          "restoreRate": 1000.0
+        }
+      }
+    }
+  },
+  {
+    "data": {
+      "collectionCreate": {
+        "collection": {
+          "id": "gid://shopify/Collection/303882502246",
+          "handle": "style-carrol-dress",
+          "title": "Style Carrol Dress"
+        },
+        "userErrors": []
+      }
+    },
+    "extensions": {
+      "cost": {
+        "requestedQueryCost": 10,
+        "actualQueryCost": 10,
+        "throttleStatus": {
+          "maximumAvailable": 20000.0,
+          "currentlyAvailable": 19990,
+          "restoreRate": 1000.0
+        }
+      }
+    }
+  },
+  {
+    "data": {
+      "collectionCreate": {
+        "collection": {
+          "id": "gid://shopify/Collection/303882535014",
+          "handle": "style-chika-top",
+          "title": "Style Chika Top"
+        },
+        "userErrors": []
+      }
+    },
+    "extensions": {
+      "cost": {
+        "requestedQueryCost": 10,
+        "actualQueryCost": 10,
+        "throttleStatus": {
+          "maximumAvailable": 20000.0,
+          "currentlyAvailable": 19990,
+          "restoreRate": 1000.0
+        }
+      }
+    }
+  },
+  {
+    "data": {
+      "collectionCreate": {
+        "collection": {
+          "id": "gid://shopify/Collection/303882567782",
+          "handle": "style-classic-buckle-belt",
+          "title": "Style Classic Buckle Belt"
+        },
+        "userErrors": []
+      }
+    },
+    "extensions": {
+      "cost": {
+        "requestedQueryCost": 10,
+        "actualQueryCost": 10,
+        "throttleStatus": {
+          "maximumAvailable": 20000.0,
+          "currentlyAvailable": 19990,
+          "restoreRate": 1000.0
+        }
+      }
+    }
+  },
+  {
+    "data": {
+      "collectionCreate": {
+        "collection": {
+          "id": "gid://shopify/Collection/303882600550",
+          "handle": "style-claudia-dress",
+          "title": "Style Claudia Dress"
+        },
+        "userErrors": []
+      }
+    },
+    "extensions": {
+      "cost": {
+        "requestedQueryCost": 10,
+        "actualQueryCost": 10,
+        "throttleStatus": {
+          "maximumAvailable": 20000.0,
+          "currentlyAvailable": 19990,
+          "restoreRate": 1000.0
+        }
+      }
+    }
+  },
+  {
+    "data": {
+      "collectionCreate": {
+        "collection": {
+          "id": "gid://shopify/Collection/303882633318",
+          "handle": "style-conroy-jacket",
+          "title": "Style Conroy Jacket"
+        },
+        "userErrors": []
+      }
+    },
+    "extensions": {
+      "cost": {
+        "requestedQueryCost": 10,
+        "actualQueryCost": 10,
+        "throttleStatus": {
+          "maximumAvailable": 20000.0,
+          "currentlyAvailable": 19990,
+          "restoreRate": 1000.0
+        }
+      }
+    }
+  },
+  {
+    "data": {
+      "collectionCreate": {
+        "collection": {
+          "id": "gid://shopify/Collection/303882666086",
+          "handle": "style-e-w-mini-tote",
+          "title": "Style E/W Mini Tote"
+        },
+        "userErrors": []
+      }
+    },
+    "extensions": {
+      "cost": {
+        "requestedQueryCost": 10,
+        "actualQueryCost": 10,
+        "throttleStatus": {
+          "maximumAvailable": 20000.0,
+          "currentlyAvailable": 19990,
+          "restoreRate": 1000.0
+        }
+      }
+    }
+  },
+  {
+    "data": {
+      "collectionCreate": {
+        "collection": {
+          "id": "gid://shopify/Collection/303882698854",
+          "handle": "style-elongated-studded-buckle-belt",
+          "title": "Style Elongated Studded Buckle Belt"
+        },
+        "userErrors": []
+      }
+    },
+    "extensions": {
+      "cost": {
+        "requestedQueryCost": 10,
+        "actualQueryCost": 10,
+        "throttleStatus": {
+          "maximumAvailable": 20000.0,
+          "currentlyAvailable": 19990,
+          "restoreRate": 1000.0
+        }
+      }
+    }
+  },
+  {
+    "data": {
+      "collectionCreate": {
+        "collection": {
+          "id": "gid://shopify/Collection/303882731622",
+          "handle": "style-elton-skirt",
+          "title": "Style Elton Skirt"
+        },
+        "userErrors": []
+      }
+    },
+    "extensions": {
+      "cost": {
+        "requestedQueryCost": 10,
+        "actualQueryCost": 10,
+        "throttleStatus": {
+          "maximumAvailable": 20000.0,
+          "currentlyAvailable": 19990,
+          "restoreRate": 1000.0
+        }
+      }
+    }
+  },
+  {
+    "data": {
+      "collectionCreate": {
+        "collection": {
+          "id": "gid://shopify/Collection/303882764390",
+          "handle": "style-fenice-jacket",
+          "title": "Style Fenice Jacket"
+        },
+        "userErrors": []
+      }
+    },
+    "extensions": {
+      "cost": {
+        "requestedQueryCost": 10,
+        "actualQueryCost": 10,
+        "throttleStatus": {
+          "maximumAvailable": 20000.0,
+          "currentlyAvailable": 19990,
+          "restoreRate": 1000.0
+        }
+      }
+    }
+  },
+  {
+    "data": {
+      "collectionCreate": {
+        "collection": {
+          "id": "gid://shopify/Collection/303882797158",
+          "handle": "style-floyd-dress",
+          "title": "Style Floyd Dress"
+        },
+        "userErrors": []
+      }
+    },
+    "extensions": {
+      "cost": {
+        "requestedQueryCost": 10,
+        "actualQueryCost": 10,
+        "throttleStatus": {
+          "maximumAvailable": 20000.0,
+          "currentlyAvailable": 19990,
+          "restoreRate": 1000.0
+        }
+      }
+    }
+  },
+  {
+    "data": {
+      "collectionCreate": {
+        "collection": {
+          "id": "gid://shopify/Collection/303882829926",
+          "handle": "style-hamilton-sweater",
+          "title": "Style Hamilton Sweater"
+        },
+        "userErrors": []
+      }
+    },
+    "extensions": {
+      "cost": {
+        "requestedQueryCost": 10,
+        "actualQueryCost": 10,
+        "throttleStatus": {
+          "maximumAvailable": 20000.0,
+          "currentlyAvailable": 19990,
+          "restoreRate": 1000.0
+        }
+      }
+    }
+  },
+  {
+    "data": {
+      "collectionCreate": {
+        "collection": {
+          "id": "gid://shopify/Collection/303882862694",
+          "handle": "style-hank-skirt",
+          "title": "Style Hank Skirt"
+        },
+        "userErrors": []
+      }
+    },
+    "extensions": {
+      "cost": {
+        "requestedQueryCost": 10,
+        "actualQueryCost": 10,
+        "throttleStatus": {
+          "maximumAvailable": 20000.0,
+          "currentlyAvailable": 19990,
+          "restoreRate": 1000.0
+        }
+      }
+    }
+  },
+  {
+    "data": {
+      "collectionCreate": {
+        "collection": {
+          "id": "gid://shopify/Collection/303882895462",
+          "handle": "style-harold-sweater",
+          "title": "Style Harold Sweater"
+        },
+        "userErrors": []
+      }
+    },
+    "extensions": {
+      "cost": {
+        "requestedQueryCost": 10,
+        "actualQueryCost": 10,
+        "throttleStatus": {
+          "maximumAvailable": 20000.0,
+          "currentlyAvailable": 19990,
+          "restoreRate": 1000.0
+        }
+      }
+    }
+  },
+  {
+    "data": {
+      "collectionCreate": {
+        "collection": {
+          "id": "gid://shopify/Collection/303882928230",
+          "handle": "style-hayden-jacket",
+          "title": "Style Hayden Jacket"
+        },
+        "userErrors": []
+      }
+    },
+    "extensions": {
+      "cost": {
+        "requestedQueryCost": 10,
+        "actualQueryCost": 10,
+        "throttleStatus": {
+          "maximumAvailable": 20000.0,
+          "currentlyAvailable": 19990,
+          "restoreRate": 1000.0
+        }
+      }
+    }
+  },
+  {
+    "data": {
+      "collectionCreate": {
+        "collection": {
+          "id": "gid://shopify/Collection/303882960998",
+          "handle": "style-jazmina-dress",
+          "title": "Style Jazmina Dress"
+        },
+        "userErrors": []
+      }
+    },
+    "extensions": {
+      "cost": {
+        "requestedQueryCost": 10,
+        "actualQueryCost": 10,
+        "throttleStatus": {
+          "maximumAvailable": 20000.0,
+          "currentlyAvailable": 19990,
+          "restoreRate": 1000.0
+        }
+      }
+    }
+  },
+  {
+    "data": {
+      "collectionCreate": {
+        "collection": {
+          "id": "gid://shopify/Collection/303882993766",
+          "handle": "style-kaplan-dress",
+          "title": "Style Kaplan Dress"
+        },
+        "userErrors": []
+      }
+    },
+    "extensions": {
+      "cost": {
+        "requestedQueryCost": 10,
+        "actualQueryCost": 10,
+        "throttleStatus": {
+          "maximumAvailable": 20000.0,
+          "currentlyAvailable": 19990,
+          "restoreRate": 1000.0
+        }
+      }
+    }
+  },
+  {
+    "data": {
+      "collectionCreate": {
+        "collection": {
+          "id": "gid://shopify/Collection/303883026534",
+          "handle": "style-katrin-dress",
+          "title": "Style Katrin Dress"
+        },
+        "userErrors": []
+      }
+    },
+    "extensions": {
+      "cost": {
+        "requestedQueryCost": 10,
+        "actualQueryCost": 10,
+        "throttleStatus": {
+          "maximumAvailable": 20000.0,
+          "currentlyAvailable": 19990,
+          "restoreRate": 1000.0
+        }
+      }
+    }
+  },
+  {
+    "data": {
+      "collectionCreate": {
+        "collection": {
+          "id": "gid://shopify/Collection/303883059302",
+          "handle": "style-kiera-dress",
+          "title": "Style Kiera Dress"
+        },
+        "userErrors": []
+      }
+    },
+    "extensions": {
+      "cost": {
+        "requestedQueryCost": 10,
+        "actualQueryCost": 10,
+        "throttleStatus": {
+          "maximumAvailable": 20000.0,
+          "currentlyAvailable": 19990,
+          "restoreRate": 1000.0
+        }
+      }
+    }
+  },
+  {
+    "data": {
+      "collectionCreate": {
+        "collection": {
+          "id": "gid://shopify/Collection/303883092070",
+          "handle": "style-linnie-skirt",
+          "title": "Style Linnie Skirt"
+        },
+        "userErrors": []
+      }
+    },
+    "extensions": {
+      "cost": {
+        "requestedQueryCost": 10,
+        "actualQueryCost": 10,
+        "throttleStatus": {
+          "maximumAvailable": 20000.0,
+          "currentlyAvailable": 19990,
+          "restoreRate": 1000.0
+        }
+      }
+    }
+  },
+  {
+    "data": {
+      "collectionCreate": {
+        "collection": {
+          "id": "gid://shopify/Collection/303883124838",
+          "handle": "style-llewellyn-jacket",
+          "title": "Style Llewellyn Jacket"
+        },
+        "userErrors": []
+      }
+    },
+    "extensions": {
+      "cost": {
+        "requestedQueryCost": 10,
+        "actualQueryCost": 10,
+        "throttleStatus": {
+          "maximumAvailable": 20000.0,
+          "currentlyAvailable": 19990,
+          "restoreRate": 1000.0
+        }
+      }
+    }
+  },
+  {
+    "data": {
+      "collectionCreate": {
+        "collection": {
+          "id": "gid://shopify/Collection/303883157606",
+          "handle": "style-loquette-belt",
+          "title": "Style Loquette Belt"
+        },
+        "userErrors": []
+      }
+    },
+    "extensions": {
+      "cost": {
+        "requestedQueryCost": 10,
+        "actualQueryCost": 10,
+        "throttleStatus": {
+          "maximumAvailable": 20000.0,
+          "currentlyAvailable": 19990,
+          "restoreRate": 1000.0
+        }
+      }
+    }
+  },
+  {
+    "data": {
+      "collectionCreate": {
+        "collection": {
+          "id": "gid://shopify/Collection/303883190374",
+          "handle": "style-mack-skirt",
+          "title": "Style Mack Skirt"
+        },
+        "userErrors": []
+      }
+    },
+    "extensions": {
+      "cost": {
+        "requestedQueryCost": 10,
+        "actualQueryCost": 10,
+        "throttleStatus": {
+          "maximumAvailable": 20000.0,
+          "currentlyAvailable": 19990,
+          "restoreRate": 1000.0
+        }
+      }
+    }
+  },
+  {
+    "data": {
+      "collectionCreate": {
+        "collection": {
+          "id": "gid://shopify/Collection/303883223142",
+          "handle": "style-marian-dress",
+          "title": "Style Marian Dress"
+        },
+        "userErrors": []
+      }
+    },
+    "extensions": {
+      "cost": {
+        "requestedQueryCost": 10,
+        "actualQueryCost": 10,
+        "throttleStatus": {
+          "maximumAvailable": 20000.0,
+          "currentlyAvailable": 19990,
+          "restoreRate": 1000.0
+        }
+      }
+    }
+  },
+  {
+    "data": {
+      "collectionCreate": {
+        "collection": {
+          "id": "gid://shopify/Collection/303883255910",
+          "handle": "style-marty-sweater",
+          "title": "Style Marty Sweater"
+        },
+        "userErrors": []
+      }
+    },
+    "extensions": {
+      "cost": {
+        "requestedQueryCost": 10,
+        "actualQueryCost": 10,
+        "throttleStatus": {
+          "maximumAvailable": 20000.0,
+          "currentlyAvailable": 19990,
+          "restoreRate": 1000.0
+        }
+      }
+    }
+  },
+  {
+    "data": {
+      "collectionCreate": {
+        "collection": {
+          "id": "gid://shopify/Collection/303883288678",
+          "handle": "style-meyer-dress",
+          "title": "Style Meyer Dress"
+        },
+        "userErrors": []
+      }
+    },
+    "extensions": {
+      "cost": {
+        "requestedQueryCost": 10,
+        "actualQueryCost": 10,
+        "throttleStatus": {
+          "maximumAvailable": 20000.0,
+          "currentlyAvailable": 19990,
+          "restoreRate": 1000.0
+        }
+      }
+    }
+  },
+  {
+    "data": {
+      "collectionCreate": {
+        "collection": {
+          "id": "gid://shopify/Collection/303883321446",
+          "handle": "style-noor-dress",
+          "title": "Style Noor Dress"
+        },
+        "userErrors": []
+      }
+    },
+    "extensions": {
+      "cost": {
+        "requestedQueryCost": 10,
+        "actualQueryCost": 10,
+        "throttleStatus": {
+          "maximumAvailable": 20000.0,
+          "currentlyAvailable": 19990,
+          "restoreRate": 1000.0
+        }
+      }
+    }
+  },
+  {
+    "data": {
+      "collectionCreate": {
+        "collection": {
+          "id": "gid://shopify/Collection/303883354214",
+          "handle": "style-oates-sweater",
+          "title": "Style Oates Sweater"
+        },
+        "userErrors": []
+      }
+    },
+    "extensions": {
+      "cost": {
+        "requestedQueryCost": 10,
+        "actualQueryCost": 10,
+        "throttleStatus": {
+          "maximumAvailable": 20000.0,
+          "currentlyAvailable": 19990,
+          "restoreRate": 1000.0
+        }
+      }
+    }
+  },
+  {
+    "data": {
+      "collectionCreate": {
+        "collection": {
+          "id": "gid://shopify/Collection/303883386982",
+          "handle": "style-organic-buckle-belt",
+          "title": "Style Organic Buckle Belt"
+        },
+        "userErrors": []
+      }
+    },
+    "extensions": {
+      "cost": {
+        "requestedQueryCost": 10,
+        "actualQueryCost": 10,
+        "throttleStatus": {
+          "maximumAvailable": 20000.0,
+          "currentlyAvailable": 19990,
+          "restoreRate": 1000.0
+        }
+      }
+    }
+  },
+  {
+    "data": {
+      "collectionCreate": {
+        "collection": {
+          "id": "gid://shopify/Collection/303883419750",
+          "handle": "style-origami-bag",
+          "title": "Style Origami Bag"
+        },
+        "userErrors": []
+      }
+    },
+    "extensions": {
+      "cost": {
+        "requestedQueryCost": 10,
+        "actualQueryCost": 10,
+        "throttleStatus": {
+          "maximumAvailable": 20000.0,
+          "currentlyAvailable": 19990,
+          "restoreRate": 1000.0
+        }
+      }
+    }
+  },
+  {
+    "data": {
+      "collectionCreate": {
+        "collection": {
+          "id": "gid://shopify/Collection/303883452518",
+          "handle": "style-origami-bag-mini",
+          "title": "Style Origami Bag Mini"
+        },
+        "userErrors": []
+      }
+    },
+    "extensions": {
+      "cost": {
+        "requestedQueryCost": 10,
+        "actualQueryCost": 10,
+        "throttleStatus": {
+          "maximumAvailable": 20000.0,
+          "currentlyAvailable": 19990,
+          "restoreRate": 1000.0
+        }
+      }
+    }
+  },
+  {
+    "data": {
+      "collectionCreate": {
+        "collection": {
+          "id": "gid://shopify/Collection/303883485286",
+          "handle": "style-origami-baguette",
+          "title": "Style Origami Baguette"
+        },
+        "userErrors": []
+      }
+    },
+    "extensions": {
+      "cost": {
+        "requestedQueryCost": 10,
+        "actualQueryCost": 10,
+        "throttleStatus": {
+          "maximumAvailable": 20000.0,
+          "currentlyAvailable": 19990,
+          "restoreRate": 1000.0
+        }
+      }
+    }
+  },
+  {
+    "data": {
+      "collectionCreate": {
+        "collection": {
+          "id": "gid://shopify/Collection/303883518054",
+          "handle": "style-orrie-dress",
+          "title": "Style Orrie Dress"
+        },
+        "userErrors": []
+      }
+    },
+    "extensions": {
+      "cost": {
+        "requestedQueryCost": 10,
+        "actualQueryCost": 10,
+        "throttleStatus": {
+          "maximumAvailable": 20000.0,
+          "currentlyAvailable": 19990,
+          "restoreRate": 1000.0
+        }
+      }
+    }
+  },
+  {
+    "data": {
+      "collectionCreate": {
+        "collection": {
+          "id": "gid://shopify/Collection/303883550822",
+          "handle": "style-penny-dress",
+          "title": "Style Penny Dress"
+        },
+        "userErrors": []
+      }
+    },
+    "extensions": {
+      "cost": {
+        "requestedQueryCost": 10,
+        "actualQueryCost": 10,
+        "throttleStatus": {
+          "maximumAvailable": 20000.0,
+          "currentlyAvailable": 19990,
+          "restoreRate": 1000.0
+        }
+      }
+    }
+  },
+  {
+    "data": {
+      "collectionCreate": {
+        "collection": {
+          "id": "gid://shopify/Collection/303883583590",
+          "handle": "style-pogo-sweater",
+          "title": "Style Pogo Sweater"
+        },
+        "userErrors": []
+      }
+    },
+    "extensions": {
+      "cost": {
+        "requestedQueryCost": 10,
+        "actualQueryCost": 10,
+        "throttleStatus": {
+          "maximumAvailable": 20000.0,
+          "currentlyAvailable": 19990,
+          "restoreRate": 1000.0
+        }
+      }
+    }
+  },
+  {
+    "data": {
+      "collectionCreate": {
+        "collection": {
+          "id": "gid://shopify/Collection/303883616358",
+          "handle": "style-putney-sweater",
+          "title": "Style Putney Sweater"
+        },
+        "userErrors": []
+      }
+    },
+    "extensions": {
+      "cost": {
+        "requestedQueryCost": 10,
+        "actualQueryCost": 10,
+        "throttleStatus": {
+          "maximumAvailable": 20000.0,
+          "currentlyAvailable": 19990,
+          "restoreRate": 1000.0
+        }
+      }
+    }
+  },
+  {
+    "data": {
+      "collectionCreate": {
+        "collection": {
+          "id": "gid://shopify/Collection/303883649126",
+          "handle": "style-satterly-top",
+          "title": "Style Satterly Top"
+        },
+        "userErrors": []
+      }
+    },
+    "extensions": {
+      "cost": {
+        "requestedQueryCost": 10,
+        "actualQueryCost": 10,
+        "throttleStatus": {
+          "maximumAvailable": 20000.0,
+          "currentlyAvailable": 19990,
+          "restoreRate": 1000.0
+        }
+      }
+    }
+  },
+  {
+    "data": {
+      "collectionCreate": {
+        "collection": {
+          "id": "gid://shopify/Collection/303883681894",
+          "handle": "style-sayle-sweater",
+          "title": "Style Sayle Sweater"
+        },
+        "userErrors": []
+      }
+    },
+    "extensions": {
+      "cost": {
+        "requestedQueryCost": 10,
+        "actualQueryCost": 10,
+        "throttleStatus": {
+          "maximumAvailable": 20000.0,
+          "currentlyAvailable": 19990,
+          "restoreRate": 1000.0
+        }
+      }
+    }
+  },
+  {
+    "data": {
+      "collectionCreate": {
+        "collection": {
+          "id": "gid://shopify/Collection/303883714662",
+          "handle": "style-sleary-top",
+          "title": "Style Sleary Top"
+        },
+        "userErrors": []
+      }
+    },
+    "extensions": {
+      "cost": {
+        "requestedQueryCost": 10,
+        "actualQueryCost": 10,
+        "throttleStatus": {
+          "maximumAvailable": 20000.0,
+          "currentlyAvailable": 19990,
+          "restoreRate": 1000.0
+        }
+      }
+    }
+  },
+  {
+    "data": {
+      "collectionCreate": {
+        "collection": {
+          "id": "gid://shopify/Collection/303883747430",
+          "handle": "style-small-tote",
+          "title": "Style Small Tote"
+        },
+        "userErrors": []
+      }
+    },
+    "extensions": {
+      "cost": {
+        "requestedQueryCost": 10,
+        "actualQueryCost": 10,
+        "throttleStatus": {
+          "maximumAvailable": 20000.0,
+          "currentlyAvailable": 19990,
+          "restoreRate": 1000.0
+        }
+      }
+    }
+  },
+  {
+    "data": {
+      "collectionCreate": {
+        "collection": {
+          "id": "gid://shopify/Collection/303883780198",
+          "handle": "style-square-buckle-belt",
+          "title": "Style Square Buckle Belt"
+        },
+        "userErrors": []
+      }
+    },
+    "extensions": {
+      "cost": {
+        "requestedQueryCost": 10,
+        "actualQueryCost": 10,
+        "throttleStatus": {
+          "maximumAvailable": 20000.0,
+          "currentlyAvailable": 19990,
+          "restoreRate": 1000.0
+        }
+      }
+    }
+  },
+  {
+    "data": {
+      "collectionCreate": {
+        "collection": {
+          "id": "gid://shopify/Collection/303883812966",
+          "handle": "style-tate-sweater",
+          "title": "Style Tate Sweater"
+        },
+        "userErrors": []
+      }
+    },
+    "extensions": {
+      "cost": {
+        "requestedQueryCost": 10,
+        "actualQueryCost": 10,
+        "throttleStatus": {
+          "maximumAvailable": 20000.0,
+          "currentlyAvailable": 19990,
+          "restoreRate": 1000.0
+        }
+      }
+    }
+  },
+  {
+    "data": {
+      "collectionCreate": {
+        "collection": {
+          "id": "gid://shopify/Collection/303883845734",
+          "handle": "style-taylor-sweater",
+          "title": "Style Taylor Sweater"
+        },
+        "userErrors": []
+      }
+    },
+    "extensions": {
+      "cost": {
+        "requestedQueryCost": 10,
+        "actualQueryCost": 10,
+        "throttleStatus": {
+          "maximumAvailable": 20000.0,
+          "currentlyAvailable": 19990,
+          "restoreRate": 1000.0
+        }
+      }
+    }
+  },
+  {
+    "data": {
+      "collectionCreate": {
+        "collection": {
+          "id": "gid://shopify/Collection/303883878502",
+          "handle": "style-thea-sweater",
+          "title": "Style Thea Sweater"
+        },
+        "userErrors": []
+      }
+    },
+    "extensions": {
+      "cost": {
+        "requestedQueryCost": 10,
+        "actualQueryCost": 10,
+        "throttleStatus": {
+          "maximumAvailable": 20000.0,
+          "currentlyAvailable": 19990,
+          "restoreRate": 1000.0
+        }
+      }
+    }
+  },
+  {
+    "data": {
+      "collectionCreate": {
+        "collection": {
+          "id": "gid://shopify/Collection/303883911270",
+          "handle": "style-toro-sweater",
+          "title": "Style Toro Sweater"
+        },
+        "userErrors": []
+      }
+    },
+    "extensions": {
+      "cost": {
+        "requestedQueryCost": 10,
+        "actualQueryCost": 10,
+        "throttleStatus": {
+          "maximumAvailable": 20000.0,
+          "currentlyAvailable": 19990,
+          "restoreRate": 1000.0
+        }
+      }
+    }
+  },
+  {
+    "data": {
+      "collectionCreate": {
+        "collection": {
+          "id": "gid://shopify/Collection/303883944038",
+          "handle": "style-ty-sweater",
+          "title": "Style Ty Sweater"
+        },
+        "userErrors": []
+      }
+    },
+    "extensions": {
+      "cost": {
+        "requestedQueryCost": 10,
+        "actualQueryCost": 10,
+        "throttleStatus": {
+          "maximumAvailable": 20000.0,
+          "currentlyAvailable": 19990,
+          "restoreRate": 1000.0
+        }
+      }
+    }
+  },
+  {
+    "data": {
+      "collectionCreate": {
+        "collection": {
+          "id": "gid://shopify/Collection/303883976806",
+          "handle": "style-varda-skirt",
+          "title": "Style Varda Skirt"
+        },
+        "userErrors": []
+      }
+    },
+    "extensions": {
+      "cost": {
+        "requestedQueryCost": 10,
+        "actualQueryCost": 10,
+        "throttleStatus": {
+          "maximumAvailable": 20000.0,
+          "currentlyAvailable": 19990,
+          "restoreRate": 1000.0
+        }
+      }
+    }
+  },
+  {
+    "data": {
+      "collectionCreate": {
+        "collection": {
+          "id": "gid://shopify/Collection/303884009574",
+          "handle": "style-western-boho-belt",
+          "title": "Style Western Boho Belt"
+        },
+        "userErrors": []
+      }
+    },
+    "extensions": {
+      "cost": {
+        "requestedQueryCost": 10,
+        "actualQueryCost": 10,
+        "throttleStatus": {
+          "maximumAvailable": 20000.0,
+          "currentlyAvailable": 19990,
+          "restoreRate": 1000.0
+        }
+      }
+    }
+  },
+  {
+    "data": {
+      "collectionCreate": {
+        "collection": {
+          "id": "gid://shopify/Collection/303884042342",
+          "handle": "style-xl-tote",
+          "title": "Style Xl Tote"
+        },
+        "userErrors": []
+      }
+    },
+    "extensions": {
+      "cost": {
+        "requestedQueryCost": 10,
+        "actualQueryCost": 10,
+        "throttleStatus": {
+          "maximumAvailable": 20000.0,
+          "currentlyAvailable": 19990,
+          "restoreRate": 1000.0
+        }
+      }
+    }
+  }
+]
