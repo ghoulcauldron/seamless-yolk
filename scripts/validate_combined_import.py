@@ -493,7 +493,7 @@ def check_data_consistency_against_sources(df: pd.DataFrame, tracker_df: pd.Data
 def main(capsule: str, input_filename: str, override_filename: str):
     base_path = pathlib.Path(f"capsules/{capsule}")
     input_file_path = base_path / f"outputs/{input_filename}"
-    tracker_file_path = base_path / "inputs/SS26 for Shopify check(By Style).csv"
+    tracker_file_path = base_path / "inputs/S226 Shopify upload masterfile.csv"
     manifest_path = base_path / "manifests/images_manifest.jsonl"
     override_file_path = base_path / f"outputs/{override_filename}" if override_filename else None
 

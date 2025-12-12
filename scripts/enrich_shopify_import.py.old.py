@@ -184,7 +184,7 @@ def main(capsule: str, dry_run: bool, override_file: str = None):
         output_dir = capsule_dir / "outputs"
         output_dir.mkdir(parents=True, exist_ok=True)
 
-        tracker_path = capsule_dir / "inputs/SS26 for Shopify check(By Style).csv"
+        tracker_path = capsule_dir / "inputs/S226 Shopify upload masterfile.csv"
         tracker_df_raw = pd.read_csv(tracker_path, header=None, encoding='cp1252', keep_default_na=False)
         header_row_index = tracker_df_raw[tracker_df_raw.apply(lambda r: r.astype(str).str.contains('Product ID').any(), axis=1)].index[0]
         tracker_df = tracker_df_raw.copy()

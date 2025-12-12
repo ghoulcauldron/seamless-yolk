@@ -250,7 +250,7 @@ def check_internal_structure(df: pd.DataFrame) -> list:
 def main(capsule: str):
     base_path = pathlib.Path(f"capsules/{capsule}")
     ready_file_path = base_path / "outputs/poc_shopify_import_ready.csv"
-    tracker_file_path = base_path / "inputs/SS26 for Shopify check(By Style).csv"
+    tracker_file_path = base_path / "inputs/S226 Shopify upload masterfile.csv"
     manifest_path = base_path / "manifests/images_manifest.jsonl"
 
     try:

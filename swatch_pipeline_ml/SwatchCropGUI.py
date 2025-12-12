@@ -4,8 +4,8 @@ import json
 from PyQt5 import QtWidgets, QtGui, QtCore
 from PIL import Image
 
-INPUT_DIR = "inputs/ghosts"
-OUTPUT_DIR = "outputs/swatches"
+INPUT_DIR = "capsules/S226/inputs/ghosts"
+OUTPUT_DIR = "capsules/S226/outputs/swatches"
 LOG_PATH = "logs/swatch_hints.json"
 CONFIG_PATH = "config/garment_config.json"
 CROP_SIZE = 300 # Default size

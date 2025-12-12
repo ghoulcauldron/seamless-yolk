@@ -9,9 +9,9 @@ It replaces the manual file-list process and unifies data, assets, and enrichmen
 
 ```
 
-/capsules/S126/
+/capsules/S2  26/
 inputs/
-SS26 for Shopify check(By Style).csv
+S226 Shopify upload masterfile.csv
 products_export_1.csv
 assets/
 ghosts/
@@ -44,8 +44,6 @@ python scripts/build_image_manifests.py --capsule S126 [--dry-run]
 * Parses CPI from filenames (`Style-ColorCode`)
 * Validates hero/model/swatch coverage
 * Writes `manifests/images_manifest.jsonl`
-  and updates `capsule_status.json`
-
 ---
 
 ### Step 2 — Sync Swatch Hints → Garment Config

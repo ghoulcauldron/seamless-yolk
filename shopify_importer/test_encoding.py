@@ -1,1 +1,1 @@
-import pandas as pd; print('--- Running test_encoding.py ---'); pd.read_csv('SS26 for Shopify check(By Style).csv', header=1, encoding='cp1252'); print('>>> SUCCESS: The file was read correctly with cp1252 encoding! <<<')
+import pandas as pd; print('--- Running test_encoding.py ---'); pd.read_csv('S226 Shopify upload masterfile.csv', header=1, encoding='cp1252'); print('>>> SUCCESS: The file was read correctly with cp1252 encoding! <<<')

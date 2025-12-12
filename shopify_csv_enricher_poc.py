@@ -104,7 +104,7 @@ def enrich_shopify_import_poc(source_file, scaffold_file, output_file, cdn_prefi
 
 
 if __name__ == '__main__':
-    SOURCE_CSV = 'SS26 for Shopify check(By Style).csv'
+    SOURCE_CSV = 'S226 Shopify upload masterfile.csv'
     SCAFFOLD_CSV = 'products_export_1.csv'
     OUTPUT_CSV = 'poc_shopify_import_enriched.csv'
     CDN_PREFIX_URL = 'https://cdn.shopify.com/s/files/1/0148/9561/2004/files/'
