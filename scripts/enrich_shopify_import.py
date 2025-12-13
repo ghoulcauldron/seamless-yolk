@@ -79,16 +79,17 @@ def check_filename_consistency(filenames: list) -> tuple[bool, str | None, list]
 
 
 # --- Tag Generation Logic ---
+# --- removed "collection_new arrivals" as per latest requirements ---
 CATEGORY_TAGS_MAP = {
-    1: "collection_ready-to-wear, collection_jackets, collection_new-arrivals", 2: "collection_ready-to-wear, collection_jackets, collection_new-arrivals",
-    3: "collection_ready-to-wear, collection_dresses, collection_new-arrivals", 4: "collection_ready-to-wear, collection_tops, collection_new-arrivals",
-    5: "collection_ready-to-wear, collection_skirts, collection_new-arrivals", 6: "collection_ready-to-wear, collection_pants, collection_new-arrivals",
-    9: "collection_accessories, collection_SHOES, collection_new-arrivals", 70: "collection_accessories, collection_Bags, collection_new-arrivals",
-    71: "collection_accessories, collection_Bags, collection_new-arrivals", 76: "collection_accessories, collection_belts, collection_new-arrivals",
-    79: "collection_accessories, collection_Jewelry, collection_new-arrivals", 81: "collection_ready-to-wear, collection_knitwear, collection_jackets, collection_new-arrivals",
-    82: "collection_ready-to-wear, collection_knitwear, collection_jackets, collection_new-arrivals", 83: "collection_ready-to-wear, collection_knitwear, collection_dresses, collection_new-arrivals",
-    84: "collection_ready-to-wear, collection_knitwear, collection_tops, collection_new-arrivals", 85: "collection_ready-to-wear, collection_knitwear, collection_skirts, collection_new-arrivals",
-    86: "collection_ready-to-wear, collection_knitwear, collection_pants, collection_new-arrivals", 88: "collection_ready-to-wear, collection_knitwear, collection_tops, collection_new-arrivals"
+    1: "collection_ready-to-wear, collection_jackets", 2: "collection_ready-to-wear, collection_jackets",
+    3: "collection_ready-to-wear, collection_dresses", 4: "collection_ready-to-wear, collection_tops",
+    5: "collection_ready-to-wear, collection_skirts", 6: "collection_ready-to-wear, collection_pants",
+    9: "collection_accessories, collection_SHOES", 70: "collection_accessories, collection_Bags",
+    71: "collection_accessories, collection_Bags", 76: "collection_accessories, collection_belts",
+    79: "collection_accessories, collection_Jewelry", 81: "collection_ready-to-wear, collection_knitwear, collection_jackets",
+    82: "collection_ready-to-wear, collection_knitwear, collection_jackets", 83: "collection_ready-to-wear, collection_knitwear, collection_dresses",
+    84: "collection_ready-to-wear, collection_knitwear, collection_tops", 85: "collection_ready-to-wear, collection_knitwear, collection_skirts",
+    86: "collection_ready-to-wear, collection_knitwear, collection_pants", 88: "collection_ready-to-wear, collection_knitwear, collection_tops"
 }
 
 def extract_product_id_from_tags(tags_str: str) -> str | None:
