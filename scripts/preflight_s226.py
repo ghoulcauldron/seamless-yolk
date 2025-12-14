@@ -61,8 +61,56 @@ def load_masterfile(path: str) -> pd.DataFrame:
     return df
 
 def load_filenames(path: str) -> list[str]:
-    with open(path, "r") as f:
-        return re.findall(r"'(.*?)'", f.read())
+    """Load image filenames/paths from a text file.
+
+    Supports:
+      - quoted tokens: '...'
+      - unquoted paths/filenames containing common image extensions
+
+    Returns a de-duplicated list preserving first-seen order.
+    """
+    with open(path, "r", encoding="utf-8", errors="ignore") as f:
+        contents = f.read()
+
+    # 1) Quoted tokens: '...'
+    quoted = re.findall(r"'(.*?)'", contents)
+
+    combined = []
+    seen = set()
+
+    def _add(item: str) -> None:
+        s = str(item).strip()
+        if not s:
+            return
+        if s not in seen:
+            seen.add(s)
+            combined.append(s)
+
+    # Add quoted first
+    for item in quoted:
+        _add(item)
+
+    # 2) Line-based parsing for unquoted lists (supports spaces in filenames)
+    # Many of our input files are one filename per line.
+    for raw_line in contents.splitlines():
+        line = raw_line.strip()
+        if not line:
+            continue
+
+        # Skip lines that are purely a quoted concat artifact; quoted items already handled.
+        # Still, we allow mixed lines and extract image-like substrings below.
+
+        # If the entire line looks like a single image path/filename (even with spaces), keep it.
+        if re.search(r"\.(jpg|jpeg|png|webp)$", line, flags=re.IGNORECASE):
+            _add(line)
+            continue
+
+        # Otherwise, extract any image-like substrings from the line.
+        # This supports occasional lines containing multiple tokens.
+        for m in re.finditer(r"[^'\"\r\n]+?\.(?:jpg|jpeg|png|webp)", line, flags=re.IGNORECASE):
+            _add(m.group(0))
+
+    return combined
 
 # ----------------------------
 # Setup logging
@@ -184,17 +232,30 @@ def find_images_for_product(product_id: str, filenames: list[str]) -> list[str]:
     return [fn for fn in filenames if product_id in fn]
 
 def classify_images(image_files: list[str]) -> dict:
-    ghosts = [f for f in image_files if "_ghost_" in f.lower()]
-    models = [f for f in image_files if "model_image_" in f.lower()]
-    editorials = [
-        f for f in image_files
-        if f not in ghosts and f not in models
-    ]
+    """Classify image files for a product.
+
+    We classify by filename patterns, not by which input list they came from.
+    - ghost: contains "ghost" in filename
+    - hero: contains "hero_image" in filename
+    - model: contains "model_image_" in filename
+    - editorial: everything else
+    """
+    lower = [(f, f.lower()) for f in image_files]
+
+    ghosts = [f for f, lo in lower if "ghost" in lo]
+    heroes = [f for f, lo in lower if "hero_image" in lo]
+    models = [f for f, lo in lower if "model_image_" in lo]
+
+    # Editorials are the remainder
+    classified = set(ghosts) | set(heroes) | set(models)
+    editorials = [f for f in image_files if f not in classified]
+
     return {
         "ghosts": ghosts,
+        "heroes": heroes,
         "models": models,
         "editorials": editorials,
-        "total": len(image_files)
+        "total": len(image_files),
     }
 
 # ----------------------------
@@ -227,6 +288,7 @@ def preflight_product(
         "category_code_known": False,
         "color_match": False,
         "ghost_count": 0,
+        "hero_count": 0,
         "model_count": 0,
         "editorial_count": 0,
         "total_images": 0,
@@ -251,6 +313,17 @@ def preflight_product(
 
     parent = parent_rows.iloc[0]
     result["title"] = parent.get("Title")
+
+    # Wholesale-only products (WS Buy) are excluded from DTC
+    tags_str = str(parent.get("Tags", ""))
+    if "WS Buy" in tags_str:
+        result.update({
+            "status": "SKIP",
+            "client_recommendation": "Wholesale only – excluded from DTC",
+            "image_status": "N/A",
+        })
+        result["warnings"].append("Wholesale product (WS Buy) – skipped")
+        return result
 
     # Product ID extraction and validation
     tags = parent.get("Tags", "")
@@ -347,20 +420,40 @@ def preflight_product(
         result["warnings"].append("Invalid or missing SEASON CODE")
     result["season_code_valid"] = season_code_valid
 
-    # Category code known
+    # Category code known (with knit fallback)
     category_code_known = False
     category_code = source.get("CATEGORY CODE")
+
     if pd.notna(category_code):
         try:
             cat_int = int(category_code)
-            if cat_int in CATEGORY_TAGS_MAP:
+
+            # Knitwear sentinel → defer to KNIT CATEGORY CODE
+            if cat_int == 8:
+                knit_code = source.get("KNIT CATEGORY CODE")
+                if pd.notna(knit_code):
+                    try:
+                        knit_int = int(knit_code)
+                        if knit_int in CATEGORY_TAGS_MAP:
+                            category_code_known = True
+                        else:
+                            result["warnings"].append("Unknown KNIT CATEGORY CODE")
+                    except Exception:
+                        result["warnings"].append("Unknown KNIT CATEGORY CODE")
+                else:
+                    result["warnings"].append("Unknown KNIT CATEGORY CODE")
+
+            # Non-knit category
+            elif cat_int in CATEGORY_TAGS_MAP:
                 category_code_known = True
             else:
                 result["warnings"].append("Unknown CATEGORY CODE")
+
         except Exception:
             result["warnings"].append("Unknown CATEGORY CODE")
     else:
         result["warnings"].append("Unknown CATEGORY CODE")
+
     result["category_code_known"] = category_code_known
 
     # Color match
@@ -379,16 +472,21 @@ def preflight_product(
     result["color_match"] = color_match
 
     # Image analysis
-    ghost_imgs = find_images_for_product(product_id, ghost_files)
-    model_imgs = find_images_for_product(product_id, model_files)
-    editorial_imgs = []  # No editorial images from text files
+    # IMPORTANT: do not trust that ghost/model lists are cleanly separated.
+    # Some files may contain mixed image types. Combine and classify by pattern.
+    all_image_pool = list(dict.fromkeys(ghost_files + model_files))
+    product_images = find_images_for_product(product_id, all_image_pool)
 
-    ghost_count = len(ghost_imgs)
-    model_count = len(model_imgs)
-    editorial_count = len(editorial_imgs)
-    total_images = ghost_count + model_count + editorial_count
+    classified = classify_images(product_images)
+
+    ghost_count = len(classified["ghosts"])
+    hero_count = len(classified["heroes"])
+    model_count = len(classified["models"])
+    editorial_count = len(classified["editorials"])
+    total_images = classified["total"]
 
     result["ghost_count"] = ghost_count
+    result["hero_count"] = hero_count
     result["model_count"] = model_count
     result["editorial_count"] = editorial_count
     result["total_images"] = total_images
@@ -397,7 +495,8 @@ def preflight_product(
     child_row_count = len(group_df) - 1
     result["child_row_count"] = child_row_count
 
-    model_overflow_required = max(0, model_count - child_row_count)
+    non_ghost_count = hero_count + model_count + editorial_count
+    model_overflow_required = max(0, non_ghost_count - child_row_count)
     result["model_overflow_required"] = model_overflow_required
     if model_overflow_required > 0:
         result["warnings"].append(f"Image overflow: {model_overflow_required} additional rows required")
@@ -410,8 +509,8 @@ def preflight_product(
         result["warnings"].append("Multiple ghost images found")
 
     # Image position plan simulation
-    # planned_positions: ghost at 1, then models/editorials starting at 2
-    planned_positions = [1] + list(range(2, 2 + model_count + editorial_count))
+    # planned_positions: ghost at 1, then all non-ghost images (hero, model, editorial) starting at 2
+    planned_positions = [1] + list(range(2, 2 + non_ghost_count))
     # Validate positions contiguous, unique, start at 1
     valid_positions = True
     if not planned_positions:
@@ -437,9 +536,9 @@ def preflight_product(
         image_status = "IMAGE_INVALID"
     elif ghost_count == 0 or total_images == 0:
         image_status = "IMAGE_INCOMPLETE"
-    elif ghost_count >= 1 and (model_count + editorial_count) == 0:
+    elif ghost_count >= 1 and non_ghost_count == 0:
         image_status = "IMAGE_MINIMAL"
-    elif ghost_count >= 1 and (model_count + editorial_count) >= 1:
+    elif ghost_count >= 1 and non_ghost_count >= 1:
         image_status = "IMAGE_READY"
     else:
         image_status = "IMAGE_INCOMPLETE"
@@ -500,6 +599,7 @@ def run_preflight(
     total_products = len(df)
     go_count = (df["status"] == "GO").sum()
     no_go_count = (df["status"] == "NO-GO").sum()
+    skip_count = (df["status"] == "SKIP").sum()
     warning_products_count = (df["warnings"].apply(len) > 0).sum()
     error_products_count = (df["errors"].apply(len) > 0).sum()
 
@@ -510,6 +610,7 @@ def run_preflight(
             "total_products": total_products,
             "go_count": int(go_count),
             "no_go_count": int(no_go_count),
+            "skip_count": int(skip_count),
             "warning_products_count": int(warning_products_count),
             "error_products_count": int(error_products_count),
         },
