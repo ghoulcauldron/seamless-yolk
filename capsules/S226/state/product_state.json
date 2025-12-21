@@ -1,0 +1,1088 @@
+{
+  "capsule": "S226",
+  "generated_at": "2025-12-20T14:32:15.301917Z",
+  "generated_from": "preflight",
+  "products": {
+    "arp-dress-black": {
+      "allowed_actions": {
+        "collection_write": true,
+        "image_upsert": true,
+        "include_in_import_csv": true,
+        "metafield_write": true
+      },
+      "body_ready": true,
+      "client_recommendation": "Upload",
+      "cpi": "8301-000001",
+      "current_stage": "PREFLIGHT_COMPLETE",
+      "details_ready": true,
+      "image_state": "IMAGE_READY",
+      "preflight_errors": [],
+      "preflight_status": "GO",
+      "preflight_warnings": [
+        "Image overflow: 1 additional rows required"
+      ],
+      "product_type": "RTW",
+      "ws_buy": false
+    },
+    "arp-dress-toffee": {
+      "allowed_actions": {
+        "collection_write": true,
+        "image_upsert": true,
+        "include_in_import_csv": true,
+        "metafield_write": true
+      },
+      "body_ready": true,
+      "client_recommendation": "Upload (minimal imagery)",
+      "cpi": "8301-000258",
+      "current_stage": "PREFLIGHT_COMPLETE",
+      "details_ready": true,
+      "image_state": "IMAGE_MINIMAL",
+      "preflight_errors": [],
+      "preflight_status": "GO",
+      "preflight_warnings": [],
+      "product_type": "RTW",
+      "ws_buy": false
+    },
+    "arthur-top-azure-stripe": {
+      "allowed_actions": {
+        "collection_write": true,
+        "image_upsert": false,
+        "include_in_import_csv": true,
+        "metafield_write": true
+      },
+      "body_ready": false,
+      "client_recommendation": "Wholesale only \u2013 excluded from DTC",
+      "cpi": null,
+      "current_stage": "PREFLIGHT_COMPLETE",
+      "details_ready": false,
+      "image_state": "N/A",
+      "preflight_errors": [],
+      "preflight_status": "SKIP",
+      "preflight_warnings": [
+        "Wholesale product (WS Buy) \u2013 skipped"
+      ],
+      "product_type": "RTW",
+      "ws_buy": false
+    },
+    "arthur-top-optic-white": {
+      "allowed_actions": {
+        "collection_write": true,
+        "image_upsert": false,
+        "include_in_import_csv": true,
+        "metafield_write": true
+      },
+      "body_ready": false,
+      "client_recommendation": "Wholesale only \u2013 excluded from DTC",
+      "cpi": null,
+      "current_stage": "PREFLIGHT_COMPLETE",
+      "details_ready": false,
+      "image_state": "N/A",
+      "preflight_errors": [],
+      "preflight_status": "SKIP",
+      "preflight_warnings": [
+        "Wholesale product (WS Buy) \u2013 skipped"
+      ],
+      "product_type": "RTW",
+      "ws_buy": false
+    },
+    "basket-clutch-pale-blush": {
+      "allowed_actions": {
+        "collection_write": true,
+        "image_upsert": false,
+        "include_in_import_csv": true,
+        "metafield_write": true
+      },
+      "body_ready": true,
+      "client_recommendation": "Hold \u2013 ghost image required",
+      "cpi": "7157-000689",
+      "current_stage": "PREFLIGHT_COMPLETE",
+      "details_ready": true,
+      "image_state": "IMAGE_INCOMPLETE",
+      "preflight_errors": [
+        "Missing ghost image"
+      ],
+      "preflight_status": "NO-GO",
+      "preflight_warnings": [
+        "Image overflow: 1 additional rows required"
+      ],
+      "product_type": "ACCESSORY",
+      "ws_buy": false
+    },
+    "basket-clutch-tahini-silver": {
+      "allowed_actions": {
+        "collection_write": true,
+        "image_upsert": false,
+        "include_in_import_csv": true,
+        "metafield_write": true
+      },
+      "body_ready": true,
+      "client_recommendation": "Hold \u2013 ghost image required",
+      "cpi": "7157-381182",
+      "current_stage": "PREFLIGHT_COMPLETE",
+      "details_ready": true,
+      "image_state": "IMAGE_INCOMPLETE",
+      "preflight_errors": [
+        "Missing ghost image"
+      ],
+      "preflight_status": "NO-GO",
+      "preflight_warnings": [],
+      "product_type": "ACCESSORY",
+      "ws_buy": false
+    },
+    "chapman-pant-tahini": {
+      "allowed_actions": {
+        "collection_write": true,
+        "image_upsert": true,
+        "include_in_import_csv": true,
+        "metafield_write": true
+      },
+      "body_ready": true,
+      "client_recommendation": "Upload (minimal imagery)",
+      "cpi": "6003-000182",
+      "current_stage": "PREFLIGHT_COMPLETE",
+      "details_ready": true,
+      "image_state": "IMAGE_MINIMAL",
+      "preflight_errors": [],
+      "preflight_status": "GO",
+      "preflight_warnings": [],
+      "product_type": "RTW",
+      "ws_buy": false
+    },
+    "cherie-dress-storm-petals": {
+      "allowed_actions": {
+        "collection_write": true,
+        "image_upsert": true,
+        "include_in_import_csv": true,
+        "metafield_write": true
+      },
+      "body_ready": true,
+      "client_recommendation": "Upload",
+      "cpi": "3034-415067",
+      "current_stage": "PREFLIGHT_COMPLETE",
+      "details_ready": true,
+      "image_state": "IMAGE_READY",
+      "preflight_errors": [],
+      "preflight_status": "GO",
+      "preflight_warnings": [],
+      "product_type": "RTW",
+      "ws_buy": false
+    },
+    "chika-top-ivory-allover-petals": {
+      "allowed_actions": {
+        "collection_write": true,
+        "image_upsert": true,
+        "include_in_import_csv": true,
+        "metafield_write": true
+      },
+      "body_ready": true,
+      "client_recommendation": "Upload",
+      "cpi": "4015-416102",
+      "current_stage": "PREFLIGHT_COMPLETE",
+      "details_ready": true,
+      "image_state": "IMAGE_READY",
+      "preflight_errors": [],
+      "preflight_status": "GO",
+      "preflight_warnings": [],
+      "product_type": "RTW",
+      "ws_buy": false
+    },
+    "chika-top-maroon-allover-petals": {
+      "allowed_actions": {
+        "collection_write": true,
+        "image_upsert": false,
+        "include_in_import_csv": true,
+        "metafield_write": true
+      },
+      "body_ready": true,
+      "client_recommendation": "Hold \u2013 ghost image required",
+      "cpi": "4015-416563",
+      "current_stage": "PREFLIGHT_COMPLETE",
+      "details_ready": true,
+      "image_state": "IMAGE_INCOMPLETE",
+      "preflight_errors": [
+        "Missing ghost image"
+      ],
+      "preflight_status": "NO-GO",
+      "preflight_warnings": [],
+      "product_type": "RTW",
+      "ws_buy": false
+    },
+    "chika-top-tapioca": {
+      "allowed_actions": {
+        "collection_write": true,
+        "image_upsert": true,
+        "include_in_import_csv": true,
+        "metafield_write": true
+      },
+      "body_ready": true,
+      "client_recommendation": "Upload (minimal imagery)",
+      "cpi": "4015-000172",
+      "current_stage": "PREFLIGHT_COMPLETE",
+      "details_ready": true,
+      "image_state": "IMAGE_MINIMAL",
+      "preflight_errors": [],
+      "preflight_status": "GO",
+      "preflight_warnings": [],
+      "product_type": "RTW",
+      "ws_buy": false
+    },
+    "clay-sweater-black": {
+      "allowed_actions": {
+        "collection_write": true,
+        "image_upsert": true,
+        "include_in_import_csv": true,
+        "metafield_write": true
+      },
+      "body_ready": true,
+      "client_recommendation": "Upload",
+      "cpi": "8807-000001",
+      "current_stage": "PREFLIGHT_COMPLETE",
+      "details_ready": true,
+      "image_state": "IMAGE_READY",
+      "preflight_errors": [],
+      "preflight_status": "GO",
+      "preflight_warnings": [
+        "Image overflow: 1 additional rows required"
+      ],
+      "product_type": "RTW",
+      "ws_buy": false
+    },
+    "clay-sweater-desert-sage": {
+      "allowed_actions": {
+        "collection_write": true,
+        "image_upsert": true,
+        "include_in_import_csv": true,
+        "metafield_write": true
+      },
+      "body_ready": true,
+      "client_recommendation": "Upload (minimal imagery)",
+      "cpi": "8807-000398",
+      "current_stage": "PREFLIGHT_COMPLETE",
+      "details_ready": true,
+      "image_state": "IMAGE_MINIMAL",
+      "preflight_errors": [],
+      "preflight_status": "GO",
+      "preflight_warnings": [],
+      "product_type": "RTW",
+      "ws_buy": false
+    },
+    "daisy-dress-black-lily": {
+      "allowed_actions": {
+        "collection_write": true,
+        "image_upsert": true,
+        "include_in_import_csv": true,
+        "metafield_write": true
+      },
+      "body_ready": true,
+      "client_recommendation": "Upload",
+      "cpi": "3010-414001",
+      "current_stage": "PREFLIGHT_COMPLETE",
+      "details_ready": true,
+      "image_state": "IMAGE_READY",
+      "preflight_errors": [],
+      "preflight_status": "GO",
+      "preflight_warnings": [],
+      "product_type": "RTW",
+      "ws_buy": false
+    },
+    "dash-pant-midnight-melange": {
+      "allowed_actions": {
+        "collection_write": true,
+        "image_upsert": true,
+        "include_in_import_csv": true,
+        "metafield_write": true
+      },
+      "body_ready": true,
+      "client_recommendation": "Upload",
+      "cpi": "6007-000479",
+      "current_stage": "PREFLIGHT_COMPLETE",
+      "details_ready": true,
+      "image_state": "IMAGE_READY",
+      "preflight_errors": [],
+      "preflight_status": "GO",
+      "preflight_warnings": [],
+      "product_type": "RTW",
+      "ws_buy": false
+    },
+    "dash-pant-mortar-melange": {
+      "allowed_actions": {
+        "collection_write": true,
+        "image_upsert": true,
+        "include_in_import_csv": true,
+        "metafield_write": true
+      },
+      "body_ready": true,
+      "client_recommendation": "Upload (minimal imagery)",
+      "cpi": "6007-000147",
+      "current_stage": "PREFLIGHT_COMPLETE",
+      "details_ready": true,
+      "image_state": "IMAGE_MINIMAL",
+      "preflight_errors": [],
+      "preflight_status": "GO",
+      "preflight_warnings": [],
+      "product_type": "RTW",
+      "ws_buy": false
+    },
+    "dora-dress-ivory": {
+      "allowed_actions": {
+        "collection_write": true,
+        "image_upsert": false,
+        "include_in_import_csv": true,
+        "metafield_write": true
+      },
+      "body_ready": true,
+      "client_recommendation": "Hold \u2013 ghost image required",
+      "cpi": "3007-000102",
+      "current_stage": "PREFLIGHT_COMPLETE",
+      "details_ready": true,
+      "image_state": "IMAGE_INCOMPLETE",
+      "preflight_errors": [
+        "Missing ghost image"
+      ],
+      "preflight_status": "NO-GO",
+      "preflight_warnings": [],
+      "product_type": "RTW",
+      "ws_buy": false
+    },
+    "erik-top-black": {
+      "allowed_actions": {
+        "collection_write": true,
+        "image_upsert": true,
+        "include_in_import_csv": true,
+        "metafield_write": true
+      },
+      "body_ready": true,
+      "client_recommendation": "Upload (minimal imagery)",
+      "cpi": "8401-000001",
+      "current_stage": "PREFLIGHT_COMPLETE",
+      "details_ready": true,
+      "image_state": "IMAGE_MINIMAL",
+      "preflight_errors": [],
+      "preflight_status": "GO",
+      "preflight_warnings": [],
+      "product_type": "RTW",
+      "ws_buy": false
+    },
+    "erik-top-ivory": {
+      "allowed_actions": {
+        "collection_write": true,
+        "image_upsert": false,
+        "include_in_import_csv": true,
+        "metafield_write": true
+      },
+      "body_ready": false,
+      "client_recommendation": "Wholesale only \u2013 excluded from DTC",
+      "cpi": null,
+      "current_stage": "PREFLIGHT_COMPLETE",
+      "details_ready": false,
+      "image_state": "N/A",
+      "preflight_errors": [],
+      "preflight_status": "SKIP",
+      "preflight_warnings": [
+        "Wholesale product (WS Buy) \u2013 skipped"
+      ],
+      "product_type": "RTW",
+      "ws_buy": false
+    },
+    "fenice-jacket-midnight-melange": {
+      "allowed_actions": {
+        "collection_write": true,
+        "image_upsert": false,
+        "include_in_import_csv": true,
+        "metafield_write": true
+      },
+      "body_ready": true,
+      "client_recommendation": "Hold \u2013 ghost image required",
+      "cpi": "2003-000479",
+      "current_stage": "PREFLIGHT_COMPLETE",
+      "details_ready": true,
+      "image_state": "IMAGE_INCOMPLETE",
+      "preflight_errors": [
+        "Missing ghost image"
+      ],
+      "preflight_status": "NO-GO",
+      "preflight_warnings": [],
+      "product_type": "RTW",
+      "ws_buy": false
+    },
+    "fenice-jacket-mortar-melange": {
+      "allowed_actions": {
+        "collection_write": true,
+        "image_upsert": true,
+        "include_in_import_csv": true,
+        "metafield_write": true
+      },
+      "body_ready": true,
+      "client_recommendation": "Upload (minimal imagery)",
+      "cpi": "2003-000147",
+      "current_stage": "PREFLIGHT_COMPLETE",
+      "details_ready": true,
+      "image_state": "IMAGE_MINIMAL",
+      "preflight_errors": [],
+      "preflight_status": "GO",
+      "preflight_warnings": [],
+      "product_type": "RTW",
+      "ws_buy": false
+    },
+    "fenice-jacket-tahini-melange": {
+      "allowed_actions": {
+        "collection_write": true,
+        "image_upsert": true,
+        "include_in_import_csv": true,
+        "metafield_write": true
+      },
+      "body_ready": true,
+      "client_recommendation": "Upload",
+      "cpi": "2003-000182",
+      "current_stage": "PREFLIGHT_COMPLETE",
+      "details_ready": true,
+      "image_state": "IMAGE_READY",
+      "preflight_errors": [],
+      "preflight_status": "GO",
+      "preflight_warnings": [],
+      "product_type": "RTW",
+      "ws_buy": false
+    },
+    "floyd-dress-azure-stripe": {
+      "allowed_actions": {
+        "collection_write": true,
+        "image_upsert": true,
+        "include_in_import_csv": true,
+        "metafield_write": true
+      },
+      "body_ready": true,
+      "client_recommendation": "Upload",
+      "cpi": "3008-374484",
+      "current_stage": "PREFLIGHT_COMPLETE",
+      "details_ready": true,
+      "image_state": "IMAGE_READY",
+      "preflight_errors": [],
+      "preflight_status": "GO",
+      "preflight_warnings": [],
+      "product_type": "RTW",
+      "ws_buy": false
+    },
+    "fossett-pant-midnight-melange": {
+      "allowed_actions": {
+        "collection_write": true,
+        "image_upsert": false,
+        "include_in_import_csv": true,
+        "metafield_write": true
+      },
+      "body_ready": true,
+      "client_recommendation": "Hold \u2013 ghost image required",
+      "cpi": "6014-000479",
+      "current_stage": "PREFLIGHT_COMPLETE",
+      "details_ready": true,
+      "image_state": "IMAGE_INCOMPLETE",
+      "preflight_errors": [
+        "Missing ghost image"
+      ],
+      "preflight_status": "NO-GO",
+      "preflight_warnings": [],
+      "product_type": "RTW",
+      "ws_buy": false
+    },
+    "fossett-pant-mortar-melange": {
+      "allowed_actions": {
+        "collection_write": true,
+        "image_upsert": true,
+        "include_in_import_csv": true,
+        "metafield_write": true
+      },
+      "body_ready": true,
+      "client_recommendation": "Upload (minimal imagery)",
+      "cpi": "6014-000147",
+      "current_stage": "PREFLIGHT_COMPLETE",
+      "details_ready": true,
+      "image_state": "IMAGE_MINIMAL",
+      "preflight_errors": [],
+      "preflight_status": "GO",
+      "preflight_warnings": [],
+      "product_type": "RTW",
+      "ws_buy": false
+    },
+    "fossett-pant-tahini-melange": {
+      "allowed_actions": {
+        "collection_write": true,
+        "image_upsert": true,
+        "include_in_import_csv": true,
+        "metafield_write": true
+      },
+      "body_ready": true,
+      "client_recommendation": "Upload",
+      "cpi": "6014-000182",
+      "current_stage": "PREFLIGHT_COMPLETE",
+      "details_ready": true,
+      "image_state": "IMAGE_READY",
+      "preflight_errors": [],
+      "preflight_status": "GO",
+      "preflight_warnings": [],
+      "product_type": "RTW",
+      "ws_buy": false
+    },
+    "hoffman-jacket-tahini": {
+      "allowed_actions": {
+        "collection_write": true,
+        "image_upsert": false,
+        "include_in_import_csv": true,
+        "metafield_write": true
+      },
+      "body_ready": false,
+      "client_recommendation": "Wholesale only \u2013 excluded from DTC",
+      "cpi": null,
+      "current_stage": "PREFLIGHT_COMPLETE",
+      "details_ready": false,
+      "image_state": "N/A",
+      "preflight_errors": [],
+      "preflight_status": "SKIP",
+      "preflight_warnings": [
+        "Wholesale product (WS Buy) \u2013 skipped"
+      ],
+      "product_type": "RTW",
+      "ws_buy": false
+    },
+    "kiera-dress-maroon-allover-petals": {
+      "allowed_actions": {
+        "collection_write": true,
+        "image_upsert": true,
+        "include_in_import_csv": true,
+        "metafield_write": true
+      },
+      "body_ready": true,
+      "client_recommendation": "Upload (minimal imagery)",
+      "cpi": "3019-416563",
+      "current_stage": "PREFLIGHT_COMPLETE",
+      "details_ready": true,
+      "image_state": "IMAGE_MINIMAL",
+      "preflight_errors": [],
+      "preflight_status": "GO",
+      "preflight_warnings": [],
+      "product_type": "RTW",
+      "ws_buy": false
+    },
+    "kirsty-dress-storm-allover-petals": {
+      "allowed_actions": {
+        "collection_write": true,
+        "image_upsert": true,
+        "include_in_import_csv": true,
+        "metafield_write": true
+      },
+      "body_ready": true,
+      "client_recommendation": "Upload",
+      "cpi": "3035-416067",
+      "current_stage": "PREFLIGHT_COMPLETE",
+      "details_ready": true,
+      "image_state": "IMAGE_READY",
+      "preflight_errors": [],
+      "preflight_status": "GO",
+      "preflight_warnings": [],
+      "product_type": "RTW",
+      "ws_buy": false
+    },
+    "knot-basket-crossbody-black-silver": {
+      "allowed_actions": {
+        "collection_write": true,
+        "image_upsert": false,
+        "include_in_import_csv": true,
+        "metafield_write": true
+      },
+      "body_ready": true,
+      "client_recommendation": "Hold \u2013 ghost image required",
+      "cpi": "7159-381001",
+      "current_stage": "PREFLIGHT_COMPLETE",
+      "details_ready": true,
+      "image_state": "IMAGE_INCOMPLETE",
+      "preflight_errors": [
+        "Missing ghost image"
+      ],
+      "preflight_status": "NO-GO",
+      "preflight_warnings": [],
+      "product_type": "ACCESSORY",
+      "ws_buy": false
+    },
+    "knot-basket-large-macademia": {
+      "allowed_actions": {
+        "collection_write": true,
+        "image_upsert": false,
+        "include_in_import_csv": true,
+        "metafield_write": true
+      },
+      "body_ready": false,
+      "client_recommendation": "Wholesale only \u2013 excluded from DTC",
+      "cpi": null,
+      "current_stage": "PREFLIGHT_COMPLETE",
+      "details_ready": false,
+      "image_state": "N/A",
+      "preflight_errors": [],
+      "preflight_status": "SKIP",
+      "preflight_warnings": [
+        "Wholesale product (WS Buy) \u2013 skipped"
+      ],
+      "product_type": "RTW",
+      "ws_buy": false
+    },
+    "knot-basket-small-black-silver": {
+      "allowed_actions": {
+        "collection_write": true,
+        "image_upsert": false,
+        "include_in_import_csv": true,
+        "metafield_write": true
+      },
+      "body_ready": true,
+      "client_recommendation": "Hold \u2013 ghost image required",
+      "cpi": "7155-381001",
+      "current_stage": "PREFLIGHT_COMPLETE",
+      "details_ready": true,
+      "image_state": "IMAGE_INCOMPLETE",
+      "preflight_errors": [
+        "Missing ghost image"
+      ],
+      "preflight_status": "NO-GO",
+      "preflight_warnings": [],
+      "product_type": "ACCESSORY",
+      "ws_buy": false
+    },
+    "knot-basket-small-long-handle-danube": {
+      "allowed_actions": {
+        "collection_write": true,
+        "image_upsert": false,
+        "include_in_import_csv": true,
+        "metafield_write": true
+      },
+      "body_ready": true,
+      "client_recommendation": "Hold \u2013 ghost image required",
+      "cpi": "7165-000414",
+      "current_stage": "PREFLIGHT_COMPLETE",
+      "details_ready": true,
+      "image_state": "IMAGE_INCOMPLETE",
+      "preflight_errors": [
+        "Missing ghost image"
+      ],
+      "preflight_status": "NO-GO",
+      "preflight_warnings": [
+        "Image overflow: 1 additional rows required"
+      ],
+      "product_type": "ACCESSORY",
+      "ws_buy": false
+    },
+    "knot-basket-small-long-handle-mouton": {
+      "allowed_actions": {
+        "collection_write": true,
+        "image_upsert": false,
+        "include_in_import_csv": true,
+        "metafield_write": true
+      },
+      "body_ready": false,
+      "client_recommendation": "Wholesale only \u2013 excluded from DTC",
+      "cpi": null,
+      "current_stage": "PREFLIGHT_COMPLETE",
+      "details_ready": false,
+      "image_state": "N/A",
+      "preflight_errors": [],
+      "preflight_status": "SKIP",
+      "preflight_warnings": [
+        "Wholesale product (WS Buy) \u2013 skipped"
+      ],
+      "product_type": "RTW",
+      "ws_buy": false
+    },
+    "linnie-skirt-ivory-petals": {
+      "allowed_actions": {
+        "collection_write": true,
+        "image_upsert": true,
+        "include_in_import_csv": true,
+        "metafield_write": true
+      },
+      "body_ready": true,
+      "client_recommendation": "Upload",
+      "cpi": "5017-416102",
+      "current_stage": "PREFLIGHT_COMPLETE",
+      "details_ready": true,
+      "image_state": "IMAGE_READY",
+      "preflight_errors": [],
+      "preflight_status": "GO",
+      "preflight_warnings": [],
+      "product_type": "RTW",
+      "ws_buy": false
+    },
+    "loquette-flap-bag-black": {
+      "allowed_actions": {
+        "collection_write": true,
+        "image_upsert": false,
+        "include_in_import_csv": true,
+        "metafield_write": true
+      },
+      "body_ready": true,
+      "client_recommendation": "Hold \u2013 ghost image required",
+      "cpi": "7168-000001",
+      "current_stage": "PREFLIGHT_COMPLETE",
+      "details_ready": true,
+      "image_state": "IMAGE_INCOMPLETE",
+      "preflight_errors": [
+        "Missing ghost image"
+      ],
+      "preflight_status": "NO-GO",
+      "preflight_warnings": [
+        "Image overflow: 1 additional rows required"
+      ],
+      "product_type": "ACCESSORY",
+      "ws_buy": false
+    },
+    "loquette-flap-bag-python": {
+      "allowed_actions": {
+        "collection_write": true,
+        "image_upsert": false,
+        "include_in_import_csv": true,
+        "metafield_write": true
+      },
+      "body_ready": true,
+      "client_recommendation": "Hold \u2013 ghost image required",
+      "cpi": "7168-000907",
+      "current_stage": "PREFLIGHT_COMPLETE",
+      "details_ready": true,
+      "image_state": "IMAGE_INCOMPLETE",
+      "preflight_errors": [
+        "Missing ghost image"
+      ],
+      "preflight_status": "NO-GO",
+      "preflight_warnings": [
+        "Image overflow: 1 additional rows required"
+      ],
+      "product_type": "ACCESSORY",
+      "ws_buy": false
+    },
+    "lydia-dress-ivory-allover-petals": {
+      "allowed_actions": {
+        "collection_write": true,
+        "image_upsert": true,
+        "include_in_import_csv": true,
+        "metafield_write": true
+      },
+      "body_ready": true,
+      "client_recommendation": "Upload (minimal imagery)",
+      "cpi": "3001-416102",
+      "current_stage": "PREFLIGHT_COMPLETE",
+      "details_ready": true,
+      "image_state": "IMAGE_MINIMAL",
+      "preflight_errors": [],
+      "preflight_status": "GO",
+      "preflight_warnings": [],
+      "product_type": "RTW",
+      "ws_buy": false
+    },
+    "maddox-sweater-black": {
+      "allowed_actions": {
+        "collection_write": true,
+        "image_upsert": true,
+        "include_in_import_csv": true,
+        "metafield_write": true
+      },
+      "body_ready": true,
+      "client_recommendation": "Upload (minimal imagery)",
+      "cpi": "8808-000001",
+      "current_stage": "PREFLIGHT_COMPLETE",
+      "details_ready": true,
+      "image_state": "IMAGE_MINIMAL",
+      "preflight_errors": [],
+      "preflight_status": "GO",
+      "preflight_warnings": [],
+      "product_type": "RTW",
+      "ws_buy": false
+    },
+    "maddox-sweater-toffee": {
+      "allowed_actions": {
+        "collection_write": true,
+        "image_upsert": true,
+        "include_in_import_csv": true,
+        "metafield_write": true
+      },
+      "body_ready": true,
+      "client_recommendation": "Upload (minimal imagery)",
+      "cpi": "8808-000258",
+      "current_stage": "PREFLIGHT_COMPLETE",
+      "details_ready": true,
+      "image_state": "IMAGE_MINIMAL",
+      "preflight_errors": [],
+      "preflight_status": "GO",
+      "preflight_warnings": [],
+      "product_type": "RTW",
+      "ws_buy": false
+    },
+    "magee-top-storm-petals": {
+      "allowed_actions": {
+        "collection_write": true,
+        "image_upsert": true,
+        "include_in_import_csv": true,
+        "metafield_write": true
+      },
+      "body_ready": true,
+      "client_recommendation": "Upload",
+      "cpi": "4013-416067",
+      "current_stage": "PREFLIGHT_COMPLETE",
+      "details_ready": true,
+      "image_state": "IMAGE_READY",
+      "preflight_errors": [],
+      "preflight_status": "GO",
+      "preflight_warnings": [],
+      "product_type": "RTW",
+      "ws_buy": false
+    },
+    "margot-top-indigo": {
+      "allowed_actions": {
+        "collection_write": true,
+        "image_upsert": true,
+        "include_in_import_csv": true,
+        "metafield_write": true
+      },
+      "body_ready": true,
+      "client_recommendation": "Upload",
+      "cpi": "4010-000403",
+      "current_stage": "PREFLIGHT_COMPLETE",
+      "details_ready": true,
+      "image_state": "IMAGE_READY",
+      "preflight_errors": [],
+      "preflight_status": "GO",
+      "preflight_warnings": [],
+      "product_type": "RTW",
+      "ws_buy": false
+    },
+    "monti-skirt-storm-petals": {
+      "allowed_actions": {
+        "collection_write": true,
+        "image_upsert": true,
+        "include_in_import_csv": true,
+        "metafield_write": true
+      },
+      "body_ready": true,
+      "client_recommendation": "Upload",
+      "cpi": "5003-416067",
+      "current_stage": "PREFLIGHT_COMPLETE",
+      "details_ready": true,
+      "image_state": "IMAGE_READY",
+      "preflight_errors": [],
+      "preflight_status": "GO",
+      "preflight_warnings": [],
+      "product_type": "RTW",
+      "ws_buy": false
+    },
+    "nadja-dress-pale-blush-petals": {
+      "allowed_actions": {
+        "collection_write": true,
+        "image_upsert": true,
+        "include_in_import_csv": true,
+        "metafield_write": true
+      },
+      "body_ready": true,
+      "client_recommendation": "Upload",
+      "cpi": "3024-416689",
+      "current_stage": "PREFLIGHT_COMPLETE",
+      "details_ready": true,
+      "image_state": "IMAGE_READY",
+      "preflight_errors": [],
+      "preflight_status": "GO",
+      "preflight_warnings": [],
+      "product_type": "RTW",
+      "ws_buy": false
+    },
+    "noori-dress-storm-tulip": {
+      "allowed_actions": {
+        "collection_write": true,
+        "image_upsert": true,
+        "include_in_import_csv": true,
+        "metafield_write": true
+      },
+      "body_ready": true,
+      "client_recommendation": "Upload",
+      "cpi": "3030-413067",
+      "current_stage": "PREFLIGHT_COMPLETE",
+      "details_ready": true,
+      "image_state": "IMAGE_READY",
+      "preflight_errors": [],
+      "preflight_status": "GO",
+      "preflight_warnings": [],
+      "product_type": "RTW",
+      "ws_buy": false
+    },
+    "orrie-dress-navy": {
+      "allowed_actions": {
+        "collection_write": true,
+        "image_upsert": true,
+        "include_in_import_csv": true,
+        "metafield_write": true
+      },
+      "body_ready": true,
+      "client_recommendation": "Upload (minimal imagery)",
+      "cpi": "3022-000400",
+      "current_stage": "PREFLIGHT_COMPLETE",
+      "details_ready": true,
+      "image_state": "IMAGE_MINIMAL",
+      "preflight_errors": [],
+      "preflight_status": "GO",
+      "preflight_warnings": [],
+      "product_type": "RTW",
+      "ws_buy": false
+    },
+    "paulina-dress-pale-blush-ao-petals": {
+      "allowed_actions": {
+        "collection_write": true,
+        "image_upsert": false,
+        "include_in_import_csv": true,
+        "metafield_write": true
+      },
+      "body_ready": true,
+      "client_recommendation": "Hold \u2013 ghost image required",
+      "cpi": "3004-416689",
+      "current_stage": "PREFLIGHT_COMPLETE",
+      "details_ready": true,
+      "image_state": "IMAGE_INCOMPLETE",
+      "preflight_errors": [
+        "Missing ghost image"
+      ],
+      "preflight_status": "NO-GO",
+      "preflight_warnings": [],
+      "product_type": "RTW",
+      "ws_buy": false
+    },
+    "penrose-dress-ivory": {
+      "allowed_actions": {
+        "collection_write": true,
+        "image_upsert": true,
+        "include_in_import_csv": true,
+        "metafield_write": true
+      },
+      "body_ready": true,
+      "client_recommendation": "Upload (minimal imagery)",
+      "cpi": "8308-000102",
+      "current_stage": "PREFLIGHT_COMPLETE",
+      "details_ready": true,
+      "image_state": "IMAGE_MINIMAL",
+      "preflight_errors": [],
+      "preflight_status": "GO",
+      "preflight_warnings": [],
+      "product_type": "RTW",
+      "ws_buy": false
+    },
+    "siggi-top-ivory-allover-petals": {
+      "allowed_actions": {
+        "collection_write": true,
+        "image_upsert": true,
+        "include_in_import_csv": true,
+        "metafield_write": true
+      },
+      "body_ready": true,
+      "client_recommendation": "Upload",
+      "cpi": "4016-416102",
+      "current_stage": "PREFLIGHT_COMPLETE",
+      "details_ready": true,
+      "image_state": "IMAGE_READY",
+      "preflight_errors": [],
+      "preflight_status": "GO",
+      "preflight_warnings": [
+        "Image overflow: 1 additional rows required"
+      ],
+      "product_type": "RTW",
+      "ws_buy": false
+    },
+    "wells-dress-berry-blue": {
+      "allowed_actions": {
+        "collection_write": true,
+        "image_upsert": false,
+        "include_in_import_csv": true,
+        "metafield_write": true
+      },
+      "body_ready": false,
+      "client_recommendation": "Wholesale only \u2013 excluded from DTC",
+      "cpi": null,
+      "current_stage": "PREFLIGHT_COMPLETE",
+      "details_ready": false,
+      "image_state": "N/A",
+      "preflight_errors": [],
+      "preflight_status": "SKIP",
+      "preflight_warnings": [
+        "Wholesale product (WS Buy) \u2013 skipped"
+      ],
+      "product_type": "RTW",
+      "ws_buy": false
+    },
+    "wells-dress-pale-blush": {
+      "allowed_actions": {
+        "collection_write": true,
+        "image_upsert": true,
+        "include_in_import_csv": true,
+        "metafield_write": true
+      },
+      "body_ready": true,
+      "client_recommendation": "Upload",
+      "cpi": "8309-000689",
+      "current_stage": "PREFLIGHT_COMPLETE",
+      "details_ready": true,
+      "image_state": "IMAGE_READY",
+      "preflight_errors": [],
+      "preflight_status": "GO",
+      "preflight_warnings": [],
+      "product_type": "RTW",
+      "ws_buy": false
+    },
+    "winnie-dress-black": {
+      "allowed_actions": {
+        "collection_write": true,
+        "image_upsert": true,
+        "include_in_import_csv": true,
+        "metafield_write": true
+      },
+      "body_ready": true,
+      "client_recommendation": "Upload",
+      "cpi": "8307-000001",
+      "current_stage": "PREFLIGHT_COMPLETE",
+      "details_ready": true,
+      "image_state": "IMAGE_READY",
+      "preflight_errors": [],
+      "preflight_status": "GO",
+      "preflight_warnings": [
+        "Image overflow: 2 additional rows required"
+      ],
+      "product_type": "RTW",
+      "ws_buy": false
+    },
+    "winnie-dress-holly-red": {
+      "allowed_actions": {
+        "collection_write": true,
+        "image_upsert": true,
+        "include_in_import_csv": true,
+        "metafield_write": true
+      },
+      "body_ready": true,
+      "client_recommendation": "Upload (minimal imagery)",
+      "cpi": "8307-000649",
+      "current_stage": "PREFLIGHT_COMPLETE",
+      "details_ready": true,
+      "image_state": "IMAGE_MINIMAL",
+      "preflight_errors": [],
+      "preflight_status": "GO",
+      "preflight_warnings": [],
+      "product_type": "RTW",
+      "ws_buy": false
+    },
+    "woolfe-dress-black": {
+      "allowed_actions": {
+        "collection_write": true,
+        "image_upsert": true,
+        "include_in_import_csv": true,
+        "metafield_write": true
+      },
+      "body_ready": true,
+      "client_recommendation": "Upload (minimal imagery)",
+      "cpi": "8322-000001",
+      "current_stage": "PREFLIGHT_COMPLETE",
+      "details_ready": true,
+      "image_state": "IMAGE_MINIMAL",
+      "preflight_errors": [],
+      "preflight_status": "GO",
+      "preflight_warnings": [],
+      "product_type": "RTW",
+      "ws_buy": false
+    }
+  },
+  "schema_version": "1.0"
+}
