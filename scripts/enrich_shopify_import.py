@@ -359,8 +359,12 @@ def main(capsule: str, dry_run: bool, override_file: str = None):
                 source_text = textile_raw
 
             if source_text:
-                # Extract atomic percentage-material pairs safely (e.g. "68% Cotton")
-                pairs = re.findall(r'(\d+\s*%\s*[^%]+)', source_text)
+                # Use a stricter, non-greedy regex to extract atomic percentage-material pairs (e.g. "68% Cotton")
+                # This ensures we do not truncate material names and capture up to the next percent or end of string.
+                pairs = re.findall(
+                    r'(\d+\s*%\s*[A-Za-z][A-Za-z\s\-]*)(?=\s*\d+\s*%|$)',
+                    source_text
+                )
 
                 bullet_lines = []
                 for pair in pairs:
