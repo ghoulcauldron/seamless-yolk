@@ -199,33 +199,7 @@ def main(capsule: str, dry_run: bool, override_file: str = None):
         tracker_df = tracker_df.drop(tracker_df.index[:header_row_index + 1]).reset_index(drop=True)
         tracker_df.columns = tracker_df.columns.str.strip()
 
-        if 'RRP (USD)' in tracker_df.columns:
-            print("ℹ️ Tracker contains RRP (USD) but pricing is ignored in favor of Shopify export.")
-
         export_df = pd.read_csv(capsule_dir / "inputs/products_export_1.csv")
-
-        # --- HARD-SKIP WS BUY PRODUCTS EARLY ---
-        # Identify parent rows: Title not null/empty, Tags contains 'WS Buy' (case-insensitive, exact match)
-        parent_mask = export_df['Title'].notna() & (export_df['Title'].astype(str).str.strip() != '')
-        # Split tags, check for 'WS Buy' tag (case-insensitive, ignore whitespace)
-        def has_ws_buy(tags):
-            if not isinstance(tags, str):
-                return False
-            return any(
-                t.strip().lower() == 'ws buy'
-                for t in tags.split(',')
-            )
-        ws_buy_parent_handles = set(
-            export_df[parent_mask & export_df['Tags'].apply(has_ws_buy)]['Handle']
-        )
-        n_handles = len(ws_buy_parent_handles)
-        if n_handles > 0:
-            # Drop all rows whose Handle is in this set
-            before_rows = len(export_df)
-            export_df = export_df[~export_df['Handle'].isin(ws_buy_parent_handles)].reset_index(drop=True)
-            after_rows = len(export_df)
-            n_rows_removed = before_rows - after_rows
-            print(f"> INFO: Skipped {n_handles} WS Buy handles ({n_rows_removed} rows removed).")
         manifest_path = capsule_dir / "manifests/images_manifest.jsonl"
         manifest_recs = [json.loads(line) for line in manifest_path.read_text().splitlines() if line.strip()]
         manifest_df = pd.DataFrame(manifest_recs)
@@ -290,7 +264,7 @@ def main(capsule: str, dry_run: bool, override_file: str = None):
     # Ensure Product ID in tracker is string for lookup
     tracker_df['Product ID'] = tracker_df['Product ID'].astype(str).str.strip()
     tracker_df.set_index('Product ID', inplace=True)
-    # tracker_df['RRP (USD)'] = pd.to_numeric(tracker_df['RRP (USD)'], errors='coerce')
+    tracker_df['RRP (USD)'] = pd.to_numeric(tracker_df['RRP (USD)'], errors='coerce')
 
     # --- Initialize list for new rows ---
     all_new_rows_to_add = []
@@ -333,46 +307,10 @@ def main(capsule: str, dry_run: bool, override_file: str = None):
             child_indices = product_group[~parent_row_filter].index
             export_df.loc[child_indices, 'Tags'] = '' # Clear tags on child rows
 
-            # --- Product Description → Body (HTML) enrichment ---
-            # Only write if Body (HTML) is empty/blank, and Product Description exists in masterfile
-            body_html_val = export_df.loc[parent_row_index, 'Body (HTML)'] if 'Body (HTML)' in export_df.columns else ''
-            if (not isinstance(body_html_val, str) or body_html_val.strip() == ''):
-                prod_desc = source_record.get('Product Description', '')
-                if isinstance(prod_desc, str) and prod_desc.strip():
-                    export_df.loc[parent_row_index, 'Body (HTML)'] = prod_desc
-            # --- END Body (HTML) enrichment ---
-
-            # --- Fabric / Textile Content → Details metafield enrichment ---
-            details_col = 'Details (product.metafields.altuzarra.details)'
-
-            fabric_raw = source_record.get('Fabric Content')
-            textile_raw = source_record.get('Textile Content')
-            product_details_raw = source_record.get('Product Details')
-
-            source_text = ''
-            if isinstance(product_details_raw, str) and product_details_raw.strip():
-                # Product Details is authoritative if present
-                source_text = product_details_raw
-            elif isinstance(fabric_raw, str) and fabric_raw.strip():
-                source_text = fabric_raw
-            elif isinstance(textile_raw, str) and textile_raw.strip():
-                source_text = textile_raw
-
-            if source_text:
-                # Extract atomic percentage-material pairs safely (e.g. "68% Cotton")
-                pairs = re.findall(r'(\d+\s*%\s*[^%]+)', source_text)
-
-                bullet_lines = []
-                for pair in pairs:
-                    cleaned = pair.strip()
-                    if cleaned:
-                        bullet_lines.append(f"- {cleaned}")
-
-                if bullet_lines:
-                    export_df.loc[parent_row_index, details_col] = "\n".join(bullet_lines)
-            # --- END Fabric / Textile Content enrichment ---
+            if pd.notna(source_record.get('PRODUCT DETAILS')):
+                export_df.loc[parent_row_index, 'Details (product.metafields.altuzarra.details)'] = source_record['PRODUCT DETAILS']
             # Apply price to ALL rows in the group
-            # export_df.loc[product_group.index, 'Variant Price'] = source_record['RRP (USD)']
+            export_df.loc[product_group.index, 'Variant Price'] = source_record['RRP (USD)']
 
         except KeyError: # Catch lookup failure (Product ID not in tracker or missing tag)
             reason = "Product ID Not Found in Tracker"
@@ -386,7 +324,6 @@ def main(capsule: str, dry_run: bool, override_file: str = None):
         images_for_cpi = manifest_df[manifest_df['cpi'] == cpi].to_dict('records')
         final_image_list = [] # Reset for each product
         override_insert_info = None # Reset for each product
-        has_any_images = bool(images_for_cpi)
 
         # Determine is_accessory status early
         # Handle cases where images_for_cpi might be empty AFTER filtering anomalies
@@ -419,7 +356,7 @@ def main(capsule: str, dry_run: bool, override_file: str = None):
                 "Manifest Files Found": ", ".join(sorted([r.get('filename','N/A').replace(' ','_') for r in images_for_cpi]))
             })
             anomalous_handles.add(handle)
-            # IMAGE_SOFT_FAIL: allow image assignment if images exist
+            run_image_assignment = False # Cannot guarantee correct first image
 
         if run_image_assignment:
             filenames_to_check = [img['filename'] for img in images_for_cpi if img.get('asset_type') in ['ghosts', 'editorials'] and img.get('filename')]
@@ -441,7 +378,7 @@ def main(capsule: str, dry_run: bool, override_file: str = None):
                         "Manifest Files Found": ", ".join(sorted([r.get('filename','N/A') for r in images_for_cpi]))
                     })
                     anomalous_handles.add(handle)
-                    # IMAGE_SOFT_FAIL: allow image assignment if images exist
+                    run_image_assignment = False # Stop image processing due to inconsistency without override
 
         if run_image_assignment and not is_accessory: # RTW Check
             ghosts_editorials = [img for img in images_for_cpi if img.get('asset_type') in ['ghosts', 'editorials'] and img.get('filename')]
@@ -456,7 +393,7 @@ def main(capsule: str, dry_run: bool, override_file: str = None):
                     "Manifest Files Found (G+E)": ", ".join(sorted([r.get('filename','N/A') for r in ghosts_editorials]))
                 })
                 anomalous_handles.add(handle)
-                # IMAGE_SOFT_FAIL: allow image assignment if images exist
+                run_image_assignment = False # Stop processing RTW without required images
 
 
         # --- Image Sorting and Assignment (only if run_image_assignment is True) ---
