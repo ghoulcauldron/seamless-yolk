@@ -2,6 +2,7 @@ import pandas as pd
 import argparse
 import pathlib
 from datetime import datetime # Import datetime
+import re # Import re for timestamp check
 
 def combine_csvs(ready_file_path: str, missing_file_path: str, output_file_path: str):
     """

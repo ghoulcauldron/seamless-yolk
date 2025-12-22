@@ -1,5 +1,3 @@
-
-
 #!/usr/bin/env python3
 
 """
@@ -18,32 +16,6 @@ from datetime import datetime
 from pathlib import Path
 
 
-def derive_allowed_actions(preflight_entry: dict) -> dict:
-    """
-    Determine allowed actions based strictly on preflight findings.
-    Client overrides can be applied later by editing the state file.
-    """
-    status = preflight_entry.get("status")
-    ws_buy = preflight_entry.get("ws_buy", False)
-    image_status = preflight_entry.get("image_status")
-
-    include_in_import = not ws_buy
-
-    image_upsert_allowed = (
-        include_in_import and image_status in {"IMAGE_READY", "IMAGE_MINIMAL"}
-    )
-
-    metafield_write_allowed = include_in_import
-    collection_write_allowed = include_in_import
-
-    return {
-        "include_in_import_csv": include_in_import,
-        "image_upsert": image_upsert_allowed,
-        "metafield_write": metafield_write_allowed,
-        "collection_write": collection_write_allowed,
-    }
-
-
 def seed_state(preflight_data: dict, capsule: str) -> dict:
     products_state = {}
 
@@ -51,27 +23,53 @@ def seed_state(preflight_data: dict, capsule: str) -> dict:
         handle = product["handle"]
 
         state_entry = {
+            "handle": handle,
+            "product_id": product.get("product_id"),
             "cpi": product.get("cpi"),
             "product_type": "ACCESSORY" if product.get("is_accessory") else "RTW",
-            "preflight_status": product.get("status"),
-            "preflight_errors": product.get("errors", []),
-            "preflight_warnings": product.get("warnings", []),
-            "ws_buy": product.get("ws_buy", False),
-            "image_state": product.get("image_status"),
-            "details_ready": product.get("details_ready", False),
-            "body_ready": product.get("body_status") == "BODY_WRITE_OK",
-            "client_recommendation": product.get("client_recommendation"),
-            "allowed_actions": derive_allowed_actions(product),
-            "current_stage": "PREFLIGHT_COMPLETE",
+            "is_accessory": bool(product.get("is_accessory")),
+
+            "preflight": {
+                "status": product.get("status"),
+                "image_status": product.get("image_status"),
+                "errors": product.get("errors", []),
+                "warnings": product.get("warnings", []),
+            },
+
+            "import": {
+                "eligible": not product.get("ws_buy", False),
+                "imported": False,
+                "imported_at": None,
+                "import_source": None,
+                "anomaly_accepted": False,
+            },
+
+            "images": {
+                "expected": {
+                    "count": product.get("total_images"),
+                    "max_position": product.get("total_images"),
+                },
+                "last_enriched_at": None,
+            },
+
+            "promotion": {
+                "stage": "PRE_FLIGHT",
+                "locked": False,
+                "last_transition_at": None,
+            },
+
+            "overrides": {
+                "manual_go": False,
+                "notes": "",
+            },
         }
 
         products_state[handle] = state_entry
 
     return {
-        "schema_version": "1.0",
         "capsule": capsule,
+        "schema_version": "1.0",
         "generated_at": datetime.utcnow().isoformat() + "Z",
-        "generated_from": "preflight",
         "products": products_state,
     }
 
@@ -111,7 +109,7 @@ def main():
 
     output_path.parent.mkdir(parents=True, exist_ok=True)
     with output_path.open("w", encoding="utf-8") as f:
-        json.dump(state_data, f, indent=2, sort_keys=True)
+        json.dump(state_data, f, indent=2)
 
     print(f"✅ product_state.json written to: {output_path}")
     print(f"   Products seeded: {len(state_data['products'])}")
