@@ -64,6 +64,28 @@ def seed_state(preflight_data: dict, capsule: str) -> dict:
             },
         }
 
+        # Default deny-all allowed_actions (will be selectively opened below)
+        state_entry["allowed_actions"] = {
+            "metafield_write": False,
+            "image_upsert": False,
+            "collection_write": False,
+            "include_in_import_csv": False,
+            "size_guide_write": False,
+        }
+
+        preflight_status = state_entry["preflight"]["status"]
+        image_status = state_entry["preflight"]["image_status"]
+
+        state_entry["allowed_actions"].update({
+            "metafield_write": preflight_status == "GO",
+            "image_upsert": (
+                preflight_status == "GO"
+                and image_status in {"IMAGE_READY", "IMAGE_MINIMAL"}
+            ),
+            "collection_write": preflight_status == "GO",
+            "include_in_import_csv": preflight_status in {"GO", "NO-GO"},
+        })
+
         products_state[handle] = state_entry
 
     return {
@@ -73,6 +95,33 @@ def seed_state(preflight_data: dict, capsule: str) -> dict:
         "products": products_state,
     }
 
+def derive_allowed_actions(record: dict) -> dict:
+    stage = record["promotion"]["stage"]
+    locked = record["promotion"]["locked"]
+    manual_go = record["overrides"]["manual_go"]
+
+    if locked:
+        return {
+            "metafield_write": False,
+            "image_upsert": False,
+            "collection_write": False,
+            "size_guide_write": False,
+        }
+
+    if stage == "IMPORTED":
+        return {
+            "metafield_write": True,
+            "image_upsert": manual_go,   # anomalies require override
+            "collection_write": True,
+            "size_guide_write": True,
+        }
+
+    return {
+        "metafield_write": False,
+        "image_upsert": False,
+        "collection_write": False,
+        "size_guide_write": False,
+    }
 
 def main():
     parser = argparse.ArgumentParser(

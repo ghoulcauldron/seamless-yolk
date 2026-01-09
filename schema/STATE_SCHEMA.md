@@ -1,10 +1,6 @@
+# Product State Schema (v1)
 
-
-# Product State Schema v1
-
-This document defines the canonical product state model used across the capsule
-pipeline. State is the single source of truth governing enrichment, import,
-media attachment, metafield writes, collection creation, and promotion.
+This schema defines the authoritative post-import state and serves as the single source of truth after CSV upload.
 
 ---
 
@@ -13,6 +9,8 @@ media attachment, metafield writes, collection creation, and promotion.
 ```
 capsules/{CAPSULE}/state/product_state_{CAPSULE}.json
 ```
+
+One file exists per capsule and is append-only after preflight.
 
 ---
 
@@ -40,50 +38,22 @@ capsules/{CAPSULE}/state/product_state_{CAPSULE}.json
 
 ## Product Record
 
-Each product is keyed by its Shopify handle and conforms to the following
-structure.
+Each product is keyed by its Shopify handle and conforms to the following structure.
 
 ```json
 {
-  "handle": "arp-dress-black",
-  "product_id": "S226-8301 KCS049 000001 BLACK",
+  "allowed_actions": ["go", "skip"],
+  "body_ready": true,
+  "client_recommendation": "go",
   "cpi": "8301-000001",
+  "current_stage": "PREFLIGHT_COMPLETE",
+  "details_ready": true,
+  "image_state": "IMAGE_READY",
+  "preflight_errors": ["Missing ghost image"],
+  "preflight_status": "NO-GO",
+  "preflight_warnings": [],
   "product_type": "RTW",
-  "is_accessory": false,
-
-  "preflight": {
-    "status": "NO-GO",
-    "image_status": "IMAGE_SOFT_FAIL",
-    "errors": ["Missing ghost image"],
-    "warnings": []
-  },
-
-  "import": {
-    "eligible": true,
-    "imported": true,
-    "imported_at": "2025-12-21T20:14:05Z",
-    "import_source": "combined_csv",
-    "anomaly_accepted": true
-  },
-
-  "images": {
-    "expected": {
-      "count": 5,
-      "max_position": 5
-    },
-    "last_enriched_at": "2025-12-21T19:55:00Z"
-  },
-
-  "promotion": {
-    "stage": "IMPORTED",
-    "locked": false,
-    "last_transition_at": "2025-12-21T20:14:05Z"
-  },
-
-  "overrides": {
-    "manual_go": false,
-    "notes": ""
-  }
+  "ws_buy": false
 }
 ```
 
@@ -91,165 +61,69 @@ structure.
 
 ## Section Contracts
 
-### Identity (Immutable)
+### Identity Fields (Immutable)
 
-- **handle**
-- **product_id**
-- **cpi**
-- **product_type**
-- **is_accessory**
+- **cpi**  
+  Capsule product identifier, unique per product.
 
-These fields are set once during seeding and must never change.
+- **product_type**  
+  Product classification, e.g. `RTW`.
 
----
-
-### Preflight (Read-Only)
-
-```json
-"preflight": {
-  "status": "GO | NO-GO",
-  "image_status": "IMAGE_OK | IMAGE_SOFT_FAIL | IMAGE_HARD_FAIL",
-  "errors": [],
-  "warnings": []
-}
-```
-
-- Snapshot of pre-import validation
-- Never mutated post-import
-- Used for audit and reporting only
+- **ws_buy**  
+  Boolean indicating wholesale buy exclusion.
 
 ---
 
-### Import State (Authoritative Gate)
+### Preflight Fields (Immutable)
 
-```json
-"import": {
-  "eligible": true,
-  "imported": true,
-  "imported_at": "...",
-  "import_source": "combined_csv | anomalies_csv",
-  "anomaly_accepted": true
-}
-```
+- **preflight_status**  
+  Enum: `GO | NO-GO | SKIP`  
+  Snapshot of pre-import validation status.
 
-Rules:
+- **preflight_errors**  
+  Array of strings describing validation errors.
 
-- `eligible = false` → product is excluded entirely (e.g. WS Buy)
-- `imported = true` → product must not re-enter enrichment
-- `anomaly_accepted = true` → client approved upload despite issues
+- **preflight_warnings**  
+  Array of strings describing validation warnings.
 
 ---
 
-### Image Expectation
+### Image State
 
-```json
-"images": {
-  "expected": {
-    "count": 5,
-    "max_position": 5
-  }
-}
-```
-
-- Reflects attempted image layout
-- Does not verify Shopify state
-- Prevents duplicate uploads downstream
+- **image_state**  
+  Enum: `IMAGE_READY | IMAGE_MINIMAL | IMAGE_INCOMPLETE | N/A`  
+  Indicates completeness of product images.
 
 ---
 
-### Promotion State
+### Current Stage
 
-```json
-"promotion": {
-  "stage": "IMPORTED",
-  "locked": false,
-  "last_transition_at": "..."
-}
-```
-
-Controls orchestration and gating.
+- **current_stage**  
+  Enum: `PREFLIGHT_COMPLETE`  
+  Indicates the current processing stage; only `PREFLIGHT_COMPLETE` is defined in v1.
 
 ---
 
-### Overrides (Human Authority)
+### Readiness Flags
 
-```json
-"overrides": {
-  "manual_go": false,
-  "notes": ""
-}
-```
+- **body_ready**  
+  Boolean indicating if the product body content is ready.
 
-- Only set manually
-- Scripts must respect overrides
-- Never auto-cleared
+- **details_ready**  
+  Boolean indicating if product details are ready.
 
----
+- **client_recommendation**  
+  String recommendation from client, e.g. `go`.
 
-## Promotion Ladder
-
-```
-PRE_FLIGHT
-  ↓
-ENRICHED
-  ↓
-IMPORT_READY
-  ↓
-IMPORTED
-  ↓
-MEDIA_ATTACHED
-  ↓
-METAFIELDS_WRITTEN
-  ↓
-COLLECTIONS_CREATED
-  ↓
-LIVE
-```
+- **allowed_actions**  
+  Array of strings indicating permitted manual actions, e.g. `["go", "skip"]`.
 
 ---
 
-## Stage Definitions
+## Schema Guarantees
 
-### PRE_FLIGHT
-- Product seeded from preflight output
-- No CSVs generated
-
-### ENRICHED
-- Appears in import-ready or anomalies CSV
-
-### IMPORT_READY
-- Human decision to upload
-- Anomaly approval may occur here
-
-### IMPORTED
-- Confirmed by post-import inference
-- Hard gate: enrichment must skip
-
-### MEDIA_ATTACHED
-- Images uploaded (ghost, hero, model, swatch)
-
-### METAFIELDS_WRITTEN
-- Look products, size guides, swatches written
-
-### COLLECTIONS_CREATED
-- Smart collections created (idempotent)
-
-### LIVE
-- Fully promoted
-- Locked unless rollback is intentional
+- Preflight fields (`preflight_status`, `preflight_errors`, `preflight_warnings`) are immutable after initial seeding.
+- This schema is version 1 and intentionally minimal.
+- Future versions (v2+) will extend this schema to support state-driven gating and richer product lifecycle management.
 
 ---
-
-## Locking Rules
-
-- `promotion.locked = true` freezes the product
-- Used for live products, legal holds, or emergency stops
-
----
-
-## Design Principles
-
-- State is the single source of truth
-- Scripts are idempotent and obedient to state
-- Anomalies are first-class, not hacks
-- Human decisions are explicit and preserved

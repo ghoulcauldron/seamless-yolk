@@ -1,7 +1,7 @@
 {
   "capsule": "S226",
   "schema_version": "1.0",
-  "generated_at": "2025-12-22T03:17:59.960375Z",
+  "generated_at": "2026-01-09T18:13:02.785237Z",
   "products": {
     "arp-dress-black": {
       "handle": "arp-dress-black",
@@ -39,6 +39,13 @@
       "overrides": {
         "manual_go": false,
         "notes": ""
+      },
+      "allowed_actions": {
+        "metafield_write": true,
+        "image_upsert": true,
+        "collection_write": true,
+        "include_in_import_csv": true,
+        "size_guide_write": false
       }
     },
     "arp-dress-toffee": {
@@ -75,6 +82,13 @@
       "overrides": {
         "manual_go": false,
         "notes": ""
+      },
+      "allowed_actions": {
+        "metafield_write": true,
+        "image_upsert": true,
+        "collection_write": true,
+        "include_in_import_csv": true,
+        "size_guide_write": false
       }
     },
     "arthur-top-azure-stripe": {
@@ -113,6 +127,13 @@
       "overrides": {
         "manual_go": false,
         "notes": ""
+      },
+      "allowed_actions": {
+        "metafield_write": false,
+        "image_upsert": false,
+        "collection_write": false,
+        "include_in_import_csv": false,
+        "size_guide_write": false
       }
     },
     "arthur-top-optic-white": {
@@ -151,6 +172,13 @@
       "overrides": {
         "manual_go": false,
         "notes": ""
+      },
+      "allowed_actions": {
+        "metafield_write": false,
+        "image_upsert": false,
+        "collection_write": false,
+        "include_in_import_csv": false,
+        "size_guide_write": false
       }
     },
     "basket-clutch-pale-blush": {
@@ -191,6 +219,13 @@
       "overrides": {
         "manual_go": false,
         "notes": ""
+      },
+      "allowed_actions": {
+        "metafield_write": false,
+        "image_upsert": false,
+        "collection_write": false,
+        "include_in_import_csv": true,
+        "size_guide_write": false
       }
     },
     "basket-clutch-tahini-silver": {
@@ -229,6 +264,13 @@
       "overrides": {
         "manual_go": false,
         "notes": ""
+      },
+      "allowed_actions": {
+        "metafield_write": false,
+        "image_upsert": false,
+        "collection_write": false,
+        "include_in_import_csv": true,
+        "size_guide_write": false
       }
     },
     "chapman-pant-tahini": {
@@ -265,6 +307,13 @@
       "overrides": {
         "manual_go": false,
         "notes": ""
+      },
+      "allowed_actions": {
+        "metafield_write": true,
+        "image_upsert": true,
+        "collection_write": true,
+        "include_in_import_csv": true,
+        "size_guide_write": false
       }
     },
     "cherie-dress-storm-petals": {
@@ -301,6 +350,13 @@
       "overrides": {
         "manual_go": false,
         "notes": ""
+      },
+      "allowed_actions": {
+        "metafield_write": true,
+        "image_upsert": true,
+        "collection_write": true,
+        "include_in_import_csv": true,
+        "size_guide_write": false
       }
     },
     "chika-top-ivory-allover-petals": {
@@ -337,6 +393,13 @@
       "overrides": {
         "manual_go": false,
         "notes": ""
+      },
+      "allowed_actions": {
+        "metafield_write": true,
+        "image_upsert": true,
+        "collection_write": true,
+        "include_in_import_csv": true,
+        "size_guide_write": false
       }
     },
     "chika-top-maroon-allover-petals": {
@@ -375,6 +438,13 @@
       "overrides": {
         "manual_go": false,
         "notes": ""
+      },
+      "allowed_actions": {
+        "metafield_write": false,
+        "image_upsert": false,
+        "collection_write": false,
+        "include_in_import_csv": true,
+        "size_guide_write": false
       }
     },
     "chika-top-tapioca": {
@@ -411,6 +481,13 @@
       "overrides": {
         "manual_go": false,
         "notes": ""
+      },
+      "allowed_actions": {
+        "metafield_write": true,
+        "image_upsert": true,
+        "collection_write": true,
+        "include_in_import_csv": true,
+        "size_guide_write": false
       }
     },
     "clay-sweater-black": {
@@ -449,6 +526,13 @@
       "overrides": {
         "manual_go": false,
         "notes": ""
+      },
+      "allowed_actions": {
+        "metafield_write": true,
+        "image_upsert": true,
+        "collection_write": true,
+        "include_in_import_csv": true,
+        "size_guide_write": false
       }
     },
     "clay-sweater-desert-sage": {
@@ -485,6 +569,13 @@
       "overrides": {
         "manual_go": false,
         "notes": ""
+      },
+      "allowed_actions": {
+        "metafield_write": true,
+        "image_upsert": true,
+        "collection_write": true,
+        "include_in_import_csv": true,
+        "size_guide_write": false
       }
     },
     "daisy-dress-black-lily": {
@@ -521,6 +612,13 @@
       "overrides": {
         "manual_go": false,
         "notes": ""
+      },
+      "allowed_actions": {
+        "metafield_write": true,
+        "image_upsert": true,
+        "collection_write": true,
+        "include_in_import_csv": true,
+        "size_guide_write": false
       }
     },
     "dash-pant-midnight-melange": {
@@ -557,6 +655,13 @@
       "overrides": {
         "manual_go": false,
         "notes": ""
+      },
+      "allowed_actions": {
+        "metafield_write": true,
+        "image_upsert": true,
+        "collection_write": true,
+        "include_in_import_csv": true,
+        "size_guide_write": false
       }
     },
     "dash-pant-mortar-melange": {
@@ -593,6 +698,13 @@
       "overrides": {
         "manual_go": false,
         "notes": ""
+      },
+      "allowed_actions": {
+        "metafield_write": true,
+        "image_upsert": true,
+        "collection_write": true,
+        "include_in_import_csv": true,
+        "size_guide_write": false
       }
     },
     "dora-dress-ivory": {
@@ -631,6 +743,13 @@
       "overrides": {
         "manual_go": false,
         "notes": ""
+      },
+      "allowed_actions": {
+        "metafield_write": false,
+        "image_upsert": false,
+        "collection_write": false,
+        "include_in_import_csv": true,
+        "size_guide_write": false
       }
     },
     "erik-top-black": {
@@ -667,6 +786,13 @@
       "overrides": {
         "manual_go": false,
         "notes": ""
+      },
+      "allowed_actions": {
+        "metafield_write": true,
+        "image_upsert": true,
+        "collection_write": true,
+        "include_in_import_csv": true,
+        "size_guide_write": false
       }
     },
     "erik-top-ivory": {
@@ -705,6 +831,13 @@
       "overrides": {
         "manual_go": false,
         "notes": ""
+      },
+      "allowed_actions": {
+        "metafield_write": false,
+        "image_upsert": false,
+        "collection_write": false,
+        "include_in_import_csv": false,
+        "size_guide_write": false
       }
     },
     "fenice-jacket-midnight-melange": {
@@ -743,6 +876,13 @@
       "overrides": {
         "manual_go": false,
         "notes": ""
+      },
+      "allowed_actions": {
+        "metafield_write": false,
+        "image_upsert": false,
+        "collection_write": false,
+        "include_in_import_csv": true,
+        "size_guide_write": false
       }
     },
     "fenice-jacket-mortar-melange": {
@@ -779,6 +919,13 @@
       "overrides": {
         "manual_go": false,
         "notes": ""
+      },
+      "allowed_actions": {
+        "metafield_write": true,
+        "image_upsert": true,
+        "collection_write": true,
+        "include_in_import_csv": true,
+        "size_guide_write": false
       }
     },
     "fenice-jacket-tahini-melange": {
@@ -815,6 +962,13 @@
       "overrides": {
         "manual_go": false,
         "notes": ""
+      },
+      "allowed_actions": {
+        "metafield_write": true,
+        "image_upsert": true,
+        "collection_write": true,
+        "include_in_import_csv": true,
+        "size_guide_write": false
       }
     },
     "floyd-dress-azure-stripe": {
@@ -851,6 +1005,13 @@
       "overrides": {
         "manual_go": false,
         "notes": ""
+      },
+      "allowed_actions": {
+        "metafield_write": true,
+        "image_upsert": true,
+        "collection_write": true,
+        "include_in_import_csv": true,
+        "size_guide_write": false
       }
     },
     "fossett-pant-midnight-melange": {
@@ -889,6 +1050,13 @@
       "overrides": {
         "manual_go": false,
         "notes": ""
+      },
+      "allowed_actions": {
+        "metafield_write": false,
+        "image_upsert": false,
+        "collection_write": false,
+        "include_in_import_csv": true,
+        "size_guide_write": false
       }
     },
     "fossett-pant-mortar-melange": {
@@ -925,6 +1093,13 @@
       "overrides": {
         "manual_go": false,
         "notes": ""
+      },
+      "allowed_actions": {
+        "metafield_write": true,
+        "image_upsert": true,
+        "collection_write": true,
+        "include_in_import_csv": true,
+        "size_guide_write": false
       }
     },
     "fossett-pant-tahini-melange": {
@@ -961,6 +1136,13 @@
       "overrides": {
         "manual_go": false,
         "notes": ""
+      },
+      "allowed_actions": {
+        "metafield_write": true,
+        "image_upsert": true,
+        "collection_write": true,
+        "include_in_import_csv": true,
+        "size_guide_write": false
       }
     },
     "hoffman-jacket-tahini": {
@@ -999,6 +1181,13 @@
       "overrides": {
         "manual_go": false,
         "notes": ""
+      },
+      "allowed_actions": {
+        "metafield_write": false,
+        "image_upsert": false,
+        "collection_write": false,
+        "include_in_import_csv": false,
+        "size_guide_write": false
       }
     },
     "kiera-dress-maroon-allover-petals": {
@@ -1035,6 +1224,13 @@
       "overrides": {
         "manual_go": false,
         "notes": ""
+      },
+      "allowed_actions": {
+        "metafield_write": true,
+        "image_upsert": true,
+        "collection_write": true,
+        "include_in_import_csv": true,
+        "size_guide_write": false
       }
     },
     "kirsty-dress-storm-allover-petals": {
@@ -1071,6 +1267,13 @@
       "overrides": {
         "manual_go": false,
         "notes": ""
+      },
+      "allowed_actions": {
+        "metafield_write": true,
+        "image_upsert": true,
+        "collection_write": true,
+        "include_in_import_csv": true,
+        "size_guide_write": false
       }
     },
     "knot-basket-crossbody-black-silver": {
@@ -1109,6 +1312,13 @@
       "overrides": {
         "manual_go": false,
         "notes": ""
+      },
+      "allowed_actions": {
+        "metafield_write": false,
+        "image_upsert": false,
+        "collection_write": false,
+        "include_in_import_csv": true,
+        "size_guide_write": false
       }
     },
     "knot-basket-large-macademia": {
@@ -1147,6 +1357,13 @@
       "overrides": {
         "manual_go": false,
         "notes": ""
+      },
+      "allowed_actions": {
+        "metafield_write": false,
+        "image_upsert": false,
+        "collection_write": false,
+        "include_in_import_csv": false,
+        "size_guide_write": false
       }
     },
     "knot-basket-small-black-silver": {
@@ -1185,6 +1402,13 @@
       "overrides": {
         "manual_go": false,
         "notes": ""
+      },
+      "allowed_actions": {
+        "metafield_write": false,
+        "image_upsert": false,
+        "collection_write": false,
+        "include_in_import_csv": true,
+        "size_guide_write": false
       }
     },
     "knot-basket-small-long-handle-danube": {
@@ -1225,6 +1449,13 @@
       "overrides": {
         "manual_go": false,
         "notes": ""
+      },
+      "allowed_actions": {
+        "metafield_write": false,
+        "image_upsert": false,
+        "collection_write": false,
+        "include_in_import_csv": true,
+        "size_guide_write": false
       }
     },
     "knot-basket-small-long-handle-mouton": {
@@ -1263,6 +1494,13 @@
       "overrides": {
         "manual_go": false,
         "notes": ""
+      },
+      "allowed_actions": {
+        "metafield_write": false,
+        "image_upsert": false,
+        "collection_write": false,
+        "include_in_import_csv": false,
+        "size_guide_write": false
       }
     },
     "linnie-skirt-ivory-petals": {
@@ -1299,6 +1537,13 @@
       "overrides": {
         "manual_go": false,
         "notes": ""
+      },
+      "allowed_actions": {
+        "metafield_write": true,
+        "image_upsert": true,
+        "collection_write": true,
+        "include_in_import_csv": true,
+        "size_guide_write": false
       }
     },
     "loquette-flap-bag-black": {
@@ -1339,6 +1584,13 @@
       "overrides": {
         "manual_go": false,
         "notes": ""
+      },
+      "allowed_actions": {
+        "metafield_write": false,
+        "image_upsert": false,
+        "collection_write": false,
+        "include_in_import_csv": true,
+        "size_guide_write": false
       }
     },
     "loquette-flap-bag-python": {
@@ -1379,6 +1631,13 @@
       "overrides": {
         "manual_go": false,
         "notes": ""
+      },
+      "allowed_actions": {
+        "metafield_write": false,
+        "image_upsert": false,
+        "collection_write": false,
+        "include_in_import_csv": true,
+        "size_guide_write": false
       }
     },
     "lydia-dress-ivory-allover-petals": {
@@ -1415,6 +1674,13 @@
       "overrides": {
         "manual_go": false,
         "notes": ""
+      },
+      "allowed_actions": {
+        "metafield_write": true,
+        "image_upsert": true,
+        "collection_write": true,
+        "include_in_import_csv": true,
+        "size_guide_write": false
       }
     },
     "maddox-sweater-black": {
@@ -1451,6 +1717,13 @@
       "overrides": {
         "manual_go": false,
         "notes": ""
+      },
+      "allowed_actions": {
+        "metafield_write": true,
+        "image_upsert": true,
+        "collection_write": true,
+        "include_in_import_csv": true,
+        "size_guide_write": false
       }
     },
     "maddox-sweater-toffee": {
@@ -1487,6 +1760,13 @@
       "overrides": {
         "manual_go": false,
         "notes": ""
+      },
+      "allowed_actions": {
+        "metafield_write": true,
+        "image_upsert": true,
+        "collection_write": true,
+        "include_in_import_csv": true,
+        "size_guide_write": false
       }
     },
     "magee-top-storm-petals": {
@@ -1523,6 +1803,13 @@
       "overrides": {
         "manual_go": false,
         "notes": ""
+      },
+      "allowed_actions": {
+        "metafield_write": true,
+        "image_upsert": true,
+        "collection_write": true,
+        "include_in_import_csv": true,
+        "size_guide_write": false
       }
     },
     "margot-top-indigo": {
@@ -1559,6 +1846,13 @@
       "overrides": {
         "manual_go": false,
         "notes": ""
+      },
+      "allowed_actions": {
+        "metafield_write": true,
+        "image_upsert": true,
+        "collection_write": true,
+        "include_in_import_csv": true,
+        "size_guide_write": false
       }
     },
     "monti-skirt-storm-petals": {
@@ -1595,6 +1889,13 @@
       "overrides": {
         "manual_go": false,
         "notes": ""
+      },
+      "allowed_actions": {
+        "metafield_write": true,
+        "image_upsert": true,
+        "collection_write": true,
+        "include_in_import_csv": true,
+        "size_guide_write": false
       }
     },
     "nadja-dress-pale-blush-petals": {
@@ -1631,6 +1932,13 @@
       "overrides": {
         "manual_go": false,
         "notes": ""
+      },
+      "allowed_actions": {
+        "metafield_write": true,
+        "image_upsert": true,
+        "collection_write": true,
+        "include_in_import_csv": true,
+        "size_guide_write": false
       }
     },
     "noori-dress-storm-tulip": {
@@ -1667,6 +1975,13 @@
       "overrides": {
         "manual_go": false,
         "notes": ""
+      },
+      "allowed_actions": {
+        "metafield_write": true,
+        "image_upsert": true,
+        "collection_write": true,
+        "include_in_import_csv": true,
+        "size_guide_write": false
       }
     },
     "orrie-dress-navy": {
@@ -1703,6 +2018,13 @@
       "overrides": {
         "manual_go": false,
         "notes": ""
+      },
+      "allowed_actions": {
+        "metafield_write": true,
+        "image_upsert": true,
+        "collection_write": true,
+        "include_in_import_csv": true,
+        "size_guide_write": false
       }
     },
     "paulina-dress-pale-blush-ao-petals": {
@@ -1741,6 +2063,13 @@
       "overrides": {
         "manual_go": false,
         "notes": ""
+      },
+      "allowed_actions": {
+        "metafield_write": false,
+        "image_upsert": false,
+        "collection_write": false,
+        "include_in_import_csv": true,
+        "size_guide_write": false
       }
     },
     "penrose-dress-ivory": {
@@ -1777,6 +2106,13 @@
       "overrides": {
         "manual_go": false,
         "notes": ""
+      },
+      "allowed_actions": {
+        "metafield_write": true,
+        "image_upsert": true,
+        "collection_write": true,
+        "include_in_import_csv": true,
+        "size_guide_write": false
       }
     },
     "siggi-top-ivory-allover-petals": {
@@ -1815,6 +2151,13 @@
       "overrides": {
         "manual_go": false,
         "notes": ""
+      },
+      "allowed_actions": {
+        "metafield_write": true,
+        "image_upsert": true,
+        "collection_write": true,
+        "include_in_import_csv": true,
+        "size_guide_write": false
       }
     },
     "wells-dress-berry-blue": {
@@ -1853,6 +2196,13 @@
       "overrides": {
         "manual_go": false,
         "notes": ""
+      },
+      "allowed_actions": {
+        "metafield_write": false,
+        "image_upsert": false,
+        "collection_write": false,
+        "include_in_import_csv": false,
+        "size_guide_write": false
       }
     },
     "wells-dress-pale-blush": {
@@ -1889,6 +2239,13 @@
       "overrides": {
         "manual_go": false,
         "notes": ""
+      },
+      "allowed_actions": {
+        "metafield_write": true,
+        "image_upsert": true,
+        "collection_write": true,
+        "include_in_import_csv": true,
+        "size_guide_write": false
       }
     },
     "winnie-dress-black": {
@@ -1927,6 +2284,13 @@
       "overrides": {
         "manual_go": false,
         "notes": ""
+      },
+      "allowed_actions": {
+        "metafield_write": true,
+        "image_upsert": true,
+        "collection_write": true,
+        "include_in_import_csv": true,
+        "size_guide_write": false
       }
     },
     "winnie-dress-holly-red": {
@@ -1963,6 +2327,13 @@
       "overrides": {
         "manual_go": false,
         "notes": ""
+      },
+      "allowed_actions": {
+        "metafield_write": true,
+        "image_upsert": true,
+        "collection_write": true,
+        "include_in_import_csv": true,
+        "size_guide_write": false
       }
     },
     "woolfe-dress-black": {
@@ -1999,6 +2370,13 @@
       "overrides": {
         "manual_go": false,
         "notes": ""
+      },
+      "allowed_actions": {
+        "metafield_write": true,
+        "image_upsert": true,
+        "collection_write": true,
+        "include_in_import_csv": true,
+        "size_guide_write": false
       }
     }
   }

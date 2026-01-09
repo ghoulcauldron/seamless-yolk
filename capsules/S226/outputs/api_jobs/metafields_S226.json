@@ -1,0 +1,34 @@
+[
+  {
+    "cpi": "4015-000172",
+    "product_gid": "gid://shopify/Product/7716189208678",
+    "file_gid": "gid://shopify/MediaImage/25950277599334",
+    "key": "swatch_image",
+    "response": {
+      "data": {
+        "metafieldsSet": {
+          "metafields": [
+            {
+              "key": "swatch_image",
+              "namespace": "altuzarra",
+              "type": "file_reference",
+              "value": "gid://shopify/MediaImage/25950277599334"
+            }
+          ],
+          "userErrors": []
+        }
+      },
+      "extensions": {
+        "cost": {
+          "requestedQueryCost": 10,
+          "actualQueryCost": 10,
+          "throttleStatus": {
+            "maximumAvailable": 20000.0,
+            "currentlyAvailable": 19990,
+            "restoreRate": 1000.0
+          }
+        }
+      }
+    }
+  }
+]

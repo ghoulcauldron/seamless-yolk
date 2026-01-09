@@ -12,7 +12,8 @@ from dotenv import load_dotenv
 load_dotenv()
 
 class ShopifyClient:
-    def __init__(self):
+    def __init__(self, verbose: bool = False):
+        self.verbose = verbose
         self.shop_url = os.getenv("SHOP_URL", "").rstrip("/")
         self.token = os.getenv("SHOPIFY_ACCESS_TOKEN")
         self.api_version = os.getenv("API_VERSION", "2025-10")
@@ -647,43 +648,274 @@ class ShopifyClient:
         print(f"Found {len(files_map)} existing files with CDN URLs.")
         return files_map
 
+
     # ------------------------------------------------------------------
     # --- File Upload & Metafield Functions (Used by pre_upload & writer) ---
     # ------------------------------------------------------------------
 
-    def upload_file(self, resource_url: str, alt: str) -> str:
-        # ... (This function can remain as-is) ...
+    # ------------------------------------------------------------------
+    # --- NEW: Authoritative File Upload via stagedUploadsCreate ---
+    # ------------------------------------------------------------------
+
+    # Authoritative Shopify file creation path. All file uploads MUST use this method.
+    def resolve_file_gid(self, gid: str, allow_retry: bool = False, timeout: int = 30) -> str:
+        """
+        Ensures we return a File GID.
+        If given a MediaImage GID, resolves its parent File.
+        """
+        if gid.startswith("gid://shopify/File/"):
+            return gid
+
+        if gid.startswith("gid://shopify/MediaImage/"):
+            start = time.time()
+            while True:
+                query = """
+                query resolveMediaImage($id: ID!) {
+                  node(id: $id) {
+                    ... on MediaImage {
+                      file {
+                        id
+                      }
+                    }
+                  }
+                }
+                """
+                resp = self.graphql(query, {"id": gid})
+                file_node = resp.get("data", {}).get("node", {}).get("file")
+
+                if file_node and file_node.get("id"):
+                    return file_node["id"]
+
+                if not allow_retry or (time.time() - start) > timeout:
+                    raise RuntimeError(
+                        f"Could not resolve File for MediaImage {gid} after {int(time.time() - start)}s"
+                    )
+
+                time.sleep(2)
+
+        raise RuntimeError(f"Unknown GID type: {gid}")
+
+    def upload_file_from_path(self, file_path: str, alt: str, verbose: bool = False) -> str:
+        """
+        CRITICAL CONTRACT:
+        - This function is the ONLY supported way to create Shopify Files.
+        - It MUST use:
+            * stagedUploadsCreate
+            * PUT raw bytes (no headers)
+            * fileCreate
+        - DO NOT:
+            * POST
+            * add headers
+            * use remote URLs
+        Violating this WILL break uploads due to signature validation.
+
+        Uploads a local file to Shopify using the supported 3-step flow:
+        1) stagedUploadsCreate
+        2) PUT raw file bytes to staged target (NO headers)
+        3) fileCreate referencing staged resource
+
+        Returns the created File GID.
+        """
+        file_path = os.path.abspath(file_path)
+
+        if not os.path.exists(file_path):
+            raise FileNotFoundError(f"Local file not found: {file_path}")
+
+        filename = os.path.basename(file_path)
+        mime_type = self._guess_mime_type(filename)
+        file_size = os.path.getsize(file_path)
+        file_size_str = str(file_size)
+        assert file_size_str.isdigit(), f"fileSize must be numeric string, got {file_size_str}"
+
+        if verbose:
+            print(f"  > [upload] Preparing staged upload for {filename} ({file_size} bytes)")
+
+        # --- Step 1: stagedUploadsCreate ---
         mutation = """
-        mutation fileCreate($files: [FileCreateInput!]!) {
-          fileCreate(files: $files) {
-            files { 
-              id
-              fileStatus
+        mutation stagedUploadsCreate($input: [StagedUploadInput!]!) {
+          stagedUploadsCreate(input: $input) {
+            stagedTargets {
+              url
+              resourceUrl
+              parameters {
+                name
+                value
+              }
             }
-            userErrors { field message }
+            userErrors {
+              field
+              message
+            }
           }
         }
         """
-        variables = {"files": {"alt": alt, "contentType": "IMAGE", "originalSource": resource_url}}
-        resp = self.graphql(mutation, variables)
-        
-        if 'errors' in resp:
-            error_message = resp['errors'][0]['message']
-            raise RuntimeError(f"GraphQL API Error: {error_message}")
+        variables = {
+            "input": [{
+                "filename": filename,
+                "mimeType": mime_type,
+                "resource": "FILE",
+                "fileSize": file_size_str
+            }]
+        }
 
-        user_errors = resp.get("data", {}).get("fileCreate", {}).get("userErrors", [])
+        resp = self.graphql(mutation, variables)
+        raw_data = resp.get("data", {}).get("stagedUploadsCreate")
+
+        # --- HARDENED RESPONSE HANDLING ---
+        if not raw_data:
+            print("  > ❌ stagedUploadsCreate returned no data.")
+            print(json.dumps(resp, indent=2))
+            return None
+
+        user_errors = raw_data.get("userErrors") or []
         if user_errors:
-            raise RuntimeError(f"Error creating file: {user_errors[0]['message']}")
-            
-        file_data = resp["data"]["fileCreate"]["files"][0]
-        
-        if file_data["fileStatus"] == "READY":
-            return file_data["id"]
-        
-        return file_data["id"]
+            print("  > ❌ stagedUploadsCreate userErrors:")
+            print(json.dumps(user_errors, indent=2))
+            return None
+
+        staged_targets = raw_data.get("stagedTargets") or []
+        if not staged_targets:
+            print("  > ❌ stagedUploadsCreate returned no stagedTargets.")
+            print(json.dumps(resp, indent=2))
+            return None
+
+        target = staged_targets[0]
+
+        required_keys = {"url", "resourceUrl", "parameters"}
+        missing = required_keys - set(target.keys())
+        if missing:
+            print(f"  > ❌ staged upload target missing keys: {missing}")
+            print(json.dumps(target, indent=2))
+            return None
+        upload_url = target["url"]
+        resource_url = target["resourceUrl"]
+        # --- SAFETY ASSERTION ---
+        # Shopify-signed URLs ONLY accept PUT.
+        # If this ever changes upstream, we want a loud failure.
+        if not upload_url.startswith("https://shopify-staged-uploads.storage.googleapis.com"):
+            raise RuntimeError(
+                f"Unexpected staged upload URL host: {upload_url}"
+            )
+
+        # --- Step 2: PUT raw file bytes ONLY ---
+        # IMPORTANT:
+        # Shopify staged upload URLs are cryptographically signed.
+        # They ONLY allow:
+        #   - HTTP PUT
+        #   - raw bytes
+        #   - NO x-goog-* headers (those must be signed)
+        # The GraphQL response includes `parameters` (e.g. acl/content_type), but those
+        # are for the multipart/form POST pattern. Our signed URL indicates SignedHeaders=host,
+        # so we must perform a plain PUT of the file bytes with NO custom headers.
+
+        # One-line signed-headers sanity log (helps prevent regressions)
+        m = re.search(r"[?&]X-Goog-SignedHeaders=([^&]+)", upload_url)
+        signed_headers = m.group(1) if m else "(missing)"
+        if verbose:
+            print(f"  > [upload] SignedHeaders={signed_headers}")
+        if signed_headers != "host":
+            raise RuntimeError(f"Unexpected X-Goog-SignedHeaders={signed_headers} (expected 'host')")
+
+        # Read bytes and assert we are NOT uploading an empty payload
+        with open(file_path, "rb") as f:
+            file_bytes = f.read()
+
+        assert len(file_bytes) == file_size, (
+            f"Read {len(file_bytes)} bytes from disk but os.path.getsize reported {file_size} bytes"
+        )
+        assert len(file_bytes) > 0, "Refusing to upload an empty file payload"
+
+        if verbose:
+            print(f"  > [upload] PUT {len(file_bytes)} bytes to staged target (no headers)")
+
+        # DO NOT pass any headers (especially x-goog-*)
+        from requests import Request, Session
+
+        req = Request(
+            method="PUT",
+            url=upload_url,
+            data=file_bytes,
+        )
+        prepared = req.prepare()
+
+        # CRITICAL: Shopify staged upload URLs only allow the Host header.
+        # Remove ALL headers (including Content-Length, User-Agent, etc.)
+        prepared.headers.clear()
+
+        session = Session()
+        r = session.send(prepared)
+
+        if r.status_code not in (200, 201):
+            raise RuntimeError(
+                f"Staged upload PUT failed ({r.status_code}): {r.text}"
+            )
+
+        # --- Step 3: fileCreate ---
+        if verbose:
+            print(f"  > [upload] Creating Shopify File record")
+
+        mutation = """
+        mutation fileCreate($files: [FileCreateInput!]!) {
+          fileCreate(files: $files) {
+            files {
+              id
+              fileStatus
+            }
+            userErrors {
+              field
+              message
+            }
+          }
+        }
+        """
+        variables = {
+            "files": [{
+                "alt": alt,
+                "contentType": "IMAGE",
+                "originalSource": resource_url
+            }]
+        }
+
+        resp = self.graphql(mutation, variables)
+        fc = resp.get("data", {}).get("fileCreate", {})
+
+        if fc.get("userErrors"):
+            raise RuntimeError(f"fileCreate failed: {fc['userErrors']}")
+
+        raw_gid = fc["files"][0]["id"]
+
+        # Wait until Shopify marks the file READY
+        self.wait_for_file_ready(raw_gid)
+
+        # NOTE:
+        # Do NOT enforce gid://shopify/File/.
+        # Shopify does not guarantee the GID type returned by fileCreate.
+        # Enforcing this will cause non-deterministic failures.
+        # IMPORTANT:
+        # Shopify may return MediaImage, GenericFile, or File GIDs.
+        # All are valid for file_reference metafields.
+        if verbose:
+            print(f"  > [upload] Created file GID: {raw_gid}")
+        return raw_gid
+
+    def _guess_mime_type(self, filename: str) -> str:
+        if filename.lower().endswith(".png"):
+            return "image/png"
+        if filename.lower().endswith(".jpg") or filename.lower().endswith(".jpeg"):
+            return "image/jpeg"
+        return "application/octet-stream"
+
+    def upload_file(self, resource_url: str, alt: str) -> str:
+        """
+        DEPRECATED.
+
+        This method is disabled and cannot be used for file uploads.
+        Use upload_file_from_path(...) instead.
+        """
+        raise RuntimeError("upload_file() is deprecated. Use upload_file_from_path().")
         
     def wait_for_file_ready(self, file_gid: str, timeout: int = 60) -> str:
-        # ... (This function can remain as-is) ...
+        # Polls until the file is READY and returns the canonical CDN URL (no query params).
         print(f"  > Waiting for file {file_gid} to be 'READY'...")
         start_time = time.time()
         
