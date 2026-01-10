@@ -204,7 +204,7 @@
         "image_status": "N/A",
         "status": "SKIP",
         "warnings": [
-          "Wholesale product (WS Buy) – skipped"
+          "Wholesale product (WS Buy) \u2013 skipped"
         ]
       },
       "product_id": null,
@@ -261,7 +261,7 @@
         "image_status": "N/A",
         "status": "SKIP",
         "warnings": [
-          "Wholesale product (WS Buy) – skipped"
+          "Wholesale product (WS Buy) \u2013 skipped"
         ]
       },
       "product_id": null,
@@ -277,16 +277,15 @@
         "collection_write": false,
         "image_upsert": false,
         "include_in_import_csv": false,
-        "metafield_write": false,
+        "metafield_write": true,
         "size_guide_write": false
       },
       "assets": {
         "look_images": [
           {
-            "derived_at": "2026-01-09T22:22:58.093467Z",
-            "derived_from": "inspect_product_images",
             "media_gid": "gid://shopify/MediaImage/25940633780326",
-            "source": "shopify_existing"
+            "source": "shopify",
+            "adopted_at": "2026-01-10T22:59:04.338457Z"
           }
         ]
       },
@@ -327,8 +326,8 @@
         "errors": [
           "Missing ghost image"
         ],
-        "image_status": "IMAGE_INCOMPLETE",
-        "status": "NO-GO",
+        "image_status": "IMAGE_OK",
+        "status": "GO",
         "warnings": [
           "Image overflow: 1 additional rows required"
         ]
@@ -350,7 +349,10 @@
         "collection_Bags",
         "color_pale blush",
         "style_Basket Clutch"
-      ]
+      ],
+      "assets_provenance": {
+        "look_images": "shopify"
+      }
     },
     "basket-clutch-tahini-silver": {
       "allowed_actions": {
@@ -1387,7 +1389,7 @@
         "image_status": "N/A",
         "status": "SKIP",
         "warnings": [
-          "Wholesale product (WS Buy) – skipped"
+          "Wholesale product (WS Buy) \u2013 skipped"
         ]
       },
       "product_id": null,
@@ -1980,7 +1982,7 @@
         "image_status": "N/A",
         "status": "SKIP",
         "warnings": [
-          "Wholesale product (WS Buy) – skipped"
+          "Wholesale product (WS Buy) \u2013 skipped"
         ]
       },
       "product_id": null,
@@ -2267,7 +2269,7 @@
         "image_status": "N/A",
         "status": "SKIP",
         "warnings": [
-          "Wholesale product (WS Buy) – skipped"
+          "Wholesale product (WS Buy) \u2013 skipped"
         ]
       },
       "product_id": null,
@@ -2482,7 +2484,7 @@
         "image_status": "N/A",
         "status": "SKIP",
         "warnings": [
-          "Wholesale product (WS Buy) – skipped"
+          "Wholesale product (WS Buy) \u2013 skipped"
         ]
       },
       "product_id": null,
@@ -3703,7 +3705,7 @@
         "image_status": "N/A",
         "status": "SKIP",
         "warnings": [
-          "Wholesale product (WS Buy) – skipped"
+          "Wholesale product (WS Buy) \u2013 skipped"
         ]
       },
       "product_id": null,

@@ -1,0 +1,26 @@
+[
+  {
+    "cpi": "7157-000689",
+    "product_gid": "gid://shopify/Product/7716189732966",
+    "shopify": {
+      "media_count": 4,
+      "hero_candidates": [
+        {
+          "media_gid": "gid://shopify/MediaImage/25940633780326",
+          "position": 0,
+          "filename": "https://cdn.shopify.com/s/files/1/0148/9561/2004/files/SS26-7157-STS002-000689-PALE-BLUSH_FINAL_ghost_front_0410_main.jpg?v=1767735006"
+        },
+        {
+          "media_gid": "gid://shopify/MediaImage/25939691929702",
+          "position": 1,
+          "filename": "https://cdn.shopify.com/s/files/1/0148/9561/2004/files/S226-7157_STS002_000689_PALE_BLUSH_001_fca21abf-54bf-4059-9718-37fa0b775a17.jpg?v=1767735006"
+        }
+      ]
+    },
+    "handle": "basket-clutch-pale-blush",
+    "manifest": {
+      "has_editorial": true
+    },
+    "assessment": "OK"
+  }
+]

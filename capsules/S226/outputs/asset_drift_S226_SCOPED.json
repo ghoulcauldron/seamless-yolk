@@ -20,5 +20,27 @@
       ]
     },
     "timestamp": "2026-01-10T03:14:40.557816Z"
+  },
+  {
+    "cpi": "7157-000689",
+    "handle": "basket-clutch-pale-blush",
+    "baseline": {
+      "local_has_hero": true,
+      "local_has_swatch": false
+    },
+    "observed": {
+      "shopify_media_count": 4,
+      "shopify_has_hero": true
+    },
+    "adopted": {
+      "look_images": [
+        {
+          "media_gid": "gid://shopify/MediaImage/25940633780326",
+          "source": "shopify",
+          "adopted_at": "2026-01-10T22:59:04.338457Z"
+        }
+      ]
+    },
+    "timestamp": "2026-01-10T22:59:04.338842Z"
   }
 ]

@@ -200,6 +200,22 @@ Writes to product state with provenance.
 
 ---
 
+### Accessory & Handbag Image Semantics
+
+For accessories (e.g. handbags, baskets, clutches):
+
+- `derive_look_images_from_shopify` **may populate** `assets.look_images` in `product_state`
+- This reflects **observed Shopify media**, not required editorial usage
+- Write‑phase scripts (e.g. `metafields_writer.py`) remain gated by:
+  - `allowed_actions.metafield_write`
+  - `preflight.status`
+  - product category (`is_accessory`)
+- **No `look_image` metafield will be written for accessories**, even if `look_images` are present in state
+
+This behavior is intentional and ensures Shopify reality is observed without implying mutation intent.
+
+---
+
 ### Reconcile Capsule Assets
 
 ```
@@ -451,6 +467,18 @@ If introduced at the right time, they will be:
 
 ---
 
+### Future Refinement — Accessory Look Image Semantics
+
+`derive_look_images_from_shopify` may be refined to better express accessory intent.
+
+Possible future improvements:
+- Skip look‑image enrichment entirely for `is_accessory == true` products
+- Or annotate `assets.look_images` with `required=false` to distinguish observation from requirement
+
+This is **not implemented intentionally** to avoid destabilizing the current reconciliation and write‑phase pipeline.
+
+---
+
 ## NOTES
 
 **Runbooks**  
@@ -462,4 +490,4 @@ Where we can go next (optional)
 **Update seeding script to all-inclusive: tags and perhaps other attribs.**
 
 **If this README and the code disagree, the README wins.**
----
+---</file>
