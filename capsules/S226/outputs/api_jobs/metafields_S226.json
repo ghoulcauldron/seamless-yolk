@@ -1,8 +1,8 @@
 [
   {
-    "cpi": "4015-000172",
-    "product_gid": "gid://shopify/Product/7716189208678",
-    "file_gid": "gid://shopify/MediaImage/25950277599334",
+    "cpi": "3004-416689",
+    "product_gid": "gid://shopify/Product/7716188356710",
+    "file_gid": "gid://shopify/MediaImage/25951295701094",
     "key": "swatch_image",
     "response": {
       "data": {
@@ -12,7 +12,7 @@
               "key": "swatch_image",
               "namespace": "altuzarra",
               "type": "file_reference",
-              "value": "gid://shopify/MediaImage/25950277599334"
+              "value": "gid://shopify/MediaImage/25951295701094"
             }
           ],
           "userErrors": []

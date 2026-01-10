@@ -978,6 +978,40 @@ class ShopifyClient:
         
         raise TimeoutError(f"Timed out waiting for file {file_gid} to become ready.")
 
+    def get_product_metafield(self, product_gid: str, key: str, namespace: str = "altuzarra") -> str | None:
+        """
+        Fetch the value of a single product metafield by namespace/key.
+        Returns the metafield value string, or None if not set.
+        """
+        query = """
+        query getProductMetafield($id: ID!, $namespace: String!, $key: String!) {
+          node(id: $id) {
+            ... on Product {
+              metafield(namespace: $namespace, key: $key) {
+                value
+              }
+            }
+          }
+        }
+        """
+        variables = {
+            "id": product_gid,
+            "namespace": namespace,
+            "key": key,
+        }
+
+        resp = self.graphql(query, variables)
+
+        node = resp.get("data", {}).get("node")
+        if not node:
+            return None
+
+        metafield = node.get("metafield")
+        if not metafield:
+            return None
+
+        return metafield.get("value")
+
     def set_product_metafield(self, product_gid: str, key: str, value_gid: str, namespace: str = "altuzarra", field_type: str = "file_reference"):
         # ... (This function can remain as-is) ...
         mutation = """

@@ -46,6 +46,17 @@
         "collection_write": true,
         "include_in_import_csv": true,
         "size_guide_write": false
+      },
+      "product_gid": "gid://shopify/Product/7716190027878",
+      "assets": {
+        "look_images": [
+          {
+            "media_gid": "gid://shopify/MediaImage/25939682689126",
+            "source": "shopify_existing",
+            "derived_from": "inspect_product_images",
+            "derived_at": "2026-01-09T22:22:58.093467Z"
+          }
+        ]
       }
     },
     "arp-dress-toffee": {
@@ -89,6 +100,17 @@
         "collection_write": true,
         "include_in_import_csv": true,
         "size_guide_write": false
+      },
+      "product_gid": "gid://shopify/Product/7716190060646",
+      "assets": {
+        "look_images": [
+          {
+            "media_gid": "gid://shopify/MediaImage/25940473118822",
+            "source": "shopify_existing",
+            "derived_from": "inspect_product_images",
+            "derived_at": "2026-01-09T22:22:58.093467Z"
+          }
+        ]
       }
     },
     "arthur-top-azure-stripe": {
@@ -226,6 +248,17 @@
         "collection_write": false,
         "include_in_import_csv": true,
         "size_guide_write": false
+      },
+      "product_gid": "gid://shopify/Product/7716189732966",
+      "assets": {
+        "look_images": [
+          {
+            "media_gid": "gid://shopify/MediaImage/25940633780326",
+            "source": "shopify_existing",
+            "derived_from": "inspect_product_images",
+            "derived_at": "2026-01-09T22:22:58.093467Z"
+          }
+        ]
       }
     },
     "basket-clutch-tahini-silver": {
@@ -271,6 +304,17 @@
         "collection_write": false,
         "include_in_import_csv": true,
         "size_guide_write": false
+      },
+      "product_gid": "gid://shopify/Product/7716189765734",
+      "assets": {
+        "look_images": [
+          {
+            "media_gid": "gid://shopify/MediaImage/25940638924902",
+            "source": "shopify_existing",
+            "derived_from": "inspect_product_images",
+            "derived_at": "2026-01-09T22:22:58.093467Z"
+          }
+        ]
       }
     },
     "chapman-pant-tahini": {
@@ -314,6 +358,17 @@
         "collection_write": true,
         "include_in_import_csv": true,
         "size_guide_write": false
+      },
+      "product_gid": "gid://shopify/Product/7716189372518",
+      "assets": {
+        "look_images": [
+          {
+            "media_gid": "gid://shopify/MediaImage/25940709408870",
+            "source": "shopify_existing",
+            "derived_from": "inspect_product_images",
+            "derived_at": "2026-01-09T22:22:58.093467Z"
+          }
+        ]
       }
     },
     "cherie-dress-storm-petals": {
@@ -357,6 +412,17 @@
         "collection_write": true,
         "include_in_import_csv": true,
         "size_guide_write": false
+      },
+      "product_gid": "gid://shopify/Product/7716188749926",
+      "assets": {
+        "look_images": [
+          {
+            "media_gid": "gid://shopify/MediaImage/25939682885734",
+            "source": "shopify_existing",
+            "derived_from": "inspect_product_images",
+            "derived_at": "2026-01-09T22:22:58.093467Z"
+          }
+        ]
       }
     },
     "chika-top-ivory-allover-petals": {
@@ -400,6 +466,17 @@
         "collection_write": true,
         "include_in_import_csv": true,
         "size_guide_write": false
+      },
+      "product_gid": "gid://shopify/Product/7716189143142",
+      "assets": {
+        "look_images": [
+          {
+            "media_gid": "gid://shopify/MediaImage/25939683082342",
+            "source": "shopify_existing",
+            "derived_from": "inspect_product_images",
+            "derived_at": "2026-01-09T22:22:58.093467Z"
+          }
+        ]
       }
     },
     "chika-top-maroon-allover-petals": {
@@ -445,7 +522,8 @@
         "collection_write": false,
         "include_in_import_csv": true,
         "size_guide_write": false
-      }
+      },
+      "product_gid": "gid://shopify/Product/7716189175910"
     },
     "chika-top-tapioca": {
       "handle": "chika-top-tapioca",
@@ -488,6 +566,17 @@
         "collection_write": true,
         "include_in_import_csv": true,
         "size_guide_write": false
+      },
+      "product_gid": "gid://shopify/Product/7716189208678",
+      "assets": {
+        "look_images": [
+          {
+            "media_gid": "gid://shopify/MediaImage/25940489240678",
+            "source": "shopify_existing",
+            "derived_from": "inspect_product_images",
+            "derived_at": "2026-01-09T22:22:58.093467Z"
+          }
+        ]
       }
     },
     "clay-sweater-black": {
@@ -533,6 +622,17 @@
         "collection_write": true,
         "include_in_import_csv": true,
         "size_guide_write": false
+      },
+      "product_gid": "gid://shopify/Product/7716190421094",
+      "assets": {
+        "look_images": [
+          {
+            "media_gid": "gid://shopify/MediaImage/25939683311718",
+            "source": "shopify_existing",
+            "derived_from": "inspect_product_images",
+            "derived_at": "2026-01-09T22:22:58.093467Z"
+          }
+        ]
       }
     },
     "clay-sweater-desert-sage": {
@@ -576,6 +676,17 @@
         "collection_write": true,
         "include_in_import_csv": true,
         "size_guide_write": false
+      },
+      "product_gid": "gid://shopify/Product/7716190486630",
+      "assets": {
+        "look_images": [
+          {
+            "media_gid": "gid://shopify/MediaImage/25940496973926",
+            "source": "shopify_existing",
+            "derived_from": "inspect_product_images",
+            "derived_at": "2026-01-09T22:22:58.093467Z"
+          }
+        ]
       }
     },
     "daisy-dress-black-lily": {
@@ -619,6 +730,17 @@
         "collection_write": true,
         "include_in_import_csv": true,
         "size_guide_write": false
+      },
+      "product_gid": "gid://shopify/Product/7716188520550",
+      "assets": {
+        "look_images": [
+          {
+            "media_gid": "gid://shopify/MediaImage/25939683606630",
+            "source": "shopify_existing",
+            "derived_from": "inspect_product_images",
+            "derived_at": "2026-01-09T22:22:58.093467Z"
+          }
+        ]
       }
     },
     "dash-pant-midnight-melange": {
@@ -662,6 +784,17 @@
         "collection_write": true,
         "include_in_import_csv": true,
         "size_guide_write": false
+      },
+      "product_gid": "gid://shopify/Product/7716189405286",
+      "assets": {
+        "look_images": [
+          {
+            "media_gid": "gid://shopify/MediaImage/25939683803238",
+            "source": "shopify_existing",
+            "derived_from": "inspect_product_images",
+            "derived_at": "2026-01-09T22:22:58.093467Z"
+          }
+        ]
       }
     },
     "dash-pant-mortar-melange": {
@@ -705,6 +838,17 @@
         "collection_write": true,
         "include_in_import_csv": true,
         "size_guide_write": false
+      },
+      "product_gid": "gid://shopify/Product/7716189470822",
+      "assets": {
+        "look_images": [
+          {
+            "media_gid": "gid://shopify/MediaImage/25940506083430",
+            "source": "shopify_existing",
+            "derived_from": "inspect_product_images",
+            "derived_at": "2026-01-09T22:22:58.093467Z"
+          }
+        ]
       }
     },
     "dora-dress-ivory": {
@@ -750,6 +894,17 @@
         "collection_write": false,
         "include_in_import_csv": true,
         "size_guide_write": false
+      },
+      "product_gid": "gid://shopify/Product/7716188422246",
+      "assets": {
+        "look_images": [
+          {
+            "media_gid": "gid://shopify/MediaImage/25949878386790",
+            "source": "shopify_existing",
+            "derived_from": "inspect_product_images",
+            "derived_at": "2026-01-09T22:22:58.093467Z"
+          }
+        ]
       }
     },
     "erik-top-black": {
@@ -793,6 +948,17 @@
         "collection_write": true,
         "include_in_import_csv": true,
         "size_guide_write": false
+      },
+      "product_gid": "gid://shopify/Product/7716190355558",
+      "assets": {
+        "look_images": [
+          {
+            "media_gid": "gid://shopify/MediaImage/25949876322406",
+            "source": "shopify_existing",
+            "derived_from": "inspect_product_images",
+            "derived_at": "2026-01-09T22:22:58.093467Z"
+          }
+        ]
       }
     },
     "erik-top-ivory": {
@@ -883,6 +1049,17 @@
         "collection_write": false,
         "include_in_import_csv": true,
         "size_guide_write": false
+      },
+      "product_gid": "gid://shopify/Product/7716188127334",
+      "assets": {
+        "look_images": [
+          {
+            "media_gid": "gid://shopify/MediaImage/25949881172070",
+            "source": "shopify_existing",
+            "derived_from": "inspect_product_images",
+            "derived_at": "2026-01-09T22:22:58.093467Z"
+          }
+        ]
       }
     },
     "fenice-jacket-mortar-melange": {
@@ -926,6 +1103,17 @@
         "collection_write": true,
         "include_in_import_csv": true,
         "size_guide_write": false
+      },
+      "product_gid": "gid://shopify/Product/7716188192870",
+      "assets": {
+        "look_images": [
+          {
+            "media_gid": "gid://shopify/MediaImage/25940518109286",
+            "source": "shopify_existing",
+            "derived_from": "inspect_product_images",
+            "derived_at": "2026-01-09T22:22:58.093467Z"
+          }
+        ]
       }
     },
     "fenice-jacket-tahini-melange": {
@@ -969,6 +1157,17 @@
         "collection_write": true,
         "include_in_import_csv": true,
         "size_guide_write": false
+      },
+      "product_gid": "gid://shopify/Product/7716188225638",
+      "assets": {
+        "look_images": [
+          {
+            "media_gid": "gid://shopify/MediaImage/25939684065382",
+            "source": "shopify_existing",
+            "derived_from": "inspect_product_images",
+            "derived_at": "2026-01-09T22:22:58.093467Z"
+          }
+        ]
       }
     },
     "floyd-dress-azure-stripe": {
@@ -1012,6 +1211,17 @@
         "collection_write": true,
         "include_in_import_csv": true,
         "size_guide_write": false
+      },
+      "product_gid": "gid://shopify/Product/7716188455014",
+      "assets": {
+        "look_images": [
+          {
+            "media_gid": "gid://shopify/MediaImage/25939684393062",
+            "source": "shopify_existing",
+            "derived_from": "inspect_product_images",
+            "derived_at": "2026-01-09T22:22:58.093467Z"
+          }
+        ]
       }
     },
     "fossett-pant-midnight-melange": {
@@ -1057,6 +1267,17 @@
         "collection_write": false,
         "include_in_import_csv": true,
         "size_guide_write": false
+      },
+      "product_gid": "gid://shopify/Product/7716189503590",
+      "assets": {
+        "look_images": [
+          {
+            "media_gid": "gid://shopify/MediaImage/25940538163302",
+            "source": "shopify_existing",
+            "derived_from": "inspect_product_images",
+            "derived_at": "2026-01-09T22:22:58.093467Z"
+          }
+        ]
       }
     },
     "fossett-pant-mortar-melange": {
@@ -1100,6 +1321,17 @@
         "collection_write": true,
         "include_in_import_csv": true,
         "size_guide_write": false
+      },
+      "product_gid": "gid://shopify/Product/7716189536358",
+      "assets": {
+        "look_images": [
+          {
+            "media_gid": "gid://shopify/MediaImage/25940545863782",
+            "source": "shopify_existing",
+            "derived_from": "inspect_product_images",
+            "derived_at": "2026-01-09T22:22:58.093467Z"
+          }
+        ]
       }
     },
     "fossett-pant-tahini-melange": {
@@ -1143,6 +1375,17 @@
         "collection_write": true,
         "include_in_import_csv": true,
         "size_guide_write": false
+      },
+      "product_gid": "gid://shopify/Product/7716189569126",
+      "assets": {
+        "look_images": [
+          {
+            "media_gid": "gid://shopify/MediaImage/25939684622438",
+            "source": "shopify_existing",
+            "derived_from": "inspect_product_images",
+            "derived_at": "2026-01-09T22:22:58.093467Z"
+          }
+        ]
       }
     },
     "hoffman-jacket-tahini": {
@@ -1231,6 +1474,17 @@
         "collection_write": true,
         "include_in_import_csv": true,
         "size_guide_write": false
+      },
+      "product_gid": "gid://shopify/Product/7716188586086",
+      "assets": {
+        "look_images": [
+          {
+            "media_gid": "gid://shopify/MediaImage/25940554874982",
+            "source": "shopify_existing",
+            "derived_from": "inspect_product_images",
+            "derived_at": "2026-01-09T22:22:58.093467Z"
+          }
+        ]
       }
     },
     "kirsty-dress-storm-allover-petals": {
@@ -1274,6 +1528,17 @@
         "collection_write": true,
         "include_in_import_csv": true,
         "size_guide_write": false
+      },
+      "product_gid": "gid://shopify/Product/7716188815462",
+      "assets": {
+        "look_images": [
+          {
+            "media_gid": "gid://shopify/MediaImage/25939684819046",
+            "source": "shopify_existing",
+            "derived_from": "inspect_product_images",
+            "derived_at": "2026-01-09T22:22:58.093467Z"
+          }
+        ]
       }
     },
     "knot-basket-crossbody-black-silver": {
@@ -1319,6 +1584,17 @@
         "collection_write": false,
         "include_in_import_csv": true,
         "size_guide_write": false
+      },
+      "product_gid": "gid://shopify/Product/7716189798502",
+      "assets": {
+        "look_images": [
+          {
+            "media_gid": "gid://shopify/MediaImage/25940645249126",
+            "source": "shopify_existing",
+            "derived_from": "inspect_product_images",
+            "derived_at": "2026-01-09T22:22:58.093467Z"
+          }
+        ]
       }
     },
     "knot-basket-large-macademia": {
@@ -1409,6 +1685,17 @@
         "collection_write": false,
         "include_in_import_csv": true,
         "size_guide_write": false
+      },
+      "product_gid": "gid://shopify/Product/7716189700198",
+      "assets": {
+        "look_images": [
+          {
+            "media_gid": "gid://shopify/MediaImage/25940829274214",
+            "source": "shopify_existing",
+            "derived_from": "inspect_product_images",
+            "derived_at": "2026-01-09T22:22:58.093467Z"
+          }
+        ]
       }
     },
     "knot-basket-small-long-handle-danube": {
@@ -1456,6 +1743,17 @@
         "collection_write": false,
         "include_in_import_csv": true,
         "size_guide_write": false
+      },
+      "product_gid": "gid://shopify/Product/7716189864038",
+      "assets": {
+        "look_images": [
+          {
+            "media_gid": "gid://shopify/MediaImage/25940651737190",
+            "source": "shopify_existing",
+            "derived_from": "inspect_product_images",
+            "derived_at": "2026-01-09T22:22:58.093467Z"
+          }
+        ]
       }
     },
     "knot-basket-small-long-handle-mouton": {
@@ -1544,6 +1842,17 @@
         "collection_write": true,
         "include_in_import_csv": true,
         "size_guide_write": false
+      },
+      "product_gid": "gid://shopify/Product/7716189339750",
+      "assets": {
+        "look_images": [
+          {
+            "media_gid": "gid://shopify/MediaImage/25939685015654",
+            "source": "shopify_existing",
+            "derived_from": "inspect_product_images",
+            "derived_at": "2026-01-09T22:22:58.093467Z"
+          }
+        ]
       }
     },
     "loquette-flap-bag-black": {
@@ -1591,6 +1900,17 @@
         "collection_write": false,
         "include_in_import_csv": true,
         "size_guide_write": false
+      },
+      "product_gid": "gid://shopify/Product/7716189995110",
+      "assets": {
+        "look_images": [
+          {
+            "media_gid": "gid://shopify/MediaImage/25940660420710",
+            "source": "shopify_existing",
+            "derived_from": "inspect_product_images",
+            "derived_at": "2026-01-09T22:22:58.093467Z"
+          }
+        ]
       }
     },
     "loquette-flap-bag-python": {
@@ -1638,6 +1958,17 @@
         "collection_write": false,
         "include_in_import_csv": true,
         "size_guide_write": false
+      },
+      "product_gid": "gid://shopify/Product/7716189896806",
+      "assets": {
+        "look_images": [
+          {
+            "media_gid": "gid://shopify/MediaImage/25940655243366",
+            "source": "shopify_existing",
+            "derived_from": "inspect_product_images",
+            "derived_at": "2026-01-09T22:22:58.093467Z"
+          }
+        ]
       }
     },
     "lydia-dress-ivory-allover-petals": {
@@ -1681,6 +2012,17 @@
         "collection_write": true,
         "include_in_import_csv": true,
         "size_guide_write": false
+      },
+      "product_gid": "gid://shopify/Product/7716188323942",
+      "assets": {
+        "look_images": [
+          {
+            "media_gid": "gid://shopify/MediaImage/25940562673766",
+            "source": "shopify_existing",
+            "derived_from": "inspect_product_images",
+            "derived_at": "2026-01-09T22:22:58.093467Z"
+          }
+        ]
       }
     },
     "maddox-sweater-black": {
@@ -1724,6 +2066,17 @@
         "collection_write": true,
         "include_in_import_csv": true,
         "size_guide_write": false
+      },
+      "product_gid": "gid://shopify/Product/7716190519398",
+      "assets": {
+        "look_images": [
+          {
+            "media_gid": "gid://shopify/MediaImage/25939691307110",
+            "source": "shopify_existing",
+            "derived_from": "inspect_product_images",
+            "derived_at": "2026-01-09T22:22:58.093467Z"
+          }
+        ]
       }
     },
     "maddox-sweater-toffee": {
@@ -1767,6 +2120,17 @@
         "collection_write": true,
         "include_in_import_csv": true,
         "size_guide_write": false
+      },
+      "product_gid": "gid://shopify/Product/7716190552166",
+      "assets": {
+        "look_images": [
+          {
+            "media_gid": "gid://shopify/MediaImage/25940572504166",
+            "source": "shopify_existing",
+            "derived_from": "inspect_product_images",
+            "derived_at": "2026-01-09T22:22:58.093467Z"
+          }
+        ]
       }
     },
     "magee-top-storm-petals": {
@@ -1810,6 +2174,17 @@
         "collection_write": true,
         "include_in_import_csv": true,
         "size_guide_write": false
+      },
+      "product_gid": "gid://shopify/Product/7716189077606",
+      "assets": {
+        "look_images": [
+          {
+            "media_gid": "gid://shopify/MediaImage/25939685212262",
+            "source": "shopify_existing",
+            "derived_from": "inspect_product_images",
+            "derived_at": "2026-01-09T22:22:58.093467Z"
+          }
+        ]
       }
     },
     "margot-top-indigo": {
@@ -1853,6 +2228,17 @@
         "collection_write": true,
         "include_in_import_csv": true,
         "size_guide_write": false
+      },
+      "product_gid": "gid://shopify/Product/7716189012070",
+      "assets": {
+        "look_images": [
+          {
+            "media_gid": "gid://shopify/MediaImage/25939685408870",
+            "source": "shopify_existing",
+            "derived_from": "inspect_product_images",
+            "derived_at": "2026-01-09T22:22:58.093467Z"
+          }
+        ]
       }
     },
     "monti-skirt-storm-petals": {
@@ -1896,6 +2282,17 @@
         "collection_write": true,
         "include_in_import_csv": true,
         "size_guide_write": false
+      },
+      "product_gid": "gid://shopify/Product/7716189274214",
+      "assets": {
+        "look_images": [
+          {
+            "media_gid": "gid://shopify/MediaImage/25939685638246",
+            "source": "shopify_existing",
+            "derived_from": "inspect_product_images",
+            "derived_at": "2026-01-09T22:22:58.093467Z"
+          }
+        ]
       }
     },
     "nadja-dress-pale-blush-petals": {
@@ -1939,6 +2336,17 @@
         "collection_write": true,
         "include_in_import_csv": true,
         "size_guide_write": false
+      },
+      "product_gid": "gid://shopify/Product/7716188651622",
+      "assets": {
+        "look_images": [
+          {
+            "media_gid": "gid://shopify/MediaImage/25939685834854",
+            "source": "shopify_existing",
+            "derived_from": "inspect_product_images",
+            "derived_at": "2026-01-09T22:22:58.093467Z"
+          }
+        ]
       }
     },
     "noori-dress-storm-tulip": {
@@ -1982,6 +2390,17 @@
         "collection_write": true,
         "include_in_import_csv": true,
         "size_guide_write": false
+      },
+      "product_gid": "gid://shopify/Product/7716188717158",
+      "assets": {
+        "look_images": [
+          {
+            "media_gid": "gid://shopify/MediaImage/25939686031462",
+            "source": "shopify_existing",
+            "derived_from": "inspect_product_images",
+            "derived_at": "2026-01-09T22:22:58.093467Z"
+          }
+        ]
       }
     },
     "orrie-dress-navy": {
@@ -2025,6 +2444,17 @@
         "collection_write": true,
         "include_in_import_csv": true,
         "size_guide_write": false
+      },
+      "product_gid": "gid://shopify/Product/7716188618854",
+      "assets": {
+        "look_images": [
+          {
+            "media_gid": "gid://shopify/MediaImage/25940579975270",
+            "source": "shopify_existing",
+            "derived_from": "inspect_product_images",
+            "derived_at": "2026-01-09T22:22:58.093467Z"
+          }
+        ]
       }
     },
     "paulina-dress-pale-blush-ao-petals": {
@@ -2034,8 +2464,8 @@
       "product_type": "RTW",
       "is_accessory": false,
       "preflight": {
-        "status": "NO-GO",
-        "image_status": "IMAGE_INCOMPLETE",
+        "status": "GO",
+        "image_status": "IMAGE_OK",
         "errors": [
           "Missing ghost image"
         ],
@@ -2065,11 +2495,31 @@
         "notes": ""
       },
       "allowed_actions": {
-        "metafield_write": false,
-        "image_upsert": false,
+        "metafield_write": true,
+        "image_upsert": true,
         "collection_write": false,
         "include_in_import_csv": true,
         "size_guide_write": false
+      },
+      "product_gid": "gid://shopify/Product/7716188356710",
+      "assets": {
+        "look_images": [
+          {
+            "media_gid": "gid://shopify/MediaImage/25940848672870",
+            "source": "shopify",
+            "adopted_at": "2026-01-10T03:14:40.557685Z"
+          }
+        ],
+        "swatch": {
+          "file_path": "capsules/S226/assets/swatches/S226-3004 SCP015 416689 PALE BLUSH AO PETALS_FINAL_swatch.jpg",
+          "source": "local_created",
+          "created_by": "swatch_creator",
+          "registered_by": "register_created_swatches",
+          "registered_at": "2026-01-10T04:41:33.396399+00:00"
+        }
+      },
+      "assets_provenance": {
+        "look_images": "shopify"
       }
     },
     "penrose-dress-ivory": {
@@ -2113,6 +2563,17 @@
         "collection_write": true,
         "include_in_import_csv": true,
         "size_guide_write": false
+      },
+      "product_gid": "gid://shopify/Product/7716190158950",
+      "assets": {
+        "look_images": [
+          {
+            "media_gid": "gid://shopify/MediaImage/25940598292582",
+            "source": "shopify_existing",
+            "derived_from": "inspect_product_images",
+            "derived_at": "2026-01-09T22:22:58.093467Z"
+          }
+        ]
       }
     },
     "siggi-top-ivory-allover-petals": {
@@ -2158,6 +2619,17 @@
         "collection_write": true,
         "include_in_import_csv": true,
         "size_guide_write": false
+      },
+      "product_gid": "gid://shopify/Product/7716189241446",
+      "assets": {
+        "look_images": [
+          {
+            "media_gid": "gid://shopify/MediaImage/25939686293606",
+            "source": "shopify_existing",
+            "derived_from": "inspect_product_images",
+            "derived_at": "2026-01-09T22:22:58.093467Z"
+          }
+        ]
       }
     },
     "wells-dress-berry-blue": {
@@ -2246,6 +2718,17 @@
         "collection_write": true,
         "include_in_import_csv": true,
         "size_guide_write": false
+      },
+      "product_gid": "gid://shopify/Product/7716190257254",
+      "assets": {
+        "look_images": [
+          {
+            "media_gid": "gid://shopify/MediaImage/25939686850662",
+            "source": "shopify_existing",
+            "derived_from": "inspect_product_images",
+            "derived_at": "2026-01-09T22:22:58.093467Z"
+          }
+        ]
       }
     },
     "winnie-dress-black": {
@@ -2291,6 +2774,17 @@
         "collection_write": true,
         "include_in_import_csv": true,
         "size_guide_write": false
+      },
+      "product_gid": "gid://shopify/Product/7716190093414",
+      "assets": {
+        "look_images": [
+          {
+            "media_gid": "gid://shopify/MediaImage/25939687014502",
+            "source": "shopify_existing",
+            "derived_from": "inspect_product_images",
+            "derived_at": "2026-01-09T22:22:58.093467Z"
+          }
+        ]
       }
     },
     "winnie-dress-holly-red": {
@@ -2334,6 +2828,17 @@
         "collection_write": true,
         "include_in_import_csv": true,
         "size_guide_write": false
+      },
+      "product_gid": "gid://shopify/Product/7716190126182",
+      "assets": {
+        "look_images": [
+          {
+            "media_gid": "gid://shopify/MediaImage/25940603928678",
+            "source": "shopify_existing",
+            "derived_from": "inspect_product_images",
+            "derived_at": "2026-01-09T22:22:58.093467Z"
+          }
+        ]
       }
     },
     "woolfe-dress-black": {
@@ -2377,6 +2882,17 @@
         "collection_write": true,
         "include_in_import_csv": true,
         "size_guide_write": false
+      },
+      "product_gid": "gid://shopify/Product/7716190322790",
+      "assets": {
+        "look_images": [
+          {
+            "media_gid": "gid://shopify/MediaImage/25940611924070",
+            "source": "shopify_existing",
+            "derived_from": "inspect_product_images",
+            "derived_at": "2026-01-09T22:22:58.093467Z"
+          }
+        ]
       }
     }
   }

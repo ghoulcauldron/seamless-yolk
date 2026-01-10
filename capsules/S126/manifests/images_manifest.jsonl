@@ -865,4 +865,3 @@
 {"capsule": "S126", "cpi": "7695-000001", "asset_type": "swatches", "filename": "SS26-7695-LLS036-000001 BLACK_FINAL_swatch.jpg", "source_dir": "capsules/S126/assets/swatches", "is_accessory": true, "created_at": "2025-10-20T20:49:28"}
 {"capsule": "S126", "cpi": "7695-000102", "asset_type": "swatches", "filename": "SS26-7695-LLS036-000102 IVORY_FINAL_swatch.jpg", "source_dir": "capsules/S126/assets/swatches", "is_accessory": true, "created_at": "2025-10-20T20:49:28"}
 {"capsule": "S126", "cpi": "7695-000206", "asset_type": "swatches", "filename": "SS26-7695-LLS036-000206 PRALINE_FINAL_swatch.jpg", "source_dir": "capsules/S126/assets/swatches", "is_accessory": true, "created_at": "2025-10-20T20:49:28"}
-{"capsule": "S126", "cpi": null, "asset_type": "swatches", "filename": "SS26-BEAN-SKINNY-BLACK_swatch.jpg", "source_dir": "capsules/S126/assets/swatches", "is_accessory": false, "created_at": "2025-10-20T20:49:28"}

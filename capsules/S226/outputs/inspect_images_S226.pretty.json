@@ -1,0 +1,1129 @@
+[
+  {
+    "cpi": "2003-000147",
+    "product_gid": "gid://shopify/Product/7716188192870",
+    "shopify": {
+      "media_count": 6,
+      "hero_candidates": [
+        {
+          "media_gid": "gid://shopify/MediaImage/25939693142118",
+          "position": 0,
+          "filename": "https://cdn.shopify.com/s/files/1/0148/9561/2004/files/S226-2003_AIQ003_000147_MORTAR_MELANGE_FINAL_ghost_0777_661b8291-9507-47da-b5d6-425d5e9ea025.jpg?v=1767716503"
+        },
+        {
+          "media_gid": "gid://shopify/MediaImage/25940518109286",
+          "position": 1,
+          "filename": "https://cdn.shopify.com/s/files/1/0148/9561/2004/files/S226-2003AIQ003000147MORTARMELANGE_FINAL_hero_image_0049.jpg?v=1767733984"
+        }
+      ]
+    },
+    "handle": "fenice-jacket-mortar-melange",
+    "manifest": {
+      "has_editorial": false
+    },
+    "assessment": "SHOPIFY_HAS_HERO_MANIFEST_MISSING"
+  },
+  {
+    "cpi": "2003-000182",
+    "product_gid": "gid://shopify/Product/7716188225638",
+    "shopify": {
+      "media_count": 6,
+      "hero_candidates": [
+        {
+          "media_gid": "gid://shopify/MediaImage/25939684032614",
+          "position": 0,
+          "filename": "https://cdn.shopify.com/s/files/1/0148/9561/2004/files/S226-2003_AWQ015_000182_TAHINI_MELANGE_FINAL_ghost_0657_3be8c9c8-c0b4-4f20-b90a-ccc96617aae2.jpg?v=1767716385"
+        },
+        {
+          "media_gid": "gid://shopify/MediaImage/25939684065382",
+          "position": 1,
+          "filename": "https://cdn.shopify.com/s/files/1/0148/9561/2004/files/S226-2003_AWQ015_000182_TAHINI_MELANGE_FINAL_hero_image__023_d4f134c2-067c-42a4-9a06-d3bf8749b79f.jpg?v=1767716384"
+        }
+      ]
+    },
+    "handle": "fenice-jacket-tahini-melange",
+    "manifest": {
+      "has_editorial": false
+    },
+    "assessment": "SHOPIFY_HAS_HERO_MANIFEST_MISSING"
+  },
+  {
+    "cpi": "2003-000479",
+    "product_gid": "gid://shopify/Product/7716188127334",
+    "shopify": {
+      "media_count": 6,
+      "hero_candidates": [
+        {
+          "media_gid": "gid://shopify/MediaImage/25940621197414",
+          "position": 0,
+          "filename": "https://cdn.shopify.com/s/files/1/0148/9561/2004/files/S226-2003AIQ003000147MORTARMELANGE_FINAL_ghost_0777.jpg?v=1767734864"
+        },
+        {
+          "media_gid": "gid://shopify/MediaImage/25949881172070",
+          "position": 1,
+          "filename": "https://cdn.shopify.com/s/files/1/0148/9561/2004/files/S226-2003AIM001000479MIDNIGHTMELANGE_FINAL_hero_image_0034_39712013-9453-405d-890f-10dbd0edf8da.jpg?v=1767975954"
+        }
+      ]
+    },
+    "handle": "fenice-jacket-midnight-melange",
+    "manifest": {
+      "has_editorial": false
+    },
+    "assessment": "SHOPIFY_HAS_HERO_MANIFEST_MISSING"
+  },
+  {
+    "cpi": "3001-416102",
+    "product_gid": "gid://shopify/Product/7716188323942",
+    "shopify": {
+      "media_count": 6,
+      "hero_candidates": [
+        {
+          "media_gid": "gid://shopify/MediaImage/25939693109350",
+          "position": 0,
+          "filename": "https://cdn.shopify.com/s/files/1/0148/9561/2004/files/S226-3001_SCP015_416102_IVORY_ALLOVER_PETALS_FINAL_ghost_0273_81207982-b51b-48fa-8eeb-5d1707b053c2.jpg?v=1767716502"
+        },
+        {
+          "media_gid": "gid://shopify/MediaImage/25940562673766",
+          "position": 1,
+          "filename": "https://cdn.shopify.com/s/files/1/0148/9561/2004/files/S226-3001SCP015416102IVORYALLOVERPETALS_FINAL_hero_image_0021.jpg?v=1767734305"
+        }
+      ]
+    },
+    "handle": "lydia-dress-ivory-allover-petals",
+    "manifest": {
+      "has_editorial": false
+    },
+    "assessment": "SHOPIFY_HAS_HERO_MANIFEST_MISSING"
+  },
+  {
+    "cpi": "3004-416689",
+    "product_gid": "gid://shopify/Product/7716188356710",
+    "shopify": {
+      "media_count": 6,
+      "hero_candidates": [
+        {
+          "media_gid": "gid://shopify/MediaImage/25940848672870",
+          "position": 0,
+          "filename": "https://cdn.shopify.com/s/files/1/0148/9561/2004/files/251218_Altuzarra_1070.jpg?v=1767737994"
+        },
+        {
+          "media_gid": "gid://shopify/MediaImage/25940590887014",
+          "position": 1,
+          "filename": "https://cdn.shopify.com/s/files/1/0148/9561/2004/files/S226-3004SCP015416689PALEBLUSHAOPETALS_FINAL_hero_image_0031_b77ee9e3-e888-40da-9a3c-5b4fd1c00b5a.jpg?v=1767737994"
+        }
+      ]
+    },
+    "handle": "paulina-dress-pale-blush-ao-petals",
+    "manifest": {
+      "has_editorial": false
+    },
+    "assessment": "SHOPIFY_HAS_HERO_MANIFEST_MISSING"
+  },
+  {
+    "cpi": "3007-000102",
+    "product_gid": "gid://shopify/Product/7716188422246",
+    "shopify": {
+      "media_count": 6,
+      "hero_candidates": [
+        {
+          "media_gid": "gid://shopify/MediaImage/25943474274406",
+          "position": 0,
+          "filename": "https://cdn.shopify.com/s/files/1/0148/9561/2004/files/S326-3007BYS084000102IVORY_FINAL_ghost_0058.jpg?v=1767797981"
+        },
+        {
+          "media_gid": "gid://shopify/MediaImage/25949878386790",
+          "position": 1,
+          "filename": "https://cdn.shopify.com/s/files/1/0148/9561/2004/files/S226-3007BYS084000102IVORY_FINAL_hero_image_0048.jpg?v=1767975906"
+        }
+      ]
+    },
+    "handle": "dora-dress-ivory",
+    "manifest": {
+      "has_editorial": false
+    },
+    "assessment": "SHOPIFY_HAS_HERO_MANIFEST_MISSING"
+  },
+  {
+    "cpi": "3008-374484",
+    "product_gid": "gid://shopify/Product/7716188455014",
+    "shopify": {
+      "media_count": 7,
+      "hero_candidates": [
+        {
+          "media_gid": "gid://shopify/MediaImage/25939684360294",
+          "position": 0,
+          "filename": "https://cdn.shopify.com/s/files/1/0148/9561/2004/files/S226-3008_SCQ015_374484_AZURE_STRIPE_FINAL_ghost_0164_56b1cd2b-e08c-4695-aa8c-7350270b5596.jpg?v=1767716385"
+        },
+        {
+          "media_gid": "gid://shopify/MediaImage/25939684393062",
+          "position": 1,
+          "filename": "https://cdn.shopify.com/s/files/1/0148/9561/2004/files/S226-3008_SCQ015_374484_AZURE_STRIPE_FINAL_hero_image__027_ed915bf5-9244-4d1f-b98b-074a4efc1a9a.jpg?v=1767716385"
+        },
+        {
+          "media_gid": "gid://shopify/MediaImage/25939684425830",
+          "position": 2,
+          "filename": "https://cdn.shopify.com/s/files/1/0148/9561/2004/files/S226-3008_SCQ015_374484_AZURE_STRIPE_FINAL_hero_image__032_d3246c97-2111-4c18-b5be-1637e70c1126.jpg?v=1767716385"
+        }
+      ]
+    },
+    "handle": "floyd-dress-azure-stripe",
+    "manifest": {
+      "has_editorial": false
+    },
+    "assessment": "SHOPIFY_HAS_HERO_MANIFEST_MISSING"
+  },
+  {
+    "cpi": "3010-414001",
+    "product_gid": "gid://shopify/Product/7716188520550",
+    "shopify": {
+      "media_count": 6,
+      "hero_candidates": [
+        {
+          "media_gid": "gid://shopify/MediaImage/25939683573862",
+          "position": 0,
+          "filename": "https://cdn.shopify.com/s/files/1/0148/9561/2004/files/S226-3010_BSP032_414001_BLACK_LILY_FINAL_ghost_0625_8fef9a46-a673-4a69-ba05-83444f1cb756.jpg?v=1767716383"
+        },
+        {
+          "media_gid": "gid://shopify/MediaImage/25939683606630",
+          "position": 1,
+          "filename": "https://cdn.shopify.com/s/files/1/0148/9561/2004/files/S226-3010_BSP032_414001_BLACK_LILY_FINAL_hero_image__002_d94a9d2b-b42a-4c9c-8816-59d234ae3693.jpg?v=1767716382"
+        }
+      ]
+    },
+    "handle": "daisy-dress-black-lily",
+    "manifest": {
+      "has_editorial": false
+    },
+    "assessment": "SHOPIFY_HAS_HERO_MANIFEST_MISSING"
+  },
+  {
+    "cpi": "3019-416563",
+    "product_gid": "gid://shopify/Product/7716188586086",
+    "shopify": {
+      "media_count": 6,
+      "hero_candidates": [
+        {
+          "media_gid": "gid://shopify/MediaImage/25939692486758",
+          "position": 0,
+          "filename": "https://cdn.shopify.com/s/files/1/0148/9561/2004/files/S226-3019_BSP024_416563_MAROON_ALLOVER_PETALS_FINAL_ghost_0236_ce68e18f-4bf4-4cbc-95ca-5f68aa5bdd81.jpg?v=1767716500"
+        },
+        {
+          "media_gid": "gid://shopify/MediaImage/25940554874982",
+          "position": 1,
+          "filename": "https://cdn.shopify.com/s/files/1/0148/9561/2004/files/S226-3019BSP024416563MAROONALLOVERPETALS_FINAL_hero_image_0077.jpg?v=1767734231"
+        }
+      ]
+    },
+    "handle": "kiera-dress-maroon-allover-petals",
+    "manifest": {
+      "has_editorial": false
+    },
+    "assessment": "SHOPIFY_HAS_HERO_MANIFEST_MISSING"
+  },
+  {
+    "cpi": "3022-000400",
+    "product_gid": "gid://shopify/Product/7716188618854",
+    "shopify": {
+      "media_count": 6,
+      "hero_candidates": [
+        {
+          "media_gid": "gid://shopify/MediaImage/25939692159078",
+          "position": 0,
+          "filename": "https://cdn.shopify.com/s/files/1/0148/9561/2004/files/S226-3022_AIS005_000400_NAVY_FINAL_ghost_0048_f15a8c94-e303-4b89-81da-111279d6d90c.jpg?v=1767716500"
+        },
+        {
+          "media_gid": "gid://shopify/MediaImage/25940579975270",
+          "position": 1,
+          "filename": "https://cdn.shopify.com/s/files/1/0148/9561/2004/files/S226-3022AIS005000400NAVY_FINAL_hero_image_0025.jpg?v=1767734479"
+        }
+      ]
+    },
+    "handle": "orrie-dress-navy",
+    "manifest": {
+      "has_editorial": false
+    },
+    "assessment": "SHOPIFY_HAS_HERO_MANIFEST_MISSING"
+  },
+  {
+    "cpi": "3024-416689",
+    "product_gid": "gid://shopify/Product/7716188651622",
+    "shopify": {
+      "media_count": 6,
+      "hero_candidates": [
+        {
+          "media_gid": "gid://shopify/MediaImage/25939685802086",
+          "position": 0,
+          "filename": "https://cdn.shopify.com/s/files/1/0148/9561/2004/files/S226-3024_SCP015_416689_PALE_BLUSH_PETALS_FINAL_ghost_0354_8ddf7a19-76da-4dd4-92f2-73fd793c15b8.jpg?v=1767716389"
+        },
+        {
+          "media_gid": "gid://shopify/MediaImage/25939685834854",
+          "position": 1,
+          "filename": "https://cdn.shopify.com/s/files/1/0148/9561/2004/files/S226-3024_SCP015_416689_PALE_BLUSH_PETALS_FINAL_hero_image__019_8806cd49-ccbd-4e67-b347-34e1e7d5ce0e.jpg?v=1767716389"
+        }
+      ]
+    },
+    "handle": "nadja-dress-pale-blush-petals",
+    "manifest": {
+      "has_editorial": false
+    },
+    "assessment": "SHOPIFY_HAS_HERO_MANIFEST_MISSING"
+  },
+  {
+    "cpi": "3030-413067",
+    "product_gid": "gid://shopify/Product/7716188717158",
+    "shopify": {
+      "media_count": 6,
+      "hero_candidates": [
+        {
+          "media_gid": "gid://shopify/MediaImage/25939685998694",
+          "position": 0,
+          "filename": "https://cdn.shopify.com/s/files/1/0148/9561/2004/files/S226-3030_BSP024_413067_STORM_TULIP_FINAL_ghost_0148_fc9c1d4a-be89-4bbb-abf6-d2624441ef45.jpg?v=1767716390"
+        },
+        {
+          "media_gid": "gid://shopify/MediaImage/25939686031462",
+          "position": 1,
+          "filename": "https://cdn.shopify.com/s/files/1/0148/9561/2004/files/S226-3030_BSP024_413067_STORM_TULIP_FINAL_hero_image__007_b22a9595-017e-4960-bcc6-9d01452b640b.jpg?v=1767716390"
+        },
+        {
+          "media_gid": "gid://shopify/MediaImage/25939686064230",
+          "position": 2,
+          "filename": "https://cdn.shopify.com/s/files/1/0148/9561/2004/files/S226-3030_BSP024_413067_STORM_TULIP_FINAL_hero_image__014_eeefb418-a9c9-4bcf-97d2-6c276313a816.jpg?v=1767716390"
+        }
+      ]
+    },
+    "handle": "noori-dress-storm-tulip",
+    "manifest": {
+      "has_editorial": false
+    },
+    "assessment": "SHOPIFY_HAS_HERO_MANIFEST_MISSING"
+  },
+  {
+    "cpi": "3034-415067",
+    "product_gid": "gid://shopify/Product/7716188749926",
+    "shopify": {
+      "media_count": 6,
+      "hero_candidates": [
+        {
+          "media_gid": "gid://shopify/MediaImage/25939682852966",
+          "position": 0,
+          "filename": "https://cdn.shopify.com/s/files/1/0148/9561/2004/files/S226-3034_BSP024_415067_STORM_PETALS_FINAL_ghost_0041_e0c8d6da-d808-4968-bd39-ff7115908c76.jpg?v=1767716380"
+        },
+        {
+          "media_gid": "gid://shopify/MediaImage/25939682885734",
+          "position": 1,
+          "filename": "https://cdn.shopify.com/s/files/1/0148/9561/2004/files/S226-3034_BSP024_415067_STORM_PETALS_FINAL_hero_image__022_6396f94a-93bd-4cd0-951d-69093a7ca1d4.jpg?v=1767716380"
+        }
+      ]
+    },
+    "handle": "cherie-dress-storm-petals",
+    "manifest": {
+      "has_editorial": false
+    },
+    "assessment": "SHOPIFY_HAS_HERO_MANIFEST_MISSING"
+  },
+  {
+    "cpi": "3035-416067",
+    "product_gid": "gid://shopify/Product/7716188815462",
+    "shopify": {
+      "media_count": 6,
+      "hero_candidates": [
+        {
+          "media_gid": "gid://shopify/MediaImage/25939684786278",
+          "position": 0,
+          "filename": "https://cdn.shopify.com/s/files/1/0148/9561/2004/files/S226-3035_BSP024_416067_STORM_ALLOVER_PETALS_FINAL_ghost_0221_d4ca41d7-898a-4bbf-a8a4-5c9654e5421b.jpg?v=1767716386"
+        },
+        {
+          "media_gid": "gid://shopify/MediaImage/25939684819046",
+          "position": 1,
+          "filename": "https://cdn.shopify.com/s/files/1/0148/9561/2004/files/S226-3035_BSP024_416067_STORM_ALLOVER_PETALS_FINAL_hero_image__016_43b122f8-54ee-4205-872b-328c448d3bf2.jpg?v=1767716386"
+        }
+      ]
+    },
+    "handle": "kirsty-dress-storm-allover-petals",
+    "manifest": {
+      "has_editorial": false
+    },
+    "assessment": "SHOPIFY_HAS_HERO_MANIFEST_MISSING"
+  },
+  {
+    "cpi": "4010-000403",
+    "product_gid": "gid://shopify/Product/7716189012070",
+    "shopify": {
+      "media_count": 6,
+      "hero_candidates": [
+        {
+          "media_gid": "gid://shopify/MediaImage/25939685376102",
+          "position": 0,
+          "filename": "https://cdn.shopify.com/s/files/1/0148/9561/2004/files/S226-4010_DCS021_000403_INDIGO_FINAL_ghost_0440_eaac5527-f972-4f36-ae12-e4158e1155dc.jpg?v=1767716388"
+        },
+        {
+          "media_gid": "gid://shopify/MediaImage/25939685408870",
+          "position": 1,
+          "filename": "https://cdn.shopify.com/s/files/1/0148/9561/2004/files/S226-4010_DCS021_000403_INDIGO_FINAL_hero_image__013_0d22ed13-2233-4863-a3d7-d4be0900e8fd.jpg?v=1767716388"
+        }
+      ]
+    },
+    "handle": "margot-top-indigo",
+    "manifest": {
+      "has_editorial": false
+    },
+    "assessment": "SHOPIFY_HAS_HERO_MANIFEST_MISSING"
+  },
+  {
+    "cpi": "4013-416067",
+    "product_gid": "gid://shopify/Product/7716189077606",
+    "shopify": {
+      "media_count": 6,
+      "hero_candidates": [
+        {
+          "media_gid": "gid://shopify/MediaImage/25939685179494",
+          "position": 0,
+          "filename": "https://cdn.shopify.com/s/files/1/0148/9561/2004/files/S226-4013_BSP024_416067_STORM_PETALS_FINAL_ghost_0323_cc127d5a-15fd-4b1b-b57a-5b128072e482.jpg?v=1767716387"
+        },
+        {
+          "media_gid": "gid://shopify/MediaImage/25939685212262",
+          "position": 1,
+          "filename": "https://cdn.shopify.com/s/files/1/0148/9561/2004/files/S226-4013_BSP024_416067_STORM_PETALS_FINAL_hero_image__002_40ae1aaf-9f51-411a-b4fe-10b86f38e48b.jpg?v=1767716388"
+        }
+      ]
+    },
+    "handle": "magee-top-storm-petals",
+    "manifest": {
+      "has_editorial": false
+    },
+    "assessment": "SHOPIFY_HAS_HERO_MANIFEST_MISSING"
+  },
+  {
+    "cpi": "4015-000172",
+    "product_gid": "gid://shopify/Product/7716189208678",
+    "shopify": {
+      "media_count": 6,
+      "hero_candidates": [
+        {
+          "media_gid": "gid://shopify/MediaImage/25939692060774",
+          "position": 0,
+          "filename": "https://cdn.shopify.com/s/files/1/0148/9561/2004/files/S226-4015_BSS033_000172_TAPIOCA_FINAL_ghost_0497_e88c7bd5-62d2-47b1-8f10-e8e7cdeb01bb.jpg?v=1767716497"
+        },
+        {
+          "media_gid": "gid://shopify/MediaImage/25940489240678",
+          "position": 1,
+          "filename": "https://cdn.shopify.com/s/files/1/0148/9561/2004/files/S226-4015BSS033000172TAPIOCA_FINAL_hero_image_0084.jpg?v=1767733732"
+        }
+      ]
+    },
+    "handle": "chika-top-tapioca",
+    "manifest": {
+      "has_editorial": false
+    },
+    "assessment": "SHOPIFY_HAS_HERO_MANIFEST_MISSING"
+  },
+  {
+    "cpi": "4015-416102",
+    "product_gid": "gid://shopify/Product/7716189143142",
+    "shopify": {
+      "media_count": 7,
+      "hero_candidates": [
+        {
+          "media_gid": "gid://shopify/MediaImage/25939683049574",
+          "position": 0,
+          "filename": "https://cdn.shopify.com/s/files/1/0148/9561/2004/files/S226-4015_BSP024_416102_IVORY_ALLOVER_PETALS_FINAL_ghost_0395_07b97a45-165f-44fd-b113-a1db2550e52f.jpg?v=1767716381"
+        },
+        {
+          "media_gid": "gid://shopify/MediaImage/25939683082342",
+          "position": 1,
+          "filename": "https://cdn.shopify.com/s/files/1/0148/9561/2004/files/S226-4015_BSP024_416102_IVORY_ALLOVER_PETALS_FINAL_hero_image__018_04d7aa52-df84-4fe9-9429-551c61e9c88e.jpg?v=1767716381"
+        },
+        {
+          "media_gid": "gid://shopify/MediaImage/25939683115110",
+          "position": 2,
+          "filename": "https://cdn.shopify.com/s/files/1/0148/9561/2004/files/S226-4015_BSP024_416102_IVORY_ALLOVER_PETALS_FINAL_hero_image__033_9c2f8df1-daf4-4630-8d9b-489930859630.jpg?v=1767716382"
+        }
+      ]
+    },
+    "handle": "chika-top-ivory-allover-petals",
+    "manifest": {
+      "has_editorial": false
+    },
+    "assessment": "SHOPIFY_HAS_HERO_MANIFEST_MISSING"
+  },
+  {
+    "cpi": "4015-416563",
+    "product_gid": "gid://shopify/Product/7716189175910",
+    "shopify": {
+      "media_count": 0,
+      "hero_candidates": []
+    },
+    "handle": "chika-top-maroon-allover-petals",
+    "manifest": {
+      "has_editorial": false
+    },
+    "assessment": "OK"
+  },
+  {
+    "cpi": "4016-416102",
+    "product_gid": "gid://shopify/Product/7716189241446",
+    "shopify": {
+      "media_count": 8,
+      "hero_candidates": [
+        {
+          "media_gid": "gid://shopify/MediaImage/25939686260838",
+          "position": 0,
+          "filename": "https://cdn.shopify.com/s/files/1/0148/9561/2004/files/S226-4016_SCP015_416102_IVORY_ALLOVER_PETALS_FINAL_ghost_0569_6cc4577e-3b7f-4add-a8da-cf23afe2e6b0.jpg?v=1767716390"
+        },
+        {
+          "media_gid": "gid://shopify/MediaImage/25939686293606",
+          "position": 1,
+          "filename": "https://cdn.shopify.com/s/files/1/0148/9561/2004/files/S226-4016_SCP015_416102_IVORY_ALLOVER_PETALS_FINAL_hero_image__061_99e66b79-ef2b-4838-bb90-b443a98f14be.jpg?v=1767716391"
+        }
+      ]
+    },
+    "handle": "siggi-top-ivory-allover-petals",
+    "manifest": {
+      "has_editorial": false
+    },
+    "assessment": "SHOPIFY_HAS_HERO_MANIFEST_MISSING"
+  },
+  {
+    "cpi": "5003-416067",
+    "product_gid": "gid://shopify/Product/7716189274214",
+    "shopify": {
+      "media_count": 6,
+      "hero_candidates": [
+        {
+          "media_gid": "gid://shopify/MediaImage/25939685605478",
+          "position": 0,
+          "filename": "https://cdn.shopify.com/s/files/1/0148/9561/2004/files/S226-5003_BYP050_416067_STORM_PETALS_FINAL_ghost_0035_fb40a540-027e-421b-8ca7-3528394ab5c8.jpg?v=1767716389"
+        },
+        {
+          "media_gid": "gid://shopify/MediaImage/25939685638246",
+          "position": 1,
+          "filename": "https://cdn.shopify.com/s/files/1/0148/9561/2004/files/S226-5003_BYP050_416067_STORM_PETALS_FINAL_hero_image__031_88ff7636-035b-4f9d-ba5a-5107fc6c18fd.jpg?v=1767716389"
+        }
+      ]
+    },
+    "handle": "monti-skirt-storm-petals",
+    "manifest": {
+      "has_editorial": false
+    },
+    "assessment": "SHOPIFY_HAS_HERO_MANIFEST_MISSING"
+  },
+  {
+    "cpi": "5017-416102",
+    "product_gid": "gid://shopify/Product/7716189339750",
+    "shopify": {
+      "media_count": 6,
+      "hero_candidates": [
+        {
+          "media_gid": "gid://shopify/MediaImage/25939684982886",
+          "position": 0,
+          "filename": "https://cdn.shopify.com/s/files/1/0148/9561/2004/files/S226-5017_SCP015_416102_IVORY_PETALS_FINAL_ghost_0050_932811e8-45f1-4c12-afc0-3581eecd1259.jpg?v=1767716387"
+        },
+        {
+          "media_gid": "gid://shopify/MediaImage/25939685015654",
+          "position": 1,
+          "filename": "https://cdn.shopify.com/s/files/1/0148/9561/2004/files/S226-5017_SCP015_416102_IVORY_PETALS_FINAL_hero_image__019_656a23c0-9f1e-4b30-a616-e71e2f0385f1.jpg?v=1767716387"
+        }
+      ]
+    },
+    "handle": "linnie-skirt-ivory-petals",
+    "manifest": {
+      "has_editorial": false
+    },
+    "assessment": "SHOPIFY_HAS_HERO_MANIFEST_MISSING"
+  },
+  {
+    "cpi": "6003-000182",
+    "product_gid": "gid://shopify/Product/7716189372518",
+    "shopify": {
+      "media_count": 6,
+      "hero_candidates": [
+        {
+          "media_gid": "gid://shopify/MediaImage/25940708229222",
+          "position": 0,
+          "filename": "https://cdn.shopify.com/s/files/1/0148/9561/2004/files/S226-6003AWS016000182TAHINI_FINAL_ghost_0247.jpg?v=1767735836"
+        },
+        {
+          "media_gid": "gid://shopify/MediaImage/25940709408870",
+          "position": 1,
+          "filename": "https://cdn.shopify.com/s/files/1/0148/9561/2004/files/S226-6003AWS016000182TAHINI_FINAL_hero_image_0001.jpg?v=1767735846"
+        }
+      ]
+    },
+    "handle": "chapman-pant-tahini",
+    "manifest": {
+      "has_editorial": false
+    },
+    "assessment": "SHOPIFY_HAS_HERO_MANIFEST_MISSING"
+  },
+  {
+    "cpi": "6007-000147",
+    "product_gid": "gid://shopify/Product/7716189470822",
+    "shopify": {
+      "media_count": 6,
+      "hero_candidates": [
+        {
+          "media_gid": "gid://shopify/MediaImage/25939691995238",
+          "position": 0,
+          "filename": "https://cdn.shopify.com/s/files/1/0148/9561/2004/files/S226-6007_AIQ003_000147_MORTAR_MELANGE_FINAL_ghost_0184_8e0b09a7-01c1-4184-9570-d543ddc5d423.jpg?v=1767716496"
+        },
+        {
+          "media_gid": "gid://shopify/MediaImage/25940506083430",
+          "position": 1,
+          "filename": "https://cdn.shopify.com/s/files/1/0148/9561/2004/files/S226-6014AIQ003000147MORTARMELANGE_FINAL_hero_image_0001.jpg?v=1767733872"
+        }
+      ]
+    },
+    "handle": "dash-pant-mortar-melange",
+    "manifest": {
+      "has_editorial": false
+    },
+    "assessment": "SHOPIFY_HAS_HERO_MANIFEST_MISSING"
+  },
+  {
+    "cpi": "6007-000479",
+    "product_gid": "gid://shopify/Product/7716189405286",
+    "shopify": {
+      "media_count": 6,
+      "hero_candidates": [
+        {
+          "media_gid": "gid://shopify/MediaImage/25939683770470",
+          "position": 0,
+          "filename": "https://cdn.shopify.com/s/files/1/0148/9561/2004/files/S226-6007_AIM001_000479_MIDNIGHT_MELANGE_FINAL_ghost_0165_e70773a7-db13-4ea7-ac89-a503c1cb6c3c.jpg?v=1767716384"
+        },
+        {
+          "media_gid": "gid://shopify/MediaImage/25939683803238",
+          "position": 1,
+          "filename": "https://cdn.shopify.com/s/files/1/0148/9561/2004/files/S226-6007_AIM001_000479_MIDNIGHT_MELANGE_FINAL_hero_image__007_c5291205-54b3-4bb7-b675-7fde69ada703.jpg?v=1767716384"
+        }
+      ]
+    },
+    "handle": "dash-pant-midnight-melange",
+    "manifest": {
+      "has_editorial": false
+    },
+    "assessment": "SHOPIFY_HAS_HERO_MANIFEST_MISSING"
+  },
+  {
+    "cpi": "6014-000147",
+    "product_gid": "gid://shopify/Product/7716189536358",
+    "shopify": {
+      "media_count": 5,
+      "hero_candidates": [
+        {
+          "media_gid": "gid://shopify/MediaImage/25940545863782",
+          "position": 0,
+          "filename": "https://cdn.shopify.com/s/files/1/0148/9561/2004/files/S226-6007AIQ003000147MORTARMELANGE_FINAL_hero_image_0001.jpg?v=1767734173"
+        },
+        {
+          "media_gid": "gid://shopify/MediaImage/25940545896550",
+          "position": 1,
+          "filename": "https://cdn.shopify.com/s/files/1/0148/9561/2004/files/S226-6007AIQ003000147MORTARMELANGE_FINAL_model_image_1_0011.jpg?v=1767734173"
+        }
+      ]
+    },
+    "handle": "fossett-pant-mortar-melange",
+    "manifest": {
+      "has_editorial": false
+    },
+    "assessment": "SHOPIFY_HAS_HERO_MANIFEST_MISSING"
+  },
+  {
+    "cpi": "6014-000182",
+    "product_gid": "gid://shopify/Product/7716189569126",
+    "shopify": {
+      "media_count": 6,
+      "hero_candidates": [
+        {
+          "media_gid": "gid://shopify/MediaImage/25939684589670",
+          "position": 0,
+          "filename": "https://cdn.shopify.com/s/files/1/0148/9561/2004/files/S226-6014_AWQ015_000182_TAHINI_MELANGE_FINAL_ghost_0404_603a85b0-3188-4e9a-814c-6854dafeb743.jpg?v=1767716387"
+        },
+        {
+          "media_gid": "gid://shopify/MediaImage/25939684622438",
+          "position": 1,
+          "filename": "https://cdn.shopify.com/s/files/1/0148/9561/2004/files/S226-6014_AWQ015_000182_TAHINI_MELANGE_FINAL_hero_image__018_6514955e-05ea-4195-a762-aaef0dc01f03.jpg?v=1767716385"
+        }
+      ]
+    },
+    "handle": "fossett-pant-tahini-melange",
+    "manifest": {
+      "has_editorial": false
+    },
+    "assessment": "SHOPIFY_HAS_HERO_MANIFEST_MISSING"
+  },
+  {
+    "cpi": "6014-000479",
+    "product_gid": "gid://shopify/Product/7716189503590",
+    "shopify": {
+      "media_count": 5,
+      "hero_candidates": [
+        {
+          "media_gid": "gid://shopify/MediaImage/25940538163302",
+          "position": 0,
+          "filename": "https://cdn.shopify.com/s/files/1/0148/9561/2004/files/S226-6014AIM001000479MIDNIGHTMELANGE_FINAL_hero_image_0030_5a0e777b-1ab7-47d8-a0a6-c48631475ff8.jpg?v=1767734118"
+        },
+        {
+          "media_gid": "gid://shopify/MediaImage/25940531052646",
+          "position": 1,
+          "filename": "https://cdn.shopify.com/s/files/1/0148/9561/2004/files/S226-6014AIM001000479MIDNIGHTMELANGE_FINAL_model_image_1_0033.jpg?v=1767734118"
+        }
+      ]
+    },
+    "handle": "fossett-pant-midnight-melange",
+    "manifest": {
+      "has_editorial": false
+    },
+    "assessment": "SHOPIFY_HAS_HERO_MANIFEST_MISSING"
+  },
+  {
+    "cpi": "7155-381001",
+    "product_gid": "gid://shopify/Product/7716189700198",
+    "shopify": {
+      "media_count": 5,
+      "hero_candidates": [
+        {
+          "media_gid": "gid://shopify/MediaImage/25940829274214",
+          "position": 0,
+          "filename": "https://cdn.shopify.com/s/files/1/0148/9561/2004/files/SS26-7155-STS007-381001-BLACK-SILVER_FINAL_ghost_front_0494_main_1.jpg?v=1767737282"
+        },
+        {
+          "media_gid": "gid://shopify/MediaImage/25940827897958",
+          "position": 1,
+          "filename": "https://cdn.shopify.com/s/files/1/0148/9561/2004/files/S226-7155STS007381001BLACK_0007_41a671ec-dfb0-4505-8ed5-781b01f34890.jpg?v=1767737282"
+        }
+      ]
+    },
+    "handle": "knot-basket-small-black-silver",
+    "manifest": {
+      "has_editorial": false
+    },
+    "assessment": "SHOPIFY_HAS_HERO_MANIFEST_MISSING"
+  },
+  {
+    "cpi": "7157-000689",
+    "product_gid": "gid://shopify/Product/7716189732966",
+    "shopify": {
+      "media_count": 4,
+      "hero_candidates": [
+        {
+          "media_gid": "gid://shopify/MediaImage/25940633780326",
+          "position": 0,
+          "filename": "https://cdn.shopify.com/s/files/1/0148/9561/2004/files/SS26-7157-STS002-000689-PALE-BLUSH_FINAL_ghost_front_0410_main.jpg?v=1767735006"
+        },
+        {
+          "media_gid": "gid://shopify/MediaImage/25939691929702",
+          "position": 1,
+          "filename": "https://cdn.shopify.com/s/files/1/0148/9561/2004/files/S226-7157_STS002_000689_PALE_BLUSH_001_fca21abf-54bf-4059-9718-37fa0b775a17.jpg?v=1767735006"
+        }
+      ]
+    },
+    "handle": "basket-clutch-pale-blush",
+    "manifest": {
+      "has_editorial": false
+    },
+    "assessment": "SHOPIFY_HAS_HERO_MANIFEST_MISSING"
+  },
+  {
+    "cpi": "7157-381182",
+    "product_gid": "gid://shopify/Product/7716189765734",
+    "shopify": {
+      "media_count": 5,
+      "hero_candidates": [
+        {
+          "media_gid": "gid://shopify/MediaImage/25940638924902",
+          "position": 0,
+          "filename": "https://cdn.shopify.com/s/files/1/0148/9561/2004/files/SS26-7157-STS007-381182-TAHINI-SILVER_FINAL_ghost_front_0230_main.jpg?v=1767735066"
+        },
+        {
+          "media_gid": "gid://shopify/MediaImage/25939691896934",
+          "position": 1,
+          "filename": "https://cdn.shopify.com/s/files/1/0148/9561/2004/files/S226-7157_STS007_381182_TAHINI_SILVER_046_91f35979-65b7-4236-9906-d10ea5bbf5b5.jpg?v=1767735066"
+        }
+      ]
+    },
+    "handle": "basket-clutch-tahini-silver",
+    "manifest": {
+      "has_editorial": false
+    },
+    "assessment": "SHOPIFY_HAS_HERO_MANIFEST_MISSING"
+  },
+  {
+    "cpi": "7159-381001",
+    "product_gid": "gid://shopify/Product/7716189798502",
+    "shopify": {
+      "media_count": 5,
+      "hero_candidates": [
+        {
+          "media_gid": "gid://shopify/MediaImage/25940645249126",
+          "position": 0,
+          "filename": "https://cdn.shopify.com/s/files/1/0148/9561/2004/files/SS26-7159-STS007-381001-BLACK-SILVER_FINAL_ghost_front_0538_main.jpg?v=1767735128"
+        },
+        {
+          "media_gid": "gid://shopify/MediaImage/25939691864166",
+          "position": 1,
+          "filename": "https://cdn.shopify.com/s/files/1/0148/9561/2004/files/S226-7159_STS007_381001_BLACK_SILVER_005_6e804ada-ef44-4cbc-915f-9a88fb41dabe.jpg?v=1767735128"
+        }
+      ]
+    },
+    "handle": "knot-basket-crossbody-black-silver",
+    "manifest": {
+      "has_editorial": false
+    },
+    "assessment": "SHOPIFY_HAS_HERO_MANIFEST_MISSING"
+  },
+  {
+    "cpi": "7165-000414",
+    "product_gid": "gid://shopify/Product/7716189864038",
+    "shopify": {
+      "media_count": 5,
+      "hero_candidates": [
+        {
+          "media_gid": "gid://shopify/MediaImage/25940651737190",
+          "position": 0,
+          "filename": "https://cdn.shopify.com/s/files/1/0148/9561/2004/files/SS26-7165-STS002-000414-DANUBE_FINAL_ghost_front_0430_main.jpg?v=1767735204"
+        },
+        {
+          "media_gid": "gid://shopify/MediaImage/25939691765862",
+          "position": 1,
+          "filename": "https://cdn.shopify.com/s/files/1/0148/9561/2004/files/S226-7165_STS002_000414_DANUBE_002_1cc7c344-6da1-45a4-88a0-ef24896e0c3f.jpg?v=1767735204"
+        }
+      ]
+    },
+    "handle": "knot-basket-small-long-handle-danube",
+    "manifest": {
+      "has_editorial": false
+    },
+    "assessment": "SHOPIFY_HAS_HERO_MANIFEST_MISSING"
+  },
+  {
+    "cpi": "7168-000001",
+    "product_gid": "gid://shopify/Product/7716189995110",
+    "shopify": {
+      "media_count": 5,
+      "hero_candidates": [
+        {
+          "media_gid": "gid://shopify/MediaImage/25940660420710",
+          "position": 0,
+          "filename": "https://cdn.shopify.com/s/files/1/0148/9561/2004/files/SS26-7168-LLS061-000001-BLACK_FINAL_ghost_front_0603_main.jpg?v=1767735314"
+        },
+        {
+          "media_gid": "gid://shopify/MediaImage/25939691700326",
+          "position": 1,
+          "filename": "https://cdn.shopify.com/s/files/1/0148/9561/2004/files/S226-7168_LLS061_000001_BLACK_004_c45c7669-2167-4808-9e98-c633fb2fb564.jpg?v=1767735314"
+        }
+      ]
+    },
+    "handle": "loquette-flap-bag-black",
+    "manifest": {
+      "has_editorial": false
+    },
+    "assessment": "SHOPIFY_HAS_HERO_MANIFEST_MISSING"
+  },
+  {
+    "cpi": "7168-000907",
+    "product_gid": "gid://shopify/Product/7716189896806",
+    "shopify": {
+      "media_count": 5,
+      "hero_candidates": [
+        {
+          "media_gid": "gid://shopify/MediaImage/25940655243366",
+          "position": 0,
+          "filename": "https://cdn.shopify.com/s/files/1/0148/9561/2004/files/SS26-7168-ELP013-000907-PYTHON_FINAL_ghost_front_0517_main.jpg?v=1767735265"
+        },
+        {
+          "media_gid": "gid://shopify/MediaImage/25939691733094",
+          "position": 1,
+          "filename": "https://cdn.shopify.com/s/files/1/0148/9561/2004/files/S226-7168_ELP013_000907_PYTHON_002_04c2e84e-4be3-4bc4-bbd9-59d32cd88581.jpg?v=1767735265"
+        }
+      ]
+    },
+    "handle": "loquette-flap-bag-python",
+    "manifest": {
+      "has_editorial": false
+    },
+    "assessment": "SHOPIFY_HAS_HERO_MANIFEST_MISSING"
+  },
+  {
+    "cpi": "8301-000001",
+    "product_gid": "gid://shopify/Product/7716190027878",
+    "shopify": {
+      "media_count": 6,
+      "hero_candidates": [
+        {
+          "media_gid": "gid://shopify/MediaImage/25939682656358",
+          "position": 0,
+          "filename": "https://cdn.shopify.com/s/files/1/0148/9561/2004/files/S226-8301_KCS049_000001_BLACK_FINAL_ghost_0010_34c7c56b-3212-41d8-a9e1-920a7bad9a70.jpg?v=1767716380"
+        },
+        {
+          "media_gid": "gid://shopify/MediaImage/25939682689126",
+          "position": 1,
+          "filename": "https://cdn.shopify.com/s/files/1/0148/9561/2004/files/S226-8301_KCS049_000001_BLACK_FINAL_hero_image__013_c1e4bd43-232e-42fa-9e6d-75970d3f9357.jpg?v=1767716380"
+        }
+      ]
+    },
+    "handle": "arp-dress-black",
+    "manifest": {
+      "has_editorial": false
+    },
+    "assessment": "SHOPIFY_HAS_HERO_MANIFEST_MISSING"
+  },
+  {
+    "cpi": "8301-000258",
+    "product_gid": "gid://shopify/Product/7716190060646",
+    "shopify": {
+      "media_count": 6,
+      "hero_candidates": [
+        {
+          "media_gid": "gid://shopify/MediaImage/25939691667558",
+          "position": 0,
+          "filename": "https://cdn.shopify.com/s/files/1/0148/9561/2004/files/S226-8301_KCS049_000258_TOFFEE_FINAL_ghost_0111_12c9757d-4ea7-4cf9-b9ec-46e761205990.jpg?v=1767716489"
+        },
+        {
+          "media_gid": "gid://shopify/MediaImage/25940473118822",
+          "position": 1,
+          "filename": "https://cdn.shopify.com/s/files/1/0148/9561/2004/files/S226-8301KCS049000258TOFFEE_FINAL_hero_image_0038.jpg?v=1767733616"
+        }
+      ]
+    },
+    "handle": "arp-dress-toffee",
+    "manifest": {
+      "has_editorial": false
+    },
+    "assessment": "SHOPIFY_HAS_HERO_MANIFEST_MISSING"
+  },
+  {
+    "cpi": "8307-000001",
+    "product_gid": "gid://shopify/Product/7716190093414",
+    "shopify": {
+      "media_count": 7,
+      "hero_candidates": [
+        {
+          "media_gid": "gid://shopify/MediaImage/25939686981734",
+          "position": 0,
+          "filename": "https://cdn.shopify.com/s/files/1/0148/9561/2004/files/S226-8307_KYS081_000001_BLACK_FINAL_ghost_0063_e8ab505b-ca6b-4246-a746-60145f0bc2f4.jpg?v=1767716394"
+        },
+        {
+          "media_gid": "gid://shopify/MediaImage/25939687014502",
+          "position": 1,
+          "filename": "https://cdn.shopify.com/s/files/1/0148/9561/2004/files/S226-8307_KYS081_000001_BLACK_FINAL_hero_image__009_a0e40626-f12f-4387-8152-76ddf7b72e02.jpg?v=1767716393"
+        }
+      ]
+    },
+    "handle": "winnie-dress-black",
+    "manifest": {
+      "has_editorial": false
+    },
+    "assessment": "SHOPIFY_HAS_HERO_MANIFEST_MISSING"
+  },
+  {
+    "cpi": "8307-000649",
+    "product_gid": "gid://shopify/Product/7716190126182",
+    "shopify": {
+      "media_count": 6,
+      "hero_candidates": [
+        {
+          "media_gid": "gid://shopify/MediaImage/25939691634790",
+          "position": 0,
+          "filename": "https://cdn.shopify.com/s/files/1/0148/9561/2004/files/S226-8307_KYS081_000649_HOLLY_RED_FINAL_ghost_0089_4a6694d3-cec8-4d00-994b-a566d12100a5.jpg?v=1767716488"
+        },
+        {
+          "media_gid": "gid://shopify/MediaImage/25940603928678",
+          "position": 1,
+          "filename": "https://cdn.shopify.com/s/files/1/0148/9561/2004/files/S226-8307KYS081000649HOLLYRED_FINAL_hero_image_0012.jpg?v=1767734690"
+        }
+      ]
+    },
+    "handle": "winnie-dress-holly-red",
+    "manifest": {
+      "has_editorial": false
+    },
+    "assessment": "SHOPIFY_HAS_HERO_MANIFEST_MISSING"
+  },
+  {
+    "cpi": "8308-000102",
+    "product_gid": "gid://shopify/Product/7716190158950",
+    "shopify": {
+      "media_count": 6,
+      "hero_candidates": [
+        {
+          "media_gid": "gid://shopify/MediaImage/25939691602022",
+          "position": 0,
+          "filename": "https://cdn.shopify.com/s/files/1/0148/9561/2004/files/S226-8308_KYS078_000102_IVORY_FINAL_ghost_0470_e3303609-b9bf-462d-a0f4-f1838b1321a4.jpg?v=1767716487"
+        },
+        {
+          "media_gid": "gid://shopify/MediaImage/25940598292582",
+          "position": 1,
+          "filename": "https://cdn.shopify.com/s/files/1/0148/9561/2004/files/S226-8308KYS078000102IVORY_FINAL_hero_image_0750.jpg?v=1767734629"
+        }
+      ]
+    },
+    "handle": "penrose-dress-ivory",
+    "manifest": {
+      "has_editorial": false
+    },
+    "assessment": "SHOPIFY_HAS_HERO_MANIFEST_MISSING"
+  },
+  {
+    "cpi": "8309-000689",
+    "product_gid": "gid://shopify/Product/7716190257254",
+    "shopify": {
+      "media_count": 5,
+      "hero_candidates": [
+        {
+          "media_gid": "gid://shopify/MediaImage/25939686817894",
+          "position": 0,
+          "filename": "https://cdn.shopify.com/s/files/1/0148/9561/2004/files/S226-8309_KYS078_000689_PALE_BLUSH_FINAL_ghost_0904_d5921277-dc4f-4cc6-9c89-0a603a1973a0.jpg?v=1767716392"
+        },
+        {
+          "media_gid": "gid://shopify/MediaImage/25939686850662",
+          "position": 1,
+          "filename": "https://cdn.shopify.com/s/files/1/0148/9561/2004/files/S226-8309_KYS078_000689_PALE_BLUSH_FINAL_hero_image__004_793f1b04-6356-475b-9be9-005bf3de541e.jpg?v=1767716393"
+        }
+      ]
+    },
+    "handle": "wells-dress-pale-blush",
+    "manifest": {
+      "has_editorial": false
+    },
+    "assessment": "SHOPIFY_HAS_HERO_MANIFEST_MISSING"
+  },
+  {
+    "cpi": "8322-000001",
+    "product_gid": "gid://shopify/Product/7716190322790",
+    "shopify": {
+      "media_count": 6,
+      "hero_candidates": [
+        {
+          "media_gid": "gid://shopify/MediaImage/25939691569254",
+          "position": 0,
+          "filename": "https://cdn.shopify.com/s/files/1/0148/9561/2004/files/S226-8322_KYS078_000001_BLACK_FINAL_ghost_0057_5e531811-ddd9-4905-a8f7-7c91d4050664.jpg?v=1767716486"
+        },
+        {
+          "media_gid": "gid://shopify/MediaImage/25940611924070",
+          "position": 1,
+          "filename": "https://cdn.shopify.com/s/files/1/0148/9561/2004/files/S226-8322KYS078000001BLACK_FINAL_hero_image_0033.jpg?v=1767734769"
+        }
+      ]
+    },
+    "handle": "woolfe-dress-black",
+    "manifest": {
+      "has_editorial": false
+    },
+    "assessment": "SHOPIFY_HAS_HERO_MANIFEST_MISSING"
+  },
+  {
+    "cpi": "8401-000001",
+    "product_gid": "gid://shopify/Product/7716190355558",
+    "shopify": {
+      "media_count": 6,
+      "hero_candidates": [
+        {
+          "media_gid": "gid://shopify/MediaImage/25939691536486",
+          "position": 0,
+          "filename": "https://cdn.shopify.com/s/files/1/0148/9561/2004/files/S226-8401_KYS078_000001_BLACK_FINAL_ghost_0817_cf83aae2-d06e-40e9-8f5b-b64f30ed6302.jpg?v=1767716486"
+        },
+        {
+          "media_gid": "gid://shopify/MediaImage/25949876322406",
+          "position": 1,
+          "filename": "https://cdn.shopify.com/s/files/1/0148/9561/2004/files/S226-8401KYS078000001BLACK_FINAL_hero_image_0018.jpg?v=1767975862"
+        }
+      ]
+    },
+    "handle": "erik-top-black",
+    "manifest": {
+      "has_editorial": false
+    },
+    "assessment": "SHOPIFY_HAS_HERO_MANIFEST_MISSING"
+  },
+  {
+    "cpi": "8807-000001",
+    "product_gid": "gid://shopify/Product/7716190421094",
+    "shopify": {
+      "media_count": 6,
+      "hero_candidates": [
+        {
+          "media_gid": "gid://shopify/MediaImage/25939683278950",
+          "position": 0,
+          "filename": "https://cdn.shopify.com/s/files/1/0148/9561/2004/files/S226-8807_KCS049_000001_BLACK_FINAL_ghost_0679_63289003-ac1b-4a8f-a015-2717ca4a9529.jpg?v=1767716382"
+        },
+        {
+          "media_gid": "gid://shopify/MediaImage/25939683311718",
+          "position": 1,
+          "filename": "https://cdn.shopify.com/s/files/1/0148/9561/2004/files/S226-8807_KCS049_000001_BLACK_FINAL_hero_image__031_32c32ce0-5407-4ae5-acce-d8c80cd58741.jpg?v=1767716382"
+        }
+      ]
+    },
+    "handle": "clay-sweater-black",
+    "manifest": {
+      "has_editorial": false
+    },
+    "assessment": "SHOPIFY_HAS_HERO_MANIFEST_MISSING"
+  },
+  {
+    "cpi": "8807-000398",
+    "product_gid": "gid://shopify/Product/7716190486630",
+    "shopify": {
+      "media_count": 6,
+      "hero_candidates": [
+        {
+          "media_gid": "gid://shopify/MediaImage/25939691503718",
+          "position": 0,
+          "filename": "https://cdn.shopify.com/s/files/1/0148/9561/2004/files/S226-8807_KCS049_000398_DESERT_SAGE_FINAL_ghost_0669_5a910613-1335-4b03-8f27-eaba5d18ae49.jpg?v=1767716485"
+        },
+        {
+          "media_gid": "gid://shopify/MediaImage/25940496973926",
+          "position": 1,
+          "filename": "https://cdn.shopify.com/s/files/1/0148/9561/2004/files/S226-8807KCS049000398DESERTSAGE_FINAL_hero_image_0034.jpg?v=1767733798"
+        }
+      ]
+    },
+    "handle": "clay-sweater-desert-sage",
+    "manifest": {
+      "has_editorial": false
+    },
+    "assessment": "SHOPIFY_HAS_HERO_MANIFEST_MISSING"
+  },
+  {
+    "cpi": "8808-000001",
+    "product_gid": "gid://shopify/Product/7716190519398",
+    "shopify": {
+      "media_count": 1,
+      "hero_candidates": [
+        {
+          "media_gid": "gid://shopify/MediaImage/25939691307110",
+          "position": 0,
+          "filename": "https://cdn.shopify.com/s/files/1/0148/9561/2004/files/S226-8808_KCS049_000001_BLACK_FINAL_ghost_0610_0cc34e72-6a88-43b1-b2f1-5dde39108c1d.jpg?v=1767716484"
+        }
+      ]
+    },
+    "handle": "maddox-sweater-black",
+    "manifest": {
+      "has_editorial": false
+    },
+    "assessment": "SHOPIFY_HAS_HERO_MANIFEST_MISSING"
+  },
+  {
+    "cpi": "8808-000258",
+    "product_gid": "gid://shopify/Product/7716190552166",
+    "shopify": {
+      "media_count": 6,
+      "hero_candidates": [
+        {
+          "media_gid": "gid://shopify/MediaImage/25939691274342",
+          "position": 0,
+          "filename": "https://cdn.shopify.com/s/files/1/0148/9561/2004/files/S226-8808_KCS049_000258_TOFFEE_FINAL_ghost_0527_11a6a964-de39-479a-9b09-9d68d8e40269.jpg?v=1767716484"
+        },
+        {
+          "media_gid": "gid://shopify/MediaImage/25940572504166",
+          "position": 1,
+          "filename": "https://cdn.shopify.com/s/files/1/0148/9561/2004/files/S226-8808KCS049000258TOFFEE_FINAL_hero_image_0013.jpg?v=1767734395"
+        }
+      ]
+    },
+    "handle": "maddox-sweater-toffee",
+    "manifest": {
+      "has_editorial": false
+    },
+    "assessment": "SHOPIFY_HAS_HERO_MANIFEST_MISSING"
+  }
+]

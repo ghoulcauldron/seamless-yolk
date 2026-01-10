@@ -18,7 +18,7 @@ def load_manifest(capsule: str):
     manifest_path = pathlib.Path(f"capsules/{capsule}/manifests/images_manifest.jsonl")
     records = [json.loads(line) for line in manifest_path.read_text().splitlines() if line.strip()]
     # This script's scope is only swatches and editorials (for look_image)
-    return [r for r in records if r["asset_type"] in ("swatches", "editorials")]
+    return [r for r in records if r["asset_type"] == "swatches"]
 
 def load_product_map(capsule: str):
     mapping_path = pathlib.Path(f"capsules/{capsule}/manifests/product_map.json")
@@ -36,9 +36,16 @@ def resolve_handle_from_state(gate: StateGate, cpi: str) -> str | None:
             return handle
     return None
 
+def append_result(path: pathlib.Path, record: dict):
+    with path.open("a", encoding="utf-8") as f:
+        f.write(json.dumps(record) + "\n")
+
 def main(capsule: str, dry_run: bool = False, debug_cpi: str = None, cpis: list | None = None, verbose: bool = False):
     client = ShopifyClient(verbose=verbose)
     gate = StateGate(f"capsules/{capsule}/state/product_state_{capsule}.json")
+
+    results_log_path = pathlib.Path(f"capsules/{capsule}/outputs/metafields_results_{capsule}.jsonl")
+    results_log_path.parent.mkdir(parents=True, exist_ok=True)
 
     # Determine CPI scope
     if debug_cpi:
@@ -72,7 +79,7 @@ def main(capsule: str, dry_run: bool = False, debug_cpi: str = None, cpis: list 
     if debug_cpi:
         print(f"--- Running in DEBUG mode for CPI: {debug_cpi} ---")
         if not manifest:
-            print(f"❌ No swatch or editorial assets found in manifest for CPI {debug_cpi}.")
+            print(f"❌ No swatch assets found in manifest for CPI {debug_cpi}.")
             return
         print("\n--- Full Existing Files Map (first 10 items for brevity) ---")
         print(json.dumps(dict(list(existing_files_map.items())[:10]), indent=2))
@@ -111,6 +118,24 @@ def main(capsule: str, dry_run: bool = False, debug_cpi: str = None, cpis: list 
             print(f"⏭ Skipping metafield write for {handle}: {decision.reason}")
             swatch_status = "skipped"
             look_status = "skipped"
+            append_result(results_log_path, {
+                "cpi": cpi,
+                "handle": handle,
+                "product_gid": None,
+                "action": "SKIP_GATE",
+                "metafield": "swatch_image",
+                "reason": decision.reason,
+                "timestamp": __import__('datetime').datetime.utcnow().isoformat() + "Z"
+            })
+            append_result(results_log_path, {
+                "cpi": cpi,
+                "handle": handle,
+                "product_gid": None,
+                "action": "SKIP_GATE",
+                "metafield": "look_image",
+                "reason": decision.reason,
+                "timestamp": __import__('datetime').datetime.utcnow().isoformat() + "Z"
+            })
             print(f"[CPI SUMMARY] {cpi} | handle={handle} | gate=DENY | swatch={swatch_status} | look={look_status}")
             continue
 
@@ -118,24 +143,37 @@ def main(capsule: str, dry_run: bool = False, debug_cpi: str = None, cpis: list 
             # No product GID mapping found; treat as missing uploads
             swatch_status = "missing"
             look_status = "missing"
+            append_result(results_log_path, {
+                "cpi": cpi,
+                "handle": handle,
+                "product_gid": None,
+                "action": "SKIP_NO_ASSET",
+                "metafield": "swatch_image",
+                "reason": "No product GID mapping found",
+                "timestamp": __import__('datetime').datetime.utcnow().isoformat() + "Z"
+            })
+            append_result(results_log_path, {
+                "cpi": cpi,
+                "handle": handle,
+                "product_gid": None,
+                "action": "SKIP_NO_ASSET",
+                "metafield": "look_image",
+                "reason": "No product GID mapping found",
+                "timestamp": __import__('datetime').datetime.utcnow().isoformat() + "Z"
+            })
             print(f"[CPI SUMMARY] {cpi} | handle={handle} | gate=ALLOW | swatch={swatch_status} | look={look_status}")
             continue
 
         product_gid = prod_map[cpi]
 
+        # Process swatch images from manifest (unchanged)
         for row in rows:
             asset_type = row["asset_type"]
             key = None
             if asset_type == "swatches":
                 key = "swatch_image"
-            # Hero images from editorials are used for look_image
-            elif asset_type == "editorials" and "hero_image" in row["filename"]:
-                key = "look_image"
 
             if not key:
-                continue
-
-            if row.get("is_accessory") and key == "look_image":
                 continue
 
             file_gid = None
@@ -160,8 +198,6 @@ def main(capsule: str, dry_run: bool = False, debug_cpi: str = None, cpis: list 
                     # Mark as skipped in dry-run/debug mode
                     if key == "swatch_image":
                         swatch_status = "skipped"
-                    elif key == "look_image":
-                        look_status = "skipped"
                     continue
 
                 if not local_path.exists():
@@ -176,8 +212,6 @@ def main(capsule: str, dry_run: bool = False, debug_cpi: str = None, cpis: list 
                     # Mark as skipped in dry-run/debug mode
                     if key == "swatch_image":
                         swatch_status = "skipped"
-                    elif key == "look_image":
-                        look_status = "skipped"
                     continue
 
                 resp = client.set_product_metafield(product_gid, key, file_gid)
@@ -189,19 +223,127 @@ def main(capsule: str, dry_run: bool = False, debug_cpi: str = None, cpis: list 
 
                 if key == "swatch_image":
                     swatch_status = "uploaded"
-                elif key == "look_image":
-                    look_status = "uploaded"
 
-        # If no rows found for swatch or look, keep status as missing unless updated
-        # But if status not updated from missing, it stays missing
+        # Process look_image from state only
+        state_product = gate.products.get(handle, {})
+        look_images = state_product.get("assets", {}).get("look_images", [])
+        preflight_status = state_product.get("preflight", {}).get("status")
+
+        if not look_images:
+            look_status = "skipped"
+            print(f"[LOOK_IMAGE] {cpi} | handle={handle} | reason=NO_LOOK_IMAGE_IN_STATE | action=SKIP")
+            append_result(results_log_path, {
+                "cpi": cpi,
+                "handle": handle,
+                "product_gid": product_gid,
+                "action": "SKIP_NO_ASSET",
+                "metafield": "look_image",
+                "reason": "NO_LOOK_IMAGE_IN_STATE",
+                "timestamp": __import__('datetime').datetime.utcnow().isoformat() + "Z"
+            })
+        elif preflight_status != "GO":
+            look_status = "skipped"
+            print(f"[LOOK_IMAGE] {cpi} | handle={handle} | reason=PRE_FLIGHT_STATUS_NOT_GO | action=SKIP")
+            append_result(results_log_path, {
+                "cpi": cpi,
+                "handle": handle,
+                "product_gid": product_gid,
+                "action": "SKIP_PREFLIGHT",
+                "metafield": "look_image",
+                "reason": "PRE_FLIGHT_STATUS_NOT_GO",
+                "timestamp": __import__('datetime').datetime.utcnow().isoformat() + "Z"
+            })
+        else:
+            target_media_gid = look_images[0].get("media_gid")
+            if not target_media_gid:
+                look_status = "skipped"
+                print(f"[LOOK_IMAGE] {cpi} | handle={handle} | reason=MEDIA_GID_MISSING | action=SKIP")
+                append_result(results_log_path, {
+                    "cpi": cpi,
+                    "handle": handle,
+                    "product_gid": product_gid,
+                    "action": "SKIP_NO_ASSET",
+                    "metafield": "look_image",
+                    "reason": "MEDIA_GID_MISSING",
+                    "timestamp": __import__('datetime').datetime.utcnow().isoformat() + "Z"
+                })
+            else:
+                # Read existing look_image metafield
+                existing_look_image = None
+                try:
+                    existing_look_image = client.get_product_metafield(product_gid, "look_image")
+                except Exception as e:
+                    print(f"[LOOK_IMAGE] {cpi} | handle={handle} | error=Failed to read existing metafield: {e}")
+
+                if existing_look_image == target_media_gid:
+                    look_status = "noop"
+                    print(f"[LOOK_IMAGE] {cpi} | handle={handle} | product_gid={product_gid} | target_media_gid={target_media_gid} | action=NOOP_ALREADY_SET")
+                    append_result(results_log_path, {
+                        "cpi": cpi,
+                        "handle": handle,
+                        "product_gid": product_gid,
+                        "action": "NOOP_ALREADY_SET",
+                        "metafield": "look_image",
+                        "target_media_gid": target_media_gid,
+                        "timestamp": __import__('datetime').datetime.utcnow().isoformat() + "Z"
+                    })
+                else:
+                    if dry_run or debug_cpi:
+                        look_status = "skipped"
+                        print(f"[LOOK_IMAGE] {cpi} | handle={handle} | product_gid={product_gid} | target_media_gid={target_media_gid} | action=SKIP (dry-run)")
+                        append_result(results_log_path, {
+                            "cpi": cpi,
+                            "handle": handle,
+                            "product_gid": product_gid,
+                            "action": "SKIP_PREFLIGHT",
+                            "metafield": "look_image",
+                            "target_media_gid": target_media_gid,
+                            "reason": "dry-run or debug mode",
+                            "timestamp": __import__('datetime').datetime.utcnow().isoformat() + "Z"
+                        })
+                    else:
+                        try:
+                            resp = client.set_product_metafield(product_gid, "look_image", target_media_gid)
+                            look_status = "wrote"
+                            jobs.append({
+                                "cpi": cpi,
+                                "handle": handle,
+                                "product_gid": product_gid,
+                                "target_media_gid": target_media_gid,
+                                "key": "look_image",
+                                "response": resp
+                            })
+                            print(f"[LOOK_IMAGE] {cpi} | handle={handle} | product_gid={product_gid} | target_media_gid={target_media_gid} | action=WROTE")
+                            append_result(results_log_path, {
+                                "cpi": cpi,
+                                "handle": handle,
+                                "product_gid": product_gid,
+                                "action": "WROTE",
+                                "metafield": "look_image",
+                                "target_media_gid": target_media_gid,
+                                "timestamp": __import__('datetime').datetime.utcnow().isoformat() + "Z"
+                            })
+                        except Exception as e:
+                            look_status = "skipped"
+                            print(f"[LOOK_IMAGE] {cpi} | handle={handle} | product_gid={product_gid} | target_media_gid={target_media_gid} | action=ERROR | error={e}")
+                            append_result(results_log_path, {
+                                "cpi": cpi,
+                                "handle": handle,
+                                "product_gid": product_gid,
+                                "action": "ERROR",
+                                "metafield": "look_image",
+                                "target_media_gid": target_media_gid,
+                                "reason": str(e),
+                                "timestamp": __import__('datetime').datetime.utcnow().isoformat() + "Z"
+                            })
 
         print(f"[CPI SUMMARY] {cpi} | handle={handle} | gate={'ALLOW' if decision.allowed else 'DENY'} | swatch={swatch_status} | look={look_status}")
 
-    if not dry_run and not debug_cpi and jobs:
-        log_path = pathlib.Path(f"capsules/{capsule}/outputs/api_jobs/metafields_{capsule}.json")
-        log_path.parent.mkdir(parents=True, exist_ok=True)
-        json.dump(jobs, open(log_path, "w"), indent=2)
-        print(f"🗂  Log written to {log_path}")
+        if not dry_run and not debug_cpi and jobs:
+            log_path = pathlib.Path(f"capsules/{capsule}/outputs/api_jobs/metafields_{capsule}.json")
+            log_path.parent.mkdir(parents=True, exist_ok=True)
+            json.dump(jobs, open(log_path, "w"), indent=2)
+            print(f"🗂  Log written to {log_path}")
 
 if __name__ == "__main__":
     parser = argparse.ArgumentParser()

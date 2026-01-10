@@ -1,0 +1,26 @@
+[
+  {
+    "cpi": "3004-416689",
+    "product_gid": "gid://shopify/Product/7716188356710",
+    "shopify": {
+      "media_count": 6,
+      "hero_candidates": [
+        {
+          "media_gid": "gid://shopify/MediaImage/25940848672870",
+          "position": 0,
+          "filename": "https://cdn.shopify.com/s/files/1/0148/9561/2004/files/251218_Altuzarra_1070.jpg?v=1767737994"
+        },
+        {
+          "media_gid": "gid://shopify/MediaImage/25940590887014",
+          "position": 1,
+          "filename": "https://cdn.shopify.com/s/files/1/0148/9561/2004/files/S226-3004SCP015416689PALEBLUSHAOPETALS_FINAL_hero_image_0031_b77ee9e3-e888-40da-9a3c-5b4fd1c00b5a.jpg?v=1767737994"
+        }
+      ]
+    },
+    "handle": "paulina-dress-pale-blush-ao-petals",
+    "manifest": {
+      "has_editorial": true
+    },
+    "assessment": "OK"
+  }
+]

@@ -3227,6 +3227,17 @@
         "width": 560,
         "height": 560
       }
+    },
+    {
+      "filename": "S226-3004 SCP015 416689 PALE BLUSH AO PETALS_FINAL_ghost_010926.jpg",
+      "swatch": "S226-3004 SCP015 416689 PALE BLUSH AO PETALS_FINAL_swatch.jpg",
+      "garment_type": "dresses",
+      "crop": {
+        "x": 1019,
+        "y": 902,
+        "width": 300,
+        "height": 300
+      }
     }
   ]
 }

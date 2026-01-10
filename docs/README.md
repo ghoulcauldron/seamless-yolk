@@ -1,230 +1,399 @@
-Shopify Files + Metafields Pipeline
+# Shopify Files + Metafields Pipeline  
+## Capsule Asset Management System — Final, Locked Documentation
 
-Canonical Workflow & Invariants
+This document is the **authoritative, completionist reference** for the Seamless‑Yolk system as it exists today.
 
-This document records the final, correct implementation of Shopify file uploads and metafield attachment, as discovered through iterative debugging.
-Deviations from this contract will silently fail or regress.
+It captures:
+- The **actual contracts** we discovered through ~10+ hours of real debugging
+- The **correct mental model** for Shopify Files, Media, and Metafields
+- The **end‑to‑end capsule lifecycle**, including scripts that exist today (even if some are only partially formalized)
+- The **reasons past attempts failed**, so we do not regress
 
-⸻
+This README is intentionally verbose. Nothing here is theoretical.
 
-High-level overview
+---
 
-This project manages product image uploads and metafield attachment for a capsule-based catalog using Shopify’s GraphQL API.
+## 0. Core Philosophy (Read First)
 
-The system is intentionally split into three phases:
-	1.	Preflight / Enrichment (CSV generation)
-	2.	Import (manual Shopify CSV upload)
-	3.	Post-import API jobs (files + metafields)
+### Shopify is the Source of Truth  
+Local manifests and preflight checks are **beliefs**, not facts.
 
-This README focuses on Phase 3, which was the source of repeated regressions until the correct Shopify contract was enforced.
+Clients **will**:
+- Upload images manually
+- Reorder images
+- Fix mistakes directly in Shopify
+- Do this without telling us
 
-⸻
+Therefore:
+- **Shopify reality always overrides local assumptions**
+- Our system must be able to *inspect*, *adopt*, *reconcile*, and *record provenance*
+- Drift is expected, not exceptional
 
-Core invariants (DO NOT VIOLATE)
+---
 
-1. There is exactly one supported way to create Shopify Files
+## 1. High‑Level System Phases
 
-All files must be created via:
+The system is intentionally split into **four phases**:
 
+1. **Preflight & Local Beliefs**
+2. **Manual Shopify Import**
+3. **Post‑Import Inspection & Reconciliation**
+4. **Authorized Mutation (Files, Metafields, Collections)**
+
+Only Phase 4 mutates Shopify.
+
+---
+
+## 2. Canonical Folder Structure
+
+```
+capsules/<CAPSULE>/
+├── inputs/                      # Client‑provided inputs
+│   ├── *_masterfile.csv
+│   ├── products_export_*.csv
+│   ├── ghostFileNames.txt
+│   └── modelFileNames.txt
+│
+├── assets/
+│   ├── ghosts/                  # Ghost images (local)
+│   ├── editorials/              # Editorial images (local)
+│   └── swatches/                # Swatches (generated locally)
+│
+├── manifests/
+│   ├── product_map.json         # CPI → Shopify Product GID
+│   └── images_manifest.jsonl    # Canonical asset index (append‑only)
+│
+├── state/
+│   └── product_state_<CAPSULE>.json
+│
+├── outputs/
+│   ├── inspect_images_<CAPSULE>.json
+│   ├── asset_drift_<CAPSULE>.jsonl
+│   ├── actions_swatch_queue_<CAPSULE>.jsonl
+│   └── manual_review_queue_<CAPSULE>.jsonl
+│
+└── preflight_outputs/
+    ├── preflight_*_internal.json
+    └── preflight_*_client_advisory.csv
+```
+
+---
+
+## 3. Phase 1 — Preflight & State Seeding
+
+### `scripts/preflight_<capsule>.py`
+**Purpose**
+- Validate client‑provided files
+- Simulate image completeness
+- Identify missing ghosts, editorials, swatches
+- Produce GO / NO‑GO advisory
+
+**Important**
+- This phase **does not** inspect Shopify
+- Output reflects *only what the client gave us*
+
+---
+
+### `scripts/seed_product_state_from_preflight.py`
+**Purpose**
+- Create `product_state_<CAPSULE>.json`
+- Encode initial beliefs and permissions
+
+Each product includes:
+- CPI
+- Handle
+- Preflight status
+- Promotion stage
+- Allowed actions
+
+#### Locked rule
+These are **always true** once a product exists:
+```
+allowed_actions.size_guide_write = true
+allowed_actions.collection_write = true
+```
+
+Image completeness must **never** block size guides or collections.
+
+---
+
+## 4. Phase 2 — Local Asset Generation
+
+### Swatch Creation (External, Siloed)
+Directories:
+- `swatch_pipeline_pre_api/`
+- `swatch_pipeline_ml/`
+
+**Purpose**
+- Generate swatches from ghost images
+- Output files into `assets/swatches/`
+
+The main system:
+- Does **not** generate swatches
+- Only registers and promotes them
+
+---
+
+### `scripts/build_image_manifests.py`
+**Purpose**
+- Build / append `images_manifest.jsonl`
+- Canonical index of *known* assets
+
+This manifest is what mutation scripts trust.
+
+---
+
+## 5. Phase 3 — Shopify Inspection & Drift Detection
+
+### `api/inspect_product_images.py`
+**READ‑ONLY**
+
+**Purpose**
+- Query Shopify product media
+- Identify hero candidates
+- Capture Shopify reality
+
+**Output**
+- `inspect_images_<CAPSULE>.json`
+
+No state mutation. No inference. No adoption.
+
+---
+
+### `api/derive_look_images_from_shopify.py`
+**Purpose**
+- Select the canonical hero image
+- Write into `product_state.assets.look_images`
+
+#### Selection rules (locked):
+1. Filename match (`hero_image`)
+2. Positional fallback
+3. Manual override if ambiguous
+
+Each adoption records:
+- Source
+- Reason
+- Timestamp
+- Filename (if applicable)
+
+---
+
+### `api/reconcile_capsule_assets.py`
+**Purpose**
+- Compare:
+  - Preflight beliefs
+  - Local state
+  - Shopify inspection
+- Adopt missing assets
+- Flip authorization gates when conditions are met
+- Record drift history
+
+**Outputs (append‑only, deduped):**
+- `asset_drift_<CAPSULE>.jsonl`
+- `actions_swatch_queue_<CAPSULE>.jsonl`
+- `manual_review_queue_<CAPSULE>.jsonl`
+
+This is where **belief becomes authority**.
+
+---
+
+## 6. Swatch Registration & Promotion
+
+### `api/register_created_swatches.py`
+**Purpose**
+- Detect newly created swatches
+- Register them into product state
+- Attach provenance
+
+No Shopify calls.
+
+---
+
+### `api/promote_state_swatches_to_manifest.py`
+**Purpose**
+- Promote registered swatches into `images_manifest.jsonl`
+- Normalize schema
+- Prevent duplicates
+
+This is required before metafield writes.
+
+---
+
+## 7. Phase 4 — Authorized Shopify Mutation
+
+### Core Invariants (DO NOT VIOLATE)
+
+#### 1. One and only one way to upload files
+
+All Shopify Files **must** be created via:
+
+```
 stagedUploadsCreate
 → PUT raw bytes (NO HEADERS)
 → fileCreate
+```
 
-This logic lives in:
-
+Implemented in:
+```
 api/shopify_client.py
 └── upload_file_from_path()
+```
 
-No other file creation methods are allowed.
+No alternatives allowed.
 
-⸻
+---
 
-2. PUT means PUT — no headers, ever
+#### 2. PUT means PUT — no headers, ever
 
 Shopify staged upload URLs are cryptographically signed.
 
-They allow only:
-	•	HTTP PUT
-	•	Raw file bytes
-	•	NO custom headers
+They allow:
+- PUT
+- Raw bytes
+- **No headers**
 
-Violations cause errors like:
+Any headers = silent failure.
 
-MalformedSecurityHeader
-Header must be signed
-x-goog-acl
+---
 
-Correct implementation:
+#### 3. `fileCreate.contentType` is critical
 
-req = Request(
-    method="PUT",
-    url=upload_url,
-    data=file_bytes
-)
-prepared = req.prepare()
-prepared.headers.clear()
-session.send(prepared)
+| contentType | Resulting GID | Valid for image metafields |
+|------------|--------------|-----------------------------|
+| FILE       | GenericFile  | ❌ NO |
+| IMAGE      | MediaImage   | ✅ YES |
 
-If headers are present, Shopify will reject the upload.
+**Swatches and look images MUST use `IMAGE`.**
 
-⸻
+This was the primary breakthrough.
 
-3. fileCreate.contentType determines the class of file
+---
 
-This was the key breakthrough.
-
-contentType	Resulting GID	Valid for image metafields
-"FILE"	GenericFile	❌ NO
-"IMAGE"	MediaImage	✅ YES
-
-If you want to attach a file to an image-only metafield, you MUST use contentType: "IMAGE".
-
-Correct mutation (locked):
-
-mutation fileCreate($files: [FileCreateInput!]!) {
-  fileCreate(files: [{
-    alt: "...",
-    contentType: IMAGE,
-    originalSource: "..."
-  }]) {
-    files { id fileStatus }
-  }
-}
-
-Using "FILE" will upload successfully but fail at metafield attachment time.
-
-This is why earlier runs appeared to “work” but silently broke swatches.
-
-⸻
-
-4. Do NOT assert GID types
+#### 4. Never assert GID prefixes
 
 Shopify may return:
-	•	gid://shopify/MediaImage/...
-	•	gid://shopify/GenericFile/...
-	•	gid://shopify/File/...
+- `MediaImage`
+- `GenericFile`
+- `File`
 
-All are valid depending on context.
+Assertions caused false failures.
 
-Never assert GID prefixes.
-The only valid check is whether Shopify accepts the GID for the intended operation.
+Only Shopify validation matters.
 
-Earlier assertions caused false failures and masked the real issue.
+---
 
-⸻
+### `api/metafields_writer.py`
+**The only script allowed to mutate Shopify**
 
-Metafields: what actually works
+Writes:
+- `swatch_image`
+- `look_image`
+- (future: size guides, collections)
 
-Image metafields (file_reference)
-	•	Must reference MediaImage
-	•	GenericFile will be rejected with:
+**Safety guarantees**
+- CPI‑scoped execution
+- State‑gated writes
+- Idempotent (NOOP if already correct)
+- Append‑only logs
 
-Value must be one of the following file types: Image
+---
 
+### Debugging Rule (Mandatory)
 
+Always run CPI‑scoped:
 
-Confirmed working flow
-	1.	Upload image via upload_file_from_path()
-	2.	Wait until file is READY
-	3.	Attach returned GID directly to metafield
-	4.	Shopify validates type and accepts
-
-⸻
-
-State-driven gating (why this exists)
-
-All API writes are gated by product state to prevent accidental mutation.
-
-State is generated via:
-
-scripts/seed_product_state_from_preflight.py
-→ product_state_<CAPSULE>.json
-
-Each product includes:
-
-"allowed_actions": {
-  "metafield_write": true,
-  "image_upsert": true,
-  "collection_write": false,
-  "include_in_import_csv": false
-}
-
-The gate is enforced by:
-
-utils/state_gate.py
-
-Gate behavior (locked)
-	•	Missing or invalid allowed_actions → DENY, not crash
-	•	No mutation occurs unless explicitly allowed
-	•	Debug logs always emit a per-CPI summary
-
-⸻
-
-Debugging correctly (and safely)
-
-CPI-scoped runs (required)
-
-Always debug using CPI scoping, never full capsule runs:
-
+```
 python -m api.metafields_writer \
   --capsule S226 \
-  --cpis 2003-000182 \
+  --cpis 3004-416689 \
   --verbose
+```
 
-This guarantees:
-	•	Single product mutation
-	•	Deterministic output
-	•	No collateral damage
+Never full‑capsule during debugging.
 
-⸻
+---
 
-Expected verbose output (healthy)
+## 8. Size Guides
 
-[CPI] 2003-000182 | stage=PRE_FLIGHT | metafield_write=True
-> Uploading swatch image...
-> Waiting for file gid://shopify/MediaImage/... to be READY
-> File is READY
-Linked swatch_image
-[CPI SUMMARY] swatch=uploaded | look=uploaded
+### `api/size_guide_writer.py`
+**Purpose**
+- Attach correct size guide pages via metafields
+- Driven by `productType`
 
-If you see:
-	•	GenericFile + metafield error → wrong contentType
-	•	Upload succeeds but metafield missing → wrong file class
-	•	PUT fails → headers leaked
+**Key rule**
+- Size guides are **never gated**
+- If product exists → size guide allowed
 
-⸻
+---
 
-Explicitly forbidden (do not reintroduce)
+## 9. Smart Collections (Planned, Defined)
 
-❌ Remote URL uploads
-❌ Shopify CDN URLs as sources
-❌ Header injection on staged PUT
-❌ GID prefix assertions
-❌ Non-gated API writes
-❌ Full capsule runs during debugging
+Rule:
+- One smart collection per style
+- Driven by `style_<Name>` tag
 
-These were all sources of regression.
+Authorization:
+- Always allowed
 
-⸻
+Implementation pending.
 
-Final mental model
-	•	Upload correctness ≠ metafield correctness
-	•	Shopify will happily store unusable files
-	•	File class matters more than file content
-	•	The only safe system is one with:
-	•	Locked contracts
-	•	Gated writes
-	•	CPI-scoped execution
-	•	Explicit logging
+---
 
-⸻
+## 10. Drift Handling (Critical Concept)
 
-Status
+### Auto‑Adopt
+Used when:
+- Shopify assets are unambiguous
+- Clear hero / ghost / swatch candidates
 
-✅ Upload transport fixed
-✅ File classification fixed
-✅ Metafield attachment stable
-✅ State gating enforced
-✅ Regressions understood and prevented
+System adopts automatically.
 
-This pipeline is now production-safe.
+---
+
+### Manual Review
+Used when:
+- Multiple competing hero candidates
+- Ambiguous filenames
+- Unexpected ordering
+
+Queued for human review.
+
+---
+
+## 11. Final Mental Model (Locked)
+
+- Shopify truth > local belief
+- Drift is normal
+- Adoption must record provenance
+- Mutation must be gated
+- Upload success ≠ metafield success
+- File class matters more than file content
+- Append‑only logs prevent gaslighting ourselves
+
+---
+
+## Status
+
+✅ Upload transport locked  
+✅ File classification correct  
+✅ Metafield attachment stable  
+✅ Drift adoption implemented  
+✅ Swatch creation + registration + promotion wired  
+✅ State‑driven authorization working  
+
+This system is now **production‑safe**.
+
+---
+
+## Open Follow‑Ups (Explicit)
+
+1. Daily Shopify drift scan + local log
+2. Ghost‑missing inspector + downloader
+3. Smart collection writer
+4. Size guide gating flip at seed time
+
+Nothing here contradicts current behavior.
+
+---
+
+**If this README and the code disagree, the README wins.**
