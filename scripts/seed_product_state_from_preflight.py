@@ -82,8 +82,9 @@ def seed_state(preflight_data: dict, capsule: str) -> dict:
                 preflight_status == "GO"
                 and image_status in {"IMAGE_READY", "IMAGE_MINIMAL"}
             ),
-            "collection_write": preflight_status == "GO",
+            "collection_write": True,
             "include_in_import_csv": preflight_status in {"GO", "NO-GO"},
+            "size_guide_write": True,
         })
 
         products_state[handle] = state_entry
@@ -119,8 +120,8 @@ def derive_allowed_actions(record: dict) -> dict:
     return {
         "metafield_write": False,
         "image_upsert": False,
-        "collection_write": False,
-        "size_guide_write": False,
+        "collection_write": True,
+        "size_guide_write": True,
     }
 
 def main():

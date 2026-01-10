@@ -1,29 +1,39 @@
 {
   "capsule": "S226",
-  "schema_version": "1.0",
   "generated_at": "2026-01-09T18:13:02.785237Z",
   "products": {
     "arp-dress-black": {
-      "handle": "arp-dress-black",
-      "product_id": "S226-8301 KCS049 000001 BLACK",
-      "cpi": "8301-000001",
-      "product_type": "RTW",
-      "is_accessory": false,
-      "preflight": {
-        "status": "GO",
-        "image_status": "IMAGE_READY",
-        "errors": [],
-        "warnings": [
-          "Image overflow: 1 additional rows required"
+      "allowed_actions": {
+        "collection_write": true,
+        "image_upsert": true,
+        "include_in_import_csv": true,
+        "metafield_write": true,
+        "size_guide_write": true
+      },
+      "assets": {
+        "look_images": [
+          {
+            "derived_at": "2026-01-09T22:22:58.093467Z",
+            "derived_from": "inspect_product_images",
+            "media_gid": "gid://shopify/MediaImage/25939682689126",
+            "source": "shopify_existing"
+          }
         ]
       },
-      "import": {
-        "eligible": true,
-        "imported": false,
-        "imported_at": null,
-        "import_source": null,
-        "anomaly_accepted": false
+      "audit": {
+        "static_action_promotions": [
+          {
+            "actions": [
+              "collection_write",
+              "size_guide_write"
+            ],
+            "promoted_at": "2026-01-10T18:24:34.040482+00:00",
+            "script": "promote_static_allowed_actions"
+          }
+        ]
       },
+      "cpi": "8301-000001",
+      "handle": "arp-dress-black",
       "images": {
         "expected": {
           "count": 6,
@@ -31,53 +41,78 @@
         },
         "last_enriched_at": null
       },
-      "promotion": {
-        "stage": "PRE_FLIGHT",
-        "locked": false,
-        "last_transition_at": null
+      "import": {
+        "anomaly_accepted": false,
+        "eligible": true,
+        "import_source": null,
+        "imported": false,
+        "imported_at": null
       },
+      "is_accessory": false,
       "overrides": {
         "manual_go": false,
         "notes": ""
       },
-      "allowed_actions": {
-        "metafield_write": true,
-        "image_upsert": true,
-        "collection_write": true,
-        "include_in_import_csv": true,
-        "size_guide_write": false
+      "preflight": {
+        "errors": [],
+        "image_status": "IMAGE_READY",
+        "status": "GO",
+        "warnings": [
+          "Image overflow: 1 additional rows required"
+        ]
       },
       "product_gid": "gid://shopify/Product/7716190027878",
+      "product_id": "S226-8301 KCS049 000001 BLACK",
+      "product_type": "RTW",
+      "promotion": {
+        "last_transition_at": null,
+        "locked": false,
+        "stage": "PRE_FLIGHT"
+      },
+      "tags": [
+        "S226",
+        "style_Arp Dress",
+        "SS26",
+        "collection_knitwear",
+        "color_black",
+        "collection_ready-to-wear",
+        "DTC BUY",
+        "S226-8301 KCS049 000001 BLACK",
+        "collection_dresses"
+      ]
+    },
+    "arp-dress-toffee": {
+      "allowed_actions": {
+        "collection_write": true,
+        "image_upsert": true,
+        "include_in_import_csv": true,
+        "metafield_write": true,
+        "size_guide_write": true
+      },
       "assets": {
         "look_images": [
           {
-            "media_gid": "gid://shopify/MediaImage/25939682689126",
-            "source": "shopify_existing",
+            "derived_at": "2026-01-09T22:22:58.093467Z",
             "derived_from": "inspect_product_images",
-            "derived_at": "2026-01-09T22:22:58.093467Z"
+            "media_gid": "gid://shopify/MediaImage/25940473118822",
+            "source": "shopify_existing"
           }
         ]
-      }
-    },
-    "arp-dress-toffee": {
-      "handle": "arp-dress-toffee",
-      "product_id": "S226-8301 KCS049 000258 TOFFEE",
+      },
+      "audit": {
+        "static_action_promotions": [
+          {
+            "actions": [
+              "collection_write",
+              "size_guide_write"
+            ],
+            "promoted_at": "2026-01-10T18:24:34.040936+00:00",
+            "script": "promote_static_allowed_actions"
+          }
+        ]
+      },
       "cpi": "8301-000258",
-      "product_type": "RTW",
-      "is_accessory": false,
-      "preflight": {
-        "status": "GO",
-        "image_status": "IMAGE_MINIMAL",
-        "errors": [],
-        "warnings": []
-      },
-      "import": {
-        "eligible": true,
-        "imported": false,
-        "imported_at": null,
-        "import_source": null,
-        "anomaly_accepted": false
-      },
+      "handle": "arp-dress-toffee",
       "images": {
         "expected": {
           "count": 1,
@@ -85,55 +120,66 @@
         },
         "last_enriched_at": null
       },
-      "promotion": {
-        "stage": "PRE_FLIGHT",
-        "locked": false,
-        "last_transition_at": null
+      "import": {
+        "anomaly_accepted": false,
+        "eligible": true,
+        "import_source": null,
+        "imported": false,
+        "imported_at": null
       },
+      "is_accessory": false,
       "overrides": {
         "manual_go": false,
         "notes": ""
       },
-      "allowed_actions": {
-        "metafield_write": true,
-        "image_upsert": true,
-        "collection_write": true,
-        "include_in_import_csv": true,
-        "size_guide_write": false
+      "preflight": {
+        "errors": [],
+        "image_status": "IMAGE_MINIMAL",
+        "status": "GO",
+        "warnings": []
       },
       "product_gid": "gid://shopify/Product/7716190060646",
-      "assets": {
-        "look_images": [
-          {
-            "media_gid": "gid://shopify/MediaImage/25940473118822",
-            "source": "shopify_existing",
-            "derived_from": "inspect_product_images",
-            "derived_at": "2026-01-09T22:22:58.093467Z"
-          }
-        ]
-      }
+      "product_id": "S226-8301 KCS049 000258 TOFFEE",
+      "product_type": "RTW",
+      "promotion": {
+        "last_transition_at": null,
+        "locked": false,
+        "stage": "PRE_FLIGHT"
+      },
+      "tags": [
+        "S226",
+        "style_Arp Dress",
+        "SS26",
+        "S226-8301 KCS049 000258 TOFFEE",
+        "collection_knitwear",
+        "color_toffee",
+        "collection_ready-to-wear",
+        "DTC BUY",
+        "collection_dresses"
+      ]
     },
     "arthur-top-azure-stripe": {
-      "handle": "arthur-top-azure-stripe",
-      "product_id": null,
-      "cpi": null,
-      "product_type": "RTW",
-      "is_accessory": false,
-      "preflight": {
-        "status": "SKIP",
-        "image_status": "N/A",
-        "errors": [],
-        "warnings": [
-          "Wholesale product (WS Buy) \u2013 skipped"
+      "allowed_actions": {
+        "collection_write": true,
+        "image_upsert": false,
+        "include_in_import_csv": false,
+        "metafield_write": false,
+        "size_guide_write": true
+      },
+      "audit": {
+        "static_action_promotions": [
+          {
+            "actions": [
+              "collection_write",
+              "size_guide_write"
+            ],
+            "promoted_at": "2026-01-10T18:24:34.040940+00:00",
+            "script": "promote_static_allowed_actions"
+          }
         ]
       },
-      "import": {
-        "eligible": true,
-        "imported": false,
-        "imported_at": null,
-        "import_source": null,
-        "anomaly_accepted": false
-      },
+      "cpi": null,
+      "handle": "arthur-top-azure-stripe",
       "images": {
         "expected": {
           "count": 0,
@@ -141,44 +187,56 @@
         },
         "last_enriched_at": null
       },
-      "promotion": {
-        "stage": "PRE_FLIGHT",
-        "locked": false,
-        "last_transition_at": null
+      "import": {
+        "anomaly_accepted": false,
+        "eligible": true,
+        "import_source": null,
+        "imported": false,
+        "imported_at": null
       },
+      "is_accessory": false,
       "overrides": {
         "manual_go": false,
         "notes": ""
       },
-      "allowed_actions": {
-        "metafield_write": false,
-        "image_upsert": false,
-        "collection_write": false,
-        "include_in_import_csv": false,
-        "size_guide_write": false
+      "preflight": {
+        "errors": [],
+        "image_status": "N/A",
+        "status": "SKIP",
+        "warnings": [
+          "Wholesale product (WS Buy) – skipped"
+        ]
+      },
+      "product_id": null,
+      "product_type": "RTW",
+      "promotion": {
+        "last_transition_at": null,
+        "locked": false,
+        "stage": "PRE_FLIGHT"
       }
     },
     "arthur-top-optic-white": {
-      "handle": "arthur-top-optic-white",
-      "product_id": null,
-      "cpi": null,
-      "product_type": "RTW",
-      "is_accessory": false,
-      "preflight": {
-        "status": "SKIP",
-        "image_status": "N/A",
-        "errors": [],
-        "warnings": [
-          "Wholesale product (WS Buy) \u2013 skipped"
+      "allowed_actions": {
+        "collection_write": false,
+        "image_upsert": false,
+        "include_in_import_csv": false,
+        "metafield_write": false,
+        "size_guide_write": false
+      },
+      "audit": {
+        "static_action_promotions": [
+          {
+            "actions": [
+              "collection_write",
+              "size_guide_write"
+            ],
+            "promoted_at": "2026-01-10T18:24:34.040943+00:00",
+            "script": "promote_static_allowed_actions"
+          }
         ]
       },
-      "import": {
-        "eligible": true,
-        "imported": false,
-        "imported_at": null,
-        "import_source": null,
-        "anomaly_accepted": false
-      },
+      "cpi": null,
+      "handle": "arthur-top-optic-white",
       "images": {
         "expected": {
           "count": 0,
@@ -186,46 +244,66 @@
         },
         "last_enriched_at": null
       },
-      "promotion": {
-        "stage": "PRE_FLIGHT",
-        "locked": false,
-        "last_transition_at": null
+      "import": {
+        "anomaly_accepted": false,
+        "eligible": true,
+        "import_source": null,
+        "imported": false,
+        "imported_at": null
       },
+      "is_accessory": false,
       "overrides": {
         "manual_go": false,
         "notes": ""
       },
-      "allowed_actions": {
-        "metafield_write": false,
-        "image_upsert": false,
-        "collection_write": false,
-        "include_in_import_csv": false,
-        "size_guide_write": false
+      "preflight": {
+        "errors": [],
+        "image_status": "N/A",
+        "status": "SKIP",
+        "warnings": [
+          "Wholesale product (WS Buy) – skipped"
+        ]
+      },
+      "product_id": null,
+      "product_type": "RTW",
+      "promotion": {
+        "last_transition_at": null,
+        "locked": false,
+        "stage": "PRE_FLIGHT"
       }
     },
     "basket-clutch-pale-blush": {
-      "handle": "basket-clutch-pale-blush",
-      "product_id": "S226-7157 STS002 000689 PALE BLUSH",
-      "cpi": "7157-000689",
-      "product_type": "ACCESSORY",
-      "is_accessory": true,
-      "preflight": {
-        "status": "NO-GO",
-        "image_status": "IMAGE_INCOMPLETE",
-        "errors": [
-          "Missing ghost image"
-        ],
-        "warnings": [
-          "Image overflow: 1 additional rows required"
+      "allowed_actions": {
+        "collection_write": false,
+        "image_upsert": false,
+        "include_in_import_csv": false,
+        "metafield_write": false,
+        "size_guide_write": false
+      },
+      "assets": {
+        "look_images": [
+          {
+            "derived_at": "2026-01-09T22:22:58.093467Z",
+            "derived_from": "inspect_product_images",
+            "media_gid": "gid://shopify/MediaImage/25940633780326",
+            "source": "shopify_existing"
+          }
         ]
       },
-      "import": {
-        "eligible": true,
-        "imported": false,
-        "imported_at": null,
-        "import_source": null,
-        "anomaly_accepted": false
+      "audit": {
+        "static_action_promotions": [
+          {
+            "actions": [
+              "collection_write",
+              "size_guide_write"
+            ],
+            "promoted_at": "2026-01-10T18:24:34.040945+00:00",
+            "script": "promote_static_allowed_actions"
+          }
+        ]
       },
+      "cpi": "7157-000689",
+      "handle": "basket-clutch-pale-blush",
       "images": {
         "expected": {
           "count": 1,
@@ -233,55 +311,79 @@
         },
         "last_enriched_at": null
       },
-      "promotion": {
-        "stage": "PRE_FLIGHT",
-        "locked": false,
-        "last_transition_at": null
+      "import": {
+        "anomaly_accepted": false,
+        "eligible": true,
+        "import_source": null,
+        "imported": false,
+        "imported_at": null
       },
+      "is_accessory": true,
       "overrides": {
         "manual_go": false,
         "notes": ""
       },
-      "allowed_actions": {
-        "metafield_write": false,
-        "image_upsert": false,
-        "collection_write": false,
-        "include_in_import_csv": true,
-        "size_guide_write": false
-      },
-      "product_gid": "gid://shopify/Product/7716189732966",
-      "assets": {
-        "look_images": [
-          {
-            "media_gid": "gid://shopify/MediaImage/25940633780326",
-            "source": "shopify_existing",
-            "derived_from": "inspect_product_images",
-            "derived_at": "2026-01-09T22:22:58.093467Z"
-          }
-        ]
-      }
-    },
-    "basket-clutch-tahini-silver": {
-      "handle": "basket-clutch-tahini-silver",
-      "product_id": "S226-7157 STS007 381182 TAHINI/SILVER",
-      "cpi": "7157-381182",
-      "product_type": "ACCESSORY",
-      "is_accessory": true,
       "preflight": {
-        "status": "NO-GO",
-        "image_status": "IMAGE_INCOMPLETE",
         "errors": [
           "Missing ghost image"
         ],
-        "warnings": []
+        "image_status": "IMAGE_INCOMPLETE",
+        "status": "NO-GO",
+        "warnings": [
+          "Image overflow: 1 additional rows required"
+        ]
       },
-      "import": {
-        "eligible": true,
-        "imported": false,
-        "imported_at": null,
-        "import_source": null,
-        "anomaly_accepted": false
+      "product_gid": "gid://shopify/Product/7716189732966",
+      "product_id": "S226-7157 STS002 000689 PALE BLUSH",
+      "product_type": "ACCESSORY",
+      "promotion": {
+        "last_transition_at": null,
+        "locked": false,
+        "stage": "PRE_FLIGHT"
       },
+      "tags": [
+        "S226",
+        "S226-7157 STS002 000689 PALE BLUSH",
+        "collection_accessories",
+        "SS26",
+        "DTC BUY",
+        "collection_Bags",
+        "color_pale blush",
+        "style_Basket Clutch"
+      ]
+    },
+    "basket-clutch-tahini-silver": {
+      "allowed_actions": {
+        "collection_write": true,
+        "image_upsert": false,
+        "include_in_import_csv": true,
+        "metafield_write": false,
+        "size_guide_write": true
+      },
+      "assets": {
+        "look_images": [
+          {
+            "derived_at": "2026-01-09T22:22:58.093467Z",
+            "derived_from": "inspect_product_images",
+            "media_gid": "gid://shopify/MediaImage/25940638924902",
+            "source": "shopify_existing"
+          }
+        ]
+      },
+      "audit": {
+        "static_action_promotions": [
+          {
+            "actions": [
+              "collection_write",
+              "size_guide_write"
+            ],
+            "promoted_at": "2026-01-10T18:24:34.040948+00:00",
+            "script": "promote_static_allowed_actions"
+          }
+        ]
+      },
+      "cpi": "7157-381182",
+      "handle": "basket-clutch-tahini-silver",
       "images": {
         "expected": {
           "count": 0,
@@ -289,53 +391,77 @@
         },
         "last_enriched_at": null
       },
-      "promotion": {
-        "stage": "PRE_FLIGHT",
-        "locked": false,
-        "last_transition_at": null
+      "import": {
+        "anomaly_accepted": false,
+        "eligible": true,
+        "import_source": null,
+        "imported": false,
+        "imported_at": null
       },
+      "is_accessory": true,
       "overrides": {
         "manual_go": false,
         "notes": ""
       },
-      "allowed_actions": {
-        "metafield_write": false,
-        "image_upsert": false,
-        "collection_write": false,
-        "include_in_import_csv": true,
-        "size_guide_write": false
+      "preflight": {
+        "errors": [
+          "Missing ghost image"
+        ],
+        "image_status": "IMAGE_INCOMPLETE",
+        "status": "NO-GO",
+        "warnings": []
       },
       "product_gid": "gid://shopify/Product/7716189765734",
+      "product_id": "S226-7157 STS007 381182 TAHINI/SILVER",
+      "product_type": "ACCESSORY",
+      "promotion": {
+        "last_transition_at": null,
+        "locked": false,
+        "stage": "PRE_FLIGHT"
+      },
+      "tags": [
+        "S226",
+        "collection_accessories",
+        "SS26",
+        "color_tahini/silver",
+        "collection_Bags",
+        "S226-7157 STS007 381182 TAHINI/SILVER",
+        "DTC BUY",
+        "style_Basket Clutch"
+      ]
+    },
+    "chapman-pant-tahini": {
+      "allowed_actions": {
+        "collection_write": true,
+        "image_upsert": true,
+        "include_in_import_csv": true,
+        "metafield_write": true,
+        "size_guide_write": true
+      },
       "assets": {
         "look_images": [
           {
-            "media_gid": "gid://shopify/MediaImage/25940638924902",
-            "source": "shopify_existing",
+            "derived_at": "2026-01-09T22:22:58.093467Z",
             "derived_from": "inspect_product_images",
-            "derived_at": "2026-01-09T22:22:58.093467Z"
+            "media_gid": "gid://shopify/MediaImage/25940709408870",
+            "source": "shopify_existing"
           }
         ]
-      }
-    },
-    "chapman-pant-tahini": {
-      "handle": "chapman-pant-tahini",
-      "product_id": "S226-6003 AWS016 000182 TAHINI",
+      },
+      "audit": {
+        "static_action_promotions": [
+          {
+            "actions": [
+              "collection_write",
+              "size_guide_write"
+            ],
+            "promoted_at": "2026-01-10T18:24:34.040950+00:00",
+            "script": "promote_static_allowed_actions"
+          }
+        ]
+      },
       "cpi": "6003-000182",
-      "product_type": "RTW",
-      "is_accessory": false,
-      "preflight": {
-        "status": "GO",
-        "image_status": "IMAGE_MINIMAL",
-        "errors": [],
-        "warnings": []
-      },
-      "import": {
-        "eligible": true,
-        "imported": false,
-        "imported_at": null,
-        "import_source": null,
-        "anomaly_accepted": false
-      },
+      "handle": "chapman-pant-tahini",
       "images": {
         "expected": {
           "count": 1,
@@ -343,53 +469,75 @@
         },
         "last_enriched_at": null
       },
-      "promotion": {
-        "stage": "PRE_FLIGHT",
-        "locked": false,
-        "last_transition_at": null
+      "import": {
+        "anomaly_accepted": false,
+        "eligible": true,
+        "import_source": null,
+        "imported": false,
+        "imported_at": null
       },
+      "is_accessory": false,
       "overrides": {
         "manual_go": false,
         "notes": ""
       },
-      "allowed_actions": {
-        "metafield_write": true,
-        "image_upsert": true,
-        "collection_write": true,
-        "include_in_import_csv": true,
-        "size_guide_write": false
+      "preflight": {
+        "errors": [],
+        "image_status": "IMAGE_MINIMAL",
+        "status": "GO",
+        "warnings": []
       },
       "product_gid": "gid://shopify/Product/7716189372518",
+      "product_id": "S226-6003 AWS016 000182 TAHINI",
+      "product_type": "RTW",
+      "promotion": {
+        "last_transition_at": null,
+        "locked": false,
+        "stage": "PRE_FLIGHT"
+      },
+      "tags": [
+        "S226",
+        "SS26",
+        "style_Chapman Pant",
+        "S226-6003 AWS016 000182 TAHINI",
+        "color_tahini",
+        "collection_ready-to-wear",
+        "collection_pants",
+        "DTC BUY"
+      ]
+    },
+    "cherie-dress-storm-petals": {
+      "allowed_actions": {
+        "collection_write": true,
+        "image_upsert": true,
+        "include_in_import_csv": true,
+        "metafield_write": true,
+        "size_guide_write": true
+      },
       "assets": {
         "look_images": [
           {
-            "media_gid": "gid://shopify/MediaImage/25940709408870",
-            "source": "shopify_existing",
+            "derived_at": "2026-01-09T22:22:58.093467Z",
             "derived_from": "inspect_product_images",
-            "derived_at": "2026-01-09T22:22:58.093467Z"
+            "media_gid": "gid://shopify/MediaImage/25939682885734",
+            "source": "shopify_existing"
           }
         ]
-      }
-    },
-    "cherie-dress-storm-petals": {
-      "handle": "cherie-dress-storm-petals",
-      "product_id": "S226-3034 BSP024 415067 STORM PETALS",
+      },
+      "audit": {
+        "static_action_promotions": [
+          {
+            "actions": [
+              "collection_write",
+              "size_guide_write"
+            ],
+            "promoted_at": "2026-01-10T18:24:34.040952+00:00",
+            "script": "promote_static_allowed_actions"
+          }
+        ]
+      },
       "cpi": "3034-415067",
-      "product_type": "RTW",
-      "is_accessory": false,
-      "preflight": {
-        "status": "GO",
-        "image_status": "IMAGE_READY",
-        "errors": [],
-        "warnings": []
-      },
-      "import": {
-        "eligible": true,
-        "imported": false,
-        "imported_at": null,
-        "import_source": null,
-        "anomaly_accepted": false
-      },
+      "handle": "cherie-dress-storm-petals",
       "images": {
         "expected": {
           "count": 6,
@@ -397,53 +545,75 @@
         },
         "last_enriched_at": null
       },
-      "promotion": {
-        "stage": "PRE_FLIGHT",
-        "locked": false,
-        "last_transition_at": null
+      "import": {
+        "anomaly_accepted": false,
+        "eligible": true,
+        "import_source": null,
+        "imported": false,
+        "imported_at": null
       },
+      "is_accessory": false,
       "overrides": {
         "manual_go": false,
         "notes": ""
       },
-      "allowed_actions": {
-        "metafield_write": true,
-        "image_upsert": true,
-        "collection_write": true,
-        "include_in_import_csv": true,
-        "size_guide_write": false
+      "preflight": {
+        "errors": [],
+        "image_status": "IMAGE_READY",
+        "status": "GO",
+        "warnings": []
       },
       "product_gid": "gid://shopify/Product/7716188749926",
+      "product_id": "S226-3034 BSP024 415067 STORM PETALS",
+      "product_type": "RTW",
+      "promotion": {
+        "last_transition_at": null,
+        "locked": false,
+        "stage": "PRE_FLIGHT"
+      },
+      "tags": [
+        "S226",
+        "SS26",
+        "S226-3034 BSP024 415067 STORM PETALS",
+        "color_storm petals",
+        "collection_ready-to-wear",
+        "style_Cherie Dress",
+        "DTC BUY",
+        "collection_dresses"
+      ]
+    },
+    "chika-top-ivory-allover-petals": {
+      "allowed_actions": {
+        "collection_write": true,
+        "image_upsert": true,
+        "include_in_import_csv": true,
+        "metafield_write": true,
+        "size_guide_write": true
+      },
       "assets": {
         "look_images": [
           {
-            "media_gid": "gid://shopify/MediaImage/25939682885734",
-            "source": "shopify_existing",
+            "derived_at": "2026-01-09T22:22:58.093467Z",
             "derived_from": "inspect_product_images",
-            "derived_at": "2026-01-09T22:22:58.093467Z"
+            "media_gid": "gid://shopify/MediaImage/25939683082342",
+            "source": "shopify_existing"
           }
         ]
-      }
-    },
-    "chika-top-ivory-allover-petals": {
-      "handle": "chika-top-ivory-allover-petals",
-      "product_id": "S226-4015 BSP024 416102 IVORY ALLOVER PETALS",
+      },
+      "audit": {
+        "static_action_promotions": [
+          {
+            "actions": [
+              "collection_write",
+              "size_guide_write"
+            ],
+            "promoted_at": "2026-01-10T18:24:34.040954+00:00",
+            "script": "promote_static_allowed_actions"
+          }
+        ]
+      },
       "cpi": "4015-416102",
-      "product_type": "RTW",
-      "is_accessory": false,
-      "preflight": {
-        "status": "GO",
-        "image_status": "IMAGE_READY",
-        "errors": [],
-        "warnings": []
-      },
-      "import": {
-        "eligible": true,
-        "imported": false,
-        "imported_at": null,
-        "import_source": null,
-        "anomaly_accepted": false
-      },
+      "handle": "chika-top-ivory-allover-petals",
       "images": {
         "expected": {
           "count": 7,
@@ -451,55 +621,65 @@
         },
         "last_enriched_at": null
       },
-      "promotion": {
-        "stage": "PRE_FLIGHT",
-        "locked": false,
-        "last_transition_at": null
+      "import": {
+        "anomaly_accepted": false,
+        "eligible": true,
+        "import_source": null,
+        "imported": false,
+        "imported_at": null
       },
+      "is_accessory": false,
       "overrides": {
         "manual_go": false,
         "notes": ""
       },
-      "allowed_actions": {
-        "metafield_write": true,
-        "image_upsert": true,
-        "collection_write": true,
-        "include_in_import_csv": true,
-        "size_guide_write": false
-      },
-      "product_gid": "gid://shopify/Product/7716189143142",
-      "assets": {
-        "look_images": [
-          {
-            "media_gid": "gid://shopify/MediaImage/25939683082342",
-            "source": "shopify_existing",
-            "derived_from": "inspect_product_images",
-            "derived_at": "2026-01-09T22:22:58.093467Z"
-          }
-        ]
-      }
-    },
-    "chika-top-maroon-allover-petals": {
-      "handle": "chika-top-maroon-allover-petals",
-      "product_id": "S226-4015 BSP024 416563 MAROON ALLOVER PETALS",
-      "cpi": "4015-416563",
-      "product_type": "RTW",
-      "is_accessory": false,
       "preflight": {
-        "status": "NO-GO",
-        "image_status": "IMAGE_INCOMPLETE",
-        "errors": [
-          "Missing ghost image"
-        ],
+        "errors": [],
+        "image_status": "IMAGE_READY",
+        "status": "GO",
         "warnings": []
       },
-      "import": {
-        "eligible": true,
-        "imported": false,
-        "imported_at": null,
-        "import_source": null,
-        "anomaly_accepted": false
+      "product_gid": "gid://shopify/Product/7716189143142",
+      "product_id": "S226-4015 BSP024 416102 IVORY ALLOVER PETALS",
+      "product_type": "RTW",
+      "promotion": {
+        "last_transition_at": null,
+        "locked": false,
+        "stage": "PRE_FLIGHT"
       },
+      "tags": [
+        "S226-4015 BSP024 416102 IVORY ALLOVER PETALS",
+        "S226",
+        "color_ivory allover petals",
+        "SS26",
+        "style_Chika Top",
+        "collection_ready-to-wear",
+        "collection_tops",
+        "DTC BUY"
+      ]
+    },
+    "chika-top-maroon-allover-petals": {
+      "allowed_actions": {
+        "collection_write": true,
+        "image_upsert": false,
+        "include_in_import_csv": true,
+        "metafield_write": false,
+        "size_guide_write": true
+      },
+      "audit": {
+        "static_action_promotions": [
+          {
+            "actions": [
+              "collection_write",
+              "size_guide_write"
+            ],
+            "promoted_at": "2026-01-10T18:24:34.040956+00:00",
+            "script": "promote_static_allowed_actions"
+          }
+        ]
+      },
+      "cpi": "4015-416563",
+      "handle": "chika-top-maroon-allover-petals",
       "images": {
         "expected": {
           "count": 0,
@@ -507,43 +687,77 @@
         },
         "last_enriched_at": null
       },
-      "promotion": {
-        "stage": "PRE_FLIGHT",
-        "locked": false,
-        "last_transition_at": null
+      "import": {
+        "anomaly_accepted": false,
+        "eligible": true,
+        "import_source": null,
+        "imported": false,
+        "imported_at": null
       },
+      "is_accessory": false,
       "overrides": {
         "manual_go": false,
         "notes": ""
       },
-      "allowed_actions": {
-        "metafield_write": false,
-        "image_upsert": false,
-        "collection_write": false,
-        "include_in_import_csv": true,
-        "size_guide_write": false
-      },
-      "product_gid": "gid://shopify/Product/7716189175910"
-    },
-    "chika-top-tapioca": {
-      "handle": "chika-top-tapioca",
-      "product_id": "S226-4015 BSS033 000172 TAPIOCA",
-      "cpi": "4015-000172",
-      "product_type": "RTW",
-      "is_accessory": false,
       "preflight": {
-        "status": "GO",
-        "image_status": "IMAGE_MINIMAL",
-        "errors": [],
+        "errors": [
+          "Missing ghost image"
+        ],
+        "image_status": "IMAGE_INCOMPLETE",
+        "status": "NO-GO",
         "warnings": []
       },
-      "import": {
-        "eligible": true,
-        "imported": false,
-        "imported_at": null,
-        "import_source": null,
-        "anomaly_accepted": false
+      "product_gid": "gid://shopify/Product/7716189175910",
+      "product_id": "S226-4015 BSP024 416563 MAROON ALLOVER PETALS",
+      "product_type": "RTW",
+      "promotion": {
+        "last_transition_at": null,
+        "locked": false,
+        "stage": "PRE_FLIGHT"
       },
+      "tags": [
+        "S226-4015 BSP024 416563 MAROON ALLOVER PETALS",
+        "S226",
+        "SS26",
+        "style_Chika Top",
+        "collection_tops",
+        "color_maroon allover petals",
+        "collection_ready-to-wear",
+        "DTC BUY"
+      ]
+    },
+    "chika-top-tapioca": {
+      "allowed_actions": {
+        "collection_write": true,
+        "image_upsert": true,
+        "include_in_import_csv": true,
+        "metafield_write": true,
+        "size_guide_write": true
+      },
+      "assets": {
+        "look_images": [
+          {
+            "derived_at": "2026-01-09T22:22:58.093467Z",
+            "derived_from": "inspect_product_images",
+            "media_gid": "gid://shopify/MediaImage/25940489240678",
+            "source": "shopify_existing"
+          }
+        ]
+      },
+      "audit": {
+        "static_action_promotions": [
+          {
+            "actions": [
+              "collection_write",
+              "size_guide_write"
+            ],
+            "promoted_at": "2026-01-10T18:24:34.040958+00:00",
+            "script": "promote_static_allowed_actions"
+          }
+        ]
+      },
+      "cpi": "4015-000172",
+      "handle": "chika-top-tapioca",
       "images": {
         "expected": {
           "count": 1,
@@ -551,109 +765,154 @@
         },
         "last_enriched_at": null
       },
-      "promotion": {
-        "stage": "PRE_FLIGHT",
-        "locked": false,
-        "last_transition_at": null
+      "import": {
+        "anomaly_accepted": false,
+        "eligible": true,
+        "import_source": null,
+        "imported": false,
+        "imported_at": null
       },
+      "is_accessory": false,
       "overrides": {
         "manual_go": false,
         "notes": ""
       },
-      "allowed_actions": {
-        "metafield_write": true,
-        "image_upsert": true,
-        "collection_write": true,
-        "include_in_import_csv": true,
-        "size_guide_write": false
+      "preflight": {
+        "errors": [],
+        "image_status": "IMAGE_MINIMAL",
+        "status": "GO",
+        "warnings": []
       },
       "product_gid": "gid://shopify/Product/7716189208678",
+      "product_id": "S226-4015 BSS033 000172 TAPIOCA",
+      "product_type": "RTW",
+      "promotion": {
+        "last_transition_at": null,
+        "locked": false,
+        "stage": "PRE_FLIGHT"
+      },
+      "tags": [
+        "S226",
+        "SS26",
+        "style_Chika Top",
+        "S226-4015 BSS033 000172 TAPIOCA",
+        "collection_ready-to-wear",
+        "collection_tops",
+        "DTC BUY",
+        "color_tapioca"
+      ]
+    },
+    "clay-sweater-black": {
+      "allowed_actions": {
+        "collection_write": true,
+        "image_upsert": true,
+        "include_in_import_csv": true,
+        "metafield_write": true,
+        "size_guide_write": true
+      },
       "assets": {
         "look_images": [
           {
-            "media_gid": "gid://shopify/MediaImage/25940489240678",
-            "source": "shopify_existing",
+            "derived_at": "2026-01-09T22:22:58.093467Z",
             "derived_from": "inspect_product_images",
-            "derived_at": "2026-01-09T22:22:58.093467Z"
+            "media_gid": "gid://shopify/MediaImage/25939683311718",
+            "source": "shopify_existing"
           }
         ]
-      }
-    },
-    "clay-sweater-black": {
-      "handle": "clay-sweater-black",
-      "product_id": "S226-8807 KCS049 000001 BLACK",
+      },
+      "audit": {
+        "static_action_promotions": [
+          {
+            "actions": [
+              "collection_write",
+              "size_guide_write"
+            ],
+            "promoted_at": "2026-01-10T18:24:34.040960+00:00",
+            "script": "promote_static_allowed_actions"
+          }
+        ]
+      },
       "cpi": "8807-000001",
-      "product_type": "RTW",
+      "handle": "clay-sweater-black",
+      "images": {
+        "expected": {
+          "count": 6,
+          "max_position": 6
+        },
+        "last_enriched_at": null
+      },
+      "import": {
+        "anomaly_accepted": false,
+        "eligible": true,
+        "import_source": null,
+        "imported": false,
+        "imported_at": null
+      },
       "is_accessory": false,
+      "overrides": {
+        "manual_go": false,
+        "notes": ""
+      },
       "preflight": {
-        "status": "GO",
-        "image_status": "IMAGE_READY",
         "errors": [],
+        "image_status": "IMAGE_READY",
+        "status": "GO",
         "warnings": [
           "Image overflow: 1 additional rows required"
         ]
       },
-      "import": {
-        "eligible": true,
-        "imported": false,
-        "imported_at": null,
-        "import_source": null,
-        "anomaly_accepted": false
-      },
-      "images": {
-        "expected": {
-          "count": 6,
-          "max_position": 6
-        },
-        "last_enriched_at": null
-      },
-      "promotion": {
-        "stage": "PRE_FLIGHT",
-        "locked": false,
-        "last_transition_at": null
-      },
-      "overrides": {
-        "manual_go": false,
-        "notes": ""
-      },
-      "allowed_actions": {
-        "metafield_write": true,
-        "image_upsert": true,
-        "collection_write": true,
-        "include_in_import_csv": true,
-        "size_guide_write": false
-      },
       "product_gid": "gid://shopify/Product/7716190421094",
-      "assets": {
-        "look_images": [
-          {
-            "media_gid": "gid://shopify/MediaImage/25939683311718",
-            "source": "shopify_existing",
-            "derived_from": "inspect_product_images",
-            "derived_at": "2026-01-09T22:22:58.093467Z"
-          }
-        ]
-      }
+      "product_id": "S226-8807 KCS049 000001 BLACK",
+      "product_type": "RTW",
+      "promotion": {
+        "last_transition_at": null,
+        "locked": false,
+        "stage": "PRE_FLIGHT"
+      },
+      "tags": [
+        "S226",
+        "SS26",
+        "style_Clay Sweater",
+        "collection_knitwear",
+        "S226-8807 KCS049 000001 BLACK",
+        "collection_tops",
+        "color_black",
+        "collection_ready-to-wear",
+        "DTC BUY"
+      ]
     },
     "clay-sweater-desert-sage": {
-      "handle": "clay-sweater-desert-sage",
-      "product_id": "S226-8807 KCS049 000398 DESERT SAGE",
+      "allowed_actions": {
+        "collection_write": true,
+        "image_upsert": true,
+        "include_in_import_csv": true,
+        "metafield_write": true,
+        "size_guide_write": true
+      },
+      "assets": {
+        "look_images": [
+          {
+            "derived_at": "2026-01-09T22:22:58.093467Z",
+            "derived_from": "inspect_product_images",
+            "media_gid": "gid://shopify/MediaImage/25940496973926",
+            "source": "shopify_existing"
+          }
+        ]
+      },
+      "audit": {
+        "static_action_promotions": [
+          {
+            "actions": [
+              "collection_write",
+              "size_guide_write"
+            ],
+            "promoted_at": "2026-01-10T18:24:34.040962+00:00",
+            "script": "promote_static_allowed_actions"
+          }
+        ]
+      },
       "cpi": "8807-000398",
-      "product_type": "RTW",
-      "is_accessory": false,
-      "preflight": {
-        "status": "GO",
-        "image_status": "IMAGE_MINIMAL",
-        "errors": [],
-        "warnings": []
-      },
-      "import": {
-        "eligible": true,
-        "imported": false,
-        "imported_at": null,
-        "import_source": null,
-        "anomaly_accepted": false
-      },
+      "handle": "clay-sweater-desert-sage",
       "images": {
         "expected": {
           "count": 1,
@@ -661,53 +920,76 @@
         },
         "last_enriched_at": null
       },
-      "promotion": {
-        "stage": "PRE_FLIGHT",
-        "locked": false,
-        "last_transition_at": null
+      "import": {
+        "anomaly_accepted": false,
+        "eligible": true,
+        "import_source": null,
+        "imported": false,
+        "imported_at": null
       },
+      "is_accessory": false,
       "overrides": {
         "manual_go": false,
         "notes": ""
       },
-      "allowed_actions": {
-        "metafield_write": true,
-        "image_upsert": true,
-        "collection_write": true,
-        "include_in_import_csv": true,
-        "size_guide_write": false
+      "preflight": {
+        "errors": [],
+        "image_status": "IMAGE_MINIMAL",
+        "status": "GO",
+        "warnings": []
       },
       "product_gid": "gid://shopify/Product/7716190486630",
-      "assets": {
-        "look_images": [
-          {
-            "media_gid": "gid://shopify/MediaImage/25940496973926",
-            "source": "shopify_existing",
-            "derived_from": "inspect_product_images",
-            "derived_at": "2026-01-09T22:22:58.093467Z"
-          }
-        ]
-      }
+      "product_id": "S226-8807 KCS049 000398 DESERT SAGE",
+      "product_type": "RTW",
+      "promotion": {
+        "last_transition_at": null,
+        "locked": false,
+        "stage": "PRE_FLIGHT"
+      },
+      "tags": [
+        "S226",
+        "SS26",
+        "color_desert sage",
+        "S226-8807 KCS049 000398 DESERT SAGE",
+        "style_Clay Sweater",
+        "collection_knitwear",
+        "collection_ready-to-wear",
+        "collection_tops",
+        "DTC BUY"
+      ]
     },
     "daisy-dress-black-lily": {
-      "handle": "daisy-dress-black-lily",
-      "product_id": "S226-3010 BSP032 414001 BLACK LILY",
+      "allowed_actions": {
+        "collection_write": true,
+        "image_upsert": true,
+        "include_in_import_csv": true,
+        "metafield_write": true,
+        "size_guide_write": true
+      },
+      "assets": {
+        "look_images": [
+          {
+            "derived_at": "2026-01-09T22:22:58.093467Z",
+            "derived_from": "inspect_product_images",
+            "media_gid": "gid://shopify/MediaImage/25939683606630",
+            "source": "shopify_existing"
+          }
+        ]
+      },
+      "audit": {
+        "static_action_promotions": [
+          {
+            "actions": [
+              "collection_write",
+              "size_guide_write"
+            ],
+            "promoted_at": "2026-01-10T18:24:34.040964+00:00",
+            "script": "promote_static_allowed_actions"
+          }
+        ]
+      },
       "cpi": "3010-414001",
-      "product_type": "RTW",
-      "is_accessory": false,
-      "preflight": {
-        "status": "GO",
-        "image_status": "IMAGE_READY",
-        "errors": [],
-        "warnings": []
-      },
-      "import": {
-        "eligible": true,
-        "imported": false,
-        "imported_at": null,
-        "import_source": null,
-        "anomaly_accepted": false
-      },
+      "handle": "daisy-dress-black-lily",
       "images": {
         "expected": {
           "count": 6,
@@ -715,53 +997,75 @@
         },
         "last_enriched_at": null
       },
-      "promotion": {
-        "stage": "PRE_FLIGHT",
-        "locked": false,
-        "last_transition_at": null
+      "import": {
+        "anomaly_accepted": false,
+        "eligible": true,
+        "import_source": null,
+        "imported": false,
+        "imported_at": null
       },
+      "is_accessory": false,
       "overrides": {
         "manual_go": false,
         "notes": ""
       },
-      "allowed_actions": {
-        "metafield_write": true,
-        "image_upsert": true,
-        "collection_write": true,
-        "include_in_import_csv": true,
-        "size_guide_write": false
+      "preflight": {
+        "errors": [],
+        "image_status": "IMAGE_READY",
+        "status": "GO",
+        "warnings": []
       },
       "product_gid": "gid://shopify/Product/7716188520550",
+      "product_id": "S226-3010 BSP032 414001 BLACK LILY",
+      "product_type": "RTW",
+      "promotion": {
+        "last_transition_at": null,
+        "locked": false,
+        "stage": "PRE_FLIGHT"
+      },
+      "tags": [
+        "S226",
+        "color_black lily",
+        "S226-3010 BSP032 414001 BLACK LILY",
+        "SS26",
+        "collection_ready-to-wear",
+        "style_Daisy Dress",
+        "DTC BUY",
+        "collection_dresses"
+      ]
+    },
+    "dash-pant-midnight-melange": {
+      "allowed_actions": {
+        "collection_write": true,
+        "image_upsert": true,
+        "include_in_import_csv": true,
+        "metafield_write": true,
+        "size_guide_write": true
+      },
       "assets": {
         "look_images": [
           {
-            "media_gid": "gid://shopify/MediaImage/25939683606630",
-            "source": "shopify_existing",
+            "derived_at": "2026-01-09T22:22:58.093467Z",
             "derived_from": "inspect_product_images",
-            "derived_at": "2026-01-09T22:22:58.093467Z"
+            "media_gid": "gid://shopify/MediaImage/25939683803238",
+            "source": "shopify_existing"
           }
         ]
-      }
-    },
-    "dash-pant-midnight-melange": {
-      "handle": "dash-pant-midnight-melange",
-      "product_id": "S226-6007 AIM001 000479 MIDNIGHT MELANGE",
+      },
+      "audit": {
+        "static_action_promotions": [
+          {
+            "actions": [
+              "collection_write",
+              "size_guide_write"
+            ],
+            "promoted_at": "2026-01-10T18:24:34.040966+00:00",
+            "script": "promote_static_allowed_actions"
+          }
+        ]
+      },
       "cpi": "6007-000479",
-      "product_type": "RTW",
-      "is_accessory": false,
-      "preflight": {
-        "status": "GO",
-        "image_status": "IMAGE_READY",
-        "errors": [],
-        "warnings": []
-      },
-      "import": {
-        "eligible": true,
-        "imported": false,
-        "imported_at": null,
-        "import_source": null,
-        "anomaly_accepted": false
-      },
+      "handle": "dash-pant-midnight-melange",
       "images": {
         "expected": {
           "count": 6,
@@ -769,53 +1073,75 @@
         },
         "last_enriched_at": null
       },
-      "promotion": {
-        "stage": "PRE_FLIGHT",
-        "locked": false,
-        "last_transition_at": null
+      "import": {
+        "anomaly_accepted": false,
+        "eligible": true,
+        "import_source": null,
+        "imported": false,
+        "imported_at": null
       },
+      "is_accessory": false,
       "overrides": {
         "manual_go": false,
         "notes": ""
       },
-      "allowed_actions": {
-        "metafield_write": true,
-        "image_upsert": true,
-        "collection_write": true,
-        "include_in_import_csv": true,
-        "size_guide_write": false
+      "preflight": {
+        "errors": [],
+        "image_status": "IMAGE_READY",
+        "status": "GO",
+        "warnings": []
       },
       "product_gid": "gid://shopify/Product/7716189405286",
+      "product_id": "S226-6007 AIM001 000479 MIDNIGHT MELANGE",
+      "product_type": "RTW",
+      "promotion": {
+        "last_transition_at": null,
+        "locked": false,
+        "stage": "PRE_FLIGHT"
+      },
+      "tags": [
+        "S226",
+        "SS26",
+        "style_Dash Pant",
+        "S226-6007 AIM001 000479 MIDNIGHT MELANGE",
+        "collection_ready-to-wear",
+        "collection_pants",
+        "DTC BUY",
+        "color_midnight melange"
+      ]
+    },
+    "dash-pant-mortar-melange": {
+      "allowed_actions": {
+        "collection_write": true,
+        "image_upsert": true,
+        "include_in_import_csv": true,
+        "metafield_write": true,
+        "size_guide_write": true
+      },
       "assets": {
         "look_images": [
           {
-            "media_gid": "gid://shopify/MediaImage/25939683803238",
-            "source": "shopify_existing",
+            "derived_at": "2026-01-09T22:22:58.093467Z",
             "derived_from": "inspect_product_images",
-            "derived_at": "2026-01-09T22:22:58.093467Z"
+            "media_gid": "gid://shopify/MediaImage/25940506083430",
+            "source": "shopify_existing"
           }
         ]
-      }
-    },
-    "dash-pant-mortar-melange": {
-      "handle": "dash-pant-mortar-melange",
-      "product_id": "S226-6007 AIQ003 000147 MORTAR MELANGE",
+      },
+      "audit": {
+        "static_action_promotions": [
+          {
+            "actions": [
+              "collection_write",
+              "size_guide_write"
+            ],
+            "promoted_at": "2026-01-10T18:24:34.040968+00:00",
+            "script": "promote_static_allowed_actions"
+          }
+        ]
+      },
       "cpi": "6007-000147",
-      "product_type": "RTW",
-      "is_accessory": false,
-      "preflight": {
-        "status": "GO",
-        "image_status": "IMAGE_MINIMAL",
-        "errors": [],
-        "warnings": []
-      },
-      "import": {
-        "eligible": true,
-        "imported": false,
-        "imported_at": null,
-        "import_source": null,
-        "anomaly_accepted": false
-      },
+      "handle": "dash-pant-mortar-melange",
       "images": {
         "expected": {
           "count": 1,
@@ -823,109 +1149,153 @@
         },
         "last_enriched_at": null
       },
-      "promotion": {
-        "stage": "PRE_FLIGHT",
-        "locked": false,
-        "last_transition_at": null
+      "import": {
+        "anomaly_accepted": false,
+        "eligible": true,
+        "import_source": null,
+        "imported": false,
+        "imported_at": null
       },
+      "is_accessory": false,
       "overrides": {
         "manual_go": false,
         "notes": ""
       },
-      "allowed_actions": {
-        "metafield_write": true,
-        "image_upsert": true,
-        "collection_write": true,
-        "include_in_import_csv": true,
-        "size_guide_write": false
+      "preflight": {
+        "errors": [],
+        "image_status": "IMAGE_MINIMAL",
+        "status": "GO",
+        "warnings": []
       },
       "product_gid": "gid://shopify/Product/7716189470822",
+      "product_id": "S226-6007 AIQ003 000147 MORTAR MELANGE",
+      "product_type": "RTW",
+      "promotion": {
+        "last_transition_at": null,
+        "locked": false,
+        "stage": "PRE_FLIGHT"
+      },
+      "tags": [
+        "S226",
+        "color_mortar melange",
+        "SS26",
+        "style_Dash Pant",
+        "collection_ready-to-wear",
+        "collection_pants",
+        "DTC BUY",
+        "S226-6007 AIQ003 000147 MORTAR MELANGE"
+      ]
+    },
+    "dora-dress-ivory": {
+      "allowed_actions": {
+        "collection_write": true,
+        "image_upsert": false,
+        "include_in_import_csv": true,
+        "metafield_write": false,
+        "size_guide_write": true
+      },
       "assets": {
         "look_images": [
           {
-            "media_gid": "gid://shopify/MediaImage/25940506083430",
-            "source": "shopify_existing",
+            "derived_at": "2026-01-09T22:22:58.093467Z",
             "derived_from": "inspect_product_images",
-            "derived_at": "2026-01-09T22:22:58.093467Z"
+            "media_gid": "gid://shopify/MediaImage/25949878386790",
+            "source": "shopify_existing"
           }
         ]
-      }
-    },
-    "dora-dress-ivory": {
-      "handle": "dora-dress-ivory",
-      "product_id": "S226-3007 BYS084 000102 IVORY",
+      },
+      "audit": {
+        "static_action_promotions": [
+          {
+            "actions": [
+              "collection_write",
+              "size_guide_write"
+            ],
+            "promoted_at": "2026-01-10T18:24:34.040970+00:00",
+            "script": "promote_static_allowed_actions"
+          }
+        ]
+      },
       "cpi": "3007-000102",
-      "product_type": "RTW",
+      "handle": "dora-dress-ivory",
+      "images": {
+        "expected": {
+          "count": 0,
+          "max_position": 0
+        },
+        "last_enriched_at": null
+      },
+      "import": {
+        "anomaly_accepted": false,
+        "eligible": true,
+        "import_source": null,
+        "imported": false,
+        "imported_at": null
+      },
       "is_accessory": false,
+      "overrides": {
+        "manual_go": false,
+        "notes": ""
+      },
       "preflight": {
-        "status": "NO-GO",
-        "image_status": "IMAGE_INCOMPLETE",
         "errors": [
           "Missing ghost image"
         ],
+        "image_status": "IMAGE_INCOMPLETE",
+        "status": "NO-GO",
         "warnings": []
       },
-      "import": {
-        "eligible": true,
-        "imported": false,
-        "imported_at": null,
-        "import_source": null,
-        "anomaly_accepted": false
-      },
-      "images": {
-        "expected": {
-          "count": 0,
-          "max_position": 0
-        },
-        "last_enriched_at": null
-      },
-      "promotion": {
-        "stage": "PRE_FLIGHT",
-        "locked": false,
-        "last_transition_at": null
-      },
-      "overrides": {
-        "manual_go": false,
-        "notes": ""
-      },
-      "allowed_actions": {
-        "metafield_write": false,
-        "image_upsert": false,
-        "collection_write": false,
-        "include_in_import_csv": true,
-        "size_guide_write": false
-      },
       "product_gid": "gid://shopify/Product/7716188422246",
+      "product_id": "S226-3007 BYS084 000102 IVORY",
+      "product_type": "RTW",
+      "promotion": {
+        "last_transition_at": null,
+        "locked": false,
+        "stage": "PRE_FLIGHT"
+      },
+      "tags": [
+        "S226",
+        "color_ivory",
+        "SS26",
+        "S226-3007 BYS084 000102 IVORY",
+        "collection_ready-to-wear",
+        "DTC BUY",
+        "style_Dora Dress",
+        "collection_dresses"
+      ]
+    },
+    "erik-top-black": {
+      "allowed_actions": {
+        "collection_write": true,
+        "image_upsert": true,
+        "include_in_import_csv": true,
+        "metafield_write": true,
+        "size_guide_write": true
+      },
       "assets": {
         "look_images": [
           {
-            "media_gid": "gid://shopify/MediaImage/25949878386790",
-            "source": "shopify_existing",
+            "derived_at": "2026-01-09T22:22:58.093467Z",
             "derived_from": "inspect_product_images",
-            "derived_at": "2026-01-09T22:22:58.093467Z"
+            "media_gid": "gid://shopify/MediaImage/25949876322406",
+            "source": "shopify_existing"
           }
         ]
-      }
-    },
-    "erik-top-black": {
-      "handle": "erik-top-black",
-      "product_id": "S226-8401 KYS078 000001 BLACK",
+      },
+      "audit": {
+        "static_action_promotions": [
+          {
+            "actions": [
+              "collection_write",
+              "size_guide_write"
+            ],
+            "promoted_at": "2026-01-10T18:24:34.040973+00:00",
+            "script": "promote_static_allowed_actions"
+          }
+        ]
+      },
       "cpi": "8401-000001",
-      "product_type": "RTW",
-      "is_accessory": false,
-      "preflight": {
-        "status": "GO",
-        "image_status": "IMAGE_MINIMAL",
-        "errors": [],
-        "warnings": []
-      },
-      "import": {
-        "eligible": true,
-        "imported": false,
-        "imported_at": null,
-        "import_source": null,
-        "anomaly_accepted": false
-      },
+      "handle": "erik-top-black",
       "images": {
         "expected": {
           "count": 1,
@@ -933,55 +1303,66 @@
         },
         "last_enriched_at": null
       },
-      "promotion": {
-        "stage": "PRE_FLIGHT",
-        "locked": false,
-        "last_transition_at": null
+      "import": {
+        "anomaly_accepted": false,
+        "eligible": true,
+        "import_source": null,
+        "imported": false,
+        "imported_at": null
       },
+      "is_accessory": false,
       "overrides": {
         "manual_go": false,
         "notes": ""
       },
-      "allowed_actions": {
-        "metafield_write": true,
-        "image_upsert": true,
-        "collection_write": true,
-        "include_in_import_csv": true,
-        "size_guide_write": false
+      "preflight": {
+        "errors": [],
+        "image_status": "IMAGE_MINIMAL",
+        "status": "GO",
+        "warnings": []
       },
       "product_gid": "gid://shopify/Product/7716190355558",
-      "assets": {
-        "look_images": [
-          {
-            "media_gid": "gid://shopify/MediaImage/25949876322406",
-            "source": "shopify_existing",
-            "derived_from": "inspect_product_images",
-            "derived_at": "2026-01-09T22:22:58.093467Z"
-          }
-        ]
-      }
+      "product_id": "S226-8401 KYS078 000001 BLACK",
+      "product_type": "RTW",
+      "promotion": {
+        "last_transition_at": null,
+        "locked": false,
+        "stage": "PRE_FLIGHT"
+      },
+      "tags": [
+        "S226",
+        "SS26",
+        "style_Erik Top",
+        "S226-8401 KYS078 000001 BLACK",
+        "collection_knitwear",
+        "collection_tops",
+        "color_black",
+        "collection_ready-to-wear",
+        "DTC BUY"
+      ]
     },
     "erik-top-ivory": {
-      "handle": "erik-top-ivory",
-      "product_id": null,
-      "cpi": null,
-      "product_type": "RTW",
-      "is_accessory": false,
-      "preflight": {
-        "status": "SKIP",
-        "image_status": "N/A",
-        "errors": [],
-        "warnings": [
-          "Wholesale product (WS Buy) \u2013 skipped"
+      "allowed_actions": {
+        "collection_write": true,
+        "image_upsert": false,
+        "include_in_import_csv": false,
+        "metafield_write": false,
+        "size_guide_write": true
+      },
+      "audit": {
+        "static_action_promotions": [
+          {
+            "actions": [
+              "collection_write",
+              "size_guide_write"
+            ],
+            "promoted_at": "2026-01-10T18:24:34.040975+00:00",
+            "script": "promote_static_allowed_actions"
+          }
         ]
       },
-      "import": {
-        "eligible": true,
-        "imported": false,
-        "imported_at": null,
-        "import_source": null,
-        "anomaly_accepted": false
-      },
+      "cpi": null,
+      "handle": "erik-top-ivory",
       "images": {
         "expected": {
           "count": 0,
@@ -989,44 +1370,66 @@
         },
         "last_enriched_at": null
       },
-      "promotion": {
-        "stage": "PRE_FLIGHT",
-        "locked": false,
-        "last_transition_at": null
+      "import": {
+        "anomaly_accepted": false,
+        "eligible": true,
+        "import_source": null,
+        "imported": false,
+        "imported_at": null
       },
+      "is_accessory": false,
       "overrides": {
         "manual_go": false,
         "notes": ""
       },
-      "allowed_actions": {
-        "metafield_write": false,
-        "image_upsert": false,
-        "collection_write": false,
-        "include_in_import_csv": false,
-        "size_guide_write": false
+      "preflight": {
+        "errors": [],
+        "image_status": "N/A",
+        "status": "SKIP",
+        "warnings": [
+          "Wholesale product (WS Buy) – skipped"
+        ]
+      },
+      "product_id": null,
+      "product_type": "RTW",
+      "promotion": {
+        "last_transition_at": null,
+        "locked": false,
+        "stage": "PRE_FLIGHT"
       }
     },
     "fenice-jacket-midnight-melange": {
-      "handle": "fenice-jacket-midnight-melange",
-      "product_id": "S226-2003 AIM001 000479 MIDNIGHT MELANGE",
+      "allowed_actions": {
+        "collection_write": false,
+        "image_upsert": false,
+        "include_in_import_csv": false,
+        "metafield_write": false,
+        "size_guide_write": false
+      },
+      "assets": {
+        "look_images": [
+          {
+            "derived_at": "2026-01-09T22:22:58.093467Z",
+            "derived_from": "inspect_product_images",
+            "media_gid": "gid://shopify/MediaImage/25949881172070",
+            "source": "shopify_existing"
+          }
+        ]
+      },
+      "audit": {
+        "static_action_promotions": [
+          {
+            "actions": [
+              "collection_write",
+              "size_guide_write"
+            ],
+            "promoted_at": "2026-01-10T18:24:34.040977+00:00",
+            "script": "promote_static_allowed_actions"
+          }
+        ]
+      },
       "cpi": "2003-000479",
-      "product_type": "RTW",
-      "is_accessory": false,
-      "preflight": {
-        "status": "NO-GO",
-        "image_status": "IMAGE_INCOMPLETE",
-        "errors": [
-          "Missing ghost image"
-        ],
-        "warnings": []
-      },
-      "import": {
-        "eligible": true,
-        "imported": false,
-        "imported_at": null,
-        "import_source": null,
-        "anomaly_accepted": false
-      },
+      "handle": "fenice-jacket-midnight-melange",
       "images": {
         "expected": {
           "count": 0,
@@ -1034,53 +1437,77 @@
         },
         "last_enriched_at": null
       },
-      "promotion": {
-        "stage": "PRE_FLIGHT",
-        "locked": false,
-        "last_transition_at": null
+      "import": {
+        "anomaly_accepted": false,
+        "eligible": true,
+        "import_source": null,
+        "imported": false,
+        "imported_at": null
       },
+      "is_accessory": false,
       "overrides": {
         "manual_go": false,
         "notes": ""
       },
-      "allowed_actions": {
-        "metafield_write": false,
-        "image_upsert": false,
-        "collection_write": false,
-        "include_in_import_csv": true,
-        "size_guide_write": false
+      "preflight": {
+        "errors": [
+          "Missing ghost image"
+        ],
+        "image_status": "IMAGE_INCOMPLETE",
+        "status": "NO-GO",
+        "warnings": []
       },
       "product_gid": "gid://shopify/Product/7716188127334",
+      "product_id": "S226-2003 AIM001 000479 MIDNIGHT MELANGE",
+      "product_type": "RTW",
+      "promotion": {
+        "last_transition_at": null,
+        "locked": false,
+        "stage": "PRE_FLIGHT"
+      },
+      "tags": [
+        "S226",
+        "SS26",
+        "collection_ready-to-wear",
+        "style_Fenice Jacket",
+        "S226-2003 AIM001 000479 MIDNIGHT MELANGE",
+        "DTC BUY",
+        "collection_jackets",
+        "color_midnight melange"
+      ]
+    },
+    "fenice-jacket-mortar-melange": {
+      "allowed_actions": {
+        "collection_write": true,
+        "image_upsert": true,
+        "include_in_import_csv": true,
+        "metafield_write": true,
+        "size_guide_write": true
+      },
       "assets": {
         "look_images": [
           {
-            "media_gid": "gid://shopify/MediaImage/25949881172070",
-            "source": "shopify_existing",
+            "derived_at": "2026-01-09T22:22:58.093467Z",
             "derived_from": "inspect_product_images",
-            "derived_at": "2026-01-09T22:22:58.093467Z"
+            "media_gid": "gid://shopify/MediaImage/25940518109286",
+            "source": "shopify_existing"
           }
         ]
-      }
-    },
-    "fenice-jacket-mortar-melange": {
-      "handle": "fenice-jacket-mortar-melange",
-      "product_id": "S226-2003 AIQ003 000147 MORTAR MELANGE",
+      },
+      "audit": {
+        "static_action_promotions": [
+          {
+            "actions": [
+              "collection_write",
+              "size_guide_write"
+            ],
+            "promoted_at": "2026-01-10T18:24:34.040979+00:00",
+            "script": "promote_static_allowed_actions"
+          }
+        ]
+      },
       "cpi": "2003-000147",
-      "product_type": "RTW",
-      "is_accessory": false,
-      "preflight": {
-        "status": "GO",
-        "image_status": "IMAGE_MINIMAL",
-        "errors": [],
-        "warnings": []
-      },
-      "import": {
-        "eligible": true,
-        "imported": false,
-        "imported_at": null,
-        "import_source": null,
-        "anomaly_accepted": false
-      },
+      "handle": "fenice-jacket-mortar-melange",
       "images": {
         "expected": {
           "count": 1,
@@ -1088,53 +1515,75 @@
         },
         "last_enriched_at": null
       },
-      "promotion": {
-        "stage": "PRE_FLIGHT",
-        "locked": false,
-        "last_transition_at": null
+      "import": {
+        "anomaly_accepted": false,
+        "eligible": true,
+        "import_source": null,
+        "imported": false,
+        "imported_at": null
       },
+      "is_accessory": false,
       "overrides": {
         "manual_go": false,
         "notes": ""
       },
-      "allowed_actions": {
-        "metafield_write": true,
-        "image_upsert": true,
-        "collection_write": true,
-        "include_in_import_csv": true,
-        "size_guide_write": false
+      "preflight": {
+        "errors": [],
+        "image_status": "IMAGE_MINIMAL",
+        "status": "GO",
+        "warnings": []
       },
       "product_gid": "gid://shopify/Product/7716188192870",
+      "product_id": "S226-2003 AIQ003 000147 MORTAR MELANGE",
+      "product_type": "RTW",
+      "promotion": {
+        "last_transition_at": null,
+        "locked": false,
+        "stage": "PRE_FLIGHT"
+      },
+      "tags": [
+        "S226",
+        "color_mortar melange",
+        "SS26",
+        "collection_ready-to-wear",
+        "style_Fenice Jacket",
+        "DTC BUY",
+        "collection_jackets",
+        "S226-2003 AIQ003 000147 MORTAR MELANGE"
+      ]
+    },
+    "fenice-jacket-tahini-melange": {
+      "allowed_actions": {
+        "collection_write": true,
+        "image_upsert": true,
+        "include_in_import_csv": true,
+        "metafield_write": true,
+        "size_guide_write": true
+      },
       "assets": {
         "look_images": [
           {
-            "media_gid": "gid://shopify/MediaImage/25940518109286",
-            "source": "shopify_existing",
+            "derived_at": "2026-01-09T22:22:58.093467Z",
             "derived_from": "inspect_product_images",
-            "derived_at": "2026-01-09T22:22:58.093467Z"
+            "media_gid": "gid://shopify/MediaImage/25939684065382",
+            "source": "shopify_existing"
           }
         ]
-      }
-    },
-    "fenice-jacket-tahini-melange": {
-      "handle": "fenice-jacket-tahini-melange",
-      "product_id": "S226-2003 AWQ015 000182 TAHINI MELANGE",
+      },
+      "audit": {
+        "static_action_promotions": [
+          {
+            "actions": [
+              "collection_write",
+              "size_guide_write"
+            ],
+            "promoted_at": "2026-01-10T18:24:34.040981+00:00",
+            "script": "promote_static_allowed_actions"
+          }
+        ]
+      },
       "cpi": "2003-000182",
-      "product_type": "RTW",
-      "is_accessory": false,
-      "preflight": {
-        "status": "GO",
-        "image_status": "IMAGE_READY",
-        "errors": [],
-        "warnings": []
-      },
-      "import": {
-        "eligible": true,
-        "imported": false,
-        "imported_at": null,
-        "import_source": null,
-        "anomaly_accepted": false
-      },
+      "handle": "fenice-jacket-tahini-melange",
       "images": {
         "expected": {
           "count": 6,
@@ -1142,53 +1591,75 @@
         },
         "last_enriched_at": null
       },
-      "promotion": {
-        "stage": "PRE_FLIGHT",
-        "locked": false,
-        "last_transition_at": null
+      "import": {
+        "anomaly_accepted": false,
+        "eligible": true,
+        "import_source": null,
+        "imported": false,
+        "imported_at": null
       },
+      "is_accessory": false,
       "overrides": {
         "manual_go": false,
         "notes": ""
       },
-      "allowed_actions": {
-        "metafield_write": true,
-        "image_upsert": true,
-        "collection_write": true,
-        "include_in_import_csv": true,
-        "size_guide_write": false
+      "preflight": {
+        "errors": [],
+        "image_status": "IMAGE_READY",
+        "status": "GO",
+        "warnings": []
       },
       "product_gid": "gid://shopify/Product/7716188225638",
+      "product_id": "S226-2003 AWQ015 000182 TAHINI MELANGE",
+      "product_type": "RTW",
+      "promotion": {
+        "last_transition_at": null,
+        "locked": false,
+        "stage": "PRE_FLIGHT"
+      },
+      "tags": [
+        "S226",
+        "SS26",
+        "S226-2003 AWQ015 000182 TAHINI MELANGE",
+        "DTC BUY",
+        "collection_ready-to-wear",
+        "style_Fenice Jacket",
+        "color_tahini melange",
+        "collection_jackets"
+      ]
+    },
+    "floyd-dress-azure-stripe": {
+      "allowed_actions": {
+        "collection_write": true,
+        "image_upsert": true,
+        "include_in_import_csv": true,
+        "metafield_write": true,
+        "size_guide_write": true
+      },
       "assets": {
         "look_images": [
           {
-            "media_gid": "gid://shopify/MediaImage/25939684065382",
-            "source": "shopify_existing",
+            "derived_at": "2026-01-09T22:22:58.093467Z",
             "derived_from": "inspect_product_images",
-            "derived_at": "2026-01-09T22:22:58.093467Z"
+            "media_gid": "gid://shopify/MediaImage/25939684393062",
+            "source": "shopify_existing"
           }
         ]
-      }
-    },
-    "floyd-dress-azure-stripe": {
-      "handle": "floyd-dress-azure-stripe",
-      "product_id": "S226-3008 SCQ015 374484 AZURE STRIPE",
+      },
+      "audit": {
+        "static_action_promotions": [
+          {
+            "actions": [
+              "collection_write",
+              "size_guide_write"
+            ],
+            "promoted_at": "2026-01-10T18:24:34.040983+00:00",
+            "script": "promote_static_allowed_actions"
+          }
+        ]
+      },
       "cpi": "3008-374484",
-      "product_type": "RTW",
-      "is_accessory": false,
-      "preflight": {
-        "status": "GO",
-        "image_status": "IMAGE_READY",
-        "errors": [],
-        "warnings": []
-      },
-      "import": {
-        "eligible": true,
-        "imported": false,
-        "imported_at": null,
-        "import_source": null,
-        "anomaly_accepted": false
-      },
+      "handle": "floyd-dress-azure-stripe",
       "images": {
         "expected": {
           "count": 7,
@@ -1196,55 +1667,75 @@
         },
         "last_enriched_at": null
       },
-      "promotion": {
-        "stage": "PRE_FLIGHT",
-        "locked": false,
-        "last_transition_at": null
+      "import": {
+        "anomaly_accepted": false,
+        "eligible": true,
+        "import_source": null,
+        "imported": false,
+        "imported_at": null
       },
+      "is_accessory": false,
       "overrides": {
         "manual_go": false,
         "notes": ""
       },
-      "allowed_actions": {
-        "metafield_write": true,
-        "image_upsert": true,
-        "collection_write": true,
-        "include_in_import_csv": true,
-        "size_guide_write": false
+      "preflight": {
+        "errors": [],
+        "image_status": "IMAGE_READY",
+        "status": "GO",
+        "warnings": []
       },
       "product_gid": "gid://shopify/Product/7716188455014",
+      "product_id": "S226-3008 SCQ015 374484 AZURE STRIPE",
+      "product_type": "RTW",
+      "promotion": {
+        "last_transition_at": null,
+        "locked": false,
+        "stage": "PRE_FLIGHT"
+      },
+      "tags": [
+        "S226",
+        "SS26",
+        "style_Floyd Dress",
+        "S226-3008 SCQ015 374484 AZURE STRIPE",
+        "color_azure stripe",
+        "collection_ready-to-wear",
+        "DTC BUY",
+        "collection_dresses"
+      ]
+    },
+    "fossett-pant-midnight-melange": {
+      "allowed_actions": {
+        "collection_write": true,
+        "image_upsert": false,
+        "include_in_import_csv": true,
+        "metafield_write": false,
+        "size_guide_write": true
+      },
       "assets": {
         "look_images": [
           {
-            "media_gid": "gid://shopify/MediaImage/25939684393062",
-            "source": "shopify_existing",
+            "derived_at": "2026-01-09T22:22:58.093467Z",
             "derived_from": "inspect_product_images",
-            "derived_at": "2026-01-09T22:22:58.093467Z"
+            "media_gid": "gid://shopify/MediaImage/25940538163302",
+            "source": "shopify_existing"
           }
         ]
-      }
-    },
-    "fossett-pant-midnight-melange": {
-      "handle": "fossett-pant-midnight-melange",
-      "product_id": "S226-6014 AIM001 000479 MIDNIGHT MELANGE",
+      },
+      "audit": {
+        "static_action_promotions": [
+          {
+            "actions": [
+              "collection_write",
+              "size_guide_write"
+            ],
+            "promoted_at": "2026-01-10T18:24:34.040985+00:00",
+            "script": "promote_static_allowed_actions"
+          }
+        ]
+      },
       "cpi": "6014-000479",
-      "product_type": "RTW",
-      "is_accessory": false,
-      "preflight": {
-        "status": "NO-GO",
-        "image_status": "IMAGE_INCOMPLETE",
-        "errors": [
-          "Missing ghost image"
-        ],
-        "warnings": []
-      },
-      "import": {
-        "eligible": true,
-        "imported": false,
-        "imported_at": null,
-        "import_source": null,
-        "anomaly_accepted": false
-      },
+      "handle": "fossett-pant-midnight-melange",
       "images": {
         "expected": {
           "count": 0,
@@ -1252,53 +1743,77 @@
         },
         "last_enriched_at": null
       },
-      "promotion": {
-        "stage": "PRE_FLIGHT",
-        "locked": false,
-        "last_transition_at": null
+      "import": {
+        "anomaly_accepted": false,
+        "eligible": true,
+        "import_source": null,
+        "imported": false,
+        "imported_at": null
       },
+      "is_accessory": false,
       "overrides": {
         "manual_go": false,
         "notes": ""
       },
-      "allowed_actions": {
-        "metafield_write": false,
-        "image_upsert": false,
-        "collection_write": false,
-        "include_in_import_csv": true,
-        "size_guide_write": false
+      "preflight": {
+        "errors": [
+          "Missing ghost image"
+        ],
+        "image_status": "IMAGE_INCOMPLETE",
+        "status": "NO-GO",
+        "warnings": []
       },
       "product_gid": "gid://shopify/Product/7716189503590",
+      "product_id": "S226-6014 AIM001 000479 MIDNIGHT MELANGE",
+      "product_type": "RTW",
+      "promotion": {
+        "last_transition_at": null,
+        "locked": false,
+        "stage": "PRE_FLIGHT"
+      },
+      "tags": [
+        "S226",
+        "SS26",
+        "style_Fossett Pant",
+        "collection_ready-to-wear",
+        "collection_pants",
+        "DTC BUY",
+        "S226-6014 AIM001 000479 MIDNIGHT MELANGE",
+        "color_midnight melange"
+      ]
+    },
+    "fossett-pant-mortar-melange": {
+      "allowed_actions": {
+        "collection_write": true,
+        "image_upsert": true,
+        "include_in_import_csv": true,
+        "metafield_write": true,
+        "size_guide_write": true
+      },
       "assets": {
         "look_images": [
           {
-            "media_gid": "gid://shopify/MediaImage/25940538163302",
-            "source": "shopify_existing",
+            "derived_at": "2026-01-09T22:22:58.093467Z",
             "derived_from": "inspect_product_images",
-            "derived_at": "2026-01-09T22:22:58.093467Z"
+            "media_gid": "gid://shopify/MediaImage/25940545863782",
+            "source": "shopify_existing"
           }
         ]
-      }
-    },
-    "fossett-pant-mortar-melange": {
-      "handle": "fossett-pant-mortar-melange",
-      "product_id": "S226-6014 AIQ003 000147 MORTAR MELANGE",
+      },
+      "audit": {
+        "static_action_promotions": [
+          {
+            "actions": [
+              "collection_write",
+              "size_guide_write"
+            ],
+            "promoted_at": "2026-01-10T18:24:34.040987+00:00",
+            "script": "promote_static_allowed_actions"
+          }
+        ]
+      },
       "cpi": "6014-000147",
-      "product_type": "RTW",
-      "is_accessory": false,
-      "preflight": {
-        "status": "GO",
-        "image_status": "IMAGE_MINIMAL",
-        "errors": [],
-        "warnings": []
-      },
-      "import": {
-        "eligible": true,
-        "imported": false,
-        "imported_at": null,
-        "import_source": null,
-        "anomaly_accepted": false
-      },
+      "handle": "fossett-pant-mortar-melange",
       "images": {
         "expected": {
           "count": 1,
@@ -1306,53 +1821,75 @@
         },
         "last_enriched_at": null
       },
-      "promotion": {
-        "stage": "PRE_FLIGHT",
-        "locked": false,
-        "last_transition_at": null
+      "import": {
+        "anomaly_accepted": false,
+        "eligible": true,
+        "import_source": null,
+        "imported": false,
+        "imported_at": null
       },
+      "is_accessory": false,
       "overrides": {
         "manual_go": false,
         "notes": ""
       },
-      "allowed_actions": {
-        "metafield_write": true,
-        "image_upsert": true,
-        "collection_write": true,
-        "include_in_import_csv": true,
-        "size_guide_write": false
+      "preflight": {
+        "errors": [],
+        "image_status": "IMAGE_MINIMAL",
+        "status": "GO",
+        "warnings": []
       },
       "product_gid": "gid://shopify/Product/7716189536358",
+      "product_id": "S226-6014 AIQ003 000147 MORTAR MELANGE",
+      "product_type": "RTW",
+      "promotion": {
+        "last_transition_at": null,
+        "locked": false,
+        "stage": "PRE_FLIGHT"
+      },
+      "tags": [
+        "S226",
+        "color_mortar melange",
+        "SS26",
+        "S226-6014 AIQ003 000147 MORTAR MELANGE",
+        "style_Fossett Pant",
+        "collection_ready-to-wear",
+        "collection_pants",
+        "DTC BUY"
+      ]
+    },
+    "fossett-pant-tahini-melange": {
+      "allowed_actions": {
+        "collection_write": true,
+        "image_upsert": true,
+        "include_in_import_csv": true,
+        "metafield_write": true,
+        "size_guide_write": true
+      },
       "assets": {
         "look_images": [
           {
-            "media_gid": "gid://shopify/MediaImage/25940545863782",
-            "source": "shopify_existing",
+            "derived_at": "2026-01-09T22:22:58.093467Z",
             "derived_from": "inspect_product_images",
-            "derived_at": "2026-01-09T22:22:58.093467Z"
+            "media_gid": "gid://shopify/MediaImage/25939684622438",
+            "source": "shopify_existing"
           }
         ]
-      }
-    },
-    "fossett-pant-tahini-melange": {
-      "handle": "fossett-pant-tahini-melange",
-      "product_id": "S226-6014 AWQ015 000182 TAHINI MELANGE",
+      },
+      "audit": {
+        "static_action_promotions": [
+          {
+            "actions": [
+              "collection_write",
+              "size_guide_write"
+            ],
+            "promoted_at": "2026-01-10T18:24:34.040989+00:00",
+            "script": "promote_static_allowed_actions"
+          }
+        ]
+      },
       "cpi": "6014-000182",
-      "product_type": "RTW",
-      "is_accessory": false,
-      "preflight": {
-        "status": "GO",
-        "image_status": "IMAGE_READY",
-        "errors": [],
-        "warnings": []
-      },
-      "import": {
-        "eligible": true,
-        "imported": false,
-        "imported_at": null,
-        "import_source": null,
-        "anomaly_accepted": false
-      },
+      "handle": "fossett-pant-tahini-melange",
       "images": {
         "expected": {
           "count": 6,
@@ -1360,55 +1897,65 @@
         },
         "last_enriched_at": null
       },
-      "promotion": {
-        "stage": "PRE_FLIGHT",
-        "locked": false,
-        "last_transition_at": null
+      "import": {
+        "anomaly_accepted": false,
+        "eligible": true,
+        "import_source": null,
+        "imported": false,
+        "imported_at": null
       },
+      "is_accessory": false,
       "overrides": {
         "manual_go": false,
         "notes": ""
       },
-      "allowed_actions": {
-        "metafield_write": true,
-        "image_upsert": true,
-        "collection_write": true,
-        "include_in_import_csv": true,
-        "size_guide_write": false
+      "preflight": {
+        "errors": [],
+        "image_status": "IMAGE_READY",
+        "status": "GO",
+        "warnings": []
       },
       "product_gid": "gid://shopify/Product/7716189569126",
-      "assets": {
-        "look_images": [
-          {
-            "media_gid": "gid://shopify/MediaImage/25939684622438",
-            "source": "shopify_existing",
-            "derived_from": "inspect_product_images",
-            "derived_at": "2026-01-09T22:22:58.093467Z"
-          }
-        ]
-      }
+      "product_id": "S226-6014 AWQ015 000182 TAHINI MELANGE",
+      "product_type": "RTW",
+      "promotion": {
+        "last_transition_at": null,
+        "locked": false,
+        "stage": "PRE_FLIGHT"
+      },
+      "tags": [
+        "S226",
+        "S226-6014 AWQ015 000182 TAHINI MELANGE",
+        "SS26",
+        "style_Fossett Pant",
+        "DTC BUY",
+        "collection_ready-to-wear",
+        "collection_pants",
+        "color_tahini melange"
+      ]
     },
     "hoffman-jacket-tahini": {
-      "handle": "hoffman-jacket-tahini",
-      "product_id": null,
-      "cpi": null,
-      "product_type": "RTW",
-      "is_accessory": false,
-      "preflight": {
-        "status": "SKIP",
-        "image_status": "N/A",
-        "errors": [],
-        "warnings": [
-          "Wholesale product (WS Buy) \u2013 skipped"
+      "allowed_actions": {
+        "collection_write": true,
+        "image_upsert": false,
+        "include_in_import_csv": false,
+        "metafield_write": false,
+        "size_guide_write": true
+      },
+      "audit": {
+        "static_action_promotions": [
+          {
+            "actions": [
+              "collection_write",
+              "size_guide_write"
+            ],
+            "promoted_at": "2026-01-10T18:24:34.040992+00:00",
+            "script": "promote_static_allowed_actions"
+          }
         ]
       },
-      "import": {
-        "eligible": true,
-        "imported": false,
-        "imported_at": null,
-        "import_source": null,
-        "anomaly_accepted": false
-      },
+      "cpi": null,
+      "handle": "hoffman-jacket-tahini",
       "images": {
         "expected": {
           "count": 0,
@@ -1416,42 +1963,66 @@
         },
         "last_enriched_at": null
       },
-      "promotion": {
-        "stage": "PRE_FLIGHT",
-        "locked": false,
-        "last_transition_at": null
+      "import": {
+        "anomaly_accepted": false,
+        "eligible": true,
+        "import_source": null,
+        "imported": false,
+        "imported_at": null
       },
+      "is_accessory": false,
       "overrides": {
         "manual_go": false,
         "notes": ""
       },
-      "allowed_actions": {
-        "metafield_write": false,
-        "image_upsert": false,
-        "collection_write": false,
-        "include_in_import_csv": false,
-        "size_guide_write": false
+      "preflight": {
+        "errors": [],
+        "image_status": "N/A",
+        "status": "SKIP",
+        "warnings": [
+          "Wholesale product (WS Buy) – skipped"
+        ]
+      },
+      "product_id": null,
+      "product_type": "RTW",
+      "promotion": {
+        "last_transition_at": null,
+        "locked": false,
+        "stage": "PRE_FLIGHT"
       }
     },
     "kiera-dress-maroon-allover-petals": {
-      "handle": "kiera-dress-maroon-allover-petals",
-      "product_id": "S226-3019 BSP024 416563 MAROON ALLOVER PETALS",
+      "allowed_actions": {
+        "collection_write": false,
+        "image_upsert": false,
+        "include_in_import_csv": false,
+        "metafield_write": false,
+        "size_guide_write": false
+      },
+      "assets": {
+        "look_images": [
+          {
+            "derived_at": "2026-01-09T22:22:58.093467Z",
+            "derived_from": "inspect_product_images",
+            "media_gid": "gid://shopify/MediaImage/25940554874982",
+            "source": "shopify_existing"
+          }
+        ]
+      },
+      "audit": {
+        "static_action_promotions": [
+          {
+            "actions": [
+              "collection_write",
+              "size_guide_write"
+            ],
+            "promoted_at": "2026-01-10T18:24:34.040994+00:00",
+            "script": "promote_static_allowed_actions"
+          }
+        ]
+      },
       "cpi": "3019-416563",
-      "product_type": "RTW",
-      "is_accessory": false,
-      "preflight": {
-        "status": "GO",
-        "image_status": "IMAGE_MINIMAL",
-        "errors": [],
-        "warnings": []
-      },
-      "import": {
-        "eligible": true,
-        "imported": false,
-        "imported_at": null,
-        "import_source": null,
-        "anomaly_accepted": false
-      },
+      "handle": "kiera-dress-maroon-allover-petals",
       "images": {
         "expected": {
           "count": 1,
@@ -1459,53 +2030,75 @@
         },
         "last_enriched_at": null
       },
-      "promotion": {
-        "stage": "PRE_FLIGHT",
-        "locked": false,
-        "last_transition_at": null
+      "import": {
+        "anomaly_accepted": false,
+        "eligible": true,
+        "import_source": null,
+        "imported": false,
+        "imported_at": null
       },
+      "is_accessory": false,
       "overrides": {
         "manual_go": false,
         "notes": ""
       },
-      "allowed_actions": {
-        "metafield_write": true,
-        "image_upsert": true,
-        "collection_write": true,
-        "include_in_import_csv": true,
-        "size_guide_write": false
+      "preflight": {
+        "errors": [],
+        "image_status": "IMAGE_MINIMAL",
+        "status": "GO",
+        "warnings": []
       },
       "product_gid": "gid://shopify/Product/7716188586086",
+      "product_id": "S226-3019 BSP024 416563 MAROON ALLOVER PETALS",
+      "product_type": "RTW",
+      "promotion": {
+        "last_transition_at": null,
+        "locked": false,
+        "stage": "PRE_FLIGHT"
+      },
+      "tags": [
+        "S226",
+        "style_Kiera Dress",
+        "SS26",
+        "color_maroon allover petals",
+        "collection_ready-to-wear",
+        "S226-3019 BSP024 416563 MAROON ALLOVER PETALS",
+        "DTC BUY",
+        "collection_dresses"
+      ]
+    },
+    "kirsty-dress-storm-allover-petals": {
+      "allowed_actions": {
+        "collection_write": true,
+        "image_upsert": true,
+        "include_in_import_csv": true,
+        "metafield_write": true,
+        "size_guide_write": true
+      },
       "assets": {
         "look_images": [
           {
-            "media_gid": "gid://shopify/MediaImage/25940554874982",
-            "source": "shopify_existing",
+            "derived_at": "2026-01-09T22:22:58.093467Z",
             "derived_from": "inspect_product_images",
-            "derived_at": "2026-01-09T22:22:58.093467Z"
+            "media_gid": "gid://shopify/MediaImage/25939684819046",
+            "source": "shopify_existing"
           }
         ]
-      }
-    },
-    "kirsty-dress-storm-allover-petals": {
-      "handle": "kirsty-dress-storm-allover-petals",
-      "product_id": "S226-3035 BSP024 416067 STORM ALLOVER PETALS",
+      },
+      "audit": {
+        "static_action_promotions": [
+          {
+            "actions": [
+              "collection_write",
+              "size_guide_write"
+            ],
+            "promoted_at": "2026-01-10T18:24:34.040995+00:00",
+            "script": "promote_static_allowed_actions"
+          }
+        ]
+      },
       "cpi": "3035-416067",
-      "product_type": "RTW",
-      "is_accessory": false,
-      "preflight": {
-        "status": "GO",
-        "image_status": "IMAGE_READY",
-        "errors": [],
-        "warnings": []
-      },
-      "import": {
-        "eligible": true,
-        "imported": false,
-        "imported_at": null,
-        "import_source": null,
-        "anomaly_accepted": false
-      },
+      "handle": "kirsty-dress-storm-allover-petals",
       "images": {
         "expected": {
           "count": 6,
@@ -1513,111 +2106,143 @@
         },
         "last_enriched_at": null
       },
-      "promotion": {
-        "stage": "PRE_FLIGHT",
-        "locked": false,
-        "last_transition_at": null
+      "import": {
+        "anomaly_accepted": false,
+        "eligible": true,
+        "import_source": null,
+        "imported": false,
+        "imported_at": null
       },
+      "is_accessory": false,
       "overrides": {
         "manual_go": false,
         "notes": ""
       },
-      "allowed_actions": {
-        "metafield_write": true,
-        "image_upsert": true,
-        "collection_write": true,
-        "include_in_import_csv": true,
-        "size_guide_write": false
+      "preflight": {
+        "errors": [],
+        "image_status": "IMAGE_READY",
+        "status": "GO",
+        "warnings": []
       },
       "product_gid": "gid://shopify/Product/7716188815462",
+      "product_id": "S226-3035 BSP024 416067 STORM ALLOVER PETALS",
+      "product_type": "RTW",
+      "promotion": {
+        "last_transition_at": null,
+        "locked": false,
+        "stage": "PRE_FLIGHT"
+      },
+      "tags": [
+        "S226",
+        "SS26",
+        "style_Kirsty Dress",
+        "color_storm allover petals",
+        "collection_ready-to-wear",
+        "DTC BUY",
+        "collection_dresses",
+        "S226-3035 BSP024 416067 STORM ALLOVER PETALS"
+      ]
+    },
+    "knot-basket-crossbody-black-silver": {
+      "allowed_actions": {
+        "collection_write": true,
+        "image_upsert": false,
+        "include_in_import_csv": true,
+        "metafield_write": false,
+        "size_guide_write": true
+      },
       "assets": {
         "look_images": [
           {
-            "media_gid": "gid://shopify/MediaImage/25939684819046",
-            "source": "shopify_existing",
+            "derived_at": "2026-01-09T22:22:58.093467Z",
             "derived_from": "inspect_product_images",
-            "derived_at": "2026-01-09T22:22:58.093467Z"
+            "media_gid": "gid://shopify/MediaImage/25940645249126",
+            "source": "shopify_existing"
           }
         ]
-      }
-    },
-    "knot-basket-crossbody-black-silver": {
-      "handle": "knot-basket-crossbody-black-silver",
-      "product_id": "S226-7159 STS007 381001 BLACK/SILVER",
+      },
+      "audit": {
+        "static_action_promotions": [
+          {
+            "actions": [
+              "collection_write",
+              "size_guide_write"
+            ],
+            "promoted_at": "2026-01-10T18:24:34.040997+00:00",
+            "script": "promote_static_allowed_actions"
+          }
+        ]
+      },
       "cpi": "7159-381001",
-      "product_type": "ACCESSORY",
+      "handle": "knot-basket-crossbody-black-silver",
+      "images": {
+        "expected": {
+          "count": 0,
+          "max_position": 0
+        },
+        "last_enriched_at": null
+      },
+      "import": {
+        "anomaly_accepted": false,
+        "eligible": true,
+        "import_source": null,
+        "imported": false,
+        "imported_at": null
+      },
       "is_accessory": true,
+      "overrides": {
+        "manual_go": false,
+        "notes": ""
+      },
       "preflight": {
-        "status": "NO-GO",
-        "image_status": "IMAGE_INCOMPLETE",
         "errors": [
           "Missing ghost image"
         ],
+        "image_status": "IMAGE_INCOMPLETE",
+        "status": "NO-GO",
         "warnings": []
       },
-      "import": {
-        "eligible": true,
-        "imported": false,
-        "imported_at": null,
-        "import_source": null,
-        "anomaly_accepted": false
-      },
-      "images": {
-        "expected": {
-          "count": 0,
-          "max_position": 0
-        },
-        "last_enriched_at": null
-      },
-      "promotion": {
-        "stage": "PRE_FLIGHT",
-        "locked": false,
-        "last_transition_at": null
-      },
-      "overrides": {
-        "manual_go": false,
-        "notes": ""
-      },
-      "allowed_actions": {
-        "metafield_write": false,
-        "image_upsert": false,
-        "collection_write": false,
-        "include_in_import_csv": true,
-        "size_guide_write": false
-      },
       "product_gid": "gid://shopify/Product/7716189798502",
-      "assets": {
-        "look_images": [
-          {
-            "media_gid": "gid://shopify/MediaImage/25940645249126",
-            "source": "shopify_existing",
-            "derived_from": "inspect_product_images",
-            "derived_at": "2026-01-09T22:22:58.093467Z"
-          }
-        ]
-      }
+      "product_id": "S226-7159 STS007 381001 BLACK/SILVER",
+      "product_type": "ACCESSORY",
+      "promotion": {
+        "last_transition_at": null,
+        "locked": false,
+        "stage": "PRE_FLIGHT"
+      },
+      "tags": [
+        "S226",
+        "collection_accessories",
+        "color_black/silver",
+        "SS26",
+        "S226-7159 STS007 381001 BLACK/SILVER",
+        "style_Knot Basket Crossbody",
+        "collection_Bags",
+        "DTC BUY"
+      ]
     },
     "knot-basket-large-macademia": {
-      "handle": "knot-basket-large-macademia",
-      "product_id": null,
-      "cpi": null,
-      "product_type": "RTW",
-      "is_accessory": false,
-      "preflight": {
-        "status": "SKIP",
-        "image_status": "N/A",
-        "errors": [],
-        "warnings": [
-          "Wholesale product (WS Buy) \u2013 skipped"
+      "allowed_actions": {
+        "collection_write": true,
+        "image_upsert": false,
+        "include_in_import_csv": false,
+        "metafield_write": false,
+        "size_guide_write": true
+      },
+      "audit": {
+        "static_action_promotions": [
+          {
+            "actions": [
+              "collection_write",
+              "size_guide_write"
+            ],
+            "promoted_at": "2026-01-10T18:24:34.040999+00:00",
+            "script": "promote_static_allowed_actions"
+          }
         ]
       },
-      "import": {
-        "eligible": true,
-        "imported": false,
-        "imported_at": null,
-        "import_source": null,
-        "anomaly_accepted": false
-      },
+      "cpi": null,
+      "handle": "knot-basket-large-macademia",
       "images": {
         "expected": {
           "count": 0,
@@ -1625,44 +2250,66 @@
         },
         "last_enriched_at": null
       },
-      "promotion": {
-        "stage": "PRE_FLIGHT",
-        "locked": false,
-        "last_transition_at": null
+      "import": {
+        "anomaly_accepted": false,
+        "eligible": true,
+        "import_source": null,
+        "imported": false,
+        "imported_at": null
       },
+      "is_accessory": false,
       "overrides": {
         "manual_go": false,
         "notes": ""
       },
-      "allowed_actions": {
-        "metafield_write": false,
-        "image_upsert": false,
-        "collection_write": false,
-        "include_in_import_csv": false,
-        "size_guide_write": false
+      "preflight": {
+        "errors": [],
+        "image_status": "N/A",
+        "status": "SKIP",
+        "warnings": [
+          "Wholesale product (WS Buy) – skipped"
+        ]
+      },
+      "product_id": null,
+      "product_type": "RTW",
+      "promotion": {
+        "last_transition_at": null,
+        "locked": false,
+        "stage": "PRE_FLIGHT"
       }
     },
     "knot-basket-small-black-silver": {
-      "handle": "knot-basket-small-black-silver",
-      "product_id": "S226-7155 STS007 381001 BLACK/SILVER",
+      "allowed_actions": {
+        "collection_write": false,
+        "image_upsert": false,
+        "include_in_import_csv": false,
+        "metafield_write": false,
+        "size_guide_write": false
+      },
+      "assets": {
+        "look_images": [
+          {
+            "derived_at": "2026-01-09T22:22:58.093467Z",
+            "derived_from": "inspect_product_images",
+            "media_gid": "gid://shopify/MediaImage/25940829274214",
+            "source": "shopify_existing"
+          }
+        ]
+      },
+      "audit": {
+        "static_action_promotions": [
+          {
+            "actions": [
+              "collection_write",
+              "size_guide_write"
+            ],
+            "promoted_at": "2026-01-10T18:24:34.041001+00:00",
+            "script": "promote_static_allowed_actions"
+          }
+        ]
+      },
       "cpi": "7155-381001",
-      "product_type": "ACCESSORY",
-      "is_accessory": true,
-      "preflight": {
-        "status": "NO-GO",
-        "image_status": "IMAGE_INCOMPLETE",
-        "errors": [
-          "Missing ghost image"
-        ],
-        "warnings": []
-      },
-      "import": {
-        "eligible": true,
-        "imported": false,
-        "imported_at": null,
-        "import_source": null,
-        "anomaly_accepted": false
-      },
+      "handle": "knot-basket-small-black-silver",
       "images": {
         "expected": {
           "count": 0,
@@ -1670,57 +2317,77 @@
         },
         "last_enriched_at": null
       },
-      "promotion": {
-        "stage": "PRE_FLIGHT",
-        "locked": false,
-        "last_transition_at": null
+      "import": {
+        "anomaly_accepted": false,
+        "eligible": true,
+        "import_source": null,
+        "imported": false,
+        "imported_at": null
       },
+      "is_accessory": true,
       "overrides": {
         "manual_go": false,
         "notes": ""
       },
-      "allowed_actions": {
-        "metafield_write": false,
-        "image_upsert": false,
-        "collection_write": false,
-        "include_in_import_csv": true,
-        "size_guide_write": false
-      },
-      "product_gid": "gid://shopify/Product/7716189700198",
-      "assets": {
-        "look_images": [
-          {
-            "media_gid": "gid://shopify/MediaImage/25940829274214",
-            "source": "shopify_existing",
-            "derived_from": "inspect_product_images",
-            "derived_at": "2026-01-09T22:22:58.093467Z"
-          }
-        ]
-      }
-    },
-    "knot-basket-small-long-handle-danube": {
-      "handle": "knot-basket-small-long-handle-danube",
-      "product_id": "S226-7165 STS002 000414 DANUBE",
-      "cpi": "7165-000414",
-      "product_type": "ACCESSORY",
-      "is_accessory": true,
       "preflight": {
-        "status": "NO-GO",
-        "image_status": "IMAGE_INCOMPLETE",
         "errors": [
           "Missing ghost image"
         ],
-        "warnings": [
-          "Image overflow: 1 additional rows required"
+        "image_status": "IMAGE_INCOMPLETE",
+        "status": "NO-GO",
+        "warnings": []
+      },
+      "product_gid": "gid://shopify/Product/7716189700198",
+      "product_id": "S226-7155 STS007 381001 BLACK/SILVER",
+      "product_type": "ACCESSORY",
+      "promotion": {
+        "last_transition_at": null,
+        "locked": false,
+        "stage": "PRE_FLIGHT"
+      },
+      "tags": [
+        "S226",
+        "collection_accessories",
+        "color_black/silver",
+        "SS26",
+        "style_Knot Basket Small",
+        "collection_Bags",
+        "DTC BUY",
+        "S226-7155 STS007 381001 BLACK/SILVER"
+      ]
+    },
+    "knot-basket-small-long-handle-danube": {
+      "allowed_actions": {
+        "collection_write": true,
+        "image_upsert": false,
+        "include_in_import_csv": true,
+        "metafield_write": false,
+        "size_guide_write": true
+      },
+      "assets": {
+        "look_images": [
+          {
+            "derived_at": "2026-01-09T22:22:58.093467Z",
+            "derived_from": "inspect_product_images",
+            "media_gid": "gid://shopify/MediaImage/25940651737190",
+            "source": "shopify_existing"
+          }
         ]
       },
-      "import": {
-        "eligible": true,
-        "imported": false,
-        "imported_at": null,
-        "import_source": null,
-        "anomaly_accepted": false
+      "audit": {
+        "static_action_promotions": [
+          {
+            "actions": [
+              "collection_write",
+              "size_guide_write"
+            ],
+            "promoted_at": "2026-01-10T18:24:34.041003+00:00",
+            "script": "promote_static_allowed_actions"
+          }
+        ]
       },
+      "cpi": "7165-000414",
+      "handle": "knot-basket-small-long-handle-danube",
       "images": {
         "expected": {
           "count": 1,
@@ -1728,55 +2395,69 @@
         },
         "last_enriched_at": null
       },
-      "promotion": {
-        "stage": "PRE_FLIGHT",
-        "locked": false,
-        "last_transition_at": null
+      "import": {
+        "anomaly_accepted": false,
+        "eligible": true,
+        "import_source": null,
+        "imported": false,
+        "imported_at": null
       },
+      "is_accessory": true,
       "overrides": {
         "manual_go": false,
         "notes": ""
       },
-      "allowed_actions": {
-        "metafield_write": false,
-        "image_upsert": false,
-        "collection_write": false,
-        "include_in_import_csv": true,
-        "size_guide_write": false
+      "preflight": {
+        "errors": [
+          "Missing ghost image"
+        ],
+        "image_status": "IMAGE_INCOMPLETE",
+        "status": "NO-GO",
+        "warnings": [
+          "Image overflow: 1 additional rows required"
+        ]
       },
       "product_gid": "gid://shopify/Product/7716189864038",
-      "assets": {
-        "look_images": [
-          {
-            "media_gid": "gid://shopify/MediaImage/25940651737190",
-            "source": "shopify_existing",
-            "derived_from": "inspect_product_images",
-            "derived_at": "2026-01-09T22:22:58.093467Z"
-          }
-        ]
-      }
+      "product_id": "S226-7165 STS002 000414 DANUBE",
+      "product_type": "ACCESSORY",
+      "promotion": {
+        "last_transition_at": null,
+        "locked": false,
+        "stage": "PRE_FLIGHT"
+      },
+      "tags": [
+        "S226-7165 STS002 000414 DANUBE",
+        "S226",
+        "collection_accessories",
+        "SS26",
+        "style_Knot Basket Small Long Handle",
+        "color_danube",
+        "collection_Bags",
+        "DTC BUY"
+      ]
     },
     "knot-basket-small-long-handle-mouton": {
-      "handle": "knot-basket-small-long-handle-mouton",
-      "product_id": null,
-      "cpi": null,
-      "product_type": "RTW",
-      "is_accessory": false,
-      "preflight": {
-        "status": "SKIP",
-        "image_status": "N/A",
-        "errors": [],
-        "warnings": [
-          "Wholesale product (WS Buy) \u2013 skipped"
+      "allowed_actions": {
+        "collection_write": true,
+        "image_upsert": false,
+        "include_in_import_csv": false,
+        "metafield_write": false,
+        "size_guide_write": true
+      },
+      "audit": {
+        "static_action_promotions": [
+          {
+            "actions": [
+              "collection_write",
+              "size_guide_write"
+            ],
+            "promoted_at": "2026-01-10T18:24:34.041005+00:00",
+            "script": "promote_static_allowed_actions"
+          }
         ]
       },
-      "import": {
-        "eligible": true,
-        "imported": false,
-        "imported_at": null,
-        "import_source": null,
-        "anomaly_accepted": false
-      },
+      "cpi": null,
+      "handle": "knot-basket-small-long-handle-mouton",
       "images": {
         "expected": {
           "count": 0,
@@ -1784,42 +2465,66 @@
         },
         "last_enriched_at": null
       },
-      "promotion": {
-        "stage": "PRE_FLIGHT",
-        "locked": false,
-        "last_transition_at": null
+      "import": {
+        "anomaly_accepted": false,
+        "eligible": true,
+        "import_source": null,
+        "imported": false,
+        "imported_at": null
       },
+      "is_accessory": false,
       "overrides": {
         "manual_go": false,
         "notes": ""
       },
-      "allowed_actions": {
-        "metafield_write": false,
-        "image_upsert": false,
-        "collection_write": false,
-        "include_in_import_csv": false,
-        "size_guide_write": false
+      "preflight": {
+        "errors": [],
+        "image_status": "N/A",
+        "status": "SKIP",
+        "warnings": [
+          "Wholesale product (WS Buy) – skipped"
+        ]
+      },
+      "product_id": null,
+      "product_type": "RTW",
+      "promotion": {
+        "last_transition_at": null,
+        "locked": false,
+        "stage": "PRE_FLIGHT"
       }
     },
     "linnie-skirt-ivory-petals": {
-      "handle": "linnie-skirt-ivory-petals",
-      "product_id": "S226-5017 SCP015 416102 IVORY PETALS",
+      "allowed_actions": {
+        "collection_write": false,
+        "image_upsert": false,
+        "include_in_import_csv": false,
+        "metafield_write": false,
+        "size_guide_write": false
+      },
+      "assets": {
+        "look_images": [
+          {
+            "derived_at": "2026-01-09T22:22:58.093467Z",
+            "derived_from": "inspect_product_images",
+            "media_gid": "gid://shopify/MediaImage/25939685015654",
+            "source": "shopify_existing"
+          }
+        ]
+      },
+      "audit": {
+        "static_action_promotions": [
+          {
+            "actions": [
+              "collection_write",
+              "size_guide_write"
+            ],
+            "promoted_at": "2026-01-10T18:24:34.041007+00:00",
+            "script": "promote_static_allowed_actions"
+          }
+        ]
+      },
       "cpi": "5017-416102",
-      "product_type": "RTW",
-      "is_accessory": false,
-      "preflight": {
-        "status": "GO",
-        "image_status": "IMAGE_READY",
-        "errors": [],
-        "warnings": []
-      },
-      "import": {
-        "eligible": true,
-        "imported": false,
-        "imported_at": null,
-        "import_source": null,
-        "anomaly_accepted": false
-      },
+      "handle": "linnie-skirt-ivory-petals",
       "images": {
         "expected": {
           "count": 6,
@@ -1827,57 +2532,75 @@
         },
         "last_enriched_at": null
       },
-      "promotion": {
-        "stage": "PRE_FLIGHT",
-        "locked": false,
-        "last_transition_at": null
+      "import": {
+        "anomaly_accepted": false,
+        "eligible": true,
+        "import_source": null,
+        "imported": false,
+        "imported_at": null
       },
+      "is_accessory": false,
       "overrides": {
         "manual_go": false,
         "notes": ""
       },
-      "allowed_actions": {
-        "metafield_write": true,
-        "image_upsert": true,
-        "collection_write": true,
-        "include_in_import_csv": true,
-        "size_guide_write": false
+      "preflight": {
+        "errors": [],
+        "image_status": "IMAGE_READY",
+        "status": "GO",
+        "warnings": []
       },
       "product_gid": "gid://shopify/Product/7716189339750",
-      "assets": {
-        "look_images": [
-          {
-            "media_gid": "gid://shopify/MediaImage/25939685015654",
-            "source": "shopify_existing",
-            "derived_from": "inspect_product_images",
-            "derived_at": "2026-01-09T22:22:58.093467Z"
-          }
-        ]
-      }
+      "product_id": "S226-5017 SCP015 416102 IVORY PETALS",
+      "product_type": "RTW",
+      "promotion": {
+        "last_transition_at": null,
+        "locked": false,
+        "stage": "PRE_FLIGHT"
+      },
+      "tags": [
+        "S226",
+        "SS26",
+        "style_Linnie Skirt",
+        "S226-5017 SCP015 416102 IVORY PETALS",
+        "collection_skirts",
+        "collection_ready-to-wear",
+        "DTC BUY",
+        "color_ivory petals"
+      ]
     },
     "loquette-flap-bag-black": {
-      "handle": "loquette-flap-bag-black",
-      "product_id": "S226-7168 LLS061 000001 BLACK",
-      "cpi": "7168-000001",
-      "product_type": "ACCESSORY",
-      "is_accessory": true,
-      "preflight": {
-        "status": "NO-GO",
-        "image_status": "IMAGE_INCOMPLETE",
-        "errors": [
-          "Missing ghost image"
-        ],
-        "warnings": [
-          "Image overflow: 1 additional rows required"
+      "allowed_actions": {
+        "collection_write": true,
+        "image_upsert": false,
+        "include_in_import_csv": true,
+        "metafield_write": false,
+        "size_guide_write": true
+      },
+      "assets": {
+        "look_images": [
+          {
+            "derived_at": "2026-01-09T22:22:58.093467Z",
+            "derived_from": "inspect_product_images",
+            "media_gid": "gid://shopify/MediaImage/25940660420710",
+            "source": "shopify_existing"
+          }
         ]
       },
-      "import": {
-        "eligible": true,
-        "imported": false,
-        "imported_at": null,
-        "import_source": null,
-        "anomaly_accepted": false
+      "audit": {
+        "static_action_promotions": [
+          {
+            "actions": [
+              "collection_write",
+              "size_guide_write"
+            ],
+            "promoted_at": "2026-01-10T18:24:34.041009+00:00",
+            "script": "promote_static_allowed_actions"
+          }
+        ]
       },
+      "cpi": "7168-000001",
+      "handle": "loquette-flap-bag-black",
       "images": {
         "expected": {
           "count": 1,
@@ -1885,111 +2608,159 @@
         },
         "last_enriched_at": null
       },
-      "promotion": {
-        "stage": "PRE_FLIGHT",
-        "locked": false,
-        "last_transition_at": null
+      "import": {
+        "anomaly_accepted": false,
+        "eligible": true,
+        "import_source": null,
+        "imported": false,
+        "imported_at": null
       },
+      "is_accessory": true,
       "overrides": {
         "manual_go": false,
         "notes": ""
       },
-      "allowed_actions": {
-        "metafield_write": false,
-        "image_upsert": false,
-        "collection_write": false,
-        "include_in_import_csv": true,
-        "size_guide_write": false
+      "preflight": {
+        "errors": [
+          "Missing ghost image"
+        ],
+        "image_status": "IMAGE_INCOMPLETE",
+        "status": "NO-GO",
+        "warnings": [
+          "Image overflow: 1 additional rows required"
+        ]
       },
       "product_gid": "gid://shopify/Product/7716189995110",
+      "product_id": "S226-7168 LLS061 000001 BLACK",
+      "product_type": "ACCESSORY",
+      "promotion": {
+        "last_transition_at": null,
+        "locked": false,
+        "stage": "PRE_FLIGHT"
+      },
+      "tags": [
+        "S226-7168 LLS061 000001 BLACK",
+        "S226",
+        "collection_accessories",
+        "SS26",
+        "collection_Bags",
+        "color_black",
+        "style_Loquette Flap Bag",
+        "DTC BUY"
+      ]
+    },
+    "loquette-flap-bag-python": {
+      "allowed_actions": {
+        "collection_write": true,
+        "image_upsert": false,
+        "include_in_import_csv": true,
+        "metafield_write": false,
+        "size_guide_write": true
+      },
       "assets": {
         "look_images": [
           {
-            "media_gid": "gid://shopify/MediaImage/25940660420710",
-            "source": "shopify_existing",
+            "derived_at": "2026-01-09T22:22:58.093467Z",
             "derived_from": "inspect_product_images",
-            "derived_at": "2026-01-09T22:22:58.093467Z"
+            "media_gid": "gid://shopify/MediaImage/25940655243366",
+            "source": "shopify_existing"
           }
         ]
-      }
-    },
-    "loquette-flap-bag-python": {
-      "handle": "loquette-flap-bag-python",
-      "product_id": "S226-7168 ELP013 000907 PYTHON",
+      },
+      "audit": {
+        "static_action_promotions": [
+          {
+            "actions": [
+              "collection_write",
+              "size_guide_write"
+            ],
+            "promoted_at": "2026-01-10T18:24:34.041011+00:00",
+            "script": "promote_static_allowed_actions"
+          }
+        ]
+      },
       "cpi": "7168-000907",
-      "product_type": "ACCESSORY",
+      "handle": "loquette-flap-bag-python",
+      "images": {
+        "expected": {
+          "count": 1,
+          "max_position": 1
+        },
+        "last_enriched_at": null
+      },
+      "import": {
+        "anomaly_accepted": false,
+        "eligible": true,
+        "import_source": null,
+        "imported": false,
+        "imported_at": null
+      },
       "is_accessory": true,
+      "overrides": {
+        "manual_go": false,
+        "notes": ""
+      },
       "preflight": {
-        "status": "NO-GO",
-        "image_status": "IMAGE_INCOMPLETE",
         "errors": [
           "Missing ghost image"
         ],
+        "image_status": "IMAGE_INCOMPLETE",
+        "status": "NO-GO",
         "warnings": [
           "Image overflow: 1 additional rows required"
         ]
       },
-      "import": {
-        "eligible": true,
-        "imported": false,
-        "imported_at": null,
-        "import_source": null,
-        "anomaly_accepted": false
-      },
-      "images": {
-        "expected": {
-          "count": 1,
-          "max_position": 1
-        },
-        "last_enriched_at": null
-      },
-      "promotion": {
-        "stage": "PRE_FLIGHT",
-        "locked": false,
-        "last_transition_at": null
-      },
-      "overrides": {
-        "manual_go": false,
-        "notes": ""
-      },
-      "allowed_actions": {
-        "metafield_write": false,
-        "image_upsert": false,
-        "collection_write": false,
-        "include_in_import_csv": true,
-        "size_guide_write": false
-      },
       "product_gid": "gid://shopify/Product/7716189896806",
-      "assets": {
-        "look_images": [
-          {
-            "media_gid": "gid://shopify/MediaImage/25940655243366",
-            "source": "shopify_existing",
-            "derived_from": "inspect_product_images",
-            "derived_at": "2026-01-09T22:22:58.093467Z"
-          }
-        ]
-      }
+      "product_id": "S226-7168 ELP013 000907 PYTHON",
+      "product_type": "ACCESSORY",
+      "promotion": {
+        "last_transition_at": null,
+        "locked": false,
+        "stage": "PRE_FLIGHT"
+      },
+      "tags": [
+        "color_python",
+        "S226",
+        "collection_accessories",
+        "S226-7168 ELP013 000907 PYTHON",
+        "SS26",
+        "collection_Bags",
+        "style_Loquette Flap Bag",
+        "DTC BUY"
+      ]
     },
     "lydia-dress-ivory-allover-petals": {
-      "handle": "lydia-dress-ivory-allover-petals",
-      "product_id": "S226-3001 SCP015 416102 IVORY ALLOVER PETALS",
+      "allowed_actions": {
+        "collection_write": true,
+        "image_upsert": true,
+        "include_in_import_csv": true,
+        "metafield_write": true,
+        "size_guide_write": true
+      },
+      "assets": {
+        "look_images": [
+          {
+            "derived_at": "2026-01-09T22:22:58.093467Z",
+            "derived_from": "inspect_product_images",
+            "media_gid": "gid://shopify/MediaImage/25940562673766",
+            "source": "shopify_existing"
+          }
+        ]
+      },
+      "audit": {
+        "static_action_promotions": [
+          {
+            "actions": [
+              "collection_write",
+              "size_guide_write"
+            ],
+            "promoted_at": "2026-01-10T18:24:34.041013+00:00",
+            "script": "promote_static_allowed_actions"
+          }
+        ]
+      },
       "cpi": "3001-416102",
-      "product_type": "RTW",
-      "is_accessory": false,
-      "preflight": {
-        "status": "GO",
-        "image_status": "IMAGE_MINIMAL",
-        "errors": [],
-        "warnings": []
-      },
-      "import": {
-        "eligible": true,
-        "imported": false,
-        "imported_at": null,
-        "import_source": null,
-        "anomaly_accepted": false
-      },
+      "handle": "lydia-dress-ivory-allover-petals",
       "images": {
         "expected": {
           "count": 1,
@@ -1997,53 +2768,75 @@
         },
         "last_enriched_at": null
       },
-      "promotion": {
-        "stage": "PRE_FLIGHT",
-        "locked": false,
-        "last_transition_at": null
+      "import": {
+        "anomaly_accepted": false,
+        "eligible": true,
+        "import_source": null,
+        "imported": false,
+        "imported_at": null
       },
+      "is_accessory": false,
       "overrides": {
         "manual_go": false,
         "notes": ""
       },
-      "allowed_actions": {
-        "metafield_write": true,
-        "image_upsert": true,
-        "collection_write": true,
-        "include_in_import_csv": true,
-        "size_guide_write": false
+      "preflight": {
+        "errors": [],
+        "image_status": "IMAGE_MINIMAL",
+        "status": "GO",
+        "warnings": []
       },
       "product_gid": "gid://shopify/Product/7716188323942",
-      "assets": {
-        "look_images": [
-          {
-            "media_gid": "gid://shopify/MediaImage/25940562673766",
-            "source": "shopify_existing",
-            "derived_from": "inspect_product_images",
-            "derived_at": "2026-01-09T22:22:58.093467Z"
-          }
-        ]
-      }
+      "product_id": "S226-3001 SCP015 416102 IVORY ALLOVER PETALS",
+      "product_type": "RTW",
+      "promotion": {
+        "last_transition_at": null,
+        "locked": false,
+        "stage": "PRE_FLIGHT"
+      },
+      "tags": [
+        "S226",
+        "color_ivory allover petals",
+        "SS26",
+        "style_Lydia Dress",
+        "S226-3001 SCP015 416102 IVORY ALLOVER PETALS",
+        "collection_ready-to-wear",
+        "DTC BUY",
+        "collection_dresses"
+      ]
     },
     "maddox-sweater-black": {
-      "handle": "maddox-sweater-black",
-      "product_id": "S226-8808 KCS049 000001 BLACK",
+      "allowed_actions": {
+        "collection_write": true,
+        "image_upsert": true,
+        "include_in_import_csv": true,
+        "metafield_write": true,
+        "size_guide_write": true
+      },
+      "assets": {
+        "look_images": [
+          {
+            "derived_at": "2026-01-09T22:22:58.093467Z",
+            "derived_from": "inspect_product_images",
+            "media_gid": "gid://shopify/MediaImage/25939691307110",
+            "source": "shopify_existing"
+          }
+        ]
+      },
+      "audit": {
+        "static_action_promotions": [
+          {
+            "actions": [
+              "collection_write",
+              "size_guide_write"
+            ],
+            "promoted_at": "2026-01-10T18:24:34.041015+00:00",
+            "script": "promote_static_allowed_actions"
+          }
+        ]
+      },
       "cpi": "8808-000001",
-      "product_type": "RTW",
-      "is_accessory": false,
-      "preflight": {
-        "status": "GO",
-        "image_status": "IMAGE_MINIMAL",
-        "errors": [],
-        "warnings": []
-      },
-      "import": {
-        "eligible": true,
-        "imported": false,
-        "imported_at": null,
-        "import_source": null,
-        "anomaly_accepted": false
-      },
+      "handle": "maddox-sweater-black",
       "images": {
         "expected": {
           "count": 1,
@@ -2051,53 +2844,76 @@
         },
         "last_enriched_at": null
       },
-      "promotion": {
-        "stage": "PRE_FLIGHT",
-        "locked": false,
-        "last_transition_at": null
+      "import": {
+        "anomaly_accepted": false,
+        "eligible": true,
+        "import_source": null,
+        "imported": false,
+        "imported_at": null
       },
+      "is_accessory": false,
       "overrides": {
         "manual_go": false,
         "notes": ""
       },
-      "allowed_actions": {
-        "metafield_write": true,
-        "image_upsert": true,
-        "collection_write": true,
-        "include_in_import_csv": true,
-        "size_guide_write": false
+      "preflight": {
+        "errors": [],
+        "image_status": "IMAGE_MINIMAL",
+        "status": "GO",
+        "warnings": []
       },
       "product_gid": "gid://shopify/Product/7716190519398",
-      "assets": {
-        "look_images": [
-          {
-            "media_gid": "gid://shopify/MediaImage/25939691307110",
-            "source": "shopify_existing",
-            "derived_from": "inspect_product_images",
-            "derived_at": "2026-01-09T22:22:58.093467Z"
-          }
-        ]
-      }
+      "product_id": "S226-8808 KCS049 000001 BLACK",
+      "product_type": "RTW",
+      "promotion": {
+        "last_transition_at": null,
+        "locked": false,
+        "stage": "PRE_FLIGHT"
+      },
+      "tags": [
+        "S226",
+        "SS26",
+        "S226-8808 KCS049 000001 BLACK",
+        "collection_knitwear",
+        "style_Maddox Sweater",
+        "collection_tops",
+        "color_black",
+        "collection_ready-to-wear",
+        "DTC BUY"
+      ]
     },
     "maddox-sweater-toffee": {
-      "handle": "maddox-sweater-toffee",
-      "product_id": "S226-8808 KCS049 000258 TOFFEE",
+      "allowed_actions": {
+        "collection_write": true,
+        "image_upsert": true,
+        "include_in_import_csv": true,
+        "metafield_write": true,
+        "size_guide_write": true
+      },
+      "assets": {
+        "look_images": [
+          {
+            "derived_at": "2026-01-09T22:22:58.093467Z",
+            "derived_from": "inspect_product_images",
+            "media_gid": "gid://shopify/MediaImage/25940572504166",
+            "source": "shopify_existing"
+          }
+        ]
+      },
+      "audit": {
+        "static_action_promotions": [
+          {
+            "actions": [
+              "collection_write",
+              "size_guide_write"
+            ],
+            "promoted_at": "2026-01-10T18:24:34.041017+00:00",
+            "script": "promote_static_allowed_actions"
+          }
+        ]
+      },
       "cpi": "8808-000258",
-      "product_type": "RTW",
-      "is_accessory": false,
-      "preflight": {
-        "status": "GO",
-        "image_status": "IMAGE_MINIMAL",
-        "errors": [],
-        "warnings": []
-      },
-      "import": {
-        "eligible": true,
-        "imported": false,
-        "imported_at": null,
-        "import_source": null,
-        "anomaly_accepted": false
-      },
+      "handle": "maddox-sweater-toffee",
       "images": {
         "expected": {
           "count": 1,
@@ -2105,53 +2921,76 @@
         },
         "last_enriched_at": null
       },
-      "promotion": {
-        "stage": "PRE_FLIGHT",
-        "locked": false,
-        "last_transition_at": null
+      "import": {
+        "anomaly_accepted": false,
+        "eligible": true,
+        "import_source": null,
+        "imported": false,
+        "imported_at": null
       },
+      "is_accessory": false,
       "overrides": {
         "manual_go": false,
         "notes": ""
       },
-      "allowed_actions": {
-        "metafield_write": true,
-        "image_upsert": true,
-        "collection_write": true,
-        "include_in_import_csv": true,
-        "size_guide_write": false
+      "preflight": {
+        "errors": [],
+        "image_status": "IMAGE_MINIMAL",
+        "status": "GO",
+        "warnings": []
       },
       "product_gid": "gid://shopify/Product/7716190552166",
-      "assets": {
-        "look_images": [
-          {
-            "media_gid": "gid://shopify/MediaImage/25940572504166",
-            "source": "shopify_existing",
-            "derived_from": "inspect_product_images",
-            "derived_at": "2026-01-09T22:22:58.093467Z"
-          }
-        ]
-      }
+      "product_id": "S226-8808 KCS049 000258 TOFFEE",
+      "product_type": "RTW",
+      "promotion": {
+        "last_transition_at": null,
+        "locked": false,
+        "stage": "PRE_FLIGHT"
+      },
+      "tags": [
+        "S226",
+        "SS26",
+        "collection_knitwear",
+        "style_Maddox Sweater",
+        "color_toffee",
+        "collection_ready-to-wear",
+        "collection_tops",
+        "S226-8808 KCS049 000258 TOFFEE",
+        "DTC BUY"
+      ]
     },
     "magee-top-storm-petals": {
-      "handle": "magee-top-storm-petals",
-      "product_id": "S226-4013 BSP024 416067 STORM PETALS",
+      "allowed_actions": {
+        "collection_write": true,
+        "image_upsert": true,
+        "include_in_import_csv": true,
+        "metafield_write": true,
+        "size_guide_write": true
+      },
+      "assets": {
+        "look_images": [
+          {
+            "derived_at": "2026-01-09T22:22:58.093467Z",
+            "derived_from": "inspect_product_images",
+            "media_gid": "gid://shopify/MediaImage/25939685212262",
+            "source": "shopify_existing"
+          }
+        ]
+      },
+      "audit": {
+        "static_action_promotions": [
+          {
+            "actions": [
+              "collection_write",
+              "size_guide_write"
+            ],
+            "promoted_at": "2026-01-10T18:24:34.041019+00:00",
+            "script": "promote_static_allowed_actions"
+          }
+        ]
+      },
       "cpi": "4013-416067",
-      "product_type": "RTW",
-      "is_accessory": false,
-      "preflight": {
-        "status": "GO",
-        "image_status": "IMAGE_READY",
-        "errors": [],
-        "warnings": []
-      },
-      "import": {
-        "eligible": true,
-        "imported": false,
-        "imported_at": null,
-        "import_source": null,
-        "anomaly_accepted": false
-      },
+      "handle": "magee-top-storm-petals",
       "images": {
         "expected": {
           "count": 6,
@@ -2159,53 +2998,75 @@
         },
         "last_enriched_at": null
       },
-      "promotion": {
-        "stage": "PRE_FLIGHT",
-        "locked": false,
-        "last_transition_at": null
+      "import": {
+        "anomaly_accepted": false,
+        "eligible": true,
+        "import_source": null,
+        "imported": false,
+        "imported_at": null
       },
+      "is_accessory": false,
       "overrides": {
         "manual_go": false,
         "notes": ""
       },
-      "allowed_actions": {
-        "metafield_write": true,
-        "image_upsert": true,
-        "collection_write": true,
-        "include_in_import_csv": true,
-        "size_guide_write": false
+      "preflight": {
+        "errors": [],
+        "image_status": "IMAGE_READY",
+        "status": "GO",
+        "warnings": []
       },
       "product_gid": "gid://shopify/Product/7716189077606",
-      "assets": {
-        "look_images": [
-          {
-            "media_gid": "gid://shopify/MediaImage/25939685212262",
-            "source": "shopify_existing",
-            "derived_from": "inspect_product_images",
-            "derived_at": "2026-01-09T22:22:58.093467Z"
-          }
-        ]
-      }
+      "product_id": "S226-4013 BSP024 416067 STORM PETALS",
+      "product_type": "RTW",
+      "promotion": {
+        "last_transition_at": null,
+        "locked": false,
+        "stage": "PRE_FLIGHT"
+      },
+      "tags": [
+        "S226",
+        "S226-4013 BSP024 416067 STORM PETALS",
+        "SS26",
+        "style_Magee Top",
+        "color_storm petals",
+        "collection_ready-to-wear",
+        "collection_tops",
+        "DTC BUY"
+      ]
     },
     "margot-top-indigo": {
-      "handle": "margot-top-indigo",
-      "product_id": "S226-4010 DCS021 000403 INDIGO",
+      "allowed_actions": {
+        "collection_write": true,
+        "image_upsert": true,
+        "include_in_import_csv": true,
+        "metafield_write": true,
+        "size_guide_write": true
+      },
+      "assets": {
+        "look_images": [
+          {
+            "derived_at": "2026-01-09T22:22:58.093467Z",
+            "derived_from": "inspect_product_images",
+            "media_gid": "gid://shopify/MediaImage/25939685408870",
+            "source": "shopify_existing"
+          }
+        ]
+      },
+      "audit": {
+        "static_action_promotions": [
+          {
+            "actions": [
+              "collection_write",
+              "size_guide_write"
+            ],
+            "promoted_at": "2026-01-10T18:24:34.041024+00:00",
+            "script": "promote_static_allowed_actions"
+          }
+        ]
+      },
       "cpi": "4010-000403",
-      "product_type": "RTW",
-      "is_accessory": false,
-      "preflight": {
-        "status": "GO",
-        "image_status": "IMAGE_READY",
-        "errors": [],
-        "warnings": []
-      },
-      "import": {
-        "eligible": true,
-        "imported": false,
-        "imported_at": null,
-        "import_source": null,
-        "anomaly_accepted": false
-      },
+      "handle": "margot-top-indigo",
       "images": {
         "expected": {
           "count": 6,
@@ -2213,53 +3074,75 @@
         },
         "last_enriched_at": null
       },
-      "promotion": {
-        "stage": "PRE_FLIGHT",
-        "locked": false,
-        "last_transition_at": null
+      "import": {
+        "anomaly_accepted": false,
+        "eligible": true,
+        "import_source": null,
+        "imported": false,
+        "imported_at": null
       },
+      "is_accessory": false,
       "overrides": {
         "manual_go": false,
         "notes": ""
       },
-      "allowed_actions": {
-        "metafield_write": true,
-        "image_upsert": true,
-        "collection_write": true,
-        "include_in_import_csv": true,
-        "size_guide_write": false
+      "preflight": {
+        "errors": [],
+        "image_status": "IMAGE_READY",
+        "status": "GO",
+        "warnings": []
       },
       "product_gid": "gid://shopify/Product/7716189012070",
-      "assets": {
-        "look_images": [
-          {
-            "media_gid": "gid://shopify/MediaImage/25939685408870",
-            "source": "shopify_existing",
-            "derived_from": "inspect_product_images",
-            "derived_at": "2026-01-09T22:22:58.093467Z"
-          }
-        ]
-      }
+      "product_id": "S226-4010 DCS021 000403 INDIGO",
+      "product_type": "RTW",
+      "promotion": {
+        "last_transition_at": null,
+        "locked": false,
+        "stage": "PRE_FLIGHT"
+      },
+      "tags": [
+        "S226-4010 DCS021 000403 INDIGO",
+        "S226",
+        "SS26",
+        "collection_tops",
+        "color_indigo",
+        "collection_ready-to-wear",
+        "DTC BUY",
+        "style_Margot Top"
+      ]
     },
     "monti-skirt-storm-petals": {
-      "handle": "monti-skirt-storm-petals",
-      "product_id": "S226-5003 BYP050 416067 STORM PETALS",
+      "allowed_actions": {
+        "collection_write": true,
+        "image_upsert": true,
+        "include_in_import_csv": true,
+        "metafield_write": true,
+        "size_guide_write": true
+      },
+      "assets": {
+        "look_images": [
+          {
+            "derived_at": "2026-01-09T22:22:58.093467Z",
+            "derived_from": "inspect_product_images",
+            "media_gid": "gid://shopify/MediaImage/25939685638246",
+            "source": "shopify_existing"
+          }
+        ]
+      },
+      "audit": {
+        "static_action_promotions": [
+          {
+            "actions": [
+              "collection_write",
+              "size_guide_write"
+            ],
+            "promoted_at": "2026-01-10T18:24:34.041026+00:00",
+            "script": "promote_static_allowed_actions"
+          }
+        ]
+      },
       "cpi": "5003-416067",
-      "product_type": "RTW",
-      "is_accessory": false,
-      "preflight": {
-        "status": "GO",
-        "image_status": "IMAGE_READY",
-        "errors": [],
-        "warnings": []
-      },
-      "import": {
-        "eligible": true,
-        "imported": false,
-        "imported_at": null,
-        "import_source": null,
-        "anomaly_accepted": false
-      },
+      "handle": "monti-skirt-storm-petals",
       "images": {
         "expected": {
           "count": 6,
@@ -2267,53 +3150,75 @@
         },
         "last_enriched_at": null
       },
-      "promotion": {
-        "stage": "PRE_FLIGHT",
-        "locked": false,
-        "last_transition_at": null
+      "import": {
+        "anomaly_accepted": false,
+        "eligible": true,
+        "import_source": null,
+        "imported": false,
+        "imported_at": null
       },
+      "is_accessory": false,
       "overrides": {
         "manual_go": false,
         "notes": ""
       },
-      "allowed_actions": {
-        "metafield_write": true,
-        "image_upsert": true,
-        "collection_write": true,
-        "include_in_import_csv": true,
-        "size_guide_write": false
+      "preflight": {
+        "errors": [],
+        "image_status": "IMAGE_READY",
+        "status": "GO",
+        "warnings": []
       },
       "product_gid": "gid://shopify/Product/7716189274214",
-      "assets": {
-        "look_images": [
-          {
-            "media_gid": "gid://shopify/MediaImage/25939685638246",
-            "source": "shopify_existing",
-            "derived_from": "inspect_product_images",
-            "derived_at": "2026-01-09T22:22:58.093467Z"
-          }
-        ]
-      }
+      "product_id": "S226-5003 BYP050 416067 STORM PETALS",
+      "product_type": "RTW",
+      "promotion": {
+        "last_transition_at": null,
+        "locked": false,
+        "stage": "PRE_FLIGHT"
+      },
+      "tags": [
+        "S226",
+        "style_Monti Skirt",
+        "SS26",
+        "collection_skirts",
+        "color_storm petals",
+        "collection_ready-to-wear",
+        "S226-5003 BYP050 416067 STORM PETALS",
+        "DTC BUY"
+      ]
     },
     "nadja-dress-pale-blush-petals": {
-      "handle": "nadja-dress-pale-blush-petals",
-      "product_id": "S226-3024 SCP015 416689 PALE BLUSH PETALS",
+      "allowed_actions": {
+        "collection_write": true,
+        "image_upsert": true,
+        "include_in_import_csv": true,
+        "metafield_write": true,
+        "size_guide_write": true
+      },
+      "assets": {
+        "look_images": [
+          {
+            "derived_at": "2026-01-09T22:22:58.093467Z",
+            "derived_from": "inspect_product_images",
+            "media_gid": "gid://shopify/MediaImage/25939685834854",
+            "source": "shopify_existing"
+          }
+        ]
+      },
+      "audit": {
+        "static_action_promotions": [
+          {
+            "actions": [
+              "collection_write",
+              "size_guide_write"
+            ],
+            "promoted_at": "2026-01-10T18:24:34.041028+00:00",
+            "script": "promote_static_allowed_actions"
+          }
+        ]
+      },
       "cpi": "3024-416689",
-      "product_type": "RTW",
-      "is_accessory": false,
-      "preflight": {
-        "status": "GO",
-        "image_status": "IMAGE_READY",
-        "errors": [],
-        "warnings": []
-      },
-      "import": {
-        "eligible": true,
-        "imported": false,
-        "imported_at": null,
-        "import_source": null,
-        "anomaly_accepted": false
-      },
+      "handle": "nadja-dress-pale-blush-petals",
       "images": {
         "expected": {
           "count": 6,
@@ -2321,53 +3226,75 @@
         },
         "last_enriched_at": null
       },
-      "promotion": {
-        "stage": "PRE_FLIGHT",
-        "locked": false,
-        "last_transition_at": null
+      "import": {
+        "anomaly_accepted": false,
+        "eligible": true,
+        "import_source": null,
+        "imported": false,
+        "imported_at": null
       },
+      "is_accessory": false,
       "overrides": {
         "manual_go": false,
         "notes": ""
       },
-      "allowed_actions": {
-        "metafield_write": true,
-        "image_upsert": true,
-        "collection_write": true,
-        "include_in_import_csv": true,
-        "size_guide_write": false
+      "preflight": {
+        "errors": [],
+        "image_status": "IMAGE_READY",
+        "status": "GO",
+        "warnings": []
       },
       "product_gid": "gid://shopify/Product/7716188651622",
+      "product_id": "S226-3024 SCP015 416689 PALE BLUSH PETALS",
+      "product_type": "RTW",
+      "promotion": {
+        "last_transition_at": null,
+        "locked": false,
+        "stage": "PRE_FLIGHT"
+      },
+      "tags": [
+        "S226",
+        "S226-3024 SCP015 416689 PALE BLUSH PETALS",
+        "SS26",
+        "style_Nadja Dress",
+        "color_pale blush petals",
+        "collection_ready-to-wear",
+        "DTC BUY",
+        "collection_dresses"
+      ]
+    },
+    "noori-dress-storm-tulip": {
+      "allowed_actions": {
+        "collection_write": true,
+        "image_upsert": true,
+        "include_in_import_csv": true,
+        "metafield_write": true,
+        "size_guide_write": true
+      },
       "assets": {
         "look_images": [
           {
-            "media_gid": "gid://shopify/MediaImage/25939685834854",
-            "source": "shopify_existing",
+            "derived_at": "2026-01-09T22:22:58.093467Z",
             "derived_from": "inspect_product_images",
-            "derived_at": "2026-01-09T22:22:58.093467Z"
+            "media_gid": "gid://shopify/MediaImage/25939686031462",
+            "source": "shopify_existing"
           }
         ]
-      }
-    },
-    "noori-dress-storm-tulip": {
-      "handle": "noori-dress-storm-tulip",
-      "product_id": "S226-3030 BSP024 413067 STORM TULIP",
+      },
+      "audit": {
+        "static_action_promotions": [
+          {
+            "actions": [
+              "collection_write",
+              "size_guide_write"
+            ],
+            "promoted_at": "2026-01-10T18:24:34.041030+00:00",
+            "script": "promote_static_allowed_actions"
+          }
+        ]
+      },
       "cpi": "3030-413067",
-      "product_type": "RTW",
-      "is_accessory": false,
-      "preflight": {
-        "status": "GO",
-        "image_status": "IMAGE_READY",
-        "errors": [],
-        "warnings": []
-      },
-      "import": {
-        "eligible": true,
-        "imported": false,
-        "imported_at": null,
-        "import_source": null,
-        "anomaly_accepted": false
-      },
+      "handle": "noori-dress-storm-tulip",
       "images": {
         "expected": {
           "count": 6,
@@ -2375,53 +3302,75 @@
         },
         "last_enriched_at": null
       },
-      "promotion": {
-        "stage": "PRE_FLIGHT",
-        "locked": false,
-        "last_transition_at": null
+      "import": {
+        "anomaly_accepted": false,
+        "eligible": true,
+        "import_source": null,
+        "imported": false,
+        "imported_at": null
       },
+      "is_accessory": false,
       "overrides": {
         "manual_go": false,
         "notes": ""
       },
-      "allowed_actions": {
-        "metafield_write": true,
-        "image_upsert": true,
-        "collection_write": true,
-        "include_in_import_csv": true,
-        "size_guide_write": false
+      "preflight": {
+        "errors": [],
+        "image_status": "IMAGE_READY",
+        "status": "GO",
+        "warnings": []
       },
       "product_gid": "gid://shopify/Product/7716188717158",
+      "product_id": "S226-3030 BSP024 413067 STORM TULIP",
+      "product_type": "RTW",
+      "promotion": {
+        "last_transition_at": null,
+        "locked": false,
+        "stage": "PRE_FLIGHT"
+      },
+      "tags": [
+        "S226",
+        "SS26",
+        "style_Noori Dress",
+        "color_storm tulip",
+        "collection_ready-to-wear",
+        "DTC BUY",
+        "S226-3030 BSP024 413067 STORM TULIP",
+        "collection_dresses"
+      ]
+    },
+    "orrie-dress-navy": {
+      "allowed_actions": {
+        "collection_write": true,
+        "image_upsert": true,
+        "include_in_import_csv": true,
+        "metafield_write": true,
+        "size_guide_write": true
+      },
       "assets": {
         "look_images": [
           {
-            "media_gid": "gid://shopify/MediaImage/25939686031462",
-            "source": "shopify_existing",
+            "derived_at": "2026-01-09T22:22:58.093467Z",
             "derived_from": "inspect_product_images",
-            "derived_at": "2026-01-09T22:22:58.093467Z"
+            "media_gid": "gid://shopify/MediaImage/25940579975270",
+            "source": "shopify_existing"
           }
         ]
-      }
-    },
-    "orrie-dress-navy": {
-      "handle": "orrie-dress-navy",
-      "product_id": "S226-3022 AIS005 000400 NAVY",
+      },
+      "audit": {
+        "static_action_promotions": [
+          {
+            "actions": [
+              "collection_write",
+              "size_guide_write"
+            ],
+            "promoted_at": "2026-01-10T18:24:34.041032+00:00",
+            "script": "promote_static_allowed_actions"
+          }
+        ]
+      },
       "cpi": "3022-000400",
-      "product_type": "RTW",
-      "is_accessory": false,
-      "preflight": {
-        "status": "GO",
-        "image_status": "IMAGE_MINIMAL",
-        "errors": [],
-        "warnings": []
-      },
-      "import": {
-        "eligible": true,
-        "imported": false,
-        "imported_at": null,
-        "import_source": null,
-        "anomaly_accepted": false
-      },
+      "handle": "orrie-dress-navy",
       "images": {
         "expected": {
           "count": 1,
@@ -2429,118 +3378,162 @@
         },
         "last_enriched_at": null
       },
-      "promotion": {
-        "stage": "PRE_FLIGHT",
-        "locked": false,
-        "last_transition_at": null
+      "import": {
+        "anomaly_accepted": false,
+        "eligible": true,
+        "import_source": null,
+        "imported": false,
+        "imported_at": null
       },
+      "is_accessory": false,
       "overrides": {
         "manual_go": false,
         "notes": ""
       },
-      "allowed_actions": {
-        "metafield_write": true,
-        "image_upsert": true,
-        "collection_write": true,
-        "include_in_import_csv": true,
-        "size_guide_write": false
-      },
-      "product_gid": "gid://shopify/Product/7716188618854",
-      "assets": {
-        "look_images": [
-          {
-            "media_gid": "gid://shopify/MediaImage/25940579975270",
-            "source": "shopify_existing",
-            "derived_from": "inspect_product_images",
-            "derived_at": "2026-01-09T22:22:58.093467Z"
-          }
-        ]
-      }
-    },
-    "paulina-dress-pale-blush-ao-petals": {
-      "handle": "paulina-dress-pale-blush-ao-petals",
-      "product_id": "S226-3004 SCP015 416689 PALE BLUSH AO PETALS",
-      "cpi": "3004-416689",
-      "product_type": "RTW",
-      "is_accessory": false,
       "preflight": {
+        "errors": [],
+        "image_status": "IMAGE_MINIMAL",
         "status": "GO",
-        "image_status": "IMAGE_OK",
-        "errors": [
-          "Missing ghost image"
-        ],
         "warnings": []
       },
-      "import": {
-        "eligible": true,
-        "imported": false,
-        "imported_at": null,
-        "import_source": null,
-        "anomaly_accepted": false
-      },
-      "images": {
-        "expected": {
-          "count": 0,
-          "max_position": 0
-        },
-        "last_enriched_at": null
-      },
+      "product_gid": "gid://shopify/Product/7716188618854",
+      "product_id": "S226-3022 AIS005 000400 NAVY",
+      "product_type": "RTW",
       "promotion": {
-        "stage": "PRE_FLIGHT",
+        "last_transition_at": null,
         "locked": false,
-        "last_transition_at": null
+        "stage": "PRE_FLIGHT"
       },
-      "overrides": {
-        "manual_go": false,
-        "notes": ""
-      },
+      "tags": [
+        "color_navy",
+        "S226",
+        "S226-3022 AIS005 000400 NAVY",
+        "SS26",
+        "style_Orrie Dress",
+        "collection_ready-to-wear",
+        "DTC BUY",
+        "collection_dresses"
+      ]
+    },
+    "paulina-dress-pale-blush-ao-petals": {
       "allowed_actions": {
-        "metafield_write": true,
+        "collection_write": true,
         "image_upsert": true,
-        "collection_write": false,
         "include_in_import_csv": true,
-        "size_guide_write": false
+        "metafield_write": true,
+        "size_guide_write": true
       },
-      "product_gid": "gid://shopify/Product/7716188356710",
       "assets": {
         "look_images": [
           {
+            "adopted_at": "2026-01-10T03:14:40.557685Z",
             "media_gid": "gid://shopify/MediaImage/25940848672870",
-            "source": "shopify",
-            "adopted_at": "2026-01-10T03:14:40.557685Z"
+            "source": "shopify"
           }
         ],
         "swatch": {
-          "file_path": "capsules/S226/assets/swatches/S226-3004 SCP015 416689 PALE BLUSH AO PETALS_FINAL_swatch.jpg",
-          "source": "local_created",
           "created_by": "swatch_creator",
+          "file_path": "capsules/S226/assets/swatches/S226-3004 SCP015 416689 PALE BLUSH AO PETALS_FINAL_swatch.jpg",
+          "registered_at": "2026-01-10T04:41:33.396399+00:00",
           "registered_by": "register_created_swatches",
-          "registered_at": "2026-01-10T04:41:33.396399+00:00"
+          "source": "local_created"
         }
       },
       "assets_provenance": {
         "look_images": "shopify"
-      }
-    },
-    "penrose-dress-ivory": {
-      "handle": "penrose-dress-ivory",
-      "product_id": "S226-8308 KYS078 000102 IVORY",
-      "cpi": "8308-000102",
-      "product_type": "RTW",
-      "is_accessory": false,
-      "preflight": {
-        "status": "GO",
-        "image_status": "IMAGE_MINIMAL",
-        "errors": [],
-        "warnings": []
+      },
+      "audit": {
+        "static_action_promotions": [
+          {
+            "actions": [
+              "collection_write",
+              "size_guide_write"
+            ],
+            "promoted_at": "2026-01-10T18:24:34.041034+00:00",
+            "script": "promote_static_allowed_actions"
+          }
+        ]
+      },
+      "cpi": "3004-416689",
+      "handle": "paulina-dress-pale-blush-ao-petals",
+      "images": {
+        "expected": {
+          "count": 0,
+          "max_position": 0
+        },
+        "last_enriched_at": null
       },
       "import": {
+        "anomaly_accepted": false,
         "eligible": true,
-        "imported": false,
-        "imported_at": null,
         "import_source": null,
-        "anomaly_accepted": false
+        "imported": false,
+        "imported_at": null
       },
+      "is_accessory": false,
+      "overrides": {
+        "manual_go": false,
+        "notes": ""
+      },
+      "preflight": {
+        "errors": [
+          "Missing ghost image"
+        ],
+        "image_status": "IMAGE_OK",
+        "status": "GO",
+        "warnings": []
+      },
+      "product_gid": "gid://shopify/Product/7716188356710",
+      "product_id": "S226-3004 SCP015 416689 PALE BLUSH AO PETALS",
+      "product_type": "RTW",
+      "promotion": {
+        "last_transition_at": null,
+        "locked": false,
+        "stage": "PRE_FLIGHT"
+      },
+      "tags": [
+        "S226",
+        "S226-3004 SCP015 416689 PALE BLUSH AO PETALS",
+        "SS26",
+        "style_Paulina Dress",
+        "color_pale blush ao petals",
+        "collection_ready-to-wear",
+        "DTC BUY",
+        "collection_dresses"
+      ]
+    },
+    "penrose-dress-ivory": {
+      "allowed_actions": {
+        "collection_write": true,
+        "image_upsert": true,
+        "include_in_import_csv": true,
+        "metafield_write": true,
+        "size_guide_write": true
+      },
+      "assets": {
+        "look_images": [
+          {
+            "derived_at": "2026-01-09T22:22:58.093467Z",
+            "derived_from": "inspect_product_images",
+            "media_gid": "gid://shopify/MediaImage/25940598292582",
+            "source": "shopify_existing"
+          }
+        ]
+      },
+      "audit": {
+        "static_action_promotions": [
+          {
+            "actions": [
+              "collection_write",
+              "size_guide_write"
+            ],
+            "promoted_at": "2026-01-10T18:24:34.041036+00:00",
+            "script": "promote_static_allowed_actions"
+          }
+        ]
+      },
+      "cpi": "8308-000102",
+      "handle": "penrose-dress-ivory",
       "images": {
         "expected": {
           "count": 1,
@@ -2548,55 +3541,76 @@
         },
         "last_enriched_at": null
       },
-      "promotion": {
-        "stage": "PRE_FLIGHT",
-        "locked": false,
-        "last_transition_at": null
+      "import": {
+        "anomaly_accepted": false,
+        "eligible": true,
+        "import_source": null,
+        "imported": false,
+        "imported_at": null
       },
+      "is_accessory": false,
       "overrides": {
         "manual_go": false,
         "notes": ""
       },
-      "allowed_actions": {
-        "metafield_write": true,
-        "image_upsert": true,
-        "collection_write": true,
-        "include_in_import_csv": true,
-        "size_guide_write": false
+      "preflight": {
+        "errors": [],
+        "image_status": "IMAGE_MINIMAL",
+        "status": "GO",
+        "warnings": []
       },
       "product_gid": "gid://shopify/Product/7716190158950",
+      "product_id": "S226-8308 KYS078 000102 IVORY",
+      "product_type": "RTW",
+      "promotion": {
+        "last_transition_at": null,
+        "locked": false,
+        "stage": "PRE_FLIGHT"
+      },
+      "tags": [
+        "S226-8308 KYS078 000102 IVORY",
+        "S226",
+        "color_ivory",
+        "SS26",
+        "style_Penrose Dress",
+        "collection_knitwear",
+        "collection_ready-to-wear",
+        "DTC BUY",
+        "collection_dresses"
+      ]
+    },
+    "siggi-top-ivory-allover-petals": {
+      "allowed_actions": {
+        "collection_write": true,
+        "image_upsert": true,
+        "include_in_import_csv": true,
+        "metafield_write": true,
+        "size_guide_write": true
+      },
       "assets": {
         "look_images": [
           {
-            "media_gid": "gid://shopify/MediaImage/25940598292582",
-            "source": "shopify_existing",
+            "derived_at": "2026-01-09T22:22:58.093467Z",
             "derived_from": "inspect_product_images",
-            "derived_at": "2026-01-09T22:22:58.093467Z"
+            "media_gid": "gid://shopify/MediaImage/25939686293606",
+            "source": "shopify_existing"
           }
         ]
-      }
-    },
-    "siggi-top-ivory-allover-petals": {
-      "handle": "siggi-top-ivory-allover-petals",
-      "product_id": "S226-4016 SCP015 416102 IVORY ALLOVER PETALS",
-      "cpi": "4016-416102",
-      "product_type": "RTW",
-      "is_accessory": false,
-      "preflight": {
-        "status": "GO",
-        "image_status": "IMAGE_READY",
-        "errors": [],
-        "warnings": [
-          "Image overflow: 1 additional rows required"
+      },
+      "audit": {
+        "static_action_promotions": [
+          {
+            "actions": [
+              "collection_write",
+              "size_guide_write"
+            ],
+            "promoted_at": "2026-01-10T18:24:34.041038+00:00",
+            "script": "promote_static_allowed_actions"
+          }
         ]
       },
-      "import": {
-        "eligible": true,
-        "imported": false,
-        "imported_at": null,
-        "import_source": null,
-        "anomaly_accepted": false
-      },
+      "cpi": "4016-416102",
+      "handle": "siggi-top-ivory-allover-petals",
       "images": {
         "expected": {
           "count": 8,
@@ -2604,55 +3618,67 @@
         },
         "last_enriched_at": null
       },
-      "promotion": {
-        "stage": "PRE_FLIGHT",
-        "locked": false,
-        "last_transition_at": null
+      "import": {
+        "anomaly_accepted": false,
+        "eligible": true,
+        "import_source": null,
+        "imported": false,
+        "imported_at": null
       },
+      "is_accessory": false,
       "overrides": {
         "manual_go": false,
         "notes": ""
       },
-      "allowed_actions": {
-        "metafield_write": true,
-        "image_upsert": true,
-        "collection_write": true,
-        "include_in_import_csv": true,
-        "size_guide_write": false
+      "preflight": {
+        "errors": [],
+        "image_status": "IMAGE_READY",
+        "status": "GO",
+        "warnings": [
+          "Image overflow: 1 additional rows required"
+        ]
       },
       "product_gid": "gid://shopify/Product/7716189241446",
-      "assets": {
-        "look_images": [
-          {
-            "media_gid": "gid://shopify/MediaImage/25939686293606",
-            "source": "shopify_existing",
-            "derived_from": "inspect_product_images",
-            "derived_at": "2026-01-09T22:22:58.093467Z"
-          }
-        ]
-      }
+      "product_id": "S226-4016 SCP015 416102 IVORY ALLOVER PETALS",
+      "product_type": "RTW",
+      "promotion": {
+        "last_transition_at": null,
+        "locked": false,
+        "stage": "PRE_FLIGHT"
+      },
+      "tags": [
+        "S226",
+        "color_ivory allover petals",
+        "SS26",
+        "collection_ready-to-wear",
+        "collection_tops",
+        "DTC BUY",
+        "style_Siggi Top",
+        "S226-4016 SCP015 416102 IVORY ALLOVER PETALS"
+      ]
     },
     "wells-dress-berry-blue": {
-      "handle": "wells-dress-berry-blue",
-      "product_id": null,
-      "cpi": null,
-      "product_type": "RTW",
-      "is_accessory": false,
-      "preflight": {
-        "status": "SKIP",
-        "image_status": "N/A",
-        "errors": [],
-        "warnings": [
-          "Wholesale product (WS Buy) \u2013 skipped"
+      "allowed_actions": {
+        "collection_write": true,
+        "image_upsert": false,
+        "include_in_import_csv": false,
+        "metafield_write": false,
+        "size_guide_write": true
+      },
+      "audit": {
+        "static_action_promotions": [
+          {
+            "actions": [
+              "collection_write",
+              "size_guide_write"
+            ],
+            "promoted_at": "2026-01-10T18:24:34.041040+00:00",
+            "script": "promote_static_allowed_actions"
+          }
         ]
       },
-      "import": {
-        "eligible": true,
-        "imported": false,
-        "imported_at": null,
-        "import_source": null,
-        "anomaly_accepted": false
-      },
+      "cpi": null,
+      "handle": "wells-dress-berry-blue",
       "images": {
         "expected": {
           "count": 0,
@@ -2660,42 +3686,66 @@
         },
         "last_enriched_at": null
       },
-      "promotion": {
-        "stage": "PRE_FLIGHT",
-        "locked": false,
-        "last_transition_at": null
+      "import": {
+        "anomaly_accepted": false,
+        "eligible": true,
+        "import_source": null,
+        "imported": false,
+        "imported_at": null
       },
+      "is_accessory": false,
       "overrides": {
         "manual_go": false,
         "notes": ""
       },
-      "allowed_actions": {
-        "metafield_write": false,
-        "image_upsert": false,
-        "collection_write": false,
-        "include_in_import_csv": false,
-        "size_guide_write": false
+      "preflight": {
+        "errors": [],
+        "image_status": "N/A",
+        "status": "SKIP",
+        "warnings": [
+          "Wholesale product (WS Buy) – skipped"
+        ]
+      },
+      "product_id": null,
+      "product_type": "RTW",
+      "promotion": {
+        "last_transition_at": null,
+        "locked": false,
+        "stage": "PRE_FLIGHT"
       }
     },
     "wells-dress-pale-blush": {
-      "handle": "wells-dress-pale-blush",
-      "product_id": "S226-8309 KYS078 000689 PALE BLUSH",
+      "allowed_actions": {
+        "collection_write": false,
+        "image_upsert": false,
+        "include_in_import_csv": false,
+        "metafield_write": false,
+        "size_guide_write": false
+      },
+      "assets": {
+        "look_images": [
+          {
+            "derived_at": "2026-01-09T22:22:58.093467Z",
+            "derived_from": "inspect_product_images",
+            "media_gid": "gid://shopify/MediaImage/25939686850662",
+            "source": "shopify_existing"
+          }
+        ]
+      },
+      "audit": {
+        "static_action_promotions": [
+          {
+            "actions": [
+              "collection_write",
+              "size_guide_write"
+            ],
+            "promoted_at": "2026-01-10T18:24:34.041042+00:00",
+            "script": "promote_static_allowed_actions"
+          }
+        ]
+      },
       "cpi": "8309-000689",
-      "product_type": "RTW",
-      "is_accessory": false,
-      "preflight": {
-        "status": "GO",
-        "image_status": "IMAGE_READY",
-        "errors": [],
-        "warnings": []
-      },
-      "import": {
-        "eligible": true,
-        "imported": false,
-        "imported_at": null,
-        "import_source": null,
-        "anomaly_accepted": false
-      },
+      "handle": "wells-dress-pale-blush",
       "images": {
         "expected": {
           "count": 5,
@@ -2703,55 +3753,76 @@
         },
         "last_enriched_at": null
       },
-      "promotion": {
-        "stage": "PRE_FLIGHT",
-        "locked": false,
-        "last_transition_at": null
+      "import": {
+        "anomaly_accepted": false,
+        "eligible": true,
+        "import_source": null,
+        "imported": false,
+        "imported_at": null
       },
+      "is_accessory": false,
       "overrides": {
         "manual_go": false,
         "notes": ""
       },
-      "allowed_actions": {
-        "metafield_write": true,
-        "image_upsert": true,
-        "collection_write": true,
-        "include_in_import_csv": true,
-        "size_guide_write": false
+      "preflight": {
+        "errors": [],
+        "image_status": "IMAGE_READY",
+        "status": "GO",
+        "warnings": []
       },
       "product_gid": "gid://shopify/Product/7716190257254",
+      "product_id": "S226-8309 KYS078 000689 PALE BLUSH",
+      "product_type": "RTW",
+      "promotion": {
+        "last_transition_at": null,
+        "locked": false,
+        "stage": "PRE_FLIGHT"
+      },
+      "tags": [
+        "S226",
+        "SS26",
+        "collection_knitwear",
+        "DTC BUY",
+        "S226-8309 KYS078 000689 PALE BLUSH",
+        "collection_ready-to-wear",
+        "style_Wells Dress",
+        "color_pale blush",
+        "collection_dresses"
+      ]
+    },
+    "winnie-dress-black": {
+      "allowed_actions": {
+        "collection_write": true,
+        "image_upsert": true,
+        "include_in_import_csv": true,
+        "metafield_write": true,
+        "size_guide_write": true
+      },
       "assets": {
         "look_images": [
           {
-            "media_gid": "gid://shopify/MediaImage/25939686850662",
-            "source": "shopify_existing",
+            "derived_at": "2026-01-09T22:22:58.093467Z",
             "derived_from": "inspect_product_images",
-            "derived_at": "2026-01-09T22:22:58.093467Z"
+            "media_gid": "gid://shopify/MediaImage/25939687014502",
+            "source": "shopify_existing"
           }
         ]
-      }
-    },
-    "winnie-dress-black": {
-      "handle": "winnie-dress-black",
-      "product_id": "S226-8307 KYS081 000001 BLACK",
-      "cpi": "8307-000001",
-      "product_type": "RTW",
-      "is_accessory": false,
-      "preflight": {
-        "status": "GO",
-        "image_status": "IMAGE_READY",
-        "errors": [],
-        "warnings": [
-          "Image overflow: 2 additional rows required"
+      },
+      "audit": {
+        "static_action_promotions": [
+          {
+            "actions": [
+              "collection_write",
+              "size_guide_write"
+            ],
+            "promoted_at": "2026-01-10T18:24:34.041044+00:00",
+            "script": "promote_static_allowed_actions"
+          }
         ]
       },
-      "import": {
-        "eligible": true,
-        "imported": false,
-        "imported_at": null,
-        "import_source": null,
-        "anomaly_accepted": false
-      },
+      "cpi": "8307-000001",
+      "handle": "winnie-dress-black",
       "images": {
         "expected": {
           "count": 7,
@@ -2759,53 +3830,78 @@
         },
         "last_enriched_at": null
       },
-      "promotion": {
-        "stage": "PRE_FLIGHT",
-        "locked": false,
-        "last_transition_at": null
+      "import": {
+        "anomaly_accepted": false,
+        "eligible": true,
+        "import_source": null,
+        "imported": false,
+        "imported_at": null
       },
+      "is_accessory": false,
       "overrides": {
         "manual_go": false,
         "notes": ""
       },
-      "allowed_actions": {
-        "metafield_write": true,
-        "image_upsert": true,
-        "collection_write": true,
-        "include_in_import_csv": true,
-        "size_guide_write": false
+      "preflight": {
+        "errors": [],
+        "image_status": "IMAGE_READY",
+        "status": "GO",
+        "warnings": [
+          "Image overflow: 2 additional rows required"
+        ]
       },
       "product_gid": "gid://shopify/Product/7716190093414",
-      "assets": {
-        "look_images": [
-          {
-            "media_gid": "gid://shopify/MediaImage/25939687014502",
-            "source": "shopify_existing",
-            "derived_from": "inspect_product_images",
-            "derived_at": "2026-01-09T22:22:58.093467Z"
-          }
-        ]
-      }
+      "product_id": "S226-8307 KYS081 000001 BLACK",
+      "product_type": "RTW",
+      "promotion": {
+        "last_transition_at": null,
+        "locked": false,
+        "stage": "PRE_FLIGHT"
+      },
+      "tags": [
+        "S226",
+        "S226-8307 KYS081 000001 BLACK",
+        "style_Winnie Dress",
+        "SS26",
+        "collection_knitwear",
+        "color_black",
+        "collection_ready-to-wear",
+        "DTC BUY",
+        "collection_dresses"
+      ]
     },
     "winnie-dress-holly-red": {
-      "handle": "winnie-dress-holly-red",
-      "product_id": "S226-8307 KYS081 000649 HOLLY RED",
+      "allowed_actions": {
+        "collection_write": true,
+        "image_upsert": true,
+        "include_in_import_csv": true,
+        "metafield_write": true,
+        "size_guide_write": true
+      },
+      "assets": {
+        "look_images": [
+          {
+            "derived_at": "2026-01-09T22:22:58.093467Z",
+            "derived_from": "inspect_product_images",
+            "media_gid": "gid://shopify/MediaImage/25940603928678",
+            "source": "shopify_existing"
+          }
+        ]
+      },
+      "audit": {
+        "static_action_promotions": [
+          {
+            "actions": [
+              "collection_write",
+              "size_guide_write"
+            ],
+            "promoted_at": "2026-01-10T18:24:34.041046+00:00",
+            "script": "promote_static_allowed_actions"
+          }
+        ]
+      },
       "cpi": "8307-000649",
-      "product_type": "RTW",
-      "is_accessory": false,
-      "preflight": {
-        "status": "GO",
-        "image_status": "IMAGE_MINIMAL",
-        "errors": [],
-        "warnings": []
-      },
-      "import": {
-        "eligible": true,
-        "imported": false,
-        "imported_at": null,
-        "import_source": null,
-        "anomaly_accepted": false
-      },
+      "handle": "winnie-dress-holly-red",
       "images": {
         "expected": {
           "count": 1,
@@ -2813,53 +3909,76 @@
         },
         "last_enriched_at": null
       },
-      "promotion": {
-        "stage": "PRE_FLIGHT",
-        "locked": false,
-        "last_transition_at": null
+      "import": {
+        "anomaly_accepted": false,
+        "eligible": true,
+        "import_source": null,
+        "imported": false,
+        "imported_at": null
       },
+      "is_accessory": false,
       "overrides": {
         "manual_go": false,
         "notes": ""
       },
-      "allowed_actions": {
-        "metafield_write": true,
-        "image_upsert": true,
-        "collection_write": true,
-        "include_in_import_csv": true,
-        "size_guide_write": false
+      "preflight": {
+        "errors": [],
+        "image_status": "IMAGE_MINIMAL",
+        "status": "GO",
+        "warnings": []
       },
       "product_gid": "gid://shopify/Product/7716190126182",
+      "product_id": "S226-8307 KYS081 000649 HOLLY RED",
+      "product_type": "RTW",
+      "promotion": {
+        "last_transition_at": null,
+        "locked": false,
+        "stage": "PRE_FLIGHT"
+      },
+      "tags": [
+        "S226",
+        "style_Winnie Dress",
+        "SS26",
+        "collection_knitwear",
+        "color_holly red",
+        "collection_ready-to-wear",
+        "DTC BUY",
+        "S226-8307 KYS081 000649 HOLLY RED",
+        "collection_dresses"
+      ]
+    },
+    "woolfe-dress-black": {
+      "allowed_actions": {
+        "collection_write": true,
+        "image_upsert": true,
+        "include_in_import_csv": true,
+        "metafield_write": true,
+        "size_guide_write": true
+      },
       "assets": {
         "look_images": [
           {
-            "media_gid": "gid://shopify/MediaImage/25940603928678",
-            "source": "shopify_existing",
+            "derived_at": "2026-01-09T22:22:58.093467Z",
             "derived_from": "inspect_product_images",
-            "derived_at": "2026-01-09T22:22:58.093467Z"
+            "media_gid": "gid://shopify/MediaImage/25940611924070",
+            "source": "shopify_existing"
           }
         ]
-      }
-    },
-    "woolfe-dress-black": {
-      "handle": "woolfe-dress-black",
-      "product_id": "S226-8322 KYS078 000001 BLACK",
+      },
+      "audit": {
+        "static_action_promotions": [
+          {
+            "actions": [
+              "collection_write",
+              "size_guide_write"
+            ],
+            "promoted_at": "2026-01-10T18:24:34.041048+00:00",
+            "script": "promote_static_allowed_actions"
+          }
+        ]
+      },
       "cpi": "8322-000001",
-      "product_type": "RTW",
-      "is_accessory": false,
-      "preflight": {
-        "status": "GO",
-        "image_status": "IMAGE_MINIMAL",
-        "errors": [],
-        "warnings": []
-      },
-      "import": {
-        "eligible": true,
-        "imported": false,
-        "imported_at": null,
-        "import_source": null,
-        "anomaly_accepted": false
-      },
+      "handle": "woolfe-dress-black",
       "images": {
         "expected": {
           "count": 1,
@@ -2867,33 +3986,44 @@
         },
         "last_enriched_at": null
       },
-      "promotion": {
-        "stage": "PRE_FLIGHT",
-        "locked": false,
-        "last_transition_at": null
+      "import": {
+        "anomaly_accepted": false,
+        "eligible": true,
+        "import_source": null,
+        "imported": false,
+        "imported_at": null
       },
+      "is_accessory": false,
       "overrides": {
         "manual_go": false,
         "notes": ""
       },
-      "allowed_actions": {
-        "metafield_write": true,
-        "image_upsert": true,
-        "collection_write": true,
-        "include_in_import_csv": true,
-        "size_guide_write": false
+      "preflight": {
+        "errors": [],
+        "image_status": "IMAGE_MINIMAL",
+        "status": "GO",
+        "warnings": []
       },
       "product_gid": "gid://shopify/Product/7716190322790",
-      "assets": {
-        "look_images": [
-          {
-            "media_gid": "gid://shopify/MediaImage/25940611924070",
-            "source": "shopify_existing",
-            "derived_from": "inspect_product_images",
-            "derived_at": "2026-01-09T22:22:58.093467Z"
-          }
-        ]
-      }
+      "product_id": "S226-8322 KYS078 000001 BLACK",
+      "product_type": "RTW",
+      "promotion": {
+        "last_transition_at": null,
+        "locked": false,
+        "stage": "PRE_FLIGHT"
+      },
+      "tags": [
+        "S226",
+        "SS26",
+        "S226-8322 KYS078 000001 BLACK",
+        "style_Woolfe Dress",
+        "collection_knitwear",
+        "color_black",
+        "collection_ready-to-wear",
+        "DTC BUY",
+        "collection_dresses"
+      ]
     }
-  }
+  },
+  "schema_version": "1.0"
 }

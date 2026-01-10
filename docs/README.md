@@ -1,22 +1,15 @@
 # Shopify Files + Metafields Pipeline  
-## Capsule Asset Management System — Final, Locked Documentation
+## Capsule Asset Management System — Authoritative Documentation
 
-This document is the **authoritative, completionist reference** for the Seamless‑Yolk system as it exists today.
-
-It captures:
-- The **actual contracts** we discovered through ~10+ hours of real debugging
-- The **correct mental model** for Shopify Files, Media, and Metafields
-- The **end‑to‑end capsule lifecycle**, including scripts that exist today (even if some are only partially formalized)
-- The **reasons past attempts failed**, so we do not regress
-
-This README is intentionally verbose. Nothing here is theoretical.
+> This document describes the **real, production-tested pipeline** as it exists today.  
+> Nothing here is aspirational. Every step is present because it solved a real failure mode.
 
 ---
 
-## 0. Core Philosophy (Read First)
+## 0. Core Philosophy
 
-### Shopify is the Source of Truth  
-Local manifests and preflight checks are **beliefs**, not facts.
+**Shopify is the source of truth.**  
+Local files, manifests, and preflight checks represent *beliefs*, not reality.
 
 Clients **will**:
 - Upload images manually
@@ -25,375 +18,448 @@ Clients **will**:
 - Do this without telling us
 
 Therefore:
-- **Shopify reality always overrides local assumptions**
-- Our system must be able to *inspect*, *adopt*, *reconcile*, and *record provenance*
-- Drift is expected, not exceptional
+- Shopify reality always overrides local assumptions
+- Drift is expected and must be reconciled
+- All adoption must record provenance
+- All mutation must be gated and auditable
 
 ---
 
-## 1. High‑Level System Phases
-
-The system is intentionally split into **four phases**:
-
-1. **Preflight & Local Beliefs**
-2. **Manual Shopify Import**
-3. **Post‑Import Inspection & Reconciliation**
-4. **Authorized Mutation (Files, Metafields, Collections)**
-
-Only Phase 4 mutates Shopify.
+**NOTE:**  
+Shopify-exported CSVs are now considered authoritative for *post-upload discovery*. Local enriched CSVs are not sufficient after client upload.
 
 ---
 
-## 2. Canonical Folder Structure
+## Phase 0 — Capsule Initialization & Local Asset Generation
+
+This phase happens **before any CSV enrichment and before Shopify is involved**.
+
+### Capsule Folder Scaffold
+
+Each capsule lives under:
 
 ```
 capsules/<CAPSULE>/
-├── inputs/                      # Client‑provided inputs
+├── inputs/
+│   ├── ghosts/
 │   ├── *_masterfile.csv
-│   ├── products_export_*.csv
-│   ├── ghostFileNames.txt
-│   └── modelFileNames.txt
+│   └── products_export_*.csv
 │
-├── assets/
-│   ├── ghosts/                  # Ghost images (local)
-│   ├── editorials/              # Editorial images (local)
-│   └── swatches/                # Swatches (generated locally)
+├── outputs/
+│   ├── swatches/
+│   ├── api_jobs/
+│   └── *.csv
 │
 ├── manifests/
-│   ├── product_map.json         # CPI → Shopify Product GID
-│   └── images_manifest.jsonl    # Canonical asset index (append‑only)
+│   ├── images_manifest.jsonl
+│   └── product_map.json
 │
 ├── state/
 │   └── product_state_<CAPSULE>.json
 │
-├── outputs/
-│   ├── inspect_images_<CAPSULE>.json
-│   ├── asset_drift_<CAPSULE>.jsonl
-│   ├── actions_swatch_queue_<CAPSULE>.jsonl
-│   └── manual_review_queue_<CAPSULE>.jsonl
-│
 └── preflight_outputs/
-    ├── preflight_*_internal.json
-    └── preflight_*_client_advisory.csv
 ```
 
 ---
 
-## 3. Phase 1 — Preflight & State Seeding
+### Swatch Creation (Manual, GUI‑Driven)
 
-### `scripts/preflight_<capsule>.py`
-**Purpose**
-- Validate client‑provided files
-- Simulate image completeness
-- Identify missing ghosts, editorials, swatches
-- Produce GO / NO‑GO advisory
+Tool:
+```
+swatch_creator/SwatchCropGUI.py
+```
 
-**Important**
-- This phase **does not** inspect Shopify
-- Output reflects *only what the client gave us*
+Inputs:
+```
+capsules/<CAPSULE>/inputs/ghosts/
+```
+
+Outputs (authoritative):
+```
+capsules/<CAPSULE>/outputs/swatches/
+```
+
+Notes:
+- Swatches are **generated artifacts**
+- No Shopify APIs are touched
+- Registration happens later
 
 ---
 
-### `scripts/seed_product_state_from_preflight.py`
-**Purpose**
-- Create `product_state_<CAPSULE>.json`
-- Encode initial beliefs and permissions
+## Phase 1 — Import Construction (Manifests + CSVs)
 
-Each product includes:
-- CPI
-- Handle
-- Preflight status
-- Promotion stage
-- Allowed actions
+### Build Image Manifest
 
-#### Locked rule
-These are **always true** once a product exists:
+```
+scripts/build_image_manifests.py
+```
+
+Creates or appends:
+```
+capsules/<CAPSULE>/manifests/images_manifest.jsonl
+```
+
+---
+
+### Build Product Map (CPI → Shopify GID)
+
+```
+scripts/build_product_map.py
+```
+
+Outputs:
+```
+capsules/<CAPSULE>/manifests/product_map.json
+```
+
+This file is the backbone of all downstream operations.
+
+---
+
+### Preflight Validation
+
+```
+scripts/preflight_<capsule>.py
+```
+
+Purpose:
+- Validate client inputs
+- Identify missing assets
+- Produce advisory outputs only
+
+---
+
+### Seed Product State
+
+```
+scripts/seed_product_state_from_preflight.py
+```
+
+Creates:
+```
+product_state_<CAPSULE>.json
+```
+
+Locked rules:
 ```
 allowed_actions.size_guide_write = true
 allowed_actions.collection_write = true
 ```
 
-Image completeness must **never** block size guides or collections.
-
 ---
 
-## 4. Phase 2 — Local Asset Generation
-
-### Swatch Creation (External, Siloed)
-Directories:
-- `swatch_pipeline_pre_api/`
-- `swatch_pipeline_ml/`
-
-**Purpose**
-- Generate swatches from ghost images
-- Output files into `assets/swatches/`
-
-The main system:
-- Does **not** generate swatches
-- Only registers and promotes them
-
----
-
-### `scripts/build_image_manifests.py`
-**Purpose**
-- Build / append `images_manifest.jsonl`
-- Canonical index of *known* assets
-
-This manifest is what mutation scripts trust.
-
----
-
-## 5. Phase 3 — Shopify Inspection & Drift Detection
-
-### `api/inspect_product_images.py`
-**READ‑ONLY**
-
-**Purpose**
-- Query Shopify product media
-- Identify hero candidates
-- Capture Shopify reality
-
-**Output**
-- `inspect_images_<CAPSULE>.json`
-
-No state mutation. No inference. No adoption.
-
----
-
-### `api/derive_look_images_from_shopify.py`
-**Purpose**
-- Select the canonical hero image
-- Write into `product_state.assets.look_images`
-
-#### Selection rules (locked):
-1. Filename match (`hero_image`)
-2. Positional fallback
-3. Manual override if ambiguous
-
-Each adoption records:
-- Source
-- Reason
-- Timestamp
-- Filename (if applicable)
-
----
-
-### `api/reconcile_capsule_assets.py`
-**Purpose**
-- Compare:
-  - Preflight beliefs
-  - Local state
-  - Shopify inspection
-- Adopt missing assets
-- Flip authorization gates when conditions are met
-- Record drift history
-
-**Outputs (append‑only, deduped):**
-- `asset_drift_<CAPSULE>.jsonl`
-- `actions_swatch_queue_<CAPSULE>.jsonl`
-- `manual_review_queue_<CAPSULE>.jsonl`
-
-This is where **belief becomes authority**.
-
----
-
-## 6. Swatch Registration & Promotion
-
-### `api/register_created_swatches.py`
-**Purpose**
-- Detect newly created swatches
-- Register them into product state
-- Attach provenance
-
-No Shopify calls.
-
----
-
-### `api/promote_state_swatches_to_manifest.py`
-**Purpose**
-- Promote registered swatches into `images_manifest.jsonl`
-- Normalize schema
-- Prevent duplicates
-
-This is required before metafield writes.
-
----
-
-## 7. Phase 4 — Authorized Shopify Mutation
-
-### Core Invariants (DO NOT VIOLATE)
-
-#### 1. One and only one way to upload files
-
-All Shopify Files **must** be created via:
+### Enrich Shopify Import CSV
 
 ```
-stagedUploadsCreate
-→ PUT raw bytes (NO HEADERS)
-→ fileCreate
+scripts/enrich_shopify_import.py
 ```
 
-Implemented in:
+Produces:
+- enriched CSV
+- anomalies CSV
+- missing image rows CSV
+- data gap report
+
+---
+
+### Combine Import CSVs
+
 ```
-api/shopify_client.py
-└── upload_file_from_path()
+scripts/combine_shopify_imports.py
 ```
 
-No alternatives allowed.
+Outputs final client‑uploadable CSV.
 
 ---
 
-#### 2. PUT means PUT — no headers, ever
+## Phase 2 — Client Shopify Upload
 
-Shopify staged upload URLs are cryptographically signed.
-
-They allow:
-- PUT
-- Raw bytes
-- **No headers**
-
-Any headers = silent failure.
+Client uploads CSV.  
+Images may be reordered or fixed manually.  
+Drift begins.
 
 ---
 
-#### 3. `fileCreate.contentType` is critical
+## Phase 3 — Post‑Upload Inspection & Reconciliation
 
-| contentType | Resulting GID | Valid for image metafields |
-|------------|--------------|-----------------------------|
-| FILE       | GenericFile  | ❌ NO |
-| IMAGE      | MediaImage   | ✅ YES |
+### Inspect Shopify Images
 
-**Swatches and look images MUST use `IMAGE`.**
-
-This was the primary breakthrough.
+```
+api/inspect_product_images.py
+```
 
 ---
 
-#### 4. Never assert GID prefixes
+### Derive Look Images
 
-Shopify may return:
-- `MediaImage`
-- `GenericFile`
-- `File`
+```
+api/derive_look_images_from_shopify.py
+```
 
-Assertions caused false failures.
-
-Only Shopify validation matters.
+Writes to product state with provenance.
 
 ---
 
-### `api/metafields_writer.py`
-**The only script allowed to mutate Shopify**
+### Reconcile Capsule Assets
+
+```
+api/reconcile_capsule_assets.py
+```
+
+Produces:
+- drift logs
+- swatch queue
+- manual review queue
+
+---
+
+## Preparing product_state for Write Operations
+
+Before any authorized Shopify mutation steps, product_state must be aligned with current Shopify reality and enriched to enable downstream writers. This is accomplished by running the following scripts in order:
+
+- `utils/enrich_product_state_with_tags.py`  
+  Enriches product_state by adding tags and other relevant attributes. This step updates product_state to reflect the latest Shopify tagging and classification.
+
+- `api/promote_static_allowed_actions.py`  
+  Promotes static allowed_actions such as `collection_write` and `size_guide_write` to true, ensuring legacy capsules comply with the current authorization model.
+
+These scripts do mutate product_state and are prerequisites for writers handling collections, size guides, and metafields.
+
+---
+
+## Phase 4 — Authorized Shopify Mutation
+
+### Metafields
+
+```
+api/metafields_writer.py
+```
 
 Writes:
-- `swatch_image`
-- `look_image`
-- (future: size guides, collections)
-
-**Safety guarantees**
-- CPI‑scoped execution
-- State‑gated writes
-- Idempotent (NOOP if already correct)
-- Append‑only logs
+- swatch_image
+- look_image
 
 ---
 
-### Debugging Rule (Mandatory)
-
-Always run CPI‑scoped:
+### Size Guides
 
 ```
-python -m api.metafields_writer \
-  --capsule S226 \
-  --cpis 3004-416689 \
-  --verbose
+api/size_guide_writer.py
 ```
 
-Never full‑capsule during debugging.
+Never gated.
 
 ---
 
-## 8. Size Guides
+### Smart Collections
 
-### `api/size_guide_writer.py`
-**Purpose**
-- Attach correct size guide pages via metafields
-- Driven by `productType`
+```
+scripts/smart_collections.py
+```
 
-**Key rule**
-- Size guides are **never gated**
-- If product exists → size guide allowed
-
----
-
-## 9. Smart Collections (Planned, Defined)
-
-Rule:
-- One smart collection per style
-- Driven by `style_<Name>` tag
-
-Authorization:
-- Always allowed
-
-Implementation pending.
+- Now requires a Shopify-exported CSV as input.  
+- That CSV is used for *style discovery only*.  
+- Authorization comes exclusively from product_state.  
+- This step must be preceded by `utils/enrich_product_state_with_tags.py` and `api/promote_static_allowed_actions.py` for legacy capsules.
 
 ---
 
-## 10. Drift Handling (Critical Concept)
+## Phase 5 — QA & Launch Validation
 
-### Auto‑Adopt
-Used when:
-- Shopify assets are unambiguous
-- Clear hero / ghost / swatch candidates
+```
+qa_tracker.py
+```
 
-System adopts automatically.
-
----
-
-### Manual Review
-Used when:
-- Multiple competing hero candidates
-- Ambiguous filenames
-- Unexpected ordering
-
-Queued for human review.
+Produces capsule readiness report.
 
 ---
 
-## 11. Final Mental Model (Locked)
+## Final Mental Model
 
-- Shopify truth > local belief
-- Drift is normal
-- Adoption must record provenance
-- Mutation must be gated
-- Upload success ≠ metafield success
-- File class matters more than file content
-- Append‑only logs prevent gaslighting ourselves
+- Shopify truth > local belief  
+- Drift is normal  
+- Adoption requires provenance  
+- Mutation requires authorization  
 
 ---
 
-## Status
+## Utilities — State & Authorization Helpers
 
-✅ Upload transport locked  
-✅ File classification correct  
-✅ Metafield attachment stable  
-✅ Drift adoption implemented  
-✅ Swatch creation + registration + promotion wired  
-✅ State‑driven authorization working  
+> These utilities exist to stabilize decision-making across the pipeline.  
+> They are intentionally boring, deterministic, and side-effect free unless explicitly stated.
 
-This system is now **production‑safe**.
+⸻
+
+```
+api/promote_static_allowed_actions.py
+```
+
+One-time (repeat-safe) state normalizer.
+
+Promotes static allowed_actions that should always be true for any valid product:
+	•	collection_write
+	•	size_guide_write
+
+This script:
+	•	Operates only on product_state
+	•	Does not inspect Shopify
+	•	Does not infer asset completeness
+	•	Is safe to re-run at any time
+
+Use this to:
+	•	Retrofit legacy capsules
+	•	Align historical state with the current authorization model
 
 ---
 
-## Open Follow‑Ups (Explicit)
+```
+utils/enrich_product_state_with_tags.py
+```
 
-1. Daily Shopify drift scan + local log
-2. Ghost‑missing inspector + downloader
-3. Smart collection writer
-4. Size guide gating flip at seed time
-
-Nothing here contradicts current behavior.
+Enriches product_state by adding tags and other Shopify-derived attributes.  
+Run after product_state seeding and before any mutation steps.  
+Mutates product_state to reflect current Shopify tagging and classification, enabling accurate authorization and downstream processing.
 
 ---
+
+```
+utils/shopify_csv_enricher_poc.py
+```
+
+Proof-of-concept tool for enriching Shopify-exported CSVs with additional computed fields.  
+Does not mutate product_state or Shopify directly.  
+Intended for exploratory or transitional use to improve CSV-based insights.
+
+---
+
+```
+utils/state_gate.py
+```
+
+Read-only authorization evaluator for product actions.
+
+Provides a single authoritative answer to:
+
+“Is this action allowed right now for this product?”
+
+This module:
+	•	Never mutates state
+	•	Never infers outcomes
+	•	Never promotes or demotes products
+	•	Evaluates permissions strictly from product_state.json
+
+All writers (metafields, images, collections, size guides) should rely on this gate instead of duplicating authorization logic.
+
+## Future Phase — Pipeline Consolidation (Planned)
+
+The following components are **intentionally not implemented yet**.  
+They represent a future consolidation phase once the current write‑phase logic has fully stabilized.
+
+These are documented now to:
+- Preserve architectural intent
+- Prevent ad‑hoc orchestration from emerging
+- Make future refactors deliberate instead of reactive
+
+---
+
+### capsule_write_phase.py (Write‑Phase Orchestrator)
+
+**Purpose**  
+A thin, deterministic coordinator responsible for executing the *write phase* of a capsule in the correct order.
+
+This script would:
+- Accept `--capsule`, `--dry-run`, and environment flags once
+- Execute the approved write‑phase steps in sequence
+- Halt immediately if a prerequisite step fails
+- Produce a single consolidated execution log per capsule
+
+**It would explicitly *not*:**
+- Contain business logic
+- Make authorization decisions
+- Infer state or completeness
+- Replace individual scripts
+
+**Likely execution order:**
+1. `api/promote_static_allowed_actions.py`
+2. `utils/enrich_product_state_with_tags.py`
+3. `api/smart_collections.py`
+4. `api/size_guide_writer.py`
+5. `api/publish_collections.py`
+
+**When this should exist**  
+Only after:
+- Write‑phase semantics are stable
+- Authorization rules are finalized
+- Individual scripts are considered boring and trustworthy
+
+This is an *operational convenience*, not a correctness primitive.
+
+---
+
+### state_authorization.py (Shared Authorization Helper)
+
+**Purpose**  
+A single authoritative evaluator for product and style‑level permissions derived from `product_state_<CAPSULE>.json`.
+
+This module would answer questions like:
+- “Is this product allowed to perform action X right now?”
+- “Which styles are authorized for collection publication?”
+- “Why was this operation denied?”
+
+**This helper would:**
+- Be read‑only
+- Never mutate state
+- Never infer outcomes
+- Never promote or demote products
+- Centralize all authorization semantics
+
+**Consumers would include:**
+- `smart_collections.py`
+- `size_guide_writer.py`
+- `publish_collections.py`
+- Any future Shopify writers
+
+**Why this does not exist yet**  
+Some duplication is currently intentional:
+- It keeps authorization logic visible
+- It reveals mismatches between scripts
+- It prevents premature abstraction
+
+This helper should be introduced only when:
+- Authorization rules are fully settled
+- Copy‑pasted logic becomes risky rather than informative
+
+---
+
+### Design Principle (Important)
+
+> **Correctness before elegance.  
+> Semantics before orchestration.**
+
+These future components should reduce friction — not obscure logic.
+
+If introduced too early, they would:
+- Lock in incorrect assumptions
+- Hide important differences
+- Make debugging harder
+
+If introduced at the right time, they will be:
+- Small
+- Obvious
+- Boring
+- Safe
+
+---
+
+## NOTES
+
+**Runbooks**  
+Where we can go next (optional)  
+	•	Convert runbooks into Makefile targets  
+	•	Add a single capsule doctor command  
+	•	Generate machine-readable pipeline graph
+
+**Update seeding script to all-inclusive: tags and perhaps other attribs.**
 
 **If this README and the code disagree, the README wins.**
+---
